@@ -5,6 +5,9 @@
       "path": "./packages/kernel"
     },
     {
+      "path": "./packages/extractors/core"
+    },
+    {
       "path": "./packages/extractors/react"
     },
     {

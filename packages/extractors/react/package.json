@@ -12,7 +12,8 @@
   "dependencies": {
     "@babel/parser": "^7.25.0",
     "@babel/traverse": "^7.25.0",
-    "@fe-design/kernel": "workspace:*"
+    "@fe-design/kernel": "workspace:*",
+    "@fe-design/extractor-core": "workspace:*"
   },
   "devDependencies": {
     "@types/babel__traverse": "^7.20.0"

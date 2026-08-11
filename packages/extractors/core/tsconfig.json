@@ -1,0 +1,7 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": { "outDir": "dist", "rootDir": "." },
+  "include": ["src", "tests"],
+  "exclude": ["tests/equivalence"],
+  "references": [{ "path": "../../kernel" }]
+}

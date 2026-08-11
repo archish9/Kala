@@ -18,6 +18,10 @@ export default defineConfig({
       },
       { find: '@fe-design/kernel', replacement: src('packages/kernel/src/index.ts') },
       {
+        find: '@fe-design/extractor-core',
+        replacement: src('packages/extractors/core/src/index.ts')
+      },
+      {
         find: '@fe-design/extractor-react',
         replacement: src('packages/extractors/react/src/index.ts')
       },

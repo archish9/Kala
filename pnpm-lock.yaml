@@ -18,6 +18,22 @@ importers:
         specifier: ^2.1.0
         version: 2.1.9(@types/node@22.20.1)
 
+  packages/extractors/core:
+    dependencies:
+      '@fe-design/kernel':
+        specifier: workspace:*
+        version: link:../../kernel
+      culori:
+        specifier: ^4.0.2
+        version: 4.0.2
+      postcss:
+        specifier: ^8.4.0
+        version: 8.5.26
+    devDependencies:
+      '@types/culori':
+        specifier: ^4.0.0
+        version: 4.0.1
+
   packages/extractors/react:
     dependencies:
       '@babel/parser':
@@ -26,6 +42,9 @@ importers:
       '@babel/traverse':
         specifier: ^7.25.0
         version: 7.29.8
+      '@fe-design/extractor-core':
+        specifier: workspace:*
+        version: link:../core
       '@fe-design/kernel':
         specifier: workspace:*
         version: link:../../kernel
