@@ -33,7 +33,7 @@ const INIT = JSON.stringify({
 const READY = JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })
 
 describe.skipIf(!existsSync(BIN))('built binary', () => {
-  it('completes an MCP handshake and lists all six tools', async () => {
+  it('completes an MCP handshake and lists all seven tools', async () => {
     const out = await rpc([
       INIT, READY,
       JSON.stringify({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} })
@@ -42,7 +42,7 @@ describe.skipIf(!existsSync(BIN))('built binary', () => {
       .find(m => m.id === 2)
     expect(listed.result.tools.map((t: { name: string }) => t.name).sort())
       .toEqual([
-        'explain', 'guide', 'surface_brief',
+        'explain', 'guide', 'inspect', 'surface_brief',
         'system_bootstrap', 'system_status', 'verify'
       ])
   }, 15000)

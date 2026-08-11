@@ -6,6 +6,7 @@ import { systemStatus } from './tools/system-status.js'
 import { verify } from './tools/verify.js'
 import { explain } from './tools/explain.js'
 import { systemBootstrap } from './tools/system-bootstrap.js'
+import { inspect } from './tools/inspect.js'
 import { surfaceBrief } from './tools/surface-brief.js'
 import { guide } from './tools/guide.js'
 import type { VerifyResult } from '@fe-design/kernel/engine/rule-types.js'
@@ -73,6 +74,20 @@ server.tool(
     target: z.string().optional().describe('Optional file or surface the action applies to')
   },
   async ({ dir, action, target }) => asText(await guide(dir, action, target))
+)
+
+server.tool(
+  'inspect',
+  'Render a running page in a browser and report what only pixels reveal: contrast against inherited backgrounds, horizontal overflow at real viewport widths, and touch targets at their rendered size. Needs a running dev server and the browser pack. Read-only; screenshots are written outside the project.',
+  {
+    url: z.string().describe('URL of the running page, e.g. http://localhost:5173/settings'),
+    viewports: z.array(z.number().int().positive()).optional()
+      .describe('Viewport widths in px. Defaults to 375, 768, and 1440.'),
+    screenshot: z.boolean().optional()
+      .describe('Also capture a PNG per viewport and return its path.')
+  },
+  async ({ url, viewports, screenshot }) =>
+    asText(await inspect(url, viewports, screenshot))
 )
 
 server.tool(
