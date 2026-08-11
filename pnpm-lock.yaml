@@ -74,6 +74,22 @@ importers:
         specifier: ^3.23.0
         version: 3.25.76
 
+  packages/taste:
+    dependencies:
+      '@fe-design/kernel':
+        specifier: workspace:*
+        version: link:../kernel
+      '@fe-design/packs':
+        specifier: workspace:*
+        version: link:../packs
+      culori:
+        specifier: ^4.0.2
+        version: 4.0.2
+    devDependencies:
+      '@types/culori':
+        specifier: ^4.0.0
+        version: 4.0.1
+
 packages:
 
   '@babel/code-frame@7.29.7':

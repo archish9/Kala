@@ -1,0 +1,22 @@
+{
+  "id": "quiet-precision",
+  "axes": { "formality": [0.7, 1.0], "density": [0.4, 0.7], "energy": [0.0, 0.3], "expressiveness": [0.1, 0.4] },
+  "fitFor": ["financial", "developer tools", "admin", "dashboard", "data-heavy", "enterprise"],
+  "avoidFor": ["consumer social", "kids", "entertainment"],
+  "type": {
+    "families": { "sans": "Söhne", "serif": "Tiempos Text" },
+    "fallbacks": { "sans": ["Inter Tight", "system-ui", "sans-serif"] },
+    "ratio": 1.2, "baseSize": 15, "maxWeights": 2
+  },
+  "space": { "base": 4, "rhythm": "generous", "sectionGap": 96 },
+  "shape": { "radius": 2, "depth": "borders" },
+  "color": { "strategy": "warm neutral with one deep accent", "neutralHue": 40, "chromaCeiling": 0.04 },
+  "motion": { "budget": "minimal", "duration": 120, "easing": "ease-out" },
+  "signature": [
+    "Borders carry structure. Shadows are for overlays only.",
+    "Numbers are tabular-lined and right-aligned.",
+    "One accent, used only for the single primary action per surface.",
+    "Section breaks are space, never rules."
+  ],
+  "antiDefaults": ["card-in-card", "gradient-anything", "shadow-on-rest-state"]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "editorial-clean",
+  "axes": { "formality": [0.4, 0.8], "density": [0.1, 0.4], "energy": [0.2, 0.5], "expressiveness": [0.5, 0.9] },
+  "fitFor": ["publishing", "documentation", "blog", "portfolio", "agency", "marketing", "photographer"],
+  "avoidFor": ["dashboard", "admin", "data-heavy"],
+  "type": {
+    "families": { "sans": "Inter Tight", "serif": "Newsreader" },
+    "fallbacks": { "sans": ["system-ui", "sans-serif"] },
+    "ratio": 1.333, "baseSize": 18, "maxWeights": 3
+  },
+  "space": { "base": 4, "rhythm": "generous", "sectionGap": 128 },
+  "shape": { "radius": 0, "depth": "borders" },
+  "color": { "strategy": "paper neutral with a single ink accent", "neutralHue": 30, "chromaCeiling": 0.03 },
+  "motion": { "budget": "minimal", "duration": 200, "easing": "ease-out" },
+  "signature": [
+    "Type leads. Measure is capped near 68 characters.",
+    "Headings use the serif; interface chrome uses the sans.",
+    "Rules are hairlines, and there are very few of them.",
+    "Images run full-measure or full-bleed, never in cards."
+  ],
+  "antiDefaults": ["card-grid-everything", "rounded-corners", "drop-shadows"]
+}

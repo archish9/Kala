@@ -21,7 +21,8 @@ export default defineConfig({
         find: '@fe-design/extractor-react',
         replacement: src('packages/extractors/react/src/index.ts')
       },
-      { find: '@fe-design/packs', replacement: src('packages/packs/src/index.ts') }
+      { find: '@fe-design/packs', replacement: src('packages/packs/src/index.ts') },
+      { find: '@fe-design/taste', replacement: src('packages/taste/src/index.ts') }
     ]
   }
 })
