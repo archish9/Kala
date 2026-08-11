@@ -15,3 +15,6 @@ dist/
 # resolves ../foo.js to a stale build instead of the TypeScript.
 dist/
 docs/
+# Machine-specific: the MCP entry point is an absolute path.
+# Documented in Documentation/01-getting-started.md instead.
+.mcp.json
