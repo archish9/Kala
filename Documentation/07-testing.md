@@ -14,7 +14,7 @@ How to run the tests, how they are organised, and what each suite actually prove
 ## Running tests
 
 ```bash
-pnpm test                                  # everything — 374 tests
+pnpm test                                  # everything — 437 tests
 pnpm test:watch                            # watch mode
 pnpm typecheck                             # tsc -b across all packages
 
@@ -27,7 +27,8 @@ Run from the **repository root**. Vitest resolves paths and workspace aliases fr
 running inside a package directory reports "No test files found".
 
 The suite needs **no build and no browser**. Workspace packages alias to source during
-tests, so a fresh clone can run `pnpm test` immediately after `pnpm install`.
+tests, so a fresh clone can run `pnpm test` immediately after `pnpm install`. The one
+browser-dependent test skips when Chromium is absent.
 
 ---
 
@@ -42,6 +43,8 @@ tests, so a fresh clone can run `pnpm test` immediately after `pnpm install`.
 | `packages/extractors/core/tests` | 4 | Tailwind, CSS, selectors, merge |
 | `packages/extractors/{react,vue,svelte,html}/tests` | 6 | One extractor each |
 | `packages/extractors/equivalence/tests` | 1 | **All four agree** |
+| `packages/browser/tests` | 6 | Launch, collection, three checks, and one real-browser smoke test |
+| `packages/report/tests` | 2 | Review grouping and HTML rendering |
 
 ---
 
@@ -116,6 +119,18 @@ expect(payload.findings.map(f => f.rule)).toContain('nested-card')
 
 `nested-card` was written for React. That assertion runs it against **Vue** markup through
 the real server.
+
+### The browser smoke test
+
+`packages/browser/tests/smoke.test.ts`
+
+Drives real Chromium against a seeded page and asserts all three rendered checks fire. It
+matters because the contrast case cannot be faked: `#9ca3af` sits on a transparent
+`<section>` over a white `<body>`, so only an ancestor walk resolves it.
+
+Availability is resolved at **module scope**, not in `beforeAll`. `describe.skipIf` is
+evaluated during collection, which happens before any hook runs — deciding in a hook leaves
+the flag false and silently skips every browser test while appearing to pass.
 
 ### Taste property tests
 

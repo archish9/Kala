@@ -21,10 +21,12 @@ its own.
 | 2 | Taste: 12 curated systems, OKLCH ramps, solved contrast, derived dark mode, `system_bootstrap` | **Done** |
 | 3 | Surfaces: branch and data-source extraction, document rules, 4 state rules, `surface_brief`, `guide` | **Done** |
 | 4a | Extraction: Vue, Svelte, and HTML extractors, shared CSS resolution, the equivalence suite | **Done** |
-| 4b | Browser: `inspect` and `critique` with an HTML report | **Planned, not built** |
+| 4b | Browser: `inspect` and `critique` with a self-contained HTML report | **Done** |
 
-Current totals: **374 tests**, 6 tools, 13 rules, 12 systems, 6 surfaces, 13 playbooks,
-4 frameworks.
+Current totals: **437 tests**, 8 tools, 13 source rules, 3 rendered checks, 12 systems,
+6 surfaces, 13 playbooks, 4 frameworks.
+
+The whole spec is now built.
 
 Every phase has a written spec and plan under `docs/superpowers/`.
 
@@ -32,37 +34,17 @@ Every phase has a written spec and plan under `docs/superpowers/`.
 
 ## What is not built yet
 
-### Phase 4b — browser inspection and critique
+### Nothing from the original spec
 
-Fully planned in
-`docs/superpowers/plans/2026-08-11-fe-design-mcp-phase4b-browser.md`. Seven tasks.
-
-Two tools:
-
-**`inspect`** renders a running page in Chromium and reports what only pixels reveal:
-
-- **Contrast against inherited backgrounds.** `getComputedStyle` returns
-  `rgba(0, 0, 0, 0)` for an element with no background of its own, so judging contrast
-  requires walking ancestors to the first opaque colour. This is the thing static analysis
-  structurally cannot do, and the main reason the phase exists.
-- **Horizontal overflow at real viewport widths**, with the offending element named.
-- **Touch targets at their rendered size**, which markup alone cannot give you.
-
-**`critique`** turns findings — source, and rendered when a URL is supplied — into a
-grouped review across Accessibility, Consistency, Craft, and Real-world states, optionally
-written as a self-contained HTML report.
-
-It was split from 4a because it needs Playwright and a ~115MB Chromium download, and shares
-no code with the extractors. Both were verified to install and work here before the plan
-was written.
+Every phase is built. What follows is work the spec anticipated but deliberately deferred.
 
 ### The looping CSS demo report
 
 The spec's harvest notes identify the HTML report with auto-looping CSS demos beside each
-finding as the best single idea in `design-motion-principles`. The 4b plan produces the
-report but **not** the demos: getting one right means generating a correct example of the
-fix per rule, which is rule-pack authoring rather than report work. The report structure
-leaves room — every item already carries its rule id.
+finding as the best single idea in `design-motion-principles`. The report ships **without**
+the demos: getting one right means generating a correct example of the fix per rule, which
+is rule-pack authoring rather than report work. The report structure leaves room — every
+item already carries its rule id.
 
 ### Data harvest not yet done
 
@@ -84,13 +66,18 @@ Every Svelte node reports line 1. The Svelte 5 modern AST carries character offs
 than line numbers, and the offset-to-line conversion is not written. Findings point at the
 file, not the line.
 
-### Descendant CSS selectors resolve to `unknown`
+### Descendant CSS selectors resolve to `unknown` in source analysis
 
 A single-file extractor has no ancestor context, so a rule like `.sidebar .card` cannot be
 evaluated. Its declarations become `unknown` rather than being applied or ignored — the
 correct answer, but it means a project styling everything through descendant rules sees
-high `coverage.skipped` and few findings. The browser pass in 4b resolves those from a real
-render.
+high `coverage.skipped` from `verify`. **`inspect` resolves those cases** by reading
+computed styles from a real render, which is why `critique` combines both.
+
+### `inspect` needs a running page
+
+It cannot analyse a component in isolation, so it complements `verify` rather than
+replacing it.
 
 ### Branch-to-source linking is file-scoped
 

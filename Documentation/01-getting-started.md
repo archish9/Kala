@@ -33,8 +33,14 @@ If pnpm is missing, Node ships a manager for it:
 corepack enable pnpm
 ```
 
-Nothing else is required. There is **no browser dependency** — the whole test suite and
-every shipped tool runs without one.
+Nothing else is required to install, test, and run. The `inspect` tool additionally needs
+Chromium, which is **opt-in**:
+
+```bash
+npx playwright install chromium     # ~115MB, only needed for `inspect`
+```
+
+Without it, `inspect` returns install instructions and every other tool is unaffected.
 
 ---
 
@@ -53,7 +59,7 @@ to that one package rather than allowing builds generally.
 Confirm the install is healthy:
 
 ```bash
-pnpm test        # 374 passing
+pnpm test        # 437 passing
 pnpm typecheck   # no output means success
 ```
 
@@ -127,8 +133,9 @@ cd /path/to/DesignMCP
 } | node packages/server/dist/src/index.js
 ```
 
-You should see an `initialize` result followed by a `tools/list` result naming six tools:
-`system_status`, `verify`, `explain`, `surface_brief`, `guide`, `system_bootstrap`.
+You should see an `initialize` result followed by a `tools/list` result naming eight tools:
+`system_status`, `verify`, `explain`, `surface_brief`, `guide`, `inspect`, `critique`, and
+`system_bootstrap`.
 
 If that works, the server is fine and any remaining problem is client configuration.
 
@@ -234,6 +241,15 @@ resolved statically.
 
 Call `guide` with `action: "bolder"`. The response is not generic advice — it carries this
 project's type scale to work within, and this system's own bans.
+
+### Step 9 — read it as a review
+
+Call `critique` with the same paths and `html: true`. Instead of a flat list you get the
+findings grouped into Accessibility, Consistency, Craft, and Real-world states, plus a
+path to a self-contained HTML report you can open directly.
+
+If the page is running, pass `url` as well and rendered findings are folded into the same
+review.
 
 ---
 

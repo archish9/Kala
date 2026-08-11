@@ -13,7 +13,8 @@ It does four things a coding agent cannot do reliably on its own:
 | Advice that ignores the project | Grounds every playbook in this project's real scales and bans |
 
 It works across **React, Vue, Svelte, and plain HTML** — one rule, written once, fires
-identically in all four.
+identically in all four — and can render a running page to catch what source analysis
+structurally cannot.
 
 ---
 
@@ -24,7 +25,7 @@ git clone git@github.com:archish9/DesignMCP.git
 cd DesignMCP
 corepack enable pnpm      # Node 20+ required
 pnpm install
-pnpm test                 # 374 tests
+pnpm test                 # 437 tests
 pnpm --filter @fe-design/server build
 ```
 
@@ -53,7 +54,8 @@ system_bootstrap →  if not, propose three directions and apply one
 surface_brief    →  before building: which states must this screen handle?
         …agent writes code…
 verify           →  check it against the project's own system
-critique         →  read the findings as a grouped review
+inspect          →  render it, and catch what only pixels reveal
+critique         →  read everything found as a grouped review
 ```
 
 A worked example of the whole loop is in
@@ -63,12 +65,15 @@ A worked example of the whole loop is in
 
 ## What ships today
 
-- **6 MCP tools** — `system_status`, `system_bootstrap`, `surface_brief`, `guide`, `verify`, `explain`
-- **13 rules** across scale, consistency, accessibility, craft, and real-world states
+- **8 MCP tools** — `system_status`, `system_bootstrap`, `surface_brief`, `guide`,
+  `verify`, `inspect`, `critique`, `explain`
+- **13 source rules** across scale, consistency, accessibility, craft, and real-world states
+- **3 rendered checks** — computed contrast, horizontal overflow, touch target size
 - **12 curated design systems** with generated OKLCH palettes and solved contrast
 - **6 surface briefs** and **13 action playbooks**
 - **4 framework extractors** proven equivalent by a dedicated test suite
-- **374 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
+- **437 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
+- **No browser required** — the browser pass is opt-in and degrades cleanly
 
 ---
 

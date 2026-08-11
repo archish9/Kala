@@ -9,10 +9,13 @@ All six MCP tools: parameters, responses, worked examples, and failure behaviour
 | [`surface_brief`](#surface_brief) | Requirements before building a screen | no |
 | [`guide`](#guide) | A playbook for a design action, grounded in the project | no |
 | [`verify`](#verify) | Check code against the project's design system | no |
+| [`inspect`](#inspect) | Render a running page and report what only pixels reveal | no |
+| [`critique`](#critique) | Turn findings into a grouped review, optionally as HTML | no |
 | [`explain`](#explain) | Expand one finding | no |
 
-**`system_bootstrap` is the only tool that writes.** Everything else is safe to call
-freely and repeatedly.
+**`system_bootstrap` is the only tool that writes into your project.** Everything else is
+safe to call freely and repeatedly. `inspect` and `critique` can produce screenshots and
+reports, but those go to the OS temp directory and their paths are returned.
 
 ---
 
@@ -286,6 +289,142 @@ Check frontend source against the project's design system.
 
 ---
 
+## `inspect`
+
+Render a running page in a browser and report what source analysis structurally cannot.
+
+**Parameters**
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| `url` | string | yes | URL of the running page |
+| `viewports` | number[] | no | Viewport widths in px. Defaults to 375, 768, 1440. |
+| `screenshot` | boolean | no | Capture a PNG per viewport and return its path |
+
+**Response**
+
+```json
+{
+  "url": "http://localhost:5173/settings",
+  "viewports": ["375x812"],
+  "findings": [
+    {
+      "rule": "computed-contrast",
+      "sev": "error",
+      "selector": "p#faint",
+      "viewport": "375x812",
+      "msg": "Rendered contrast is 2.54:1 against rgb(255, 255, 255), below the 4.5:1 minimum.",
+      "fix": "Darken the text or lighten the background until it reaches 4.5:1."
+    },
+    {
+      "rule": "horizontal-overflow",
+      "sev": "error",
+      "selector": "nav#wide",
+      "viewport": "375x812",
+      "msg": "The page scrolls sideways by 549px at 375x812; nav#wide extends to 924px."
+    },
+    {
+      "rule": "small-touch-target",
+      "sev": "warn",
+      "selector": "button#tiny",
+      "viewport": "375x812",
+      "msg": "button#tiny renders at 20x20px, below the 44px touch minimum."
+    }
+  ],
+  "screenshots": [],
+  "degraded": []
+}
+```
+
+### The three checks
+
+**`computed-contrast`** — the reason this tool exists. `getComputedStyle` returns
+`rgba(0, 0, 0, 0)` for an element with no background of its own, so judging contrast
+requires walking ancestors to the first opaque colour. No amount of source analysis can do
+this.
+
+Large text takes the relaxed WCAG target of 3.0:1 (24px, or 18.66px bold) rather than 4.5,
+so a large heading in a soft grey does not produce a finding a designer would rightly
+ignore.
+
+**`contrast-unresolved`** — reported at `info` when no opaque background is reachable, for
+example over an image. Reporting a ratio there would invent a number, so it says so
+instead. Same discipline as the `unknown` contract in the source rules.
+
+**`horizontal-overflow`** — one finding per page, naming the widest offending element.
+"The page scrolls sideways" is not actionable without a culprit.
+
+**`small-touch-target`** — interactive elements under 44px, at viewports of 1024px or less.
+Zero-sized controls are hidden rather than small, so they are skipped.
+
+### Requirements
+
+Needs a running page and the browser pack:
+
+```bash
+npx playwright install chromium
+```
+
+Without it, `inspect` returns install instructions in `degraded[]` and every other tool is
+completely unaffected.
+
+---
+
+## `critique`
+
+Turn findings into a grouped review rather than a flat list.
+
+**Parameters**
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| `dir` | string | yes | Absolute path to the project root |
+| `paths` | string[] | yes | Project-relative files to review |
+| `url` | string | no | Running URL, to fold in rendered findings |
+| `html` | boolean | no | Write a self-contained HTML report and return its path |
+
+**Response**
+
+```json
+{
+  "review": {
+    "surface": "settings",
+    "system": "warm-utility",
+    "counts": { "error": 8, "warn": 4, "info": 0 },
+    "sections": [
+      { "title": "Accessibility",     "items": [ … ] },
+      { "title": "Consistency",       "items": [ … ] },
+      { "title": "Craft",             "items": [ … ] },
+      { "title": "Real-world states", "items": [ … ] }
+    ],
+    "coverage": { "analyzed": 61, "skipped": 9 },
+    "degraded": []
+  },
+  "reportPath": "/tmp/fe-design-review-L4voKV/settings.html"
+}
+```
+
+**Why grouping matters.** Twenty findings in a flat list read as noise. The same twenty
+across Accessibility, Consistency, Craft, and Real-world states read as a review, and the
+group names tell a reader what kind of problem each one is.
+
+Sections are ordered by their worst severity, and each item is labelled `static` or
+`rendered` so it is clear where it came from. An unrecognised rule lands in an `Other`
+section rather than vanishing.
+
+### The HTML report
+
+With `html: true`, a self-contained report is written to the OS temp directory:
+
+- No external requests — no CDN scripts, fonts, or stylesheets
+- All finding text escaped
+- Readable in both light and dark schemes
+- Coverage stated in the footer, including what was skipped
+
+Open it directly from the returned path; it needs no server.
+
+---
+
 ## `explain`
 
 Expand one finding or rule from the most recent `verify` run.
@@ -324,6 +463,9 @@ system_status ──▶ hasLock false? ──▶ system_bootstrap (propose ▸ c
       ▼
 surface_brief ──▶ …agent writes code… ──▶ verify ──▶ explain (as needed)
       │                                      │
+      │                                      ▼
+      │                        inspect (page running) ──▶ critique
+      │
       └────────── guide, when changing character of the design
 ```
 

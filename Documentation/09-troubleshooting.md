@@ -182,6 +182,45 @@ Do not add a value to the config purely to silence a finding without saying so.
 
 ---
 
+## The browser pass
+
+### `BROWSER_UNAVAILABLE`
+
+Chromium is not installed:
+
+```bash
+npx playwright install chromium
+```
+
+This is a ~115MB download. Everything except `inspect` works without it, and `critique`
+still returns a full review from source findings alone.
+
+### `PAGE_FAILED`
+
+The page did not load at that viewport. The detail carries the underlying error. Usual
+causes: the dev server is not running, the URL is wrong, or the page took longer than the
+20 second timeout.
+
+Other viewports are still inspected — one failure does not abort the run.
+
+### `inspect` finds nothing on a page that looks wrong
+
+Check `degraded[]` first; if the page failed to load there will be nothing to report.
+
+Also note the two deliberate exemptions:
+
+- Large text (24px, or 18.66px bold) uses the relaxed 3.0:1 target, so a soft-grey heading
+  may legitimately pass
+- Touch targets are only checked at viewports of 1024px or less
+
+### `contrast-unresolved` instead of a ratio
+
+No opaque background was reachable — typically an element over an image or gradient.
+Reporting a number there would invent one. Check it by eye, or give the element an explicit
+background.
+
+---
+
 ## Tests
 
 ### "No test files found, exiting with code 1"
@@ -224,6 +263,12 @@ lightness targets. Lowering a target defeats the point of solving contrast struc
 ### Built-binary tests skip
 
 Expected when `dist/` is unbuilt. Run `pnpm --filter @fe-design/server build`.
+
+### The browser smoke test skips
+
+Expected when Chromium is absent. Run `npx playwright install chromium`. If it skips even
+with Chromium present, availability is being resolved too late — it must be at module
+scope, since `describe.skipIf` is evaluated before hooks run.
 
 ---
 

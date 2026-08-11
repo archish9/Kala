@@ -18,18 +18,19 @@ Why the system is shaped this way, and the three decisions everything else follo
 
 ```
                  ┌──────────────┐
-   MCP client ──▶│    server    │  6 tools, extension registry
+   MCP client ──▶│    server    │  8 tools, extension registry
                  └──────┬───────┘
-          ┌─────────────┼──────────────┬───────────────┐
-          ▼             ▼              ▼               ▼
-   ┌────────────┐ ┌──────────┐  ┌───────────┐   ┌───────────┐
-   │ extractors │ │  kernel  │  │   taste   │   │   packs   │
-   │ 4 adapters │ │ IR, lock │  │  systems, │   │   data:   │
-   │  + core    │ │  engine  │  │  colour   │   │ rules,    │
-   └────────────┘ └──────────┘  └───────────┘   │ systems,  │
-                                                │ surfaces, │
-                                                │ guides    │
-                                                └───────────┘
+       ┌────────────┬───┴────────┬────────────┬───────────┐
+       ▼            ▼            ▼            ▼           ▼
+ ┌───────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐
+ │extractors │ │ kernel  │ │  taste  │ │ browser │ │ report  │
+ │4 adapters │ │IR, lock │ │systems, │ │ opt-in  │ │ review, │
+ │ + core    │ │ engine  │ │ colour  │ │ render  │ │  html   │
+ └───────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘
+                                 │
+                           ┌─────────┐
+                           │  packs  │  data: rules, systems,
+                           └─────────┘        surfaces, guides
 ```
 
 The kernel knows nothing about frameworks or about design. Extractors know their framework
@@ -83,7 +84,8 @@ The same discipline appears everywhere the system cannot see enough:
 |---|---|
 | `class={expr}` in any framework | `unknown` |
 | `cn()` / `clsx()` call | `unknown` |
-| CSS rule reached via `.sidebar .card` | `unknown` — no ancestor context |
+| CSS rule reached via `.sidebar .card` | `unknown` — no ancestor context in source |
+| No opaque background behind an element | `contrast-unresolved` — reported, not guessed |
 | CSS rule gated on `:hover` | `unknown` — depends on runtime state |
 | `padding: var(--x)` | `unknown` — not statically resolvable |
 
@@ -248,6 +250,8 @@ node-level rule can express.
 | `@fe-design/extractor-html` | HTML → IR | kernel, core |
 | `@fe-design/extractor-equivalence` | Proves the four agree (tests only) | all four |
 | `@fe-design/taste` | Design systems, colour maths, emission, surfaces, guides | kernel, packs |
+| `@fe-design/browser` | Rendered facts and checks. Playwright is an optional peer. | kernel, taste |
+| `@fe-design/report` | Grouped reviews and the self-contained HTML report | kernel, browser |
 | `@fe-design/packs` | Data: rules, systems, surfaces, guides | nothing |
 | `@fe-design/server` | MCP tools and the extractor registry | all of the above |
 
@@ -294,6 +298,35 @@ verify(dir, paths)
 
 Everything degrades. The response always has the same shape, and `degraded[]` explains what
 was not analysed and why.
+
+---
+
+## The browser pass
+
+`inspect` exists because one thing is structurally impossible in source analysis.
+`getComputedStyle` returns `rgba(0, 0, 0, 0)` for an element with no background of its
+own, so judging its contrast requires walking ancestors to the first opaque colour — which
+needs a real render.
+
+The package is shaped so almost none of it needs a browser to test:
+
+```
+launch.ts   → Playwright imported dynamically, here and nowhere else
+collect.ts  → one page.evaluate() gathering every fact at once
+checks/*.ts → pure functions over that data
+inspect.ts  → orchestration across viewports
+```
+
+Because the checks are pure, 27 of the browser tests run with no browser at all. One smoke
+test drives real Chromium and skips when it is absent.
+
+Two properties follow from the dynamic import: the package imports successfully when
+Playwright is missing, and `inspect` degrades to install instructions while every other
+tool is unaffected.
+
+**Nothing writes into your project.** Screenshots and HTML reports go to the OS temp
+directory and their paths are returned, so `system_bootstrap` remains the only tool that
+writes where you work.
 
 ---
 
