@@ -11,7 +11,8 @@
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.23.0",
     "@fe-design/packs": "workspace:*",
-    "@fe-design/taste": "workspace:*"
+    "@fe-design/taste": "workspace:*",
+    "@fe-design/extractor-vue": "workspace:*"
   },
   "scripts": {
     "build": "tsc -b"

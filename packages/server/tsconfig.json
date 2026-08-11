@@ -23,6 +23,9 @@
     },
     {
       "path": "../taste"
+    },
+    {
+      "path": "../extractors/vue"
     }
   ]
 }

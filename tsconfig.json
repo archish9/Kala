@@ -8,6 +8,9 @@
       "path": "./packages/extractors/core"
     },
     {
+      "path": "./packages/extractors/vue"
+    },
+    {
       "path": "./packages/extractors/react"
     },
     {
