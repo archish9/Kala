@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { buildRamp, buildNeutralRamp } from '../../src/color/ramp.js'
+import { oklch } from 'culori'
 import { solveSemantics, contrast, TARGETS } from '../../src/color/solve.js'
 
 const neutral = buildNeutralRamp(40, 0.04)
@@ -57,6 +58,23 @@ describe('solveSemantics', () => {
         expect(r.meets, `hue ${hue}: ${r.pair} was ${r.ratio.toFixed(2)}`).toBe(true)
       }
     }
+  })
+
+  it('picks a primary that still reads as the accent, not as near-black', () => {
+    // Walking the ramp from either end trivially satisfies contrast and lands
+    // on near-black or near-white, which erases the accent the system was
+    // chosen for. The primary must stay in the recognisable middle.
+    const { semantics } = solveSemantics(neutral, accent)
+    const p = oklch(semantics.primary)!
+    expect(p.l).toBeGreaterThan(0.3)
+    expect(p.l).toBeLessThan(0.8)
+    expect(p.c).toBeGreaterThan(0.02)
+  })
+
+  it('keeps the primary hue close to the seed accent hue', () => {
+    const seedHue = oklch(accent[500])!.h!
+    const p = oklch(solveSemantics(neutral, accent).semantics.primary)!
+    expect(Math.abs(p.h! - seedHue)).toBeLessThan(10)
   })
 
   it('keeps surface distinct from bg so elevation is visible', () => {

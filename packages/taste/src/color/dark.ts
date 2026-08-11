@@ -1,6 +1,9 @@
 import { oklch, formatHex, clampChroma } from 'culori'
 import { RAMP_STEPS, type Ramp, type RampStep } from './ramp.js'
-import { contrast, TARGETS, type Semantics, type PairReport } from './solve.js'
+import {
+  contrast, TARGETS, PRIMARY_PREFERENCE,
+  type Semantics, type PairReport
+} from './solve.js'
 
 /** Saturated colour glares against a dark ground, so chroma comes down. */
 const DARK_CHROMA_SCALE = 0.85
@@ -39,7 +42,7 @@ export const deriveDark = (
 
   let primary = desaturate(accent[400], DARK_CHROMA_SCALE)
   let onPrimary = neutral[950]
-  for (const step of RAMP_STEPS) {
+  for (const step of PRIMARY_PREFERENCE) {
     const candidate = desaturate(accent[step], DARK_CHROMA_SCALE)
     const light = contrast(neutral[50], candidate)
     const dark = contrast(neutral[950], candidate)

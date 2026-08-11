@@ -56,6 +56,13 @@ describe('deriveDark', () => {
     }
   })
 
+  it('picks a dark-scheme primary that still reads as the accent', () => {
+    const p = oklch(deriveDark(neutral, accent).semantics.primary)!
+    expect(p.l).toBeGreaterThan(0.3)
+    expect(p.l).toBeLessThan(0.85)
+    expect(p.c).toBeGreaterThan(0.015)
+  })
+
   it('is deterministic', () => {
     expect(deriveDark(neutral, accent).semantics)
       .toEqual(deriveDark(neutral, accent).semantics)

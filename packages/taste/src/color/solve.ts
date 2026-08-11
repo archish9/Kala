@@ -31,7 +31,16 @@ export const contrast = (a: string, b: string): number => {
 }
 
 const LIGHT_TO_DARK: RampStep[] = [...RAMP_STEPS]
-const DARK_TO_LIGHT: RampStep[] = [...RAMP_STEPS].reverse()
+
+/**
+ * Preference order for the primary action colour: the middle of the ramp
+ * first, then outward. Walking from either end instead would always pick a
+ * near-black or near-white step, since those trivially satisfy the contrast
+ * target — and a near-black primary button erases whatever accent the system
+ * was chosen for.
+ */
+export const PRIMARY_PREFERENCE: RampStep[] =
+  [600, 500, 700, 400, 800, 300, 900, 200, 950, 100, 50]
 
 const firstMeeting = (
   ramp: Ramp, order: RampStep[], against: string, target: number
@@ -58,7 +67,7 @@ export const solveSemantics = (
   // first that works with either the lightest or darkest neutral.
   let primary = accent[600]
   let onPrimary = neutral[50]
-  for (const step of DARK_TO_LIGHT) {
+  for (const step of PRIMARY_PREFERENCE) {
     const candidate = accent[step]
     const light = contrast(neutral[50], candidate)
     const dark = contrast(neutral[950], candidate)
