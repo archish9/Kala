@@ -1,0 +1,10 @@
+{
+  "id": "color-off-palette",
+  "kind": "node",
+  "severity": "error",
+  "select": { "hasFact": "style.color.fg" },
+  "assert": { "in": ["self.style.color.fg.hex", "$lock.derived.color"] },
+  "message": "Color {value} is not in the project palette.",
+  "fix": "Use an existing token, or add this color to the palette deliberately.",
+  "fixtures": { "pass": "../fixtures/color-pass.tsx", "fail": "../fixtures/color-fail.tsx" }
+}

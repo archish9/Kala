@@ -1,0 +1,10 @@
+{
+  "id": "text-contrast",
+  "kind": "relation",
+  "severity": "error",
+  "select": { "hasFact": "style.color.fg" },
+  "against": { "nearestAncestor": { "hasFact": "style.color.bg" } },
+  "assert": { "gte": ["contrast(self.style.color.fg, other.style.color.bg)", 4.5] },
+  "message": "Text contrast is below the 4.5:1 WCAG 2.1 AA minimum.",
+  "fixtures": { "pass": "../fixtures/contrast-pass.tsx", "fail": "../fixtures/contrast-fail.tsx" }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "type-off-scale",
+  "kind": "node",
+  "severity": "error",
+  "select": { "hasFact": "style.type.size" },
+  "assert": { "in": ["self.style.type.size.px", "$lock.derived.type.steps"] },
+  "message": "Text size {value} is not on the project type scale.",
+  "fixtures": { "pass": "../fixtures/type-pass.tsx", "fail": "../fixtures/type-fail.tsx" }
+}

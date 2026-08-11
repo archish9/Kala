@@ -1,0 +1,11 @@
+{
+  "id": "nested-card",
+  "kind": "node",
+  "severity": "warn",
+  "select": { "hasFact": "style.shape.radius" },
+  "predicate": "nested-card",
+  "message": "A bordered, rounded container sits directly inside another one.",
+  "fixtures": { "pass": "../fixtures/nested-pass.tsx", "fail": "../fixtures/nested-fail.tsx" },
+  "source": "impeccable@0.x/nested-cards",
+  "modified": true
+}

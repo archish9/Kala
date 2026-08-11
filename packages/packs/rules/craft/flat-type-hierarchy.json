@@ -1,0 +1,14 @@
+{
+  "id": "flat-type-hierarchy",
+  "kind": "aggregate",
+  "scope": "surface",
+  "severity": "warn",
+  "select": { "hasFact": "style.type.size" },
+  "collect": "style.type.size",
+  "assert": { "gte": ["distinct(collected)", 3] },
+  "minSample": 8,
+  "message": "Only {distinct} distinct text sizes on this surface. Hierarchy is flat.",
+  "fixtures": { "pass": "../fixtures/hierarchy-pass.tsx", "fail": "../fixtures/hierarchy-fail.tsx" },
+  "source": "impeccable@0.x/flat-type-hierarchy",
+  "modified": true
+}

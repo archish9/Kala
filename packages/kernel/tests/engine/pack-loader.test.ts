@@ -48,6 +48,13 @@ describe('loadPack', () => {
     expect(degraded.some(d => d.code === 'RULE_FIXTURE_NOT_FOUND')).toBe(true)
   })
 
+  it('resolves fixture paths to absolute, relative to the rule file', async () => {
+    const { rules } = await loadPack(dir)
+    const rule = rules.find(r => r.id === 'space-off-scale')!
+    expect(rule.fixtures.pass).toBe(join(dir, 'fixtures/space-pass.tsx'))
+    expect(rule.fixtures.fail).toBe(join(dir, 'fixtures/space-fail.tsx'))
+  })
+
   it('survives a malformed rule file and still loads the good ones', async () => {
     const { rules, degraded } = await loadPack(dir)
     expect(rules.length).toBe(1)

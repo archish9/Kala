@@ -1,0 +1,9 @@
+{
+  "name": "@fe-design/packs",
+  "version": "0.1.0",
+  "type": "module",
+  "devDependencies": {
+    "@fe-design/kernel": "workspace:*",
+    "@fe-design/extractor-react": "workspace:*"
+  }
+}

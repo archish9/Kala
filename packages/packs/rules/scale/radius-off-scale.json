@@ -1,0 +1,9 @@
+{
+  "id": "radius-off-scale",
+  "kind": "node",
+  "severity": "warn",
+  "select": { "hasFact": "style.shape.radius" },
+  "assert": { "in": ["self.style.shape.radius.px", "$lock.derived.radius"] },
+  "message": "Border radius {value} is not on the project radius scale.",
+  "fixtures": { "pass": "../fixtures/radius-pass.tsx", "fail": "../fixtures/radius-fail.tsx" }
+}

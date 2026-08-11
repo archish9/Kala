@@ -1,0 +1,12 @@
+{
+  "id": "space-off-scale",
+  "kind": "node",
+  "severity": "error",
+  "select": { "hasFact": "style.space.padding" },
+  "assert": { "allIn": ["self.style.space.padding", "$lock.derived.space"] },
+  "message": "Padding {value} is not on the project spacing scale.",
+  "fix": "Use the nearest value from derived.space in design.lock.json.",
+  "fixtures": { "pass": "../fixtures/space-pass.tsx", "fail": "../fixtures/space-fail.tsx" },
+  "source": "impeccable@0.x/cramped-padding",
+  "modified": true
+}

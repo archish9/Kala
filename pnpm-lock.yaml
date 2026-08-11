@@ -47,6 +47,15 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
 
+  packages/packs:
+    devDependencies:
+      '@fe-design/extractor-react':
+        specifier: workspace:*
+        version: link:../extractors/react
+      '@fe-design/kernel':
+        specifier: workspace:*
+        version: link:../kernel
+
 packages:
 
   '@babel/code-frame@7.29.7':

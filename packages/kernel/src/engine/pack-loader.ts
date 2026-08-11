@@ -46,9 +46,10 @@ export const loadPack = async (
     }
 
     const base = dirname(file)
+    const abs = { pass: resolve(base, fx.pass), fail: resolve(base, fx.fail) }
     const missing: string[] = []
-    for (const rel of [fx.pass, fx.fail]) {
-      if (!await exists(resolve(base, rel))) missing.push(rel)
+    for (const [key, p] of Object.entries(abs)) {
+      if (!await exists(p)) missing.push(`${key}: ${fx[key as 'pass' | 'fail']}`)
     }
     if (missing.length > 0) {
       degraded.push({
@@ -59,7 +60,10 @@ export const loadPack = async (
       continue
     }
 
-    rules.push(parsed)
+    // Fixture paths are written relative to the rule file. Only the loader knows
+    // that directory, so it resolves them here rather than leaking the
+    // convention to every consumer.
+    rules.push({ ...parsed, fixtures: abs })
   }
 
   return { rules, degraded }

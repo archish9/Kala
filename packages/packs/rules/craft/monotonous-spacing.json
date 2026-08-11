@@ -1,0 +1,14 @@
+{
+  "id": "monotonous-spacing",
+  "kind": "aggregate",
+  "scope": "surface",
+  "severity": "info",
+  "select": { "hasFact": "style.space.padding" },
+  "collect": "style.space.padding.top",
+  "assert": { "gte": ["distinct(collected)", 2] },
+  "minSample": 6,
+  "message": "Every element uses the same padding. Spacing carries no rhythm.",
+  "fixtures": { "pass": "../fixtures/spacing-pass.tsx", "fail": "../fixtures/spacing-fail.tsx" },
+  "source": "impeccable@0.x/monotonous-spacing",
+  "modified": true
+}

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { runRules } from '../../src/engine/runner.js'
+import { runRules, getFactPath } from '../../src/engine/runner.js'
 import { makeNode, emptyStyleFacts } from '../../src/ir/types.js'
 import { known, unknown } from '../../src/ir/fact.js'
 import type { IRDoc } from '../../src/ir/types.js'
@@ -71,6 +71,41 @@ describe('runRules — node kind', () => {
     const r = runRules([doc], [spaceRule], lock)
     expect(r.findings).toHaveLength(0)
     expect(r.coverage.skipped).toBe(0)
+  })
+})
+
+describe('getFactPath', () => {
+  const padded = makeNode({
+    id: 'n1', name: 'div',
+    style: {
+      ...base,
+      space: {
+        ...base.space,
+        padding: known({ top: 16, right: 8, bottom: 16, left: 8 }, origin)
+      }
+    }
+  })
+
+  it('reaches inside a known fact value and re-wraps with the original origin', () => {
+    const f = getFactPath(padded, 'style.space.padding.top')
+    expect(f?.state).toBe('known')
+    if (f?.state === 'known') {
+      expect(f.value).toBe(16)
+      expect(f.origin).toBe(origin)
+    }
+  })
+
+  it('propagates unknown rather than descending into it', () => {
+    const n = makeNode({
+      id: 'n2', name: 'div',
+      style: { ...base, space: { ...base.space, padding: unknown('prop-flow') } }
+    })
+    expect(getFactPath(n, 'style.space.padding.top')?.state).toBe('unknown')
+  })
+
+  it('propagates absent rather than descending into it', () => {
+    expect(getFactPath(makeNode({ id: 'n3', name: 'div' }), 'style.space.padding.top')?.state)
+      .toBe('absent')
   })
 })
 

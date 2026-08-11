@@ -1,0 +1,11 @@
+{
+  "id": "tiny-text",
+  "kind": "node",
+  "severity": "warn",
+  "select": { "hasFact": "style.type.size" },
+  "assert": { "gte": ["self.style.type.size.px", 12] },
+  "message": "Text size {value} is below the 12px legibility floor.",
+  "fixtures": { "pass": "../fixtures/tiny-pass.tsx", "fail": "../fixtures/tiny-fail.tsx" },
+  "source": "impeccable@0.x/tiny-text",
+  "modified": true
+}

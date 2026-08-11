@@ -2,7 +2,7 @@ import { evaluate } from './expr.js'
 import { distinct as distinctFn } from './builtins.js'
 import { ancestors } from '../ir/query.js'
 import { resolveSurface } from '../surface/resolve.js'
-import { isKnown, isUnknown, type Fact } from '../ir/fact.js'
+import { known, isKnown, isUnknown, type Fact, type StyleOrigin } from '../ir/fact.js'
 import type { IRDoc, IRNode } from '../ir/types.js'
 import type {
   RuleDef, Selector, Finding, VerifyResult, Degraded
@@ -18,16 +18,38 @@ export type PredicateFn = (
   node: IRNode, ctx: PredicateCtx
 ) => Omit<Finding, 'id'> | null
 
+const isFactLike = (x: unknown): x is Fact<unknown> =>
+  typeof x === 'object' && x !== null && 'state' in x
+
+/**
+ * Resolve a dotted path on a node to a Fact.
+ *
+ * A path may continue past a Fact (`style.space.padding.top`), in which case it
+ * descends into the fact's value and re-wraps the result carrying the original
+ * origin. absent and unknown propagate untouched, so reaching into an
+ * unresolvable fact stays unresolvable rather than silently becoming undefined.
+ */
 export const getFactPath = (
   node: IRNode, path: string
 ): Fact<unknown> | undefined => {
   const rel = path.replace(/^self\./, '')
   let cur: unknown = node
+  let origin: StyleOrigin | undefined
+
   for (const seg of rel.split('.')) {
     if (cur === null || cur === undefined) return undefined
+    if (isFactLike(cur)) {
+      if (cur.state !== 'known') return cur
+      origin = cur.origin
+      cur = cur.value
+      if (cur === null || cur === undefined) return undefined
+    }
     cur = (cur as Record<string, unknown>)[seg]
   }
-  return cur as Fact<unknown> | undefined
+
+  if (cur === undefined) return undefined
+  if (isFactLike(cur)) return cur
+  return origin ? known(cur, origin) : undefined
 }
 
 export const selectNodes = (doc: IRDoc, sel: Selector): IRNode[] =>
