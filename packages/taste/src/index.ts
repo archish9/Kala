@@ -12,4 +12,8 @@ export {
 } from './color/solve.js'
 export { deriveDark } from './color/dark.js'
 export { typeScale, spaceScale, radiusScale } from './scales.js'
+export {
+  loadSurfaces, matchSurface, REQUIRED_STATES,
+  type SurfaceDef, type RequiredState
+} from './surfaces.js'
 export * from './types.js'

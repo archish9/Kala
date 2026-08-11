@@ -1,0 +1,19 @@
+{
+  "id": "landing",
+  "aliases": ["marketing", "home", "index", "hero"],
+  "purpose": "A visitor decides whether this product is for them, and acts.",
+  "requiredStates": [],
+  "requirements": [
+    "State what the product does in the first viewport, in the user's words, not the company's.",
+    "One primary call to action, repeated at most twice down the page.",
+    "Every claim that implies proof carries the proof next to it.",
+    "Anything above the fold must render without waiting on data.",
+    "Reads top to bottom on a 375px viewport with no horizontal scroll."
+  ],
+  "antiPatterns": [
+    "A carousel hero — visitors see slide one and nothing else.",
+    "Competing primary buttons in the same viewport.",
+    "Fake urgency: countdowns or stock counts that are not real."
+  ],
+  "primaryAction": "The single action the visitor should take, placed above the fold"
+}

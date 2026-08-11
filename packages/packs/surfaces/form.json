@@ -1,0 +1,19 @@
+{
+  "id": "form",
+  "aliases": ["create", "edit", "new", "checkout", "submit"],
+  "purpose": "A user supplies information and completes a task.",
+  "requiredStates": ["loading", "error", "disabled", "success"],
+  "requirements": [
+    "Validation happens on blur and on submit, never on every keystroke.",
+    "Errors name the field and say how to fix it, not just that it is invalid.",
+    "The submit button shows a pending state and cannot be double-fired.",
+    "Required fields are marked before submission, not discovered after it.",
+    "Field order matches the order the user thinks in, not the database schema."
+  ],
+  "antiPatterns": [
+    "Clearing entered data when validation fails.",
+    "A generic 'Something went wrong' with no recovery path.",
+    "Placeholder text used as the label."
+  ],
+  "primaryAction": "Submit, disabled only while pending or genuinely invalid"
+}

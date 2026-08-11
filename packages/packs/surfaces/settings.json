@@ -1,0 +1,19 @@
+{
+  "id": "settings",
+  "aliases": ["preferences", "account", "profile", "config"],
+  "purpose": "A user changes something about their account and trusts that it saved.",
+  "requiredStates": ["loading", "error", "success", "permission"],
+  "requirements": [
+    "Saving shows a pending state and then a confirmed state; silence is not confirmation.",
+    "Destructive actions are separated from ordinary ones and require confirmation.",
+    "Unsaved changes warn before navigation.",
+    "Fields a user cannot edit explain why, rather than being silently disabled.",
+    "Labels sit outside the field so they survive being filled in."
+  ],
+  "antiPatterns": [
+    "A single Save button at the bottom of forty fields.",
+    "Placeholder text used as the label.",
+    "Delete sitting next to Save in the same button group."
+  ],
+  "primaryAction": "Save, made available only when something actually changed"
+}

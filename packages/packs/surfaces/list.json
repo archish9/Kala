@@ -1,0 +1,19 @@
+{
+  "id": "list",
+  "aliases": ["table", "index-page", "results", "search", "inbox", "feed"],
+  "purpose": "A user finds one item among many, or confirms none exists.",
+  "requiredStates": ["loading", "error", "empty"],
+  "requirements": [
+    "The empty state distinguishes 'nothing yet' from 'nothing matched your filter'.",
+    "Loading shows the shape of the result, not a centred spinner over blank space.",
+    "Row actions are reachable by keyboard, not revealed on hover alone.",
+    "Long values truncate with the full value still available.",
+    "Sort and filter state is visible without opening a menu."
+  ],
+  "antiPatterns": [
+    "Hover-only row actions, which do not exist on touch.",
+    "An empty state that is a shrug emoji and nothing actionable.",
+    "Pagination controls that hide the total count."
+  ],
+  "primaryAction": null
+}

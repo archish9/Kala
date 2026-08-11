@@ -1,0 +1,19 @@
+{
+  "id": "dashboard",
+  "aliases": ["analytics", "overview", "home-app", "metrics"],
+  "purpose": "A returning user checks state and finds what needs attention.",
+  "requiredStates": ["loading", "error", "empty"],
+  "requirements": [
+    "The most decision-relevant number is the largest thing on the screen.",
+    "Every metric states its period and its unit.",
+    "First-run shows a real empty state, not a zeroed-out chart.",
+    "Data that can fail renders an error state scoped to its own panel, not the page.",
+    "Nothing animates on data refresh — movement means something changed."
+  ],
+  "antiPatterns": [
+    "A wall of equally weighted cards with no hierarchy.",
+    "Sparklines with no axis, scale, or comparison.",
+    "Colour as the only carrier of status."
+  ],
+  "primaryAction": null
+}
