@@ -1,0 +1,20 @@
+fe-design-mcp
+Copyright 2026 the fe-design-mcp authors
+
+This product includes software developed as part of Impeccable
+(https://github.com/pbakaus/impeccable), licensed under the Apache License,
+Version 2.0. See LICENSES/Apache-2.0.txt.
+
+Files derived from Impeccable have been modified. Detection heuristics and
+thresholds were re-expressed as declarative rule definitions evaluated against
+an intermediate representation, replacing the original regular-expression
+implementation. Per-rule provenance is recorded in the "source" and "modified"
+fields of the rule JSON under packages/packs/rules/.
+
+Apache License 2.0 Section 6 grants no trademark rights. This project is not
+affiliated with, endorsed by, or branded as Impeccable.
+
+This product also includes data and guidance derived from:
+  - ui-ux-pro-max-skill (https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), MIT
+  - design-motion-principles (https://github.com/kylezantos/design-motion-principles), MIT
+See LICENSES/MIT.txt.
