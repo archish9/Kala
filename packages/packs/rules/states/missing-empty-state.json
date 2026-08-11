@@ -1,0 +1,9 @@
+{
+  "id": "missing-empty-state",
+  "kind": "document",
+  "severity": "error",
+  "select": {},
+  "predicate": "missing-empty-state",
+  "message": "This surface fetches a list and renders it, but has no empty state.",
+  "fixtures": { "pass": "../fixtures/states-empty-pass.tsx", "fail": "../fixtures/states-empty-fail.tsx" }
+}

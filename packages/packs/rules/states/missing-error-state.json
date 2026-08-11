@@ -1,0 +1,9 @@
+{
+  "id": "missing-error-state",
+  "kind": "document",
+  "severity": "error",
+  "select": {},
+  "predicate": "missing-error-state",
+  "message": "A data source has no error branch.",
+  "fixtures": { "pass": "../fixtures/states-error-pass.tsx", "fail": "../fixtures/states-error-fail.tsx" }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "missing-loading-state",
+  "kind": "document",
+  "severity": "warn",
+  "select": {},
+  "predicate": "missing-loading-state",
+  "message": "A data source has no loading branch.",
+  "fixtures": { "pass": "../fixtures/states-loading-pass.tsx", "fail": "../fixtures/states-loading-fail.tsx" }
+}

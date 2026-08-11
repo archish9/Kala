@@ -1,0 +1,9 @@
+{
+  "id": "list-without-empty",
+  "kind": "document",
+  "severity": "warn",
+  "select": {},
+  "predicate": "list-without-empty",
+  "message": "A list is rendered with no empty case.",
+  "fixtures": { "pass": "../fixtures/states-list-pass.tsx", "fail": "../fixtures/states-list-fail.tsx" }
+}
