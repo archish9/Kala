@@ -22,6 +22,24 @@ Call `system_status` with the project root.
 - If `components` already lists something that does the job, use it rather than
   writing a new one.
 
+## Before building a new screen
+
+Call `surface_brief` with the screen name or its route path.
+
+- `requiredStates` lists the states this kind of screen must handle. Build all
+  of them, not just the happy path.
+- `requirements` and `antiPatterns` are the brief. Satisfy the first, avoid the
+  second.
+- `system.signature` describes how this project does things. Follow it.
+
+## When changing the character of a design
+
+Call `guide` with one of: bolder, quieter, distill, harden, animate, typeset,
+layout, colorize, delight, clarify, adapt, optimize, onboard.
+
+The response is grounded in this project: `available` holds the real scales to
+work within, and `banned` lists what this system does not do.
+
 ## After writing any UI
 
 Call `verify` with the files you touched.

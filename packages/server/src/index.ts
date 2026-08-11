@@ -7,6 +7,7 @@ import { verify } from './tools/verify.js'
 import { explain } from './tools/explain.js'
 import { systemBootstrap } from './tools/system-bootstrap.js'
 import { surfaceBrief } from './tools/surface-brief.js'
+import { guide } from './tools/guide.js'
 import type { VerifyResult } from '@fe-design/kernel/engine/rule-types.js'
 
 let lastRun: VerifyResult | null = null
@@ -58,6 +59,20 @@ server.tool(
       .describe('Surface name, alias, or route path — e.g. "settings", "sign-in", "src/app/settings/page.tsx"')
   },
   async ({ dir, surface }) => asText(await surfaceBrief(dir, surface))
+)
+
+server.tool(
+  'guide',
+  'Get a playbook for a design action — bolder, quieter, distill, harden, animate, typeset, layout, colorize, delight, clarify, adapt, optimize, or onboard — grounded in this project design system rather than generic advice. Read-only.',
+  {
+    dir: z.string().describe('Absolute path to the project root'),
+    action: z.enum([
+      'bolder', 'quieter', 'distill', 'harden', 'animate', 'typeset', 'layout',
+      'colorize', 'delight', 'clarify', 'adapt', 'optimize', 'onboard'
+    ]).describe('Which design action to get a playbook for'),
+    target: z.string().optional().describe('Optional file or surface the action applies to')
+  },
+  async ({ dir, action, target }) => asText(await guide(dir, action, target))
 )
 
 server.tool(
