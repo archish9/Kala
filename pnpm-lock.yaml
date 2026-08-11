@@ -39,6 +39,9 @@ importers:
       culori:
         specifier: ^4.0.2
         version: 4.0.2
+      jiti:
+        specifier: ^2.7.0
+        version: 2.7.0
     devDependencies:
       '@types/culori':
         specifier: ^4.0.1
@@ -472,6 +475,10 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  jiti@2.7.0:
+    resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
+    hasBin: true
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -939,6 +946,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  jiti@2.7.0: {}
 
   js-tokens@4.0.0: {}
 

@@ -18,7 +18,8 @@
     "./surface/resolve.js": "./src/surface/resolve.ts"
   },
   "dependencies": {
-    "culori": "^4.0.2"
+    "culori": "^4.0.2",
+    "jiti": "^2.7.0"
   },
   "devDependencies": {
     "@types/culori": "^4.0.1"
