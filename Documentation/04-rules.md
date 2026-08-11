@@ -1,6 +1,16 @@
 # 4. Rule Reference
 
-All 13 rules, the four rule kinds, and how findings are suppressed.
+All 13 source rules, the three rendered checks, and how findings are suppressed.
+
+Two kinds of check exist and they work differently:
+
+| | Source rules | Rendered checks |
+|---|---|---|
+| Run by | `verify` | `inspect` |
+| Defined as | JSON in `packs/rules/` | TypeScript in `packages/browser/src/checks/` |
+| Need | nothing | a running page and Chromium |
+| Fixtures | two, enforced at load | unit tests over fact objects |
+| Count | 13 | 3 |
 
 - [The four rule kinds](#the-four-rule-kinds)
 - [Scale rules](#scale-rules)
@@ -8,13 +18,16 @@ All 13 rules, the four rule kinds, and how findings are suppressed.
 - [Accessibility rules](#accessibility-rules)
 - [Craft rules](#craft-rules)
 - [Real-world state rules](#real-world-state-rules)
+- [Rendered checks](#rendered-checks)
 - [The unknown contract](#the-unknown-contract)
 - [Rule anatomy](#rule-anatomy)
 - [Provenance](#provenance)
 
 ---
 
-## The complete list
+## Source rules
+
+Run by `verify`. No browser, no running page.
 
 | Rule | Kind | Severity | Catches |
 |---|---|---|---|
@@ -230,10 +243,79 @@ independent queries; it cannot invent one.
 
 ---
 
+## Rendered checks
+
+Run by `inspect` against a real page. These are **not** rules in the pack sense — they are
+pure TypeScript functions over collected browser facts, so they have no JSON definition and
+no fixtures.
+
+| Check | Severity | Catches |
+|---|---|---|
+| `computed-contrast` | error | Text below its target against the **ancestor-resolved** background |
+| `contrast-unresolved` | info | No opaque background reachable, so contrast was not judged |
+| `horizontal-overflow` | error | The page scrolls sideways, naming the widest offending element |
+| `small-touch-target` | warn | An interactive control under 44px at a touch-sized viewport |
+
+### `computed-contrast` — the one source analysis cannot do
+
+`getComputedStyle` returns `rgba(0, 0, 0, 0)` for an element with no background of its own:
+
+```html
+<body style="background:#ffffff">
+  <section style="padding:24px">              <!-- transparent -->
+    <p style="color:#9ca3af">faint text</p>   <!-- also transparent -->
+  </section>
+</body>
+```
+
+The paragraph's real background is the body's white, three levels up. Judging its contrast
+means walking ancestors to the first opaque colour — which requires a render. Source
+analysis can only see that the `<p>` sets no background, and `text-contrast` correctly
+skips it.
+
+Large text takes the relaxed WCAG target of **3.0:1** rather than 4.5, where large means
+24px, or 18.66px at weight 700 or above. Without that exemption a 32px heading in a soft
+grey would produce a finding a designer would rightly ignore, and a checker people ignore
+is worthless.
+
+### `contrast-unresolved` — the honest non-answer
+
+When nothing opaque is reachable — an element over an image or a gradient — there is no
+single background colour. Reporting a ratio would invent a number, so the check reports
+that it could not judge, at `info`:
+
+```
+Could not resolve a background colour behind p.hero; contrast not checked.
+```
+
+This is the same discipline as the [`unknown` contract](#the-unknown-contract) in the
+source rules, applied to pixels.
+
+### `horizontal-overflow`
+
+Compares `document.documentElement.scrollWidth` against the viewport width, with a
+one-pixel tolerance for sub-pixel layout rounding.
+
+It reports **once per page**, not once per element, but names the widest element extending
+past the viewport — "the page scrolls sideways" is not actionable without a culprit.
+
+### `small-touch-target`
+
+Interactive elements whose rendered box is under 44px on either side, at viewports of
+1024px or less. Above that width a pointer is likely and the rule does not apply.
+
+Zero-sized controls are skipped: those are hidden, not small, and reporting them is noise.
+
+Markup alone cannot answer this — a `<button>` with `padding: 12px` may or may not clear
+44px depending on its font, line height, and content.
+
+---
+
 ## The unknown contract
 
 **No rule fires on a fact it could not resolve.** Enforced in the evaluator, so a rule
-author cannot opt out.
+author cannot opt out. The rendered checks follow the same principle through
+`contrast-unresolved`.
 
 ```tsx
 <div className={cn('p-4', tone)}>   →  padding unknown  →  no finding, coverage.skipped++

@@ -4,6 +4,7 @@ How to add a rule, a design system, a surface, a playbook, or a whole framework.
 
 - [Add a rule](#add-a-rule)
 - [Add a rule that needs code](#add-a-rule-that-needs-code)
+- [Add a rendered check](#add-a-rendered-check)
 - [Add a design system](#add-a-design-system)
 - [Add a surface](#add-a-surface)
 - [Add a playbook](#add-a-playbook)
@@ -129,6 +130,135 @@ export default function missingErrorState(doc) {
 **The `unknown` contract still applies.** Check `fact.state === 'known'` before using a
 value. A predicate that reads `.value` off an unknown fact is inventing findings, which the
 `all-unknown.tsx` fixture will catch.
+
+---
+
+## Add a rendered check
+
+Rendered checks run inside `inspect` against a real page. They are **not** pack rules:
+no JSON, no fixtures, just a pure function over collected browser facts.
+
+Reach for one only when the question genuinely needs a render. If source analysis can
+answer it, write a [pack rule](#add-a-rule) instead — it is cheaper, needs no browser, and
+runs on every `verify`.
+
+### 1. Write the check
+
+`packages/browser/src/checks/my-check.ts`:
+
+```ts
+import type { PageFacts } from '../facts.js'
+import type { BrowserFinding } from './contrast.js'
+
+export const checkMyThing = (facts: PageFacts): BrowserFinding[] => {
+  const viewport = `${facts.viewport.width}x${facts.viewport.height}`
+  const out: BrowserFinding[] = []
+
+  for (const node of facts.nodes) {
+    if (!node.someCondition) continue
+
+    out.push({
+      rule: 'my-check',
+      sev: 'warn',
+      selector: node.selector,
+      viewport,
+      msg: `${node.selector} does the wrong thing.`,
+      fix: 'What to do about it.'
+    })
+  }
+
+  return out
+}
+```
+
+Every finding carries its `viewport`, because the same page can pass at 1440px and fail at
+375px.
+
+### 2. Collect any fact it needs
+
+If `PageFacts` does not already carry what you need, extend `BrowserNode` in
+`packages/browser/src/facts.ts` and gather it in `COLLECT_SCRIPT` in `collect.ts`.
+
+That script runs **inside the page** and is serialised across the process boundary, so it
+must be entirely self-contained — no imports, no closure over anything outside itself.
+
+### 3. Register it
+
+In `packages/browser/src/inspect.ts`:
+
+```ts
+import { checkMyThing } from './checks/my-check.js'
+
+export const runChecks = (facts: PageFacts): BrowserFinding[] => {
+  const all = [
+    ...checkContrast(facts),
+    ...checkOverflow(facts),
+    ...checkTargets(facts),
+    ...checkMyThing(facts)
+  ]
+  return all.sort((a, b) => SEVERITY_RANK[a.sev] - SEVERITY_RANK[b.sev])
+}
+```
+
+### 4. Test it without a browser
+
+This is why the checks are pure. Build fact objects directly:
+
+```ts
+import { describe, it, expect } from 'vitest'
+import { checkMyThing } from '../../src/checks/my-check.js'
+import type { BrowserNode, PageFacts } from '../../src/facts.js'
+
+const node = (over: Partial<BrowserNode>): BrowserNode => ({
+  id: 'b0', tag: 'p', selector: 'p', text: 'hi',
+  color: 'rgb(17,24,39)', bg: 'rgb(255,255,255)', bgResolved: true,
+  fontSize: 16, fontWeight: 400,
+  rect: { x: 0, y: 0, w: 100, h: 20 }, interactive: false,
+  ...over
+})
+
+const facts = (nodes: BrowserNode[]): PageFacts => ({
+  viewport: { width: 375, height: 812 }, scrollWidth: 375, nodes
+})
+
+describe('checkMyThing', () => {
+  it('reports nothing when the page is fine', () => {
+    expect(checkMyThing(facts([node({})]))).toEqual([])
+  })
+
+  it('reports the problem when present', () => {
+    expect(checkMyThing(facts([node({ /* the bad case */ })]))).toHaveLength(1)
+  })
+})
+```
+
+Add a case to `packages/browser/tests/smoke.test.ts` only if the check needs a real render
+to exercise — the seeded page there is the place for it.
+
+### 5. Group it in reviews
+
+Add the rule id to `SECTION_FOR` in `packages/report/src/critique.ts`:
+
+```ts
+export const SECTION_FOR: Record<string, string> = {
+  …,
+  'my-check': 'Craft'
+}
+```
+
+Skipping this is not fatal — an unrecognised rule lands in an `Other` section rather than
+vanishing — but naming it puts the finding where a reader expects it.
+
+### Two rules to honour
+
+**Never invent a value.** If the fact needed to judge is missing, report that it could not
+be judged, as `contrast-unresolved` does. Guessing produces false findings, which is the
+one failure mode that makes people stop trusting the tool.
+
+**Exempt what would be noise.** `checkTargets` skips zero-sized elements because those are
+hidden rather than small, and only applies below 1024px. `checkContrast` relaxes its target
+for large text. An exemption you can justify in one sentence is worth more than a finding
+nobody acts on.
 
 ---
 
