@@ -46,8 +46,10 @@ Call `verify` with the files you touched.
 
 - Fix every `error`. Fix `warn` unless it conflicts with an explicit instruction
   from the user.
-- `coverage.skipped` counts nodes that could not be analyzed statically — usually
-  dynamic class expressions. It is information, not a failure.
+- `coverage.skipped` counts nodes that could not be analyzed statically —
+  dynamic class expressions in any framework, and CSS rules whose selectors
+  depend on ancestors this tool cannot see. It is information, not a failure.
+- `verify` handles `.tsx`, `.jsx`, `.vue`, `.svelte`, `.html`, and `.htm`.
 - Call `explain` with a finding id when the message alone is not enough to act on.
 
 ## Rules

@@ -62,6 +62,27 @@ describe.skipIf(!existsSync(BIN))('built binary', () => {
     expect(payload.requiredStates).toContain('error')
   }, 15000)
 
+  it('analyzes a Vue file through the shipped binary', async () => {
+    const out = await rpc([
+      INIT, READY,
+      JSON.stringify({
+        jsonrpc: '2.0', id: 2, method: 'tools/call',
+        params: {
+          name: 'verify',
+          arguments: { dir: PROJECT, paths: ['src/app/settings/Panel.vue'] }
+        }
+      })
+    ])
+    const call = out.trim().split('\n').map(l => JSON.parse(l)).find(m => m.id === 2)
+    const payload = JSON.parse(call.result.content[0].text)
+    expect(payload.error).toBeUndefined()
+    expect(payload.degraded.some((d: { code: string }) => d.code === 'UNSUPPORTED_FRAMEWORK'))
+      .toBe(false)
+    // nested-card was written for React in Phase 1. Firing here, on Vue markup
+    // it was never written for, is the premise the whole IR rests on.
+    expect(payload.findings.map((f: { rule: string }) => f.rule)).toContain('nested-card')
+  }, 15000)
+
   it('returns a grounded guide through the shipped binary', async () => {
     const out = await rpc([
       INIT, READY,

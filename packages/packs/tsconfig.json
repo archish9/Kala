@@ -9,6 +9,7 @@
     "tests"
   ],
   "exclude": [
+    "dist",
     "rules/fixtures"
   ],
   "references": [

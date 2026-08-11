@@ -1,0 +1,13 @@
+{
+  "name": "@fe-design/extractor-equivalence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@fe-design/kernel": "workspace:*",
+    "@fe-design/extractor-react": "workspace:*",
+    "@fe-design/extractor-vue": "workspace:*",
+    "@fe-design/extractor-svelte": "workspace:*",
+    "@fe-design/extractor-html": "workspace:*"
+  }
+}

@@ -34,6 +34,24 @@ importers:
         specifier: ^4.0.0
         version: 4.0.1
 
+  packages/extractors/equivalence:
+    devDependencies:
+      '@fe-design/extractor-html':
+        specifier: workspace:*
+        version: link:../html
+      '@fe-design/extractor-react':
+        specifier: workspace:*
+        version: link:../react
+      '@fe-design/extractor-svelte':
+        specifier: workspace:*
+        version: link:../svelte
+      '@fe-design/extractor-vue':
+        specifier: workspace:*
+        version: link:../vue
+      '@fe-design/kernel':
+        specifier: workspace:*
+        version: link:../../kernel
+
   packages/extractors/html:
     dependencies:
       '@fe-design/extractor-core':
