@@ -26,6 +26,9 @@
     },
     {
       "path": "../extractors/vue"
+    },
+    {
+      "path": "../extractors/svelte"
     }
   ]
 }

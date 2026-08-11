@@ -1,0 +1,15 @@
+{
+  "name": "@fe-design/extractor-svelte",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/src/index.d.ts", "import": "./dist/src/index.js" }
+  },
+  "dependencies": {
+    "@fe-design/kernel": "workspace:*",
+    "@fe-design/extractor-core": "workspace:*",
+    "svelte": "^5.0.0"
+  }
+}

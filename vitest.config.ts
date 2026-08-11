@@ -29,6 +29,10 @@ export default defineConfig({
         find: '@fe-design/extractor-vue',
         replacement: src('packages/extractors/vue/src/index.ts')
       },
+      {
+        find: '@fe-design/extractor-svelte',
+        replacement: src('packages/extractors/svelte/src/index.ts')
+      },
       { find: '@fe-design/packs', replacement: src('packages/packs/src/index.ts') },
       { find: '@fe-design/taste', replacement: src('packages/taste/src/index.ts') }
     ]

@@ -11,6 +11,9 @@
       "path": "./packages/extractors/vue"
     },
     {
+      "path": "./packages/extractors/svelte"
+    },
+    {
       "path": "./packages/extractors/react"
     },
     {

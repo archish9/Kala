@@ -12,7 +12,8 @@
     "zod": "^3.23.0",
     "@fe-design/packs": "workspace:*",
     "@fe-design/taste": "workspace:*",
-    "@fe-design/extractor-vue": "workspace:*"
+    "@fe-design/extractor-vue": "workspace:*",
+    "@fe-design/extractor-svelte": "workspace:*"
   },
   "scripts": {
     "build": "tsc -b"
