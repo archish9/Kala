@@ -5,6 +5,7 @@ import { z } from 'zod'
 import { systemStatus } from './tools/system-status.js'
 import { verify } from './tools/verify.js'
 import { explain } from './tools/explain.js'
+import { systemBootstrap } from './tools/system-bootstrap.js'
 import type { VerifyResult } from '@fe-design/kernel/engine/rule-types.js'
 
 let lastRun: VerifyResult | null = null
@@ -45,6 +46,33 @@ server.tool(
   'Expand one finding id or rule id from the most recent verify run into its full rationale, fix guidance, and provenance.',
   { id: z.string().describe('A finding id such as "f7", or a rule id') },
   async ({ id }) => asText(await explain(id, lastRun))
+)
+
+server.tool(
+  'system_bootstrap',
+  'Create a design system for a project that has none. Called with a brief alone it returns three candidate directions and writes nothing; call it again with choice to apply one. This is the only tool that writes files.',
+  {
+    dir: z.string().describe('Absolute path to the project root'),
+    brief: z.string().describe('What the product is, who it is for, how it should feel'),
+    choice: z.number().int().min(1).max(3).optional()
+      .describe('Which proposal to apply, 1-3. Omit to see proposals first.'),
+    accent: z.string().optional().describe('Accent color as hex, e.g. #1F4B3F'),
+    force: z.boolean().optional()
+      .describe('Replace an existing design system. Rewrites palette, type, and scales.')
+  },
+  async ({ dir, brief, choice, accent, force }) => {
+    try {
+      // Built conditionally: under exactOptionalPropertyTypes an explicit
+      // undefined is not the same as an omitted key.
+      const opts: { choice?: number; accent?: string; force?: boolean } = {}
+      if (choice !== undefined) opts.choice = choice
+      if (accent !== undefined) opts.accent = accent
+      if (force !== undefined) opts.force = force
+      return asText(await systemBootstrap(dir, brief, opts))
+    } catch (err) {
+      return asText({ error: (err as Error).message })
+    }
+  }
 )
 
 await server.connect(new StdioServerTransport())

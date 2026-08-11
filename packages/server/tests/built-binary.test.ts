@@ -33,15 +33,33 @@ const INIT = JSON.stringify({
 const READY = JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })
 
 describe.skipIf(!existsSync(BIN))('built binary', () => {
-  it('completes an MCP handshake and lists all three tools', async () => {
+  it('completes an MCP handshake and lists all four tools', async () => {
     const out = await rpc([
       INIT, READY,
       JSON.stringify({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} })
     ])
     const listed = out.trim().split('\n').map(l => JSON.parse(l))
       .find(m => m.id === 2)
-    expect(listed.result.tools.map((t: { name: string }) => t.name))
-      .toEqual(['system_status', 'verify', 'explain'])
+    expect(listed.result.tools.map((t: { name: string }) => t.name).sort())
+      .toEqual(['explain', 'system_bootstrap', 'system_status', 'verify'])
+  }, 15000)
+
+  it('proposes design systems through the shipped binary', async () => {
+    const out = await rpc([
+      INIT, READY,
+      JSON.stringify({
+        jsonrpc: '2.0', id: 2, method: 'tools/call',
+        params: {
+          name: 'system_bootstrap',
+          arguments: { dir: PROJECT, brief: 'invoicing tool for freelancers' }
+        }
+      })
+    ])
+    const call = out.trim().split('\n').map(l => JSON.parse(l)).find(m => m.id === 2)
+    const payload = JSON.parse(call.result.content[0].text)
+    expect(payload.error).toBeUndefined()
+    expect(payload.mode).toBe('proposed')
+    expect(payload.proposals).toHaveLength(3)
   }, 15000)
 
   it('runs verify against a real project and finds the seeded violations', async () => {
