@@ -33,6 +33,9 @@
     },
     {
       "path": "./packages/browser"
+    },
+    {
+      "path": "./packages/report"
     }
   ]
 }

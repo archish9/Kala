@@ -38,6 +38,7 @@ export default defineConfig({
         replacement: src('packages/extractors/html/src/index.ts')
       },
       { find: '@fe-design/browser', replacement: src('packages/browser/src/index.ts') },
+      { find: '@fe-design/report', replacement: src('packages/report/src/index.ts') },
       { find: '@fe-design/packs', replacement: src('packages/packs/src/index.ts') },
       { find: '@fe-design/taste', replacement: src('packages/taste/src/index.ts') }
     ]

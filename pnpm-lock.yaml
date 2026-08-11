@@ -142,6 +142,15 @@ importers:
         specifier: workspace:*
         version: link:../kernel
 
+  packages/report:
+    dependencies:
+      '@fe-design/browser':
+        specifier: workspace:*
+        version: link:../browser
+      '@fe-design/kernel':
+        specifier: workspace:*
+        version: link:../kernel
+
   packages/server:
     dependencies:
       '@fe-design/browser':
