@@ -14,3 +14,4 @@ dist/
 # tsc -b emits here; it must never sit beside sources or vitest
 # resolves ../foo.js to a stale build instead of the TypeScript.
 dist/
+docs/
