@@ -2,10 +2,10 @@ import { readFile } from 'node:fs/promises'
 import { relative } from 'node:path'
 import { deriveLock } from '@fe-design/kernel/lock/derive.js'
 import { runRules } from '@fe-design/kernel/engine/runner.js'
-import { extractReact } from '@fe-design/extractor-react'
 import type { IRDoc } from '@fe-design/kernel/ir/types.js'
 import type { VerifyResult, Degraded } from '@fe-design/kernel/engine/rule-types.js'
 import { getPack, safeJoin } from '../context.js'
+import { extractorFor, SUPPORTED_EXTENSIONS } from '../extractors.js'
 
 const MAX_BYTES = 2 * 1024 * 1024
 
@@ -47,17 +47,18 @@ export const verify = async (
       continue
     }
 
-    if (!/\.(tsx|jsx)$/.test(file)) {
+    const extract = extractorFor(file)
+    if (!extract) {
       degraded.push({
         code: 'UNSUPPORTED_FRAMEWORK', path: rel,
-        detail: 'Phase 1 analyzes .tsx and .jsx only.',
+        detail: `No extractor for this file type. Supported: ${SUPPORTED_EXTENSIONS.join(', ')}.`,
         impact: '1 file not analyzed'
       })
       continue
     }
 
     try {
-      docs.push(extractReact(src, rel))
+      docs.push(extract(src, rel))
     } catch (err) {
       degraded.push({
         code: 'PARSE_FAILED', path: rel,
