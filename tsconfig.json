@@ -30,6 +30,9 @@
     },
     {
       "path": "./packages/extractors/equivalence"
+    },
+    {
+      "path": "./packages/browser"
     }
   ]
 }
