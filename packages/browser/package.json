@@ -5,13 +5,25 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/src/index.d.ts", "import": "./dist/src/index.js" }
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
   },
   "dependencies": {
     "@fe-design/kernel": "workspace:*",
     "@fe-design/taste": "workspace:*"
   },
-  "peerDependencies": { "playwright": ">=1.40.0" },
-  "peerDependenciesMeta": { "playwright": { "optional": true } },
-  "devDependencies": { "playwright": "^1.62.0" }
+  "peerDependencies": {
+    "playwright": ">=1.40.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "playwright": "^1.62.0"
+  },
+  "license": "Apache-2.0"
 }

@@ -5,11 +5,15 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/src/index.d.ts", "import": "./dist/src/index.js" }
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
   },
   "dependencies": {
     "@fe-design/kernel": "workspace:*",
     "@fe-design/extractor-core": "workspace:*",
     "parse5": "^7.2.0"
-  }
+  },
+  "license": "Apache-2.0"
 }

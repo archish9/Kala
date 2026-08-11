@@ -60,5 +60,6 @@
   "devDependencies": {
     "@types/culori": "^4.0.1"
   },
-  "types": "./dist/src/index.d.ts"
+  "types": "./dist/src/index.d.ts",
+  "license": "Apache-2.0"
 }

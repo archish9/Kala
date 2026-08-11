@@ -124,5 +124,13 @@ attribution. See [NOTICE](NOTICE) and [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## License
 
-See [LICENSES/](LICENSES/). Apache-2.0 §6 grants no trademark rights; this project is not
-affiliated with or endorsed by any of the projects above.
+Apache-2.0. Copyright 2026 archish9. See [LICENSE](LICENSE).
+
+Apache-2.0 was chosen because it is the most restrictive licence this project is already
+bound by — MIT-licensed material can be redistributed under Apache-2.0, but not the
+reverse.
+
+Incoming licences are reproduced verbatim in [LICENSES/](LICENSES/): each must be shipped
+unchanged, so there is one file per licence rather than a merged summary. Apache-2.0 §6
+grants no trademark rights; this project is not affiliated with or endorsed by any of the
+projects above.

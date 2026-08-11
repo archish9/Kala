@@ -20,5 +20,6 @@
     "systems",
     "surfaces",
     "guides"
-  ]
+  ],
+  "license": "Apache-2.0"
 }
