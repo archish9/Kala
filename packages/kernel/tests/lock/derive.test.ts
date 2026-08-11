@@ -68,6 +68,45 @@ describe('deriveLock', () => {
   })
 })
 
+describe('deriveLock — intent persistence', () => {
+  it('reads the intent zone back from a committed lock', async () => {
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)
+    const { lock } = await deriveLock(dir, { system: 'quiet-precision' })
+    await writeFile(join(dir, 'design.lock.json'), JSON.stringify(lock, null, 2))
+
+    // A plain refresh regenerates derived and must not lose intent.
+    const again = await deriveLock(dir)
+    expect(again.lock?.intent.system).toBe('quiet-precision')
+  })
+
+  it('lets an explicit intent override the persisted one', async () => {
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)
+    const { lock } = await deriveLock(dir, { system: 'quiet-precision' })
+    await writeFile(join(dir, 'design.lock.json'), JSON.stringify(lock, null, 2))
+
+    const again = await deriveLock(dir, { system: 'warm-utility' })
+    expect(again.lock?.intent.system).toBe('warm-utility')
+  })
+
+  it('regenerates the derived zone even when intent is persisted', async () => {
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)
+    const { lock } = await deriveLock(dir, { system: 'quiet-precision' })
+    await writeFile(join(dir, 'design.lock.json'), JSON.stringify(lock, null, 2))
+
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '9px' } } } }`)
+    const again = await deriveLock(dir)
+    expect(again.lock?.derived.space).toEqual([9])
+    expect(again.lock?.intent.system).toBe('quiet-precision')
+  })
+
+  it('survives a malformed lock file rather than throwing', async () => {
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)
+    await writeFile(join(dir, 'design.lock.json'), '{ not json')
+    const { lock } = await deriveLock(dir)
+    expect(lock?.intent.system).toBeNull()
+  })
+})
+
 describe('checkStale', () => {
   it('reports stale after a source file changes', async () => {
     await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)

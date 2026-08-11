@@ -6,6 +6,7 @@ import { systemStatus } from './tools/system-status.js'
 import { verify } from './tools/verify.js'
 import { explain } from './tools/explain.js'
 import { systemBootstrap } from './tools/system-bootstrap.js'
+import { surfaceBrief } from './tools/surface-brief.js'
 import type { VerifyResult } from '@fe-design/kernel/engine/rule-types.js'
 
 let lastRun: VerifyResult | null = null
@@ -46,6 +47,17 @@ server.tool(
   'Expand one finding id or rule id from the most recent verify run into its full rationale, fix guidance, and provenance.',
   { id: z.string().describe('A finding id such as "f7", or a rule id') },
   async ({ id }) => asText(await explain(id, lastRun))
+)
+
+server.tool(
+  'surface_brief',
+  'Get the requirements for a screen before building it: which real-world states it must handle, what it must do, what to avoid, and the project design constraints it must work within. Call this before writing a new surface. Read-only.',
+  {
+    dir: z.string().describe('Absolute path to the project root'),
+    surface: z.string()
+      .describe('Surface name, alias, or route path — e.g. "settings", "sign-in", "src/app/settings/page.tsx"')
+  },
+  async ({ dir, surface }) => asText(await surfaceBrief(dir, surface))
 )
 
 server.tool(

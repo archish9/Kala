@@ -11,6 +11,8 @@ const CONFIG_NAMES = [
   'tailwind.config.mjs', 'tailwind.config.cjs'
 ]
 
+const LOCK_FILE = 'design.lock.json'
+
 const CSS_CANDIDATES = [
   'src/globals.css', 'src/styles/globals.css',
   'app/globals.css', 'styles/globals.css'
@@ -58,6 +60,19 @@ export const deriveLock = async (
   const sourcePaths: string[] = []
   const derived = emptyDerived()
   let found = false
+
+  // The derived zone is regenerated from config every time, but the intent zone
+  // is authored and must survive that. Read it back from the committed lock so
+  // a refresh cannot silently discard the design intent, then let an explicit
+  // argument override it.
+  let persistedIntent: Partial<IntentZone> = {}
+  try {
+    const raw = await readFile(join(dir, LOCK_FILE), 'utf8')
+    const parsed = JSON.parse(raw) as { intent?: Partial<IntentZone> }
+    if (parsed.intent) persistedIntent = parsed.intent
+  } catch {
+    // No lock yet, or an unreadable one. Either way the intent starts empty.
+  }
 
   const configName = (await Promise.all(
     CONFIG_NAMES.map(async n => (await exists(join(dir, n))) ? n : null)
@@ -140,7 +155,7 @@ export const deriveLock = async (
       version: 1,
       sources: await hashSources(dir, sourcePaths),
       derived,
-      intent: { ...emptyIntent(), ...intent }
+      intent: { ...emptyIntent(), ...persistedIntent, ...intent }
     },
     degraded
   }
