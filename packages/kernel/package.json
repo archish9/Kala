@@ -4,7 +4,18 @@
   "type": "module",
   "main": "./src/index.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./ir/fact.js": "./src/ir/fact.ts",
+    "./ir/types.js": "./src/ir/types.ts",
+    "./ir/query.js": "./src/ir/query.ts",
+    "./engine/expr.js": "./src/engine/expr.ts",
+    "./engine/runner.js": "./src/engine/runner.ts",
+    "./engine/rule-types.js": "./src/engine/rule-types.ts",
+    "./engine/pack-loader.js": "./src/engine/pack-loader.ts",
+    "./lock/types.js": "./src/lock/types.ts",
+    "./lock/derive.js": "./src/lock/derive.ts",
+    "./lock/staleness.js": "./src/lock/staleness.ts",
+    "./surface/resolve.js": "./src/surface/resolve.ts"
   },
   "dependencies": {
     "culori": "^4.0.2"

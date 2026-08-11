@@ -1,0 +1,13 @@
+{
+  "name": "@fe-design/extractor-react",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@fe-design/kernel": "workspace:*",
+    "@babel/parser": "^7.25.0",
+    "@babel/traverse": "^7.25.0"
+  },
+  "devDependencies": { "@types/babel__traverse": "^7.20.0" }
+}
