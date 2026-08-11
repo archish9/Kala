@@ -1,0 +1,17 @@
+{
+  "id": "onboard",
+  "intent": "Design the first run, when there is no data and no habit yet.",
+  "moves": [
+    "Make the empty state the teacher: say what goes here and give the action that starts it.",
+    "Show one path to first value, not a tour of every feature.",
+    "Prefill or sample data where it removes a blank-page decision.",
+    "Ask for nothing at signup that the product does not need to work.",
+    "Make the first success visible and immediate, so the second use has a reason."
+  ],
+  "avoid": [
+    "A modal tour that must be dismissed before anything can be tried.",
+    "Empty states that describe the emptiness without offering the next step.",
+    "Progress meters toward a goal the user has not agreed to."
+  ],
+  "usesTokens": ["space", "type", "color"]
+}

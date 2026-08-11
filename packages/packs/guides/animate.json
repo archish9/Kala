@@ -1,0 +1,17 @@
+{
+  "id": "animate",
+  "intent": "Add motion that carries meaning, and only where it earns its cost.",
+  "moves": [
+    "Ask how often the user triggers this. High-frequency interactions get faster motion or none.",
+    "Animate what changed, not the whole container.",
+    "Use one duration for entering and a shorter one for leaving; exits should feel quicker.",
+    "Ease out for things arriving, ease in for things leaving.",
+    "Honour prefers-reduced-motion by removing motion, not by shortening it."
+  ],
+  "avoid": [
+    "Motion on content that is simply present at mount.",
+    "Bounce or elastic easing on utility actions.",
+    "Staggering every child in a list, which multiplies the wait by the row count."
+  ],
+  "usesTokens": ["motion"]
+}

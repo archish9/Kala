@@ -1,0 +1,17 @@
+{
+  "id": "layout",
+  "intent": "Give the surface a spatial structure a reader can predict.",
+  "moves": [
+    "Group related elements by proximity before reaching for a border or a card.",
+    "Make the gap between groups at least twice the gap within a group.",
+    "Align every element to a shared edge; a single stray alignment reads as a bug.",
+    "Choose one column count and hold it, rather than varying it per section.",
+    "Set section rhythm from one spacing value multiplied, not from arbitrary numbers."
+  ],
+  "avoid": [
+    "Cards inside cards, which double the padding and halve the clarity.",
+    "Centring everything, which removes the alignment edge the eye follows.",
+    "Equal spacing everywhere, which erases the grouping information spacing carries."
+  ],
+  "usesTokens": ["space"]
+}

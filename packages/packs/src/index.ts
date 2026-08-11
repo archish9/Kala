@@ -23,3 +23,4 @@ const findPackDir = (name: string): string => {
 export const RULES_DIR = findPackDir('rules')
 export const SYSTEMS_DIR = findPackDir('systems')
 export const SURFACES_DIR = findPackDir('surfaces')
+export const GUIDES_DIR = findPackDir('guides')

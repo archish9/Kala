@@ -1,0 +1,17 @@
+{
+  "id": "bolder",
+  "intent": "Amplify a design that reads as safe or timid, without abandoning the system.",
+  "moves": [
+    "Raise the primary heading two steps on the type scale, not one — one step reads as a mistake.",
+    "Increase the contrast between the largest and smallest text, rather than enlarging everything.",
+    "Give the single most important element more space around it than anything else on the surface.",
+    "Commit the accent colour to one element instead of spreading it across several.",
+    "Let one element break the grid deliberately, and only one."
+  ],
+  "avoid": [
+    "Adding gradients, glows, or shadows to manufacture emphasis.",
+    "Making every heading bigger, which restores the flatness you started with.",
+    "Introducing a second accent colour."
+  ],
+  "usesTokens": ["type", "color", "space"]
+}

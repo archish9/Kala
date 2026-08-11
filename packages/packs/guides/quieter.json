@@ -1,0 +1,17 @@
+{
+  "id": "quieter",
+  "intent": "Calm a surface that overstimulates, by removing emphasis rather than shrinking it.",
+  "moves": [
+    "Count the elements competing for first attention. Keep one, demote the rest a full step.",
+    "Replace filled backgrounds with borders wherever the fill was decorative.",
+    "Cut the number of distinct font weights on the surface to two.",
+    "Move colour off surfaces and onto the one element that needs the eye.",
+    "Halve every animation duration, then ask whether the motion is needed at all."
+  ],
+  "avoid": [
+    "Reducing everything proportionally, which preserves the noise at a smaller size.",
+    "Lowering text contrast to soften the look — quiet is not the same as unreadable.",
+    "Replacing colour with grey while keeping the same number of competing elements."
+  ],
+  "usesTokens": ["type", "color", "motion"]
+}

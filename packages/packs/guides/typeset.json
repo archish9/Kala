@@ -1,0 +1,17 @@
+{
+  "id": "typeset",
+  "intent": "Fix hierarchy, measure, and rhythm in the text itself.",
+  "moves": [
+    "Cap the measure near 68 characters; long lines lose the reader between rows.",
+    "Set body leading around 1.5, and tighten it as text gets larger, never the reverse.",
+    "Use size and weight together for hierarchy — one of them alone reads as an accident.",
+    "Give headings more space above than below, so they bind to the text they introduce.",
+    "Use tabular figures anywhere numbers stack in a column."
+  ],
+  "avoid": [
+    "More than three distinct sizes on one surface.",
+    "Letter-spacing on body text, which is set for its size already.",
+    "Centred paragraphs of more than two lines."
+  ],
+  "usesTokens": ["type", "space"]
+}

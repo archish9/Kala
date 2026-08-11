@@ -1,0 +1,17 @@
+{
+  "id": "clarify",
+  "intent": "Rewrite interface copy so it says what happens, in the user's words.",
+  "moves": [
+    "Make button labels name the outcome — Save changes, not Submit; Delete project, not OK.",
+    "Rewrite errors to say what went wrong and what to do next, in that order.",
+    "Replace system vocabulary with the words a user would say out loud.",
+    "Cut leading pleasantries; the first word should carry meaning.",
+    "State what an empty state means and what to do about it."
+  ],
+  "avoid": [
+    "Cleverness where precision was needed.",
+    "Blaming the user in error copy, or blaming nobody with the passive voice.",
+    "Tooltips carrying information the user needs before they hover."
+  ],
+  "usesTokens": ["type"]
+}

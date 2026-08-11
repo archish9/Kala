@@ -1,0 +1,17 @@
+{
+  "id": "delight",
+  "intent": "Add one memorable moment where it costs the user nothing.",
+  "moves": [
+    "Put it at a completion, not at an interruption — after the task, never before it.",
+    "Pick exactly one moment per surface, so it stays a moment.",
+    "Make the delight optional to notice: it must not delay the next action.",
+    "Write the empty state as though a person wrote it, because that is nearly free.",
+    "Let a hover or focus state do something considered rather than merely change colour."
+  ],
+  "avoid": [
+    "Delight on high-frequency actions, which becomes friction by the tenth use.",
+    "Animation that blocks input while it plays.",
+    "Confetti on anything the user did not choose to do."
+  ],
+  "usesTokens": ["motion", "color"]
+}

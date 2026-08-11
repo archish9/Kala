@@ -16,4 +16,8 @@ export {
   loadSurfaces, matchSurface, REQUIRED_STATES,
   type SurfaceDef, type RequiredState
 } from './surfaces.js'
+export {
+  loadGuides, GUIDE_ACTIONS, TOKEN_GROUPS,
+  type GuideDef, type GuideAction, type TokenGroup
+} from './guides.js'
 export * from './types.js'

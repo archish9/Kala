@@ -1,0 +1,17 @@
+{
+  "id": "adapt",
+  "intent": "Make the surface work at the sizes it will actually be used at.",
+  "moves": [
+    "Design the narrow view first, then let space earn the wider one.",
+    "Give every touch target at least 44px, including its padding.",
+    "Reflow columns to rows rather than shrinking them below their comfortable measure.",
+    "Move hover-only affordances to something always visible on touch.",
+    "Reduce section spacing on small screens, but never reduce text below its floor."
+  ],
+  "avoid": [
+    "Horizontal scrolling on a page that is not a table or a carousel.",
+    "Hiding content at narrow widths that the narrow user still needs.",
+    "Scaling one desktop layout down and calling it responsive."
+  ],
+  "usesTokens": ["space", "type"]
+}

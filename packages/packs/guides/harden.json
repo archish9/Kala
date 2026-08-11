@@ -1,0 +1,17 @@
+{
+  "id": "harden",
+  "intent": "Make a surface survive real data, real networks, and real people.",
+  "moves": [
+    "Render every state the surface can reach: loading, error, empty, and success.",
+    "Test each text container with a value three times longer than the design assumes.",
+    "Give every interactive control a disabled and a pending appearance.",
+    "Make error messages name the field and the fix, not just the failure.",
+    "Confirm destructive actions, and make the confirmation name what is being destroyed."
+  ],
+  "avoid": [
+    "A single page-level error state that hides which part actually failed.",
+    "Truncating text without leaving the full value reachable.",
+    "Assuming a list is never empty and never enormous."
+  ],
+  "usesTokens": ["space", "type", "color"]
+}

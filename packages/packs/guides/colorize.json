@@ -1,0 +1,17 @@
+{
+  "id": "colorize",
+  "intent": "Introduce colour with intent into a surface that is flat or monochrome.",
+  "moves": [
+    "Assign the accent one job on the surface and give it to nothing else.",
+    "Carry status in colour plus a word or shape, so it survives colourblindness and greyscale.",
+    "Tint neutrals toward the accent hue rather than adding a second colour.",
+    "Use the darkest and lightest ramp steps for text and ground, and the middle for the accent.",
+    "Check every new pair against the contrast floor before committing it."
+  ],
+  "avoid": [
+    "A second accent colour, which halves the meaning of the first.",
+    "Colour as the only difference between two states.",
+    "Pure grey neutrals next to a warm or cool accent — they read as dirty."
+  ],
+  "usesTokens": ["color"]
+}

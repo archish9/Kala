@@ -1,0 +1,17 @@
+{
+  "id": "optimize",
+  "intent": "Reduce what the browser has to do before the surface is usable.",
+  "moves": [
+    "Animate only transform and opacity; everything else forces layout or paint.",
+    "Give images explicit dimensions so nothing shifts once they load.",
+    "Load below-the-fold images lazily and above-the-fold images eagerly.",
+    "Subset and preload the fonts actually used, and set a matching fallback metric.",
+    "Move long lists to virtualisation only after measuring that the list is the problem."
+  ],
+  "avoid": [
+    "Animating width, height, top, or left.",
+    "Blocking first render on data that only the lower half of the page needs.",
+    "Optimising anything before measuring which part is actually slow."
+  ],
+  "usesTokens": ["motion"]
+}

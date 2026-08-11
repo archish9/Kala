@@ -1,0 +1,17 @@
+{
+  "id": "distill",
+  "intent": "Remove everything that is not carrying weight, until what remains is obvious.",
+  "moves": [
+    "For each element, ask what breaks if it is deleted. If nothing breaks, delete it.",
+    "Collapse any container that holds exactly one child and adds only padding.",
+    "Replace icon-plus-label pairs with the label alone where the icon adds no meaning.",
+    "Merge adjacent sections that answer the same question for the reader.",
+    "Cut secondary actions that exist because they were easy, not because they were asked for."
+  ],
+  "avoid": [
+    "Hiding complexity behind a disclosure instead of removing it.",
+    "Removing labels to gain space, which trades clarity for emptiness.",
+    "Deleting empty, error, or loading states in the name of simplicity."
+  ],
+  "usesTokens": ["space", "type"]
+}
