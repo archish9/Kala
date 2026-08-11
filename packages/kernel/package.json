@@ -2,20 +2,56 @@
   "name": "@fe-design/kernel",
   "version": "0.1.0",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./dist/src/index.js",
   "exports": {
-    ".": "./src/index.ts",
-    "./ir/fact.js": "./src/ir/fact.ts",
-    "./ir/types.js": "./src/ir/types.ts",
-    "./ir/query.js": "./src/ir/query.ts",
-    "./engine/expr.js": "./src/engine/expr.ts",
-    "./engine/runner.js": "./src/engine/runner.ts",
-    "./engine/rule-types.js": "./src/engine/rule-types.ts",
-    "./engine/pack-loader.js": "./src/engine/pack-loader.ts",
-    "./lock/types.js": "./src/lock/types.ts",
-    "./lock/derive.js": "./src/lock/derive.ts",
-    "./lock/staleness.js": "./src/lock/staleness.ts",
-    "./surface/resolve.js": "./src/surface/resolve.ts"
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./ir/fact.js": {
+      "types": "./dist/src/ir/fact.d.ts",
+      "import": "./dist/src/ir/fact.js"
+    },
+    "./ir/types.js": {
+      "types": "./dist/src/ir/types.d.ts",
+      "import": "./dist/src/ir/types.js"
+    },
+    "./ir/query.js": {
+      "types": "./dist/src/ir/query.d.ts",
+      "import": "./dist/src/ir/query.js"
+    },
+    "./engine/expr.js": {
+      "types": "./dist/src/engine/expr.d.ts",
+      "import": "./dist/src/engine/expr.js"
+    },
+    "./engine/runner.js": {
+      "types": "./dist/src/engine/runner.d.ts",
+      "import": "./dist/src/engine/runner.js"
+    },
+    "./engine/rule-types.js": {
+      "types": "./dist/src/engine/rule-types.d.ts",
+      "import": "./dist/src/engine/rule-types.js"
+    },
+    "./engine/pack-loader.js": {
+      "types": "./dist/src/engine/pack-loader.d.ts",
+      "import": "./dist/src/engine/pack-loader.js"
+    },
+    "./lock/types.js": {
+      "types": "./dist/src/lock/types.d.ts",
+      "import": "./dist/src/lock/types.js"
+    },
+    "./lock/derive.js": {
+      "types": "./dist/src/lock/derive.d.ts",
+      "import": "./dist/src/lock/derive.js"
+    },
+    "./lock/staleness.js": {
+      "types": "./dist/src/lock/staleness.d.ts",
+      "import": "./dist/src/lock/staleness.js"
+    },
+    "./surface/resolve.js": {
+      "types": "./dist/src/surface/resolve.d.ts",
+      "import": "./dist/src/surface/resolve.js"
+    }
   },
   "dependencies": {
     "culori": "^4.0.2",
@@ -23,5 +59,6 @@
   },
   "devDependencies": {
     "@types/culori": "^4.0.1"
-  }
+  },
+  "types": "./dist/src/index.d.ts"
 }

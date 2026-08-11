@@ -1,7 +1,22 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["tests"],
-  "// exclude": "Fixtures are parsed as strings by the extractor, never compiled.",
-  "exclude": ["rules/fixtures"],
-  "references": [{ "path": "../kernel" }, { "path": "../extractors/react" }]
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": [
+    "src",
+    "tests"
+  ],
+  "exclude": [
+    "rules/fixtures"
+  ],
+  "references": [
+    {
+      "path": "../kernel"
+    },
+    {
+      "path": "../extractors/react"
+    }
+  ]
 }

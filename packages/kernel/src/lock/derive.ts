@@ -65,7 +65,12 @@ export const deriveLock = async (
 
   if (configName) {
     try {
-      const jiti = createJiti(dir, { interopDefault: true })
+      // Caching must stay off: the server is long-lived, and a cached config
+      // module would keep serving pre-edit values, silently defeating the
+      // staleness detection that exists to catch exactly this.
+      const jiti = createJiti(dir, {
+        interopDefault: true, moduleCache: false, fsCache: false
+      })
       const cfg = jiti(join(dir, configName)) as {
         theme?: { extend?: Record<string, unknown> }
       }

@@ -54,6 +54,13 @@ describe('deriveLock', () => {
     expect(degraded.some(d => d.code === 'NO_DESIGN_SOURCE')).toBe(true)
   })
 
+  it('re-reads the config after it changes rather than serving a cached module', async () => {
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)
+    expect((await deriveLock(dir)).lock?.derived.space).toEqual([4])
+    await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '9px' } } } }`)
+    expect((await deriveLock(dir)).lock?.derived.space).toEqual([9])
+  })
+
   it('preserves the intent zone it is given', async () => {
     await writeTailwind(dir, `export default { theme: { extend: { spacing: { a: '4px' } } } }`)
     const { lock } = await deriveLock(dir, { system: 'quiet-precision' })

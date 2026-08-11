@@ -6,6 +6,12 @@
     },
     {
       "path": "./packages/extractors/react"
+    },
+    {
+      "path": "./packages/packs"
+    },
+    {
+      "path": "./packages/server"
     }
   ]
 }
