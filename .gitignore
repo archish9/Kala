@@ -1,0 +1,9 @@
+# Reference projects — upstream copies kept locally for harvesting, not our source.
+# See docs/superpowers/specs/*-fe-design-mcp-design.md §10 for what gets ported in.
+/impeccable-main/
+/ui-ux-pro-max-skill-main/
+/design-motion-principles-main/
+
+node_modules/
+dist/
+*.log
