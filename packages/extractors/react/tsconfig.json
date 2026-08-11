@@ -1,5 +1,7 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": ["src", "tests"],
+  "// exclude": "Fixtures are parsed as strings by the extractor, never compiled.",
+  "exclude": ["tests/fixtures"],
   "references": [{ "path": "../../kernel" }]
 }
