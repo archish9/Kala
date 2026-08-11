@@ -2,6 +2,7 @@ import { extname } from 'node:path'
 import { extractReact } from '@fe-design/extractor-react'
 import { extractVue } from '@fe-design/extractor-vue'
 import { extractSvelte } from '@fe-design/extractor-svelte'
+import { extractHtml } from '@fe-design/extractor-html'
 import type { IRDoc } from '@fe-design/kernel/ir/types.js'
 
 export type ExtractorFn = (source: string, file: string) => IRDoc
@@ -15,7 +16,9 @@ export const EXTRACTORS: Record<string, ExtractorFn> = {
   '.tsx': extractReact,
   '.jsx': extractReact,
   '.vue': extractVue,
-  '.svelte': extractSvelte
+  '.svelte': extractSvelte,
+  '.html': extractHtml,
+  '.htm': extractHtml
 }
 
 export const SUPPORTED_EXTENSIONS: string[] = Object.keys(EXTRACTORS)

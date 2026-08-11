@@ -29,6 +29,9 @@
     },
     {
       "path": "../extractors/svelte"
+    },
+    {
+      "path": "../extractors/html"
     }
   ]
 }

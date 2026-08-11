@@ -13,7 +13,8 @@
     "@fe-design/packs": "workspace:*",
     "@fe-design/taste": "workspace:*",
     "@fe-design/extractor-vue": "workspace:*",
-    "@fe-design/extractor-svelte": "workspace:*"
+    "@fe-design/extractor-svelte": "workspace:*",
+    "@fe-design/extractor-html": "workspace:*"
   },
   "scripts": {
     "build": "tsc -b"
