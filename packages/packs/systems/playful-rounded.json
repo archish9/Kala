@@ -1,0 +1,22 @@
+{
+  "id": "playful-rounded",
+  "axes": { "formality": [0.0, 0.3], "density": [0.2, 0.5], "energy": [0.7, 1.0], "expressiveness": [0.6, 0.9] },
+  "fitFor": ["kids", "children", "education", "learning", "game", "family", "playful"],
+  "avoidFor": ["banking", "compliance", "enterprise", "medical"],
+  "type": {
+    "families": { "sans": "Nunito", "serif": "Bitter" },
+    "fallbacks": { "sans": ["system-ui", "sans-serif"] },
+    "ratio": 1.25, "baseSize": 17, "maxWeights": 3
+  },
+  "space": { "base": 4, "rhythm": "normal", "sectionGap": 72 },
+  "shape": { "radius": 16, "depth": "shadows" },
+  "color": { "strategy": "bright playful accent over a soft warm neutral", "neutralHue": 320, "chromaCeiling": 0.16 },
+  "motion": { "budget": "expressive", "duration": 260, "easing": "cubic-bezier(0.34, 1.2, 0.64, 1)" },
+  "signature": [
+    "Touch targets are never smaller than 48px.",
+    "Success is celebrated; failure is never punished visually.",
+    "Icons always pair with a word, because readers are learning.",
+    "Motion overshoots slightly on reward, never on navigation."
+  ],
+  "antiDefaults": ["dense-data-grid", "all-caps-labels", "tiny-tap-targets"]
+}

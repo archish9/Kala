@@ -1,0 +1,22 @@
+{
+  "id": "sunlit-wellness",
+  "axes": { "formality": [0.2, 0.5], "density": [0.1, 0.4], "energy": [0.3, 0.6], "expressiveness": [0.5, 0.8] },
+  "fitFor": ["wellness", "meditation", "mindful", "yoga", "sleep", "nutrition", "habit"],
+  "avoidFor": ["trading", "enterprise", "compliance", "gaming"],
+  "type": {
+    "families": { "sans": "Outfit", "serif": "Fraunces" },
+    "fallbacks": { "sans": ["system-ui", "sans-serif"] },
+    "ratio": 1.333, "baseSize": 17, "maxWeights": 2
+  },
+  "space": { "base": 4, "rhythm": "generous", "sectionGap": 112 },
+  "shape": { "radius": 20, "depth": "shadows" },
+  "color": { "strategy": "warm sunlit neutral with a soft earth accent", "neutralHue": 70, "chromaCeiling": 0.09 },
+  "motion": { "budget": "moderate", "duration": 240, "easing": "ease-in-out" },
+  "signature": [
+    "One action per screen; nothing competes for attention.",
+    "Streaks are encouraged, never enforced with guilt.",
+    "Generous negative space is the point, not wasted room.",
+    "Transitions are slow enough to feel like breathing."
+  ],
+  "antiDefaults": ["urgency-banners", "dense-data-grid", "red-error-states"]
+}

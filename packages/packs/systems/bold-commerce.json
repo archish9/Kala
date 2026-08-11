@@ -1,0 +1,22 @@
+{
+  "id": "bold-commerce",
+  "axes": { "formality": [0.2, 0.6], "density": [0.4, 0.7], "energy": [0.6, 1.0], "expressiveness": [0.6, 0.9] },
+  "fitFor": ["ecommerce", "shop", "store", "retail", "checkout", "product", "conversion"],
+  "avoidFor": ["government", "compliance", "medical"],
+  "type": {
+    "families": { "sans": "Archivo", "serif": "Fraunces" },
+    "fallbacks": { "sans": ["system-ui", "sans-serif"] },
+    "ratio": 1.333, "baseSize": 16, "maxWeights": 3
+  },
+  "space": { "base": 4, "rhythm": "normal", "sectionGap": 88 },
+  "shape": { "radius": 6, "depth": "shadows" },
+  "color": { "strategy": "warm neutral with a high-energy accent reserved for buying", "neutralHue": 20, "chromaCeiling": 0.14 },
+  "motion": { "budget": "moderate", "duration": 200, "easing": "ease-out" },
+  "signature": [
+    "The accent colour belongs to the buy button and nothing else.",
+    "Product imagery is never cropped into a circle.",
+    "Price is the second-largest thing on the card, after the image.",
+    "Scarcity claims must be true or absent."
+  ],
+  "antiDefaults": ["fake-countdown", "carousel-hero", "gray-on-color"]
+}

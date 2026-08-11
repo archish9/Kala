@@ -47,10 +47,19 @@ describe('selectSystems', () => {
   })
 
   it('demotes a system whose avoidFor names the domain', async () => {
-    const proposals = selectSystems('dense admin dashboard', await load())
-    const editorial = proposals.findIndex(p => p.system.id === 'editorial-clean')
-    const quiet = proposals.findIndex(p => p.system.id === 'quiet-precision')
+    // Rank the whole catalogue, not the top three: a strongly demoted system
+    // drops out of the returned slice entirely, which findIndex cannot see.
+    const systems = await load()
+    const ranked = selectSystems('dense admin dashboard', systems, systems.length)
+    const editorial = ranked.findIndex(p => p.system.id === 'editorial-clean')
+    const quiet = ranked.findIndex(p => p.system.id === 'quiet-precision')
+    expect(editorial).toBeGreaterThan(-1)
     expect(quiet).toBeLessThan(editorial)
+  })
+
+  it('keeps a demoted system out of the returned top three', async () => {
+    const top = selectSystems('dense admin dashboard', await load())
+    expect(top.map(p => p.system.id)).not.toContain('editorial-clean')
   })
 
   it('gives every proposal a rationale mentioning the system', async () => {

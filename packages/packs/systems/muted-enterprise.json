@@ -1,0 +1,22 @@
+{
+  "id": "muted-enterprise",
+  "axes": { "formality": [0.8, 1.0], "density": [0.5, 0.8], "energy": [0.0, 0.2], "expressiveness": [0.0, 0.3] },
+  "fitFor": ["enterprise", "procurement", "government", "compliance", "hr", "erp", "internal"],
+  "avoidFor": ["consumer", "portfolio", "kids", "nightlife"],
+  "type": {
+    "families": { "sans": "Public Sans", "serif": "Source Serif 4" },
+    "fallbacks": { "sans": ["system-ui", "sans-serif"] },
+    "ratio": 1.2, "baseSize": 15, "maxWeights": 2
+  },
+  "space": { "base": 4, "rhythm": "normal", "sectionGap": 72 },
+  "shape": { "radius": 4, "depth": "borders" },
+  "color": { "strategy": "restrained institutional neutral with a low-chroma accent", "neutralHue": 240, "chromaCeiling": 0.04 },
+  "motion": { "budget": "minimal", "duration": 130, "easing": "ease-out" },
+  "signature": [
+    "Every destructive action needs a typed confirmation.",
+    "Labels sit above fields, never inside them as placeholders.",
+    "Permissions and ownership are always visible, never inferred.",
+    "Nothing is hidden behind hover; keyboard reaches everything."
+  ],
+  "antiDefaults": ["placeholder-as-label", "hover-only-actions", "gradient-anything"]
+}

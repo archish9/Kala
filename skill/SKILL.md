@@ -11,8 +11,11 @@ This project has an `fe-design` MCP server holding its design system. Use it.
 
 Call `system_status` with the project root.
 
-- `hasLock: false` — the project has no design system yet. Say so and stop.
-  Do not invent colors, fonts, or spacing.
+- `hasLock: false` — the project has no design system yet. Call
+  `system_bootstrap` with a brief describing the product, its audience, and how
+  it should feel. It returns three directions and writes nothing; show them to
+  the user and let them choose, then call it again with `choice`. Never invent
+  colors, fonts, or spacing yourself.
 - `stale: true` — the config changed since the lock was derived. The values
   returned are already refreshed; use them as-is.
 - Treat `space`, `typeSteps`, and `palette` as hard constraints.

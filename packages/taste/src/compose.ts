@@ -23,7 +23,16 @@ export type ComposedTokens = {
 export const DEFAULT_ACCENTS: Record<string, string> = {
   'quiet-precision': '#1F4B3F',
   'warm-utility': '#B4531F',
-  'editorial-clean': '#1B3A6B'
+  'editorial-clean': '#1B3A6B',
+  'technical-mono': '#2563A8',
+  'soft-clinical': '#1F7A6B',
+  'bold-commerce': '#D2401E',
+  'archive-serif': '#26406E',
+  'playful-rounded': '#C42A7A',
+  'dense-console': '#3B5BC4',
+  'muted-enterprise': '#3A5480',
+  'sunlit-wellness': '#A8641C',
+  'stark-brutal': '#111111'
 }
 
 const FALLBACK_ACCENT = '#1F4B3F'

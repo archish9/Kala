@@ -1,0 +1,22 @@
+{
+  "id": "dense-console",
+  "axes": { "formality": [0.5, 0.8], "density": [0.8, 1.0], "energy": [0.0, 0.3], "expressiveness": [0.0, 0.3] },
+  "fitFor": ["monitoring", "observability", "logs", "trading", "operations", "noc", "telemetry"],
+  "avoidFor": ["marketing", "portfolio", "kids", "wellness"],
+  "type": {
+    "families": { "sans": "Inter Tight", "serif": "Source Serif 4" },
+    "fallbacks": { "sans": ["ui-monospace", "system-ui", "sans-serif"] },
+    "ratio": 1.15, "baseSize": 13, "maxWeights": 2
+  },
+  "space": { "base": 4, "rhythm": "tight", "sectionGap": 48 },
+  "shape": { "radius": 2, "depth": "borders" },
+  "color": { "strategy": "near-neutral slate with saturated status colours only", "neutralHue": 250, "chromaCeiling": 0.05 },
+  "motion": { "budget": "minimal", "duration": 90, "easing": "linear" },
+  "signature": [
+    "Every row is scannable at a glance; nothing animates on data change.",
+    "Colour means severity and nothing else.",
+    "Numbers are tabular so columns align to the digit.",
+    "Density is the feature — do not add padding to make it breathe."
+  ],
+  "antiDefaults": ["card-in-card", "hover-reveal-actions", "animated-counters"]
+}
