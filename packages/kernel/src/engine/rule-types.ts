@@ -12,7 +12,7 @@ export type AgainstSelector = { nearestAncestor: Selector }
 
 export type RuleDef = {
   id: string
-  kind: 'node' | 'relation' | 'aggregate'
+  kind: 'node' | 'relation' | 'aggregate' | 'document'
   severity: Severity
   select: Selector
   against?: AgainstSelector

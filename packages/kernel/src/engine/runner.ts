@@ -18,6 +18,21 @@ export type PredicateFn = (
   node: IRNode, ctx: PredicateCtx
 ) => Omit<Finding, 'id'> | null
 
+export type DocPredicateCtx = { lock: unknown; surface: string }
+
+/**
+ * Runs once per file with the whole IRDoc. State completeness is a property of
+ * a document, not of one node: "this query has no error branch" needs the
+ * source list and the branch list together, and every other rule kind selects
+ * nodes before it can ask anything.
+ *
+ * Returns an array because one file can have three queries each missing a
+ * different state.
+ */
+export type DocPredicateFn = (
+  doc: IRDoc, ctx: DocPredicateCtx
+) => Omit<Finding, 'id'>[]
+
 const isFactLike = (x: unknown): x is Fact<unknown> =>
   typeof x === 'object' && x !== null && 'state' in x
 
@@ -73,7 +88,7 @@ export const runRules = (
   docs: IRDoc[],
   rules: RuleDef[],
   lock: unknown,
-  predicates: Record<string, PredicateFn> = {}
+  predicates: Record<string, PredicateFn | DocPredicateFn> = {}
 ): VerifyResult => {
   const findings: Finding[] = []
   const degraded: Degraded[] = []
@@ -83,6 +98,30 @@ export const runRules = (
 
   for (const doc of docs) {
     for (const rule of rules) {
+
+      if (rule.kind === 'document') {
+        if (!rule.predicate) continue
+        const fn = predicates[rule.predicate] as DocPredicateFn | undefined
+        if (!fn) {
+          degraded.push({
+            code: 'PREDICATE_NOT_FOUND',
+            detail: `Predicate "${rule.predicate}" for rule "${rule.id}" is not registered.`,
+            impact: '1 rule not run'
+          })
+          continue
+        }
+        try {
+          const hits = fn(doc, { lock, surface: resolveSurface(doc.file) })
+          for (const hit of hits) findings.push({ id: `f${++seq}`, ...hit })
+        } catch (err) {
+          degraded.push({
+            code: 'PREDICATE_THREW',
+            detail: `Rule "${rule.id}": ${(err as Error).message}`,
+            impact: '1 rule not run'
+          })
+        }
+        continue
+      }
 
       if (rule.kind === 'aggregate') {
         const collected: unknown[] = []
@@ -117,7 +156,7 @@ export const runRules = (
         analyzed++
 
         if (rule.predicate) {
-          const fn = predicates[rule.predicate]
+          const fn = predicates[rule.predicate] as PredicateFn | undefined
           if (!fn) {
             degraded.push({
               code: 'PREDICATE_NOT_FOUND',
