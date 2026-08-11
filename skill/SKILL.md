@@ -52,6 +52,18 @@ Call `verify` with the files you touched.
 - `verify` handles `.tsx`, `.jsx`, `.vue`, `.svelte`, `.html`, and `.htm`.
 - Call `explain` with a finding id when the message alone is not enough to act on.
 
+## When a page is running
+
+Call `inspect` with the URL to catch what source analysis cannot: contrast
+against inherited backgrounds, horizontal overflow at real widths, and touch
+targets at their rendered size. It needs the browser pack; without it the tool
+returns install instructions and everything else still works.
+
+Call `critique` for a grouped review instead of a flat finding list. Pass `url`
+to fold in rendered findings, and `html: true` to get a self-contained report
+you can open. Both tools are read-only, and any file they produce is written
+outside the project.
+
 ## Rules
 
 - Never introduce a color, size, or spacing value that is not in `system_status`.

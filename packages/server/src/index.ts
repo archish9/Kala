@@ -7,6 +7,7 @@ import { verify } from './tools/verify.js'
 import { explain } from './tools/explain.js'
 import { systemBootstrap } from './tools/system-bootstrap.js'
 import { inspect } from './tools/inspect.js'
+import { critique } from './tools/critique.js'
 import { surfaceBrief } from './tools/surface-brief.js'
 import { guide } from './tools/guide.js'
 import type { VerifyResult } from '@fe-design/kernel/engine/rule-types.js'
@@ -88,6 +89,29 @@ server.tool(
   },
   async ({ url, viewports, screenshot }) =>
     asText(await inspect(url, viewports, screenshot))
+)
+
+server.tool(
+  'critique',
+  'Review a surface and return a grouped design review rather than a flat finding list. Combines source analysis with rendered findings when a URL is given, and can write a self-contained HTML report outside the project. Read-only.',
+  {
+    dir: z.string().describe('Absolute path to the project root'),
+    paths: z.array(z.string()).describe('Project-relative files to review'),
+    url: z.string().optional()
+      .describe('Optional running URL, to add rendered findings'),
+    html: z.boolean().optional()
+      .describe('Write a self-contained HTML report and return its path')
+  },
+  async ({ dir, paths, url, html }) => {
+    try {
+      const opts: { url?: string; html?: boolean } = {}
+      if (url !== undefined) opts.url = url
+      if (html !== undefined) opts.html = html
+      return asText(await critique(dir, paths, opts))
+    } catch (err) {
+      return asText({ error: (err as Error).message })
+    }
+  }
 )
 
 server.tool(

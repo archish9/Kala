@@ -15,7 +15,8 @@
     "@fe-design/extractor-vue": "workspace:*",
     "@fe-design/extractor-svelte": "workspace:*",
     "@fe-design/extractor-html": "workspace:*",
-    "@fe-design/browser": "workspace:*"
+    "@fe-design/browser": "workspace:*",
+    "@fe-design/report": "workspace:*"
   },
   "scripts": {
     "build": "tsc -b"

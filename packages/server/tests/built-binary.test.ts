@@ -33,7 +33,7 @@ const INIT = JSON.stringify({
 const READY = JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' })
 
 describe.skipIf(!existsSync(BIN))('built binary', () => {
-  it('completes an MCP handshake and lists all seven tools', async () => {
+  it('completes an MCP handshake and lists all eight tools', async () => {
     const out = await rpc([
       INIT, READY,
       JSON.stringify({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} })
@@ -42,8 +42,8 @@ describe.skipIf(!existsSync(BIN))('built binary', () => {
       .find(m => m.id === 2)
     expect(listed.result.tools.map((t: { name: string }) => t.name).sort())
       .toEqual([
-        'explain', 'guide', 'inspect', 'surface_brief',
-        'system_bootstrap', 'system_status', 'verify'
+        'critique', 'explain', 'guide', 'inspect',
+        'surface_brief', 'system_bootstrap', 'system_status', 'verify'
       ])
   }, 15000)
 
@@ -81,6 +81,24 @@ describe.skipIf(!existsSync(BIN))('built binary', () => {
     // nested-card was written for React in Phase 1. Firing here, on Vue markup
     // it was never written for, is the premise the whole IR rests on.
     expect(payload.findings.map((f: { rule: string }) => f.rule)).toContain('nested-card')
+  }, 15000)
+
+  it('returns a grouped critique through the shipped binary', async () => {
+    const out = await rpc([
+      INIT, READY,
+      JSON.stringify({
+        jsonrpc: '2.0', id: 2, method: 'tools/call',
+        params: {
+          name: 'critique',
+          arguments: { dir: PROJECT, paths: ['src/app/settings/page.tsx'] }
+        }
+      })
+    ])
+    const call = out.trim().split('\n').map(l => JSON.parse(l)).find(m => m.id === 2)
+    const payload = JSON.parse(call.result.content[0].text)
+    expect(payload.error).toBeUndefined()
+    expect(payload.review.sections.length).toBeGreaterThan(0)
+    expect(payload.review.counts.error).toBeGreaterThan(0)
   }, 15000)
 
   it('returns a grounded guide through the shipped binary', async () => {
