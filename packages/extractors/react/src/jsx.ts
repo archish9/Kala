@@ -7,6 +7,7 @@ import {
 import { unknown, type UnknownReason } from '@fe-design/kernel/ir/fact.js'
 import { resolveTailwindClasses } from './tailwind.js'
 import { collectBranches, branchIdAt } from './branches.js'
+import { collectDataSources } from './datasources.js'
 
 // @babel/traverse ships CJS. Under ESM the callable sits on `.default`, but the
 // types resolve the default import to the module namespace, so the callable type
@@ -100,7 +101,7 @@ export const extractReact = (source: string, file: string): IRDoc => {
     framework: 'react',
     nodes,
     imports: [],
-    dataSources: [],
+    dataSources: collectDataSources(ast, source, branchRecords),
     branches: branchRecords.map(r => r.branch)
   }
 }
