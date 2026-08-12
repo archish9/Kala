@@ -18,3 +18,6 @@ docs/
 # Machine-specific: the MCP entry point is an absolute path.
 # Documented in Documentation/01-getting-started.md instead.
 .mcp.json
+
+
+note.txt
