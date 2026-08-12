@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest'
 import { readFile, readdir } from 'node:fs/promises'
 import { resolve, join } from 'node:path'
-import { loadPack } from '@fe-design/kernel/engine/pack-loader.js'
-import { runRules } from '@fe-design/kernel/engine/runner.js'
-import { extractReact } from '@fe-design/extractor-react'
-import type { RuleDef } from '@fe-design/kernel/engine/rule-types.js'
-import type { PredicateFn } from '@fe-design/kernel/engine/runner.js'
+import { loadPack } from '@kala/kernel/engine/pack-loader.js'
+import { runRules } from '@kala/kernel/engine/runner.js'
+import { extractReact } from '@kala/extractor-react'
+import type { RuleDef } from '@kala/kernel/engine/rule-types.js'
+import type { PredicateFn } from '@kala/kernel/engine/runner.js'
 
 const PACKS = join(import.meta.dirname, '..', 'rules')
 

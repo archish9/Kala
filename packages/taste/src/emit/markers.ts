@@ -6,8 +6,8 @@ type CommentStyle = 'js' | 'css'
 const wrap = (style: CommentStyle, text: string): string =>
   style === 'css' ? `/* ${text} */` : `// ${text}`
 
-export const START = (tag: string): string => `fe-design:${tag}:start`
-export const END = (tag: string): string => `fe-design:${tag}:end`
+export const START = (tag: string): string => `kala:${tag}:start`
+export const END = (tag: string): string => `kala:${tag}:end`
 
 const escape = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 

@@ -1,5 +1,5 @@
-import { contrast } from '@fe-design/taste'
-import type { Severity } from '@fe-design/kernel/engine/rule-types.js'
+import { contrast } from '@kala/taste'
+import type { Severity } from '@kala/kernel/engine/rule-types.js'
 import type { PageFacts } from '../facts.js'
 
 export type BrowserFinding = {

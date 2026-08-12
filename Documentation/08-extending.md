@@ -401,7 +401,7 @@ and matching CSS rules to `extractor-core`:
 import {
   resolveTailwindClasses, parseInlineStyle, parseStyleSheet,
   declsToStyleFacts, rulesFor, mergeFacts, type ElementKey, type CssRule
-} from '@fe-design/extractor-core'
+} from '@kala/extractor-core'
 
 // Per element, build layers in cascade order and merge:
 const layers: StyleFacts[] = []
@@ -426,7 +426,7 @@ ancestors, a runtime value — all `unknown`.
 `packages/server/src/extractors.ts`:
 
 ```ts
-import { extractMine } from '@fe-design/extractor-mine'
+import { extractMine } from '@kala/extractor-mine'
 
 export const EXTRACTORS: Record<string, ExtractorFn> = {
   …,

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { extractSvelte } from '../src/index.js'
-import { isKnown, isUnknown } from '@fe-design/kernel/ir/fact.js'
+import { isKnown, isUnknown } from '@kala/kernel/ir/fact.js'
 
 const sv = (body: string) => extractSvelte(body, 'Card.svelte')
 

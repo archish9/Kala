@@ -1,5 +1,5 @@
-import { emptyStyleFacts, type StyleFacts } from '@fe-design/kernel/ir/types.js'
-import type { Fact } from '@fe-design/kernel/ir/fact.js'
+import { emptyStyleFacts, type StyleFacts } from '@kala/kernel/ir/types.js'
+import type { Fact } from '@kala/kernel/ir/fact.js'
 
 type Group = keyof Omit<StyleFacts, 'raw'>
 

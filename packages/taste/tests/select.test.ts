@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { selectSystems, axisDistance } from '../src/select.js'
 import { loadSystems } from '../src/load.js'
-import { SYSTEMS_DIR } from '@fe-design/packs'
+import { SYSTEMS_DIR } from '@kala/packs'
 import type { DesignSystem } from '../src/types.js'
 
 const load = async (): Promise<DesignSystem[]> =>

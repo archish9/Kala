@@ -1,22 +1,22 @@
 {
-  "name": "@fe-design/server",
+  "name": "@kala/server",
   "version": "0.1.0",
   "type": "module",
   "bin": {
-    "fe-design-mcp": "./dist/src/index.js"
+    "kala-mcp": "./dist/src/index.js"
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/extractor-react": "workspace:*",
+    "@kala/kernel": "workspace:*",
+    "@kala/extractor-react": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.23.0",
-    "@fe-design/packs": "workspace:*",
-    "@fe-design/taste": "workspace:*",
-    "@fe-design/extractor-vue": "workspace:*",
-    "@fe-design/extractor-svelte": "workspace:*",
-    "@fe-design/extractor-html": "workspace:*",
-    "@fe-design/browser": "workspace:*",
-    "@fe-design/report": "workspace:*"
+    "@kala/packs": "workspace:*",
+    "@kala/taste": "workspace:*",
+    "@kala/extractor-vue": "workspace:*",
+    "@kala/extractor-svelte": "workspace:*",
+    "@kala/extractor-html": "workspace:*",
+    "@kala/browser": "workspace:*",
+    "@kala/report": "workspace:*"
   },
   "scripts": {
     "build": "tsc -b"

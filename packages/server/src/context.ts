@@ -1,9 +1,9 @@
 import { readdir } from 'node:fs/promises'
 import { join, resolve, relative, isAbsolute } from 'node:path'
-import { RULES_DIR } from '@fe-design/packs'
-import { loadPack } from '@fe-design/kernel/engine/pack-loader.js'
-import type { RuleDef, Degraded } from '@fe-design/kernel/engine/rule-types.js'
-import type { PredicateFn } from '@fe-design/kernel/engine/runner.js'
+import { RULES_DIR } from '@kala/packs'
+import { loadPack } from '@kala/kernel/engine/pack-loader.js'
+import type { RuleDef, Degraded } from '@kala/kernel/engine/rule-types.js'
+import type { PredicateFn } from '@kala/kernel/engine/runner.js'
 
 export const PACKS_DIR = RULES_DIR
 

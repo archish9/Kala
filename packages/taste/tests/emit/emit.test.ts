@@ -5,8 +5,8 @@ import { join } from 'node:path'
 import { emitAll } from '../../src/emit/lock.js'
 import { composeSystem } from '../../src/compose.js'
 import { loadSystems } from '../../src/load.js'
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
-import { SYSTEMS_DIR } from '@fe-design/packs'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
+import { SYSTEMS_DIR } from '@kala/packs'
 
 let dir: string
 beforeEach(async () => { dir = await mkdtemp(join(tmpdir(), 'emit-proj-')) })

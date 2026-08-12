@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { resolveTailwindClasses } from '../src/tailwind.js'
-import { isKnown } from '@fe-design/kernel/ir/fact.js'
+import { isKnown } from '@kala/kernel/ir/fact.js'
 
 describe('resolveTailwindClasses', () => {
   it('resolves uniform padding', () => {

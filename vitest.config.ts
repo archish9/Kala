@@ -13,34 +13,34 @@ export default defineConfig({
     // node. Tests alias back to source, so the suite never needs a build.
     alias: [
       {
-        find: /^@fe-design\/kernel\/(.*)\.js$/,
+        find: /^@kala\/kernel\/(.*)\.js$/,
         replacement: src('packages/kernel/src/$1.ts')
       },
-      { find: '@fe-design/kernel', replacement: src('packages/kernel/src/index.ts') },
+      { find: '@kala/kernel', replacement: src('packages/kernel/src/index.ts') },
       {
-        find: '@fe-design/extractor-core',
+        find: '@kala/extractor-core',
         replacement: src('packages/extractors/core/src/index.ts')
       },
       {
-        find: '@fe-design/extractor-react',
+        find: '@kala/extractor-react',
         replacement: src('packages/extractors/react/src/index.ts')
       },
       {
-        find: '@fe-design/extractor-vue',
+        find: '@kala/extractor-vue',
         replacement: src('packages/extractors/vue/src/index.ts')
       },
       {
-        find: '@fe-design/extractor-svelte',
+        find: '@kala/extractor-svelte',
         replacement: src('packages/extractors/svelte/src/index.ts')
       },
       {
-        find: '@fe-design/extractor-html',
+        find: '@kala/extractor-html',
         replacement: src('packages/extractors/html/src/index.ts')
       },
-      { find: '@fe-design/browser', replacement: src('packages/browser/src/index.ts') },
-      { find: '@fe-design/report', replacement: src('packages/report/src/index.ts') },
-      { find: '@fe-design/packs', replacement: src('packages/packs/src/index.ts') },
-      { find: '@fe-design/taste', replacement: src('packages/taste/src/index.ts') }
+      { find: '@kala/browser', replacement: src('packages/browser/src/index.ts') },
+      { find: '@kala/report', replacement: src('packages/report/src/index.ts') },
+      { find: '@kala/packs', replacement: src('packages/packs/src/index.ts') },
+      { find: '@kala/taste', replacement: src('packages/taste/src/index.ts') }
     ]
   }
 })

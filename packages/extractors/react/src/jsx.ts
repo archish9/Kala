@@ -3,8 +3,8 @@ import _traverse from '@babel/traverse'
 import type { NodePath } from '@babel/traverse'
 import {
   makeNode, emptyStyleFacts, type IRDoc, type IRNode, type StyleFacts
-} from '@fe-design/kernel/ir/types.js'
-import { unknown, type UnknownReason } from '@fe-design/kernel/ir/fact.js'
+} from '@kala/kernel/ir/types.js'
+import { unknown, type UnknownReason } from '@kala/kernel/ir/fact.js'
 import { resolveTailwindClasses } from './tailwind.js'
 import { collectBranches, branchIdAt } from './branches.js'
 import { collectDataSources } from './datasources.js'

@@ -10,9 +10,9 @@ beforeEach(async () => { dir = await mkdtemp(join(tmpdir(), 'emit-')) })
 describe('spliceBlock', () => {
   it('creates a tagged block in an empty file', () => {
     const out = spliceBlock(null, 'tokens', 'const a = 1', 'js')
-    expect(out).toContain('fe-design:tokens:start')
+    expect(out).toContain('kala:tokens:start')
     expect(out).toContain('const a = 1')
-    expect(out).toContain('fe-design:tokens:end')
+    expect(out).toContain('kala:tokens:end')
   })
 
   it('replaces only the block, preserving text around it', () => {
@@ -40,7 +40,7 @@ describe('spliceBlock', () => {
   })
 
   it('uses css comment syntax when asked', () => {
-    expect(spliceBlock(null, 'vars', ':root{}', 'css')).toContain('/* fe-design:vars:start')
+    expect(spliceBlock(null, 'vars', ':root{}', 'css')).toContain('/* kala:vars:start')
   })
 })
 

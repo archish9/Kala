@@ -1,5 +1,5 @@
 {
-  "name": "@fe-design/extractor-core",
+  "name": "@kala/extractor-core",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/src/index.js",
@@ -11,7 +11,7 @@
     }
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
+    "@kala/kernel": "workspace:*",
     "culori": "^4.0.2",
     "postcss": "^8.4.0"
   },

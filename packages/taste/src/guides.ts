@@ -1,6 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 
 export const GUIDE_ACTIONS = [
   'bolder', 'quieter', 'distill', 'harden', 'animate', 'typeset', 'layout',

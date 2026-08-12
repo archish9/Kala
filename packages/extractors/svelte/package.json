@@ -1,5 +1,5 @@
 {
-  "name": "@fe-design/extractor-svelte",
+  "name": "@kala/extractor-svelte",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/src/index.js",
@@ -11,8 +11,8 @@
     }
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/extractor-core": "workspace:*",
+    "@kala/kernel": "workspace:*",
+    "@kala/extractor-core": "workspace:*",
     "svelte": "^5.0.0"
   },
   "license": "Apache-2.0"

@@ -2,8 +2,8 @@ import postcss from 'postcss'
 import { formatHex, parse as parseColor } from 'culori'
 import {
   emptyStyleFacts, type StyleFacts, type Box
-} from '@fe-design/kernel/ir/types.js'
-import { known, unknown, type StyleOrigin } from '@fe-design/kernel/ir/fact.js'
+} from '@kala/kernel/ir/types.js'
+import { known, unknown, type StyleOrigin } from '@kala/kernel/ir/fact.js'
 
 export type Decl = { prop: string; value: string }
 export type CssRule = { selector: string; decls: Decl[] }

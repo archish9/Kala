@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { buildReview } from '../src/critique.js'
-import type { Finding } from '@fe-design/kernel/engine/rule-types.js'
-import type { BrowserFinding } from '@fe-design/browser'
+import type { Finding } from '@kala/kernel/engine/rule-types.js'
+import type { BrowserFinding } from '@kala/browser'
 
 const f = (over: Partial<Finding>): Finding => ({
   id: 'f1', rule: 'space-off-scale', sev: 'error',

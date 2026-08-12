@@ -72,7 +72,7 @@ If either fails, see [Troubleshooting](09-troubleshooting.md).
 The server runs from compiled JavaScript, so build before connecting a client:
 
 ```bash
-pnpm --filter @fe-design/server build
+pnpm --filter @kala/server build
 ```
 
 This produces `packages/server/dist/src/index.js`. `dist/` is gitignored, so this step is
@@ -96,7 +96,7 @@ Add to your MCP settings:
 ```json
 {
   "mcpServers": {
-    "fe-design": {
+    "kala": {
       "command": "node",
       "args": ["/absolute/path/to/DesignMCP/packages/server/dist/src/index.js"]
     }
@@ -114,8 +114,8 @@ working directory — every tool takes an absolute `dir` parameter instead.
 Tool descriptions alone activate weakly: an agent mid-task will not reliably remember to
 call `surface_brief` before writing a component. `skill/SKILL.md` is a short file that
 tells the agent when to call what. Copy it wherever your harness looks for skills — for
-Claude Code that is `.claude/skills/fe-design/SKILL.md` in your project, or
-`~/.claude/skills/fe-design/SKILL.md` globally.
+Claude Code that is `.claude/skills/kala/SKILL.md` in your project, or
+`~/.claude/skills/kala/SKILL.md` globally.
 
 ---
 
@@ -259,7 +259,7 @@ Every tool is a plain function. This is useful for scripting and for debugging:
 
 ```bash
 cd /path/to/DesignMCP
-pnpm --filter @fe-design/server build
+pnpm --filter @kala/server build
 
 node --input-type=module -e "
 import { systemStatus } from './packages/server/dist/src/tools/system-status.js'

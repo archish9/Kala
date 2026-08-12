@@ -1,6 +1,6 @@
 import _traverse from '@babel/traverse'
 import type { NodePath } from '@babel/traverse'
-import type { DataSource } from '@fe-design/kernel/ir/types.js'
+import type { DataSource } from '@kala/kernel/ir/types.js'
 import type { BranchRecord } from './branches.js'
 
 type TraverseFn = typeof import('@babel/traverse').default

@@ -1,5 +1,5 @@
-import type { Finding, Severity, Degraded } from '@fe-design/kernel/engine/rule-types.js'
-import type { BrowserFinding } from '@fe-design/browser'
+import type { Finding, Severity, Degraded } from '@kala/kernel/engine/rule-types.js'
+import type { BrowserFinding } from '@kala/browser'
 
 export type ReviewItem = {
   rule: string

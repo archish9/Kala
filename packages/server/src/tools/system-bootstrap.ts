@@ -2,9 +2,9 @@ import { access } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import {
   loadSystems, selectSystems, composeSystem, emitAll
-} from '@fe-design/taste'
-import { SYSTEMS_DIR } from '@fe-design/packs'
-import type { PairReport, DesignSystem } from '@fe-design/taste'
+} from '@kala/taste'
+import { SYSTEMS_DIR } from '@kala/packs'
+import type { PairReport, DesignSystem } from '@kala/taste'
 
 export type BootstrapProposal = {
   id: string

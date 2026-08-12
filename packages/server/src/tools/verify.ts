@@ -1,9 +1,9 @@
 import { readFile } from 'node:fs/promises'
 import { relative } from 'node:path'
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
-import { runRules } from '@fe-design/kernel/engine/runner.js'
-import type { IRDoc } from '@fe-design/kernel/ir/types.js'
-import type { VerifyResult, Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
+import { runRules } from '@kala/kernel/engine/runner.js'
+import type { IRDoc } from '@kala/kernel/ir/types.js'
+import type { VerifyResult, Degraded } from '@kala/kernel/engine/rule-types.js'
 import { getPack, safeJoin } from '../context.js'
 import { extractorFor, SUPPORTED_EXTENSIONS } from '../extractors.js'
 

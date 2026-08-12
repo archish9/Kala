@@ -20,10 +20,10 @@ importers:
 
   packages/browser:
     dependencies:
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../kernel
-      '@fe-design/taste':
+      '@kala/taste':
         specifier: workspace:*
         version: link:../taste
     devDependencies:
@@ -33,7 +33,7 @@ importers:
 
   packages/extractors/core:
     dependencies:
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../../kernel
       culori:
@@ -49,28 +49,28 @@ importers:
 
   packages/extractors/equivalence:
     devDependencies:
-      '@fe-design/extractor-html':
+      '@kala/extractor-html':
         specifier: workspace:*
         version: link:../html
-      '@fe-design/extractor-react':
+      '@kala/extractor-react':
         specifier: workspace:*
         version: link:../react
-      '@fe-design/extractor-svelte':
+      '@kala/extractor-svelte':
         specifier: workspace:*
         version: link:../svelte
-      '@fe-design/extractor-vue':
+      '@kala/extractor-vue':
         specifier: workspace:*
         version: link:../vue
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../../kernel
 
   packages/extractors/html:
     dependencies:
-      '@fe-design/extractor-core':
+      '@kala/extractor-core':
         specifier: workspace:*
         version: link:../core
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../../kernel
       parse5:
@@ -85,10 +85,10 @@ importers:
       '@babel/traverse':
         specifier: ^7.25.0
         version: 7.29.8
-      '@fe-design/extractor-core':
+      '@kala/extractor-core':
         specifier: workspace:*
         version: link:../core
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../../kernel
     devDependencies:
@@ -98,10 +98,10 @@ importers:
 
   packages/extractors/svelte:
     dependencies:
-      '@fe-design/extractor-core':
+      '@kala/extractor-core':
         specifier: workspace:*
         version: link:../core
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../../kernel
       svelte:
@@ -110,10 +110,10 @@ importers:
 
   packages/extractors/vue:
     dependencies:
-      '@fe-design/extractor-core':
+      '@kala/extractor-core':
         specifier: workspace:*
         version: link:../core
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../../kernel
       '@vue/compiler-sfc':
@@ -135,49 +135,49 @@ importers:
 
   packages/packs:
     devDependencies:
-      '@fe-design/extractor-react':
+      '@kala/extractor-react':
         specifier: workspace:*
         version: link:../extractors/react
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../kernel
 
   packages/report:
     dependencies:
-      '@fe-design/browser':
+      '@kala/browser':
         specifier: workspace:*
         version: link:../browser
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../kernel
 
   packages/server:
     dependencies:
-      '@fe-design/browser':
+      '@kala/browser':
         specifier: workspace:*
         version: link:../browser
-      '@fe-design/extractor-html':
+      '@kala/extractor-html':
         specifier: workspace:*
         version: link:../extractors/html
-      '@fe-design/extractor-react':
+      '@kala/extractor-react':
         specifier: workspace:*
         version: link:../extractors/react
-      '@fe-design/extractor-svelte':
+      '@kala/extractor-svelte':
         specifier: workspace:*
         version: link:../extractors/svelte
-      '@fe-design/extractor-vue':
+      '@kala/extractor-vue':
         specifier: workspace:*
         version: link:../extractors/vue
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../kernel
-      '@fe-design/packs':
+      '@kala/packs':
         specifier: workspace:*
         version: link:../packs
-      '@fe-design/report':
+      '@kala/report':
         specifier: workspace:*
         version: link:../report
-      '@fe-design/taste':
+      '@kala/taste':
         specifier: workspace:*
         version: link:../taste
       '@modelcontextprotocol/sdk':
@@ -189,10 +189,10 @@ importers:
 
   packages/taste:
     dependencies:
-      '@fe-design/kernel':
+      '@kala/kernel':
         specifier: workspace:*
         version: link:../kernel
-      '@fe-design/packs':
+      '@kala/packs':
         specifier: workspace:*
         version: link:../packs
       culori:

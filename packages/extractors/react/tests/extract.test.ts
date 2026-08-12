@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { extractReact } from '../src/index.js'
-import { isKnown, isUnknown } from '@fe-design/kernel/ir/fact.js'
+import { isKnown, isUnknown } from '@kala/kernel/ir/fact.js'
 
 const fixture = (n: string) =>
   readFile(join(import.meta.dirname, 'fixtures', n), 'utf8')

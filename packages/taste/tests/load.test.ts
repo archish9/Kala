@@ -3,7 +3,7 @@ import { mkdtemp, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { loadSystems } from '../src/load.js'
-import { SYSTEMS_DIR } from '@fe-design/packs'
+import { SYSTEMS_DIR } from '@kala/packs'
 
 describe('loadSystems', () => {
   it('loads every shipped system without degradation', async () => {

@@ -2,11 +2,11 @@ import { parse as parseSfc } from '@vue/compiler-sfc'
 import {
   resolveTailwindClasses, parseInlineStyle, parseStyleSheet,
   declsToStyleFacts, rulesFor, mergeFacts, type ElementKey, type CssRule
-} from '@fe-design/extractor-core'
+} from '@kala/extractor-core'
 import {
   makeNode, emptyStyleFacts, type IRDoc, type IRNode, type StyleFacts
-} from '@fe-design/kernel/ir/types.js'
-import { unknown } from '@fe-design/kernel/ir/fact.js'
+} from '@kala/kernel/ir/types.js'
+import { unknown } from '@kala/kernel/ir/fact.js'
 
 const ELEMENT = 1
 const ATTR = 6

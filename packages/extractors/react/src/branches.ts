@@ -1,6 +1,6 @@
 import _traverse from '@babel/traverse'
 import type { NodePath } from '@babel/traverse'
-import type { Branch, BranchSemantic } from '@fe-design/kernel/ir/types.js'
+import type { Branch, BranchSemantic } from '@kala/kernel/ir/types.js'
 
 type TraverseFn = typeof import('@babel/traverse').default
 const traverse = ((_traverse as unknown as { default?: TraverseFn }).default

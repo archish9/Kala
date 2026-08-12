@@ -1,10 +1,10 @@
 import { resolve } from 'node:path'
-import { loadGuides, loadSystems, GUIDE_ACTIONS } from '@fe-design/taste'
-import type { TokenGroup } from '@fe-design/taste'
-import { GUIDES_DIR, SYSTEMS_DIR } from '@fe-design/packs'
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
-import type { Lock } from '@fe-design/kernel/lock/types.js'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import { loadGuides, loadSystems, GUIDE_ACTIONS } from '@kala/taste'
+import type { TokenGroup } from '@kala/taste'
+import { GUIDES_DIR, SYSTEMS_DIR } from '@kala/packs'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
+import type { Lock } from '@kala/kernel/lock/types.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 
 export type GuideResult = {
   action: string

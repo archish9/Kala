@@ -121,7 +121,7 @@ export const renderReport = (review: Review): string => {
 export const writeReport = async (review: Review): Promise<string> => {
   // The OS temp directory, never the project: system_bootstrap stays the only
   // tool that writes where the user works.
-  const dir = await mkdtemp(join(tmpdir(), 'fe-design-review-'))
+  const dir = await mkdtemp(join(tmpdir(), 'kala-review-'))
   const path = join(dir, `${review.surface.replace(/[^\w-]/g, '-')}.html`)
   await writeFile(path, renderReport(review), 'utf8')
   return path

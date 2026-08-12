@@ -4,7 +4,7 @@ import { loadSystems } from '../src/load.js'
 import { composeSystem } from '../src/compose.js'
 import { contrast } from '../src/color/solve.js'
 import { selectSystems } from '../src/select.js'
-import { SYSTEMS_DIR } from '@fe-design/packs'
+import { SYSTEMS_DIR } from '@kala/packs'
 
 const load = async () => (await loadSystems(SYSTEMS_DIR)).systems
 

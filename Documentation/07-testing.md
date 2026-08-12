@@ -196,7 +196,7 @@ Sometimes you want to see behaviour rather than assertions.
 
 ```bash
 cd /path/to/DesignMCP
-pnpm --filter @fe-design/server build
+pnpm --filter @kala/server build
 
 {
   printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"p","version":"1"}}}'

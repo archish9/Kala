@@ -1,9 +1,9 @@
 import { resolve } from 'node:path'
-import { buildReview, writeReport, type Review } from '@fe-design/report'
-import { inspectUrl, type BrowserFinding } from '@fe-design/browser'
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
-import { resolveSurface } from '@fe-design/kernel/surface/resolve.js'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import { buildReview, writeReport, type Review } from '@kala/report'
+import { inspectUrl, type BrowserFinding } from '@kala/browser'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
+import { resolveSurface } from '@kala/kernel/surface/resolve.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 import { verify } from './verify.js'
 
 export type CritiqueResult = { review: Review; reportPath: string | null }

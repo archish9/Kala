@@ -1,10 +1,10 @@
 {
-  "name": "@fe-design/packs",
+  "name": "@kala/packs",
   "version": "0.1.0",
   "type": "module",
   "devDependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/extractor-react": "workspace:*"
+    "@kala/kernel": "workspace:*",
+    "@kala/extractor-react": "workspace:*"
   },
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",

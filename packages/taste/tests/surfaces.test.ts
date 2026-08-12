@@ -3,7 +3,7 @@ import { mkdtemp, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { loadSurfaces, matchSurface } from '../src/surfaces.js'
-import { SURFACES_DIR } from '@fe-design/packs'
+import { SURFACES_DIR } from '@kala/packs'
 
 const load = async () => (await loadSurfaces(SURFACES_DIR)).surfaces
 

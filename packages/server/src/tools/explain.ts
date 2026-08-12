@@ -1,5 +1,5 @@
 import { getPack } from '../context.js'
-import type { VerifyResult, Severity } from '@fe-design/kernel/engine/rule-types.js'
+import type { VerifyResult, Severity } from '@kala/kernel/engine/rule-types.js'
 
 export type ExplainResult = {
   found: boolean

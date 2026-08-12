@@ -3,7 +3,7 @@ import { mkdtemp, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { loadGuides, GUIDE_ACTIONS } from '../src/guides.js'
-import { GUIDES_DIR } from '@fe-design/packs'
+import { GUIDES_DIR } from '@kala/packs'
 
 const load = async () => (await loadGuides(GUIDES_DIR)).guides
 

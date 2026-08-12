@@ -1,6 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 import { AXIS_NAMES, type DesignSystem } from './types.js'
 
 const isRange = (v: unknown): boolean =>

@@ -1,5 +1,5 @@
-import { emptyStyleFacts, type StyleFacts, type Box } from '@fe-design/kernel/ir/types.js'
-import { known, type StyleOrigin } from '@fe-design/kernel/ir/fact.js'
+import { emptyStyleFacts, type StyleFacts, type Box } from '@kala/kernel/ir/types.js'
+import { known, type StyleOrigin } from '@kala/kernel/ir/fact.js'
 
 export type TailwindScale = {
   spacing: Record<string, number>

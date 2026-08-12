@@ -17,7 +17,7 @@ const findPackDir = (name: string): string => {
     if (parent === dir) break
     dir = parent
   }
-  throw new Error(`@fe-design/packs: could not locate the ${name} directory.`)
+  throw new Error(`@kala/packs: could not locate the ${name} directory.`)
 }
 
 export const RULES_DIR = findPackDir('rules')

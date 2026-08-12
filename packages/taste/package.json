@@ -1,5 +1,5 @@
 {
-  "name": "@fe-design/taste",
+  "name": "@kala/taste",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/src/index.js",
@@ -11,8 +11,8 @@
     }
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/packs": "workspace:*",
+    "@kala/kernel": "workspace:*",
+    "@kala/packs": "workspace:*",
     "culori": "^4.0.2"
   },
   "devDependencies": {

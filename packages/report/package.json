@@ -1,5 +1,5 @@
 {
-  "name": "@fe-design/report",
+  "name": "@kala/report",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/src/index.js",
@@ -11,8 +11,8 @@
     }
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/browser": "workspace:*"
+    "@kala/kernel": "workspace:*",
+    "@kala/browser": "workspace:*"
   },
   "license": "Apache-2.0"
 }

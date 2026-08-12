@@ -1,9 +1,9 @@
 import { extname } from 'node:path'
-import { extractReact } from '@fe-design/extractor-react'
-import { extractVue } from '@fe-design/extractor-vue'
-import { extractSvelte } from '@fe-design/extractor-svelte'
-import { extractHtml } from '@fe-design/extractor-html'
-import type { IRDoc } from '@fe-design/kernel/ir/types.js'
+import { extractReact } from '@kala/extractor-react'
+import { extractVue } from '@kala/extractor-vue'
+import { extractSvelte } from '@kala/extractor-svelte'
+import { extractHtml } from '@kala/extractor-html'
+import type { IRDoc } from '@kala/kernel/ir/types.js'
 
 export type ExtractorFn = (source: string, file: string) => IRDoc
 

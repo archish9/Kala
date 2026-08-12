@@ -1,5 +1,5 @@
 {
-  "name": "@fe-design/browser",
+  "name": "@kala/browser",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/src/index.js",
@@ -11,8 +11,8 @@
     }
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/taste": "workspace:*"
+    "@kala/kernel": "workspace:*",
+    "@kala/taste": "workspace:*"
   },
   "peerDependencies": {
     "playwright": ">=1.40.0"

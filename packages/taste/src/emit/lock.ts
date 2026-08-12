@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
 import { emitTailwindConfig } from './tailwind.js'
 import { emitGlobalsCss } from './css.js'
 import type { ComposedTokens } from '../compose.js'

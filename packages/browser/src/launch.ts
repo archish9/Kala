@@ -1,4 +1,4 @@
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 import type { BrowserLike, Viewport } from './facts.js'
 
 export const INSTALL_HINT =

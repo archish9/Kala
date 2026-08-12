@@ -3,7 +3,7 @@ import { oklch } from 'culori'
 import { composeSystem } from '../src/compose.js'
 import { loadSystems } from '../src/load.js'
 import { contrast } from '../src/color/solve.js'
-import { SYSTEMS_DIR } from '@fe-design/packs'
+import { SYSTEMS_DIR } from '@kala/packs'
 import type { DesignSystem } from '../src/types.js'
 
 const load = async (): Promise<DesignSystem[]> =>

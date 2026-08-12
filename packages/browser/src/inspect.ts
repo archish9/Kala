@@ -1,7 +1,7 @@
 import { mkdtemp, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 import { launchChromium, DEFAULT_VIEWPORTS } from './launch.js'
 import { collectFacts } from './collect.js'
 import { checkContrast, type BrowserFinding } from './checks/contrast.js'
@@ -51,7 +51,7 @@ export const inspectUrl = async (
   // Screenshots go to the OS temp directory. system_bootstrap stays the only
   // tool that writes into the user's project.
   const shotDir = opts.screenshot
-    ? await mkdtemp(join(tmpdir(), 'fe-design-shots-'))
+    ? await mkdtemp(join(tmpdir(), 'kala-shots-'))
     : null
 
   try {

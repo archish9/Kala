@@ -1,13 +1,13 @@
 {
-  "name": "@fe-design/extractor-equivalence",
+  "name": "@kala/extractor-equivalence",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/extractor-react": "workspace:*",
-    "@fe-design/extractor-vue": "workspace:*",
-    "@fe-design/extractor-svelte": "workspace:*",
-    "@fe-design/extractor-html": "workspace:*"
+    "@kala/kernel": "workspace:*",
+    "@kala/extractor-react": "workspace:*",
+    "@kala/extractor-vue": "workspace:*",
+    "@kala/extractor-svelte": "workspace:*",
+    "@kala/extractor-html": "workspace:*"
   }
 }

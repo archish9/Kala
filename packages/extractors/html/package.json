@@ -1,5 +1,5 @@
 {
-  "name": "@fe-design/extractor-html",
+  "name": "@kala/extractor-html",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/src/index.js",
@@ -11,8 +11,8 @@
     }
   },
   "dependencies": {
-    "@fe-design/kernel": "workspace:*",
-    "@fe-design/extractor-core": "workspace:*",
+    "@kala/kernel": "workspace:*",
+    "@kala/extractor-core": "workspace:*",
     "parse5": "^7.2.0"
   },
   "license": "Apache-2.0"

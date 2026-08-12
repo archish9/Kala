@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { mergeFacts } from '../src/merge.js'
-import { emptyStyleFacts } from '@fe-design/kernel/ir/types.js'
-import { known, unknown, isKnown } from '@fe-design/kernel/ir/fact.js'
+import { emptyStyleFacts } from '@kala/kernel/ir/types.js'
+import { known, unknown, isKnown } from '@kala/kernel/ir/fact.js'
 
 const origin = { kind: 'class' as const, raw: 'p-4' }
 const withPadding = (v: number) => {

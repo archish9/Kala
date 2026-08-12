@@ -134,7 +134,7 @@ Same call plus `choice`.
 **Properties worth knowing**
 
 - **Idempotent.** Running twice with the same input produces byte-identical files.
-- **Marker-delimited.** Generated blocks are fenced by `fe-design:*:start` / `:end`
+- **Marker-delimited.** Generated blocks are fenced by `kala:*:start` / `:end`
   comments, so hand edits outside them survive regeneration.
 - **Refuses to overwrite.** An existing `design.lock.json` without `force` is a hard error.
 - **Contrast is solved, not hoped for.** Every pair meets its target by construction.
@@ -400,7 +400,7 @@ Turn findings into a grouped review rather than a flat list.
     "coverage": { "analyzed": 61, "skipped": 9 },
     "degraded": []
   },
-  "reportPath": "/tmp/fe-design-review-L4voKV/settings.html"
+  "reportPath": "/tmp/kala-review-L4voKV/settings.html"
 }
 ```
 

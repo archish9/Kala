@@ -242,18 +242,18 @@ node-level rule can express.
 
 | Package | Responsibility | Depends on |
 |---|---|---|
-| `@fe-design/kernel` | IR, facts, lock, rule engine, surface resolution | nothing |
-| `@fe-design/extractor-core` | Tailwind resolver, CSS resolver, selector matching, layer merge | kernel |
-| `@fe-design/extractor-react` | JSX → IR | kernel, core |
-| `@fe-design/extractor-vue` | Vue SFC → IR | kernel, core |
-| `@fe-design/extractor-svelte` | Svelte → IR | kernel, core |
-| `@fe-design/extractor-html` | HTML → IR | kernel, core |
-| `@fe-design/extractor-equivalence` | Proves the four agree (tests only) | all four |
-| `@fe-design/taste` | Design systems, colour maths, emission, surfaces, guides | kernel, packs |
-| `@fe-design/browser` | Rendered facts and checks. Playwright is an optional peer. | kernel, taste |
-| `@fe-design/report` | Grouped reviews and the self-contained HTML report | kernel, browser |
-| `@fe-design/packs` | Data: rules, systems, surfaces, guides | nothing |
-| `@fe-design/server` | MCP tools and the extractor registry | all of the above |
+| `@kala/kernel` | IR, facts, lock, rule engine, surface resolution | nothing |
+| `@kala/extractor-core` | Tailwind resolver, CSS resolver, selector matching, layer merge | kernel |
+| `@kala/extractor-react` | JSX → IR | kernel, core |
+| `@kala/extractor-vue` | Vue SFC → IR | kernel, core |
+| `@kala/extractor-svelte` | Svelte → IR | kernel, core |
+| `@kala/extractor-html` | HTML → IR | kernel, core |
+| `@kala/extractor-equivalence` | Proves the four agree (tests only) | all four |
+| `@kala/taste` | Design systems, colour maths, emission, surfaces, guides | kernel, packs |
+| `@kala/browser` | Rendered facts and checks. Playwright is an optional peer. | kernel, taste |
+| `@kala/report` | Grouped reviews and the self-contained HTML report | kernel, browser |
+| `@kala/packs` | Data: rules, systems, surfaces, guides | nothing |
+| `@kala/server` | MCP tools and the extractor registry | all of the above |
 
 ---
 
@@ -334,13 +334,13 @@ writes where you work.
 
 The workspace resolves differently at test time and at runtime, on purpose:
 
-| Context | `@fe-design/kernel` resolves to |
+| Context | `@kala/kernel` resolves to |
 |---|---|
 | Tests (vitest) | `packages/kernel/src/index.ts` — via alias, no build needed |
 | Runtime (node) | `packages/kernel/dist/src/index.js` — via package exports |
 
 This is why `pnpm test` works on a fresh clone but the server needs
-`pnpm --filter @fe-design/server build` first.
+`pnpm --filter @kala/server build` first.
 
 Two build details that cost real debugging time and are now locked down:
 

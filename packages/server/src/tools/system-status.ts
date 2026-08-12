@@ -1,6 +1,6 @@
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
-import { checkStale } from '@fe-design/kernel/lock/staleness.js'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
+import { checkStale } from '@kala/kernel/lock/staleness.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 
 export type StatusResult = {
   hasLock: boolean

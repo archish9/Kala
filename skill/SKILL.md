@@ -1,11 +1,11 @@
 ---
-name: fe-design
+name: kala
 description: Use when building, reviewing, or changing frontend UI — pages, components, layouts, styling, or design systems. Connects UI work to this project's own design system so pages stay consistent and production-grade.
 ---
 
 # Frontend design
 
-This project has an `fe-design` MCP server holding its design system. Use it.
+This project has an `kala` MCP server holding its design system. Use it.
 
 ## Before writing any UI
 

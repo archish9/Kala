@@ -227,7 +227,7 @@ system, and the alternative is an arbitrary value in the markup.
 ### `tailwind.config.mjs`
 
 ```js
-// fe-design:tailwind:start — generated; edits inside are overwritten
+// kala:tailwind:start — generated; edits inside are overwritten
 export default {
   theme: { extend: {
     spacing:      { "0": '0px', "1": '4px', … },
@@ -237,7 +237,7 @@ export default {
     colors: { accent: { "50": '#…', … }, neutral: { … }, bg: '#…', fg: '#…' }
   } }
 }
-// fe-design:tailwind:end
+// kala:tailwind:end
 ```
 
 The key names matter: `deriveLock` reads `theme.extend.spacing`, `.fontSize`, `.colors`,
@@ -246,7 +246,7 @@ and `.borderRadius`. Changing them silently breaks derivation.
 ### `src/styles/globals.css`
 
 ```css
-/* fe-design:tokens:start — generated; edits inside are overwritten */
+/* kala:tokens:start — generated; edits inside are overwritten */
 :root {
   --color-bg: #f7f4f3;
   --color-fg: #4c433d;
@@ -263,7 +263,7 @@ and `.borderRadius`. Changing them silently breaks derivation.
 :root[data-theme="dark"] { … }
 
 @media (prefers-reduced-motion: reduce) { :root { --motion-duration: 0ms; } }
-/* fe-design:tokens:end */
+/* kala:tokens:end */
 ```
 
 ### `design.lock.json`

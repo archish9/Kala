@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { extractVue } from '../src/index.js'
-import { isKnown, isUnknown } from '@fe-design/kernel/ir/fact.js'
+import { isKnown, isUnknown } from '@kala/kernel/ir/fact.js'
 
 const sfc = (body: string) => extractVue(body, 'Card.vue')
 

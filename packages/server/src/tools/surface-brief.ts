@@ -1,9 +1,9 @@
 import { resolve } from 'node:path'
-import { loadSurfaces, matchSurface, loadSystems } from '@fe-design/taste'
-import type { RequiredState } from '@fe-design/taste'
-import { SURFACES_DIR, SYSTEMS_DIR } from '@fe-design/packs'
-import { deriveLock } from '@fe-design/kernel/lock/derive.js'
-import type { Degraded } from '@fe-design/kernel/engine/rule-types.js'
+import { loadSurfaces, matchSurface, loadSystems } from '@kala/taste'
+import type { RequiredState } from '@kala/taste'
+import { SURFACES_DIR, SYSTEMS_DIR } from '@kala/packs'
+import { deriveLock } from '@kala/kernel/lock/derive.js'
+import type { Degraded } from '@kala/kernel/engine/rule-types.js'
 
 export type SurfaceBriefResult = {
   surface: string | null

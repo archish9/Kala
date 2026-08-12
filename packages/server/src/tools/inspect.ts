@@ -1,4 +1,4 @@
-import { inspectUrl, DEFAULT_VIEWPORTS, type InspectResult } from '@fe-design/browser'
+import { inspectUrl, DEFAULT_VIEWPORTS, type InspectResult } from '@kala/browser'
 
 export type { InspectResult }
 

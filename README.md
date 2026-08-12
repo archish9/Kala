@@ -1,4 +1,4 @@
-# fe-design MCP
+# kala MCP
 
 An MCP server that helps coding agents build **production-grade frontend** — work that
 reads as though an experienced designer made it, rather than a template filled in.
@@ -26,7 +26,7 @@ cd DesignMCP
 corepack enable pnpm      # Node 20+ required
 pnpm install
 pnpm test                 # 437 tests
-pnpm --filter @fe-design/server build
+pnpm --filter @kala/server build
 ```
 
 Then point your MCP client at the built server:
@@ -34,7 +34,7 @@ Then point your MCP client at the built server:
 ```json
 {
   "mcpServers": {
-    "fe-design": {
+    "kala": {
       "command": "node",
       "args": ["/absolute/path/to/DesignMCP/packages/server/dist/src/index.js"]
     }

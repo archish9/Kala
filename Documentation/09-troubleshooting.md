@@ -33,7 +33,7 @@ rm -rf node_modules && pnpm install
 Note this setting lives in `pnpm-workspace.yaml`, not `package.json` — pnpm 11 ignores a
 `pnpm` field in `package.json` and will say so.
 
-### `Cannot find module '@fe-design/…'`
+### `Cannot find module '@kala/…'`
 
 A workspace package is not linked. Run `pnpm install` from the repository root.
 
@@ -86,7 +86,7 @@ is set per package.
 The server is not built:
 
 ```bash
-pnpm --filter @fe-design/server build
+pnpm --filter @kala/server build
 ```
 
 `dist/` is gitignored, so this is required after every fresh clone.
@@ -262,7 +262,7 @@ lightness targets. Lowering a target defeats the point of solving contrast struc
 
 ### Built-binary tests skip
 
-Expected when `dist/` is unbuilt. Run `pnpm --filter @fe-design/server build`.
+Expected when `dist/` is unbuilt. Run `pnpm --filter @kala/server build`.
 
 ### The browser smoke test skips
 
