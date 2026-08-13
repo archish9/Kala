@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "generous", "sectionGap": 96 },
   "shape": { "radius": 2, "depth": "borders" },
   "color": { "strategy": "warm neutral with one deep accent", "neutralHue": 40, "chromaCeiling": 0.04 },
-  "motion": { "budget": "minimal", "duration": 120, "easing": "ease-out" },
+  "motion": { "budget": "minimal", "duration": 120, "easing": "cubic-bezier(0.32, 0.72, 0, 1)" },
   "signature": [
     "Borders carry structure. Shadows are for overlays only.",
     "Numbers are tabular-lined and right-aligned.",

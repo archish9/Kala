@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "tight", "sectionGap": 64 },
   "shape": { "radius": 2, "depth": "borders" },
   "color": { "strategy": "cool slate neutral with a single signal accent", "neutralHue": 220, "chromaCeiling": 0.03 },
-  "motion": { "budget": "minimal", "duration": 100, "easing": "ease-out" },
+  "motion": { "budget": "minimal", "duration": 100, "easing": "cubic-bezier(0.32, 0.72, 0, 1)" },
   "signature": [
     "Monospace for every identifier, path, and value — never for prose.",
     "Status is a colored dot plus a word, never colour alone.",

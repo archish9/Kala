@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "normal", "sectionGap": 88 },
   "shape": { "radius": 6, "depth": "shadows" },
   "color": { "strategy": "warm neutral with a high-energy accent reserved for buying", "neutralHue": 20, "chromaCeiling": 0.14 },
-  "motion": { "budget": "moderate", "duration": 200, "easing": "ease-out" },
+  "motion": { "budget": "moderate", "duration": 200, "easing": "cubic-bezier(0.32, 0.72, 0, 1)" },
   "signature": [
     "The accent colour belongs to the buy button and nothing else.",
     "Product imagery is never cropped into a circle.",

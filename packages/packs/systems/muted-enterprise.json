@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "normal", "sectionGap": 72 },
   "shape": { "radius": 4, "depth": "borders" },
   "color": { "strategy": "restrained institutional neutral with a low-chroma accent", "neutralHue": 240, "chromaCeiling": 0.04 },
-  "motion": { "budget": "minimal", "duration": 130, "easing": "ease-out" },
+  "motion": { "budget": "minimal", "duration": 130, "easing": "cubic-bezier(0.32, 0.72, 0, 1)" },
   "signature": [
     "Every destructive action needs a typed confirmation.",
     "Labels sit above fields, never inside them as placeholders.",

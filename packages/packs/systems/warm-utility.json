@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "normal", "sectionGap": 72 },
   "shape": { "radius": 8, "depth": "borders" },
   "color": { "strategy": "warm sand neutral with a friendly saturated accent", "neutralHue": 60, "chromaCeiling": 0.06 },
-  "motion": { "budget": "moderate", "duration": 180, "easing": "ease-out" },
+  "motion": { "budget": "moderate", "duration": 180, "easing": "cubic-bezier(0.32, 0.72, 0, 1)" },
   "signature": [
     "Rounded corners and warm neutrals; nothing clinical.",
     "Empty states speak in plain sentences, never in icons alone.",

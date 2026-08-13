@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "generous", "sectionGap": 128 },
   "shape": { "radius": 0, "depth": "borders" },
   "color": { "strategy": "paper neutral with a single ink accent", "neutralHue": 30, "chromaCeiling": 0.03 },
-  "motion": { "budget": "minimal", "duration": 200, "easing": "ease-out" },
+  "motion": { "budget": "minimal", "duration": 200, "easing": "cubic-bezier(0.32, 0.72, 0, 1)" },
   "signature": [
     "Type leads. Measure is capped near 68 characters.",
     "Headings use the serif; interface chrome uses the sans.",

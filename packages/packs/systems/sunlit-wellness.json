@@ -11,7 +11,7 @@
   "space": { "base": 4, "rhythm": "generous", "sectionGap": 112 },
   "shape": { "radius": 20, "depth": "shadows" },
   "color": { "strategy": "warm sunlit neutral with a soft earth accent", "neutralHue": 70, "chromaCeiling": 0.09 },
-  "motion": { "budget": "moderate", "duration": 240, "easing": "ease-in-out" },
+  "motion": { "budget": "moderate", "duration": 240, "easing": "cubic-bezier(0.65, 0, 0.35, 1)" },
   "signature": [
     "One action per screen; nothing competes for attention.",
     "Streaks are encouraged, never enforced with guilt.",
