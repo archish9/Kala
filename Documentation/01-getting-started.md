@@ -98,7 +98,7 @@ Add to your MCP settings:
   "mcpServers": {
     "kala": {
       "command": "node",
-      "args": ["/absolute/path/to/DesignMCP/packages/server/dist/src/index.js"]
+      "args": ["/absolute/path/to/Kala/packages/server/dist/src/index.js"]
     }
   }
 }
@@ -108,6 +108,35 @@ Add to your MCP settings:
 
 Same shape. The server takes no arguments, reads no environment variables, and needs no
 working directory — every tool takes an absolute `dir` parameter instead.
+
+### LangChain deepagents
+
+kala is a standard stdio MCP server, which `deepagents` (and the underlying
+`langchain-mcp-adapters`) consumes directly — no changes needed on kala's side:
+
+```python
+from deepagents import create_deep_agent
+
+agent = create_deep_agent(
+    tools=[],
+    mcp_servers={
+        "kala": {
+            "command": "node",
+            "args": ["/absolute/path/to/Kala/packages/server/dist/src/index.js"],
+        }
+    },
+)
+```
+
+A deepagents `SubAgent` scoped to `tools=[...]` an explicit list gets the same hard
+tool-restriction guarantee as this project's own `/kala` command (see
+`.claude/agents/kala.md`) — useful if another FE-design MCP is also wired into the same
+agent and you want kala to be the only one consulted for a given subagent.
+
+One caveat: the hosted **managed-deep-agents** cloud offering only accepts remote
+HTTP/SSE MCP servers, not stdio — it can't spawn local processes in its sandbox. kala
+currently ships stdio only, so it works with self-hosted `deepagents`/`dcode` agents but
+not that specific managed service, until an HTTP/SSE transport is added.
 
 ### The companion skill (optional but recommended)
 

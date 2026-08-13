@@ -36,7 +36,7 @@ Then point your MCP client at the built server:
   "mcpServers": {
     "kala": {
       "command": "node",
-      "args": ["/absolute/path/to/DesignMCP/packages/server/dist/src/index.js"]
+      "args": ["/absolute/path/to/Kala/packages/server/dist/src/index.js"]
     }
   }
 }
