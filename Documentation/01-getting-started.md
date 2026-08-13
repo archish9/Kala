@@ -47,8 +47,8 @@ Without it, `inspect` returns install instructions and every other tool is unaff
 ## Install
 
 ```bash
-git clone git@github.com:archish9/DesignMCP.git
-cd DesignMCP
+git clone git@github.com:archish9/Kala.git
+cd Kala
 pnpm install
 ```
 

@@ -21,8 +21,8 @@ structurally cannot.
 ## Quick start
 
 ```bash
-git clone git@github.com:archish9/DesignMCP.git
-cd DesignMCP
+git clone git@github.com:archish9/Kala.git
+cd Kala
 corepack enable pnpm      # Node 20+ required
 pnpm install
 pnpm test                 # 437 tests
