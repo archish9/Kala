@@ -34,6 +34,74 @@ These run on your files. Say: *"Check src/Settings.tsx against our design system
 **Severity:** fix every `error`. Fix `warn` unless it conflicts with something you asked for
 deliberately. `info` is an observation.
 
+### Understanding a finding
+
+**Scale rules** — `space-off-scale`, `type-off-scale`, `radius-off-scale`
+
+```tsx
+<div className="p-4">        ✓  16px is on the scale
+<div className="p-[13px]">   ✗  13px is not
+```
+
+Fix by using the nearest value from your scale. If 13px genuinely belongs, add it to the
+scale deliberately — and say so, rather than adding it to silence a finding. `radius` is a
+warning rather than an error because a one-off radius is occasionally justified.
+
+**`color-off-palette`** — a colour invented on the spot.
+
+```tsx
+<p className="text-gray-900">     ✓  in the palette
+<p className="text-[#22543D]">    ✗  invented on the spot
+```
+
+This is the rule that stops page five looking like a different product than page one.
+
+**`text-contrast`** — text below 4.5:1 against its nearest *known* background.
+
+```tsx
+<section className="bg-white">
+  <p className="text-gray-400">too faint</p>   ✗  2.85:1
+</section>
+```
+
+If no ancestor has a known background, this rule skips rather than guessing — resolving
+inherited backgrounds properly needs a real render, which is what `computed-contrast` below
+does.
+
+**`tiny-text`** — below 12px, text stops being readable for a meaningful share of users
+regardless of design intent.
+
+**Craft rules** catch what makes output look amateur without any single line being wrong.
+`flat-type-hierarchy` fires when a surface has fewer than three distinct text sizes across
+at least eight sized elements — everything the same size means nothing is emphasised.
+`monotonous-spacing` fires when every element uses the same padding, throwing away the
+grouping information spacing carries. `nested-card` catches a bordered, rounded container
+directly inside another:
+
+```tsx
+<div className="rounded-xl border p-4">
+  <div className="rounded-xl border p-4">nested</div>   ✗
+</div>
+```
+
+It requires **both** a known radius and a known border width on both elements, so a rounded
+button inside a card does not trip it.
+
+**Real-world state rules** are the answer to "only the happy path exists". kala reads your
+data sources (`fetch`, `useQuery`, `useSWR`, `useMutation`, `load`) and the branches around
+them:
+
+```tsx
+if (isLoading) return <Spinner/>       → loading
+if (error) return <Err/>               → error
+{items.length === 0 && <Empty/>}       → empty
+if (!canEdit) return <ReadOnly/>       → permission
+```
+
+`missing-error-state` is an error because real data fails. `missing-empty-state` is an error
+because zero items is a normal outcome, not a failure. `missing-loading-state` and
+`list-without-empty` are warnings.
+
 ---
 
 ## Rendered checks (3)
@@ -50,6 +118,25 @@ These need a running page, because no amount of source reading can answer them. 
 A fourth result, `contrast-unresolved`, is reported at `info` when no opaque background can
 be found — over an image, for example. kala says it could not judge rather than inventing a
 ratio.
+
+**Why `computed-contrast` needs a browser.** `getComputedStyle` returns `rgba(0, 0, 0, 0)`
+for an element with no background of its own:
+
+```html
+<body style="background:#ffffff">
+  <section style="padding:24px">              <!-- transparent -->
+    <p style="color:#9ca3af">faint text</p>   <!-- also transparent -->
+  </section>
+</body>
+```
+
+The paragraph's real background is the body's white, three levels up. Judging its contrast
+means walking ancestors to the first opaque colour, which no amount of source reading can
+do — so the source rule correctly skips it and this one catches it.
+
+`horizontal-overflow` reports once per page rather than once per element, but names the
+widest element extending past the viewport: "the page scrolls sideways" is not actionable
+without a culprit.
 
 The rendered checks need Chromium, which is opt-in:
 
