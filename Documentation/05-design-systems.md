@@ -6,6 +6,7 @@ How the server arrives at a design direction, and what it writes.
 - [The twelve systems](#the-twelve-systems)
 - [Anatomy of a system](#anatomy-of-a-system)
 - [How a brief becomes a shortlist](#how-a-brief-becomes-a-shortlist)
+- [The catalog fallback tier](#the-catalog-fallback-tier)
 - [The colour maths](#the-colour-maths)
 - [Scales](#scales)
 - [What gets written](#what-gets-written)
@@ -47,8 +48,11 @@ curation cannot enumerate — full colour ramps, solved contrast, dark mode.
 | `sunlit-wellness` | Outfit / Fraunces | wellness, meditation, sleep, habits |
 | `stark-brutal` | Space Grotesk / Instrument Serif | studios, experimental, music, fashion |
 
-Twelve well-authored systems beat eighty-four thin ones. **Quality is capped by how good
-these are** — no maths layer rescues a mediocre catalogue.
+Twelve well-authored systems beat a same-size slice of a bigger, thinner catalogue.
+**Quality is capped by how good these are** — no maths layer rescues a mediocre catalogue.
+That is exactly why they are not the only tier: a brief none of the twelve genuinely fits
+falls through to a much larger, thinner pool instead of forcing a bad match — see
+[The catalog fallback tier](#the-catalog-fallback-tier).
 
 A property test asserts the catalogue covers the axis space at both ends, so briefs land
 somewhere distinct rather than clustering.
@@ -139,6 +143,72 @@ online shop checkout         → bold-commerce
 museum research archive      → archive-serif
 dense analytics dashboard    → quiet-precision
 ```
+
+---
+
+## The catalog fallback tier
+
+The twelve curated systems are scored first, and win whenever one of them is a real match
+— **fit ≥ 0.55**. Below that threshold, `system_bootstrap` falls through to a much larger
+pool ported from [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
+(MIT): **84 styles, 192 palettes, 74 typography pairings**, reshaped into kala's own
+schema — see [ATTRIBUTION.md](../ATTRIBUTION.md) for exactly what was kept and what
+changed in the port.
+
+### Why a fallback tier exists at all
+
+Twelve hand-authored systems is a real catalogue, but a brief like *"artisanal candle
+subscription box for pet reptiles"* has no business being forced into one of twelve
+bundles authored around completely different domains. Rather than lower the bar for what
+counts as curated, a brief that does not fit gets a **second, wider pool** to draw from
+instead — still deterministic, still no network call, just less opinionated.
+
+### Independent selection, not another bundle
+
+The twelve curated systems are *bundles* — style, palette, and typography were authored
+together as one unit on purpose, because a designer picks a serif *because* the palette is
+warm. The catalog tier cannot offer that: it has no equivalent of hand-authored coherence.
+So it does the opposite of pretending to — style, palette, and typography are selected
+**independently**, each from its own pool, using the exact same axis-distance +
+`fitFor`/`avoidFor` scorer the twelve curated systems use (`scorePool` in
+`packages/taste/src/select.ts` — one scoring algorithm, not two).
+
+```
+brief
+  → best curated system scores below 0.55
+  → pick the best-fit style from the 84                (selectCatalogStyles)
+  → resolve light vs dark from the brief + that style   (resolveColorMode)
+  → pick the best-fit palette matching that mode        (selectCatalogPalettes)
+  → pick the best-fit typography pairing                (selectCatalogTypography)
+  → assemble the three into one system                  (synthesizeSystem)
+```
+
+### Palettes are parameter presets, not literal hex
+
+ui-ux-pro-max's 192 palette rows are literal hex sets (`Primary`, `Secondary`, `Accent`,
+`Background`, …). Kala's colour pipeline does not consume a palette that way — see
+[The colour maths](#the-colour-maths) below: `composeSystem` **derives** the whole
+accessible light/dark palette from one accent hex plus two numbers, `neutralHue` and
+`chromaCeiling`. Shipping the literal hex would have skipped that solver entirely, so the
+port reduces each palette row to exactly those two numbers (plus a `defaultAccent` and a
+`darkPrimary` flag) instead. Every catalog-sourced proposal still gets a fully
+contrast-solved palette, on the same terms as a curated one — nothing bypasses
+`solveSemantics`/`deriveDark`.
+
+### What a catalog-sourced proposal does not have
+
+A catalog pick's `signature` and `antiDefaults` come back **empty**. Those lines are what a
+human wrote by hand for the twelve curated systems, and reshaping 84 styles' worth of
+equivalent opinions was out of scope for the port. `guide` and `surface_brief` still work
+against a catalog-sourced project — they just have nothing project-specific to add on top
+of the token values.
+
+### It never returns nothing
+
+If the catalog itself is missing or fails to load, `system_bootstrap` degrades to
+curated-only proposals rather than erroring — same discipline as every other degrade path
+in this server. If the catalog style pool somehow returns zero candidates, the tool falls
+back to the best curated system regardless of its fit score. There is always a proposal.
 
 ---
 

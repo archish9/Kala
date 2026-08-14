@@ -14,7 +14,7 @@ How to run the tests, how they are organised, and what each suite actually prove
 ## Running tests
 
 ```bash
-pnpm test                                  # everything — 437 tests
+pnpm test                                  # everything — 476 tests
 pnpm test:watch                            # watch mode
 pnpm typecheck                             # tsc -b across all packages
 
@@ -37,13 +37,14 @@ browser-dependent test skips when Chromium is absent.
 | Location | Files | Covers |
 |---|---|---|
 | `packages/kernel/tests` | 9 | Facts, IR queries, evaluator, pack loader, rule runner, lock, surfaces |
-| `packages/taste/tests` | 13 | Systems, axes, selection, ramps, contrast, dark mode, scales, emission, surfaces, guides |
-| `packages/server/tests` | 7 | Each tool, plus the built-binary suite |
+| `packages/taste/tests` | 17 | Systems, axes, selection, catalog fallback (selection, composition, color mode), ramps, contrast, dark mode, scales, emission, surfaces, guides |
+| `packages/taste/scripts` | 1 | Catalog CSV-to-JSON conversion helpers (`.test.mjs`, not `.test.ts` — see [Extending § Refresh the catalog data](08-extending.md#refresh-the-catalog-data)) |
+| `packages/server/tests` | 8 | Each tool, plus the built-binary suite |
 | `packages/packs/tests` | 3 | Rule pack gate, rules dir, provenance |
 | `packages/extractors/core/tests` | 4 | Tailwind, CSS, selectors, merge |
 | `packages/extractors/{react,vue,svelte,html}/tests` | 6 | One extractor each |
 | `packages/extractors/equivalence/tests` | 1 | **All four agree** |
-| `packages/browser/tests` | 6 | Launch, collection, three checks, and one real-browser smoke test |
+| `packages/browser/tests` | 7 | Launch, collection, three checks, and one real-browser smoke test |
 | `packages/report/tests` | 2 | Review grouping and HTML rendering |
 
 ---
@@ -147,6 +148,18 @@ Properties rather than snapshots, across all 12 systems × 9 hues:
 When one of these fails, the fix is the generator, never the target. Lowering a contrast
 target to make a test pass defeats the entire point of solving contrast structurally.
 
+### Catalog fallback tests
+
+`packages/taste/tests/catalog-data.test.ts` and `packages/taste/tests/propose.test.ts`
+
+`catalog-data.test.ts` asserts the ported data itself: exact counts (84/192/74), every
+entry has a valid axis range, ids are unique. `propose.test.ts` asserts the *behaviour* —
+including one test that runs a catalog-sourced synthetic system through `composeSystem`
+and checks `report` is non-empty and every pair meets its target. That single assertion is
+the guard against the fallback tier silently regressing into shipping literal hex and
+skipping the contrast solver — see
+[Design Systems § The catalog fallback tier](05-design-systems.md#the-catalog-fallback-tier).
+
 ---
 
 ## Test design principles
@@ -234,6 +247,24 @@ for (const p of selectSystems('your brief here', systems)) {
 }
 "
 ```
+
+This only ever shows the 12 curated systems' fit scores. To see the **full picture**
+including whether a brief falls through to the catalog tier, use `proposeSystem` instead —
+it is the same function `system_bootstrap` actually calls:
+
+```bash
+node --input-type=module -e "
+const { loadSystems, loadCatalog, proposeSystem } = await import('./packages/taste/dist/src/index.js')
+const { SYSTEMS_DIR, CATALOG_DIR } = await import('./packages/packs/dist/src/index.js')
+const { systems } = await loadSystems(SYSTEMS_DIR)
+const { catalog } = await loadCatalog(CATALOG_DIR)
+for (const p of proposeSystem('your brief here', systems, catalog)) {
+  console.log(p.system.id, p.fit, '—', p.rationale, '— signature:', p.system.signature.length)
+}
+"
+```
+
+A catalog-sourced result prints `signature: 0`; a curated one always prints 3 or more.
 
 Both snippets need `pnpm typecheck` to have run at least once, since they import from
 `dist/`.

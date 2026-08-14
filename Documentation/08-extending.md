@@ -6,6 +6,7 @@ How to add a rule, a design system, a surface, a playbook, or a whole framework.
 - [Add a rule that needs code](#add-a-rule-that-needs-code)
 - [Add a rendered check](#add-a-rendered-check)
 - [Add a design system](#add-a-design-system)
+- [Refresh the catalog data](#refresh-the-catalog-data)
 - [Add a surface](#add-a-surface)
 - [Add a playbook](#add-a-playbook)
 - [Add a framework](#add-a-framework)
@@ -325,6 +326,55 @@ pnpm vitest run packages/taste/tests/systems.test.ts
 This runs your system through every property: contrast at every hue in both schemes,
 monotonic ramps, AAA body text, deterministic composition. Update the expected count in the
 "ships twelve systems" test.
+
+This only covers the **curated** twelve. The catalog fallback tier
+([Design Systems § The catalog fallback tier](05-design-systems.md#the-catalog-fallback-tier))
+is separate data entirely and is not touched by adding a curated system.
+
+---
+
+## Refresh the catalog data
+
+The catalog fallback tier (`packages/packs/catalog/{styles,palettes,typography}.json`) is
+generated, not hand-written — it is a one-time port of ui-ux-pro-max's `styles.csv`,
+`colors.csv`, and `typography.csv` (MIT), reshaped into kala's schema. There is normally
+**nothing to do here**: the generated JSON is committed to the repo like any other pack
+data. Re-run the conversion only if the upstream ui-ux-pro-max data changes and you want
+to pull that update in.
+
+Each domain has its own script under `packages/taste/scripts/`, taking the source CSV's
+path as its only argument:
+
+```bash
+# Build @kala/taste first — the scripts self-import briefToAxes from its built dist
+pnpm typecheck
+
+node packages/taste/scripts/build-catalog-styles.mjs     /path/to/ui-ux-pro-max/data/styles.csv
+node packages/taste/scripts/build-catalog-palettes.mjs   /path/to/ui-ux-pro-max/data/colors.csv
+node packages/taste/scripts/build-catalog-typography.mjs /path/to/ui-ux-pro-max/data/typography.csv
+```
+
+Each script overwrites the matching file under `packages/packs/catalog/` and prints how
+many rows it wrote (84 / 192 / 74 today — the count will differ if upstream added or
+removed rows). Verify the result:
+
+```bash
+pnpm vitest run packages/taste/tests/catalog-data.test.ts
+```
+
+**What the scripts do, briefly** (see `packages/taste/scripts/lib.mjs` for the shared
+helpers): each CSV row's free-text fields (`Keywords`, `Best For`, `Mood/Style Keywords`,
+…) are run through `deriveAxesRange`, which wraps the same `briefToAxes` lexicon used for
+a real brief, so the reshape reuses the project's own scoring geometry rather than
+inventing a second one. Colour rows are reduced to `neutralHue`/`chromaCeiling` via
+`culori`, not carried over as literal hex — see
+[Design Systems § Palettes are parameter presets, not literal hex](05-design-systems.md#palettes-are-parameter-presets-not-literal-hex)
+for why. **These scripts are not part of `pnpm test`, `pnpm build`, or CI** — they are a
+maintenance tool for an occasional, deliberate data refresh, not a build step.
+
+If you update the CSVs, also update the row counts in
+[ATTRIBUTION.md](../ATTRIBUTION.md) and in `catalog-data.test.ts`'s three `toHaveLength`
+assertions.
 
 ---
 

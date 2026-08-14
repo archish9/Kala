@@ -25,7 +25,7 @@ git clone git@github.com:archish9/Kala.git
 cd Kala
 corepack enable pnpm      # Node 20+ required
 pnpm install
-pnpm test                 # 437 tests
+pnpm test                 # 476 tests
 pnpm --filter @kala/server build
 ```
 
@@ -69,11 +69,15 @@ A worked example of the whole loop is in
   `verify`, `inspect`, `critique`, `explain`
 - **13 source rules** across scale, consistency, accessibility, craft, and real-world states
 - **3 rendered checks** — computed contrast, horizontal overflow, touch target size
-- **12 curated design systems** with generated OKLCH palettes and solved contrast
+- **12 curated design systems** with generated OKLCH palettes and solved contrast, backed
+  by a **catalog fallback tier** (84 styles / 192 palettes / 74 typography pairings, ported
+  from ui-ux-pro-max under MIT) for briefs none of the 12 fit well
 - **6 surface briefs** and **13 action playbooks**
 - **4 framework extractors** proven equivalent by a dedicated test suite
-- **437 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
+- **476 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
 - **No browser required** — the browser pass is opt-in and degrades cleanly
+- **No network calls, no API keys** — the whole server, including the catalog, is static
+  data plus deterministic code; nothing it does depends on an external service
 
 ---
 
@@ -87,7 +91,7 @@ Start here and read in order, or jump to what you need.
 | [2. Architecture](Documentation/02-architecture.md) | Packages, the IR, the three-state fact model, dependency rules |
 | [3. Tool Reference](Documentation/03-tools.md) | Every tool: parameters, responses, worked examples |
 | [4. Rule Reference](Documentation/04-rules.md) | All 13 rules, the four rule kinds, waivers, provenance |
-| [5. Design Systems](Documentation/05-design-systems.md) | The 12 systems, selection, colour maths, emitted files |
+| [5. Design Systems](Documentation/05-design-systems.md) | The 12 curated systems, the catalog fallback tier, selection, colour maths, emitted files |
 | [6. Surfaces and Guides](Documentation/06-surfaces-and-guides.md) | The 6 surface briefs and 13 playbooks |
 | [7. Testing](Documentation/07-testing.md) | Running tests, the test layout, what each suite proves |
 | [8. Extending](Documentation/08-extending.md) | Add a rule, a design system, a surface, a framework |
@@ -119,7 +123,10 @@ This is a greenfield product that harvests proven material from three prior proj
 attribution. See [NOTICE](NOTICE) and [ATTRIBUTION.md](ATTRIBUTION.md).
 
 - [impeccable](https://github.com/pbakaus/impeccable) — Apache-2.0 — detector heuristics and thresholds
-- [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — MIT
+- [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — MIT —
+  surface/guidance material, the persisted-design-system pattern, and (as of the catalog
+  fallback tier) 84 styles / 192 palettes / 74 typography pairings reshaped from its
+  `styles.csv` / `colors.csv` / `typography.csv` — see [ATTRIBUTION.md](ATTRIBUTION.md)
 - [design-motion-principles](https://github.com/kylezantos/design-motion-principles) — MIT
 
 ## License

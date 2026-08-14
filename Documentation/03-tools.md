@@ -138,6 +138,11 @@ Same call plus `choice`.
   comments, so hand edits outside them survive regeneration.
 - **Refuses to overwrite.** An existing `design.lock.json` without `force` is a hard error.
 - **Contrast is solved, not hoped for.** Every pair meets its target by construction.
+- **Proposals can come from two tiers.** The 12 curated systems are scored first; only when
+  none fits well does a proposal come from the larger catalog fallback tier instead. A
+  catalog-sourced proposal's `signature` and `banned`/`antiDefaults` come back **empty** —
+  it has no hand-authored opinions, unlike a curated one. See
+  [Design Systems § The catalog fallback tier](05-design-systems.md#the-catalog-fallback-tier).
 
 Details of what gets written: [Design Systems](05-design-systems.md#what-gets-written).
 

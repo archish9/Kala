@@ -3,6 +3,7 @@
 What is built, what is deliberately not, and what is honestly weak.
 
 - [Build status](#build-status)
+- [What's being built now](#whats-being-built-now)
 - [What is not built yet](#what-is-not-built-yet)
 - [Known limits](#known-limits)
 - [Design decisions and their costs](#design-decisions-and-their-costs)
@@ -23,12 +24,40 @@ its own.
 | 4a | Extraction: Vue, Svelte, and HTML extractors, shared CSS resolution, the equivalence suite | **Done** |
 | 4b | Browser: `inspect` and `critique` with a self-contained HTML report | **Done** |
 
-Current totals: **437 tests**, 8 tools, 13 source rules, 3 rendered checks, 12 systems,
-6 surfaces, 13 playbooks, 4 frameworks.
+Current totals: **476 tests**, 8 tools, 13 source rules, 3 rendered checks, 12 curated
+systems + a catalog fallback tier (84 styles / 192 palettes / 74 typography), 6 surfaces,
+13 playbooks, 4 frameworks.
 
-The whole spec is now built.
+The whole original spec is now built. Work since then continues under a new post-spec
+roadmap — see [What's being built now](#whats-being-built-now) below.
 
 Every phase has a written spec and plan under `docs/superpowers/`.
+
+---
+
+## What's being built now
+
+The original four-phase spec is complete. Kala is now growing along a **second,
+independently-approved roadmap** toward a fuller FE production suite, still bound by the
+same constraints as everything above: no network calls, no API keys, deterministic.
+True AI image generation (novel banner art, AI-drawn logos, rendered brand mockups) is
+explicitly **out of scope for the whole roadmap** — it cannot be done without an external
+image-generation API, which contradicts the no-network-dependency constraint. See
+`docs/superpowers/specs/2026-08-14-catalog-search-infra-design.md` for the sub-project 1
+design doc and the full ordering rationale.
+
+| # | Sub-project | Status |
+|---|---|---|
+| 1 | Catalog search infra — the 84/192/74 catalog fallback tier documented in [Design Systems § The catalog fallback tier](05-design-systems.md#the-catalog-fallback-tier) | **Done** |
+| 2 | Advisor breadth — chart-type advisor, icon lookup, mobile/RN guidelines, React/Next perf rules, UX-guideline expansion | Not started |
+| 3 | Design dials — variance/motion/density 1–10 knobs on `system_bootstrap` | Not started |
+| 4 | GSAP snippet bank — extends the `animate` guide with code snippets by intensity tier | Not started |
+| 5 | Banner/slide/component generation — new write-capable tool(s); breaks the "one writing tool" invariant below, needs its own design | Not started |
+| 6 | Brand/CIP without images — brand guideline docs, not mockup renders | Not started |
+| 7 | Stack coverage expansion — extractors beyond React/Vue/Svelte/HTML, one stack at a time | Not started |
+
+(Numbered here by approved build order, which front-loads the sub-project everything else
+leans on; this does not match the order the sub-projects were originally proposed in.)
 
 ---
 
@@ -37,6 +66,7 @@ Every phase has a written spec and plan under `docs/superpowers/`.
 ### Nothing from the original spec
 
 Every phase is built. What follows is work the spec anticipated but deliberately deferred.
+The post-spec roadmap above is separate work, tracked in the table just above instead.
 
 ### The looping CSS demo report
 
@@ -46,13 +76,19 @@ the demos: getting one right means generating a correct example of the fix per r
 is rule-pack authoring rather than report work. The report structure leaves room — every
 item already carries its rule id.
 
-### Data harvest not yet done
+### Data harvest: partially done
 
-Section 10 of the spec plans to convert roughly 800 curated rows from
-`ui-ux-pro-max-skill` into typed JSON. Some landed as inspiration for the surfaces and
-guides; the bulk has not been converted. Most relevant: the 161-row `ui-reasoning.csv`
-would replace the hand-written keyword lexicon in `briefToAxes` with real per-industry
-mappings.
+Section 10 of the original spec plans to convert roughly 800 curated rows from
+`ui-ux-pro-max-skill` into typed JSON. Some landed early as inspiration for the surfaces
+and guides; **350 rows — `styles.csv`, `colors.csv`, `typography.csv` — are now converted**
+as the catalog fallback tier (see
+[Design Systems § The catalog fallback tier](05-design-systems.md#the-catalog-fallback-tier)).
+The remaining ~450 rows (`charts.csv`, `icons.csv`, `ux-guidelines.csv`,
+`react-performance.csv`, `app-interface.csv`, the 22 `data/stacks/*.csv` files, and the
+161-row `ui-reasoning.csv`) are **not converted** — they map to sub-project 2, "advisor
+breadth", in the [post-spec roadmap](#whats-being-built-now) above, not yet started.
+`ui-reasoning.csv` in particular would replace the hand-written keyword lexicon in
+`briefToAxes` with real per-industry mappings; the lexicon remains hand-written until then.
 
 ---
 
@@ -90,10 +126,15 @@ finding in a file with several independent queries; it cannot **invent** one.
 `briefToAxes` uses a keyword lexicon. A brief using vocabulary outside it lands neutral and
 selection falls back to axis geometry alone.
 
-### Twelve systems is a real catalogue but a small one
+### Twelve curated systems is a real catalogue but a small one
 
 Quality is capped by how good they are. No maths layer rescues a mediocre catalogue, and
-authoring more is design work rather than a coding task.
+authoring more is design work rather than a coding task. The catalog fallback tier
+(84 styles / 192 palettes / 74 typography — see
+[Design Systems § The catalog fallback tier](05-design-systems.md#the-catalog-fallback-tier))
+widens reach for briefs the twelve do not fit, but it is not a substitute for more curated
+systems: it carries no hand-authored `signature`/`antiDefaults`, so it trades opinion for
+coverage rather than adding more of the twelve's kind of quality.
 
 ### Tailwind v3 config shape
 
@@ -129,7 +170,11 @@ trust permanently; under-reporting is recoverable.
 
 **Buys:** coherence. Twelve systems authored as wholes, not assembled from independent
 lookups.
-**Costs:** a ceiling. The catalogue is the product, and expanding it is design work.
+**Costs:** a ceiling. The catalogue is the product, and expanding it is design work. The
+catalog fallback tier softens this cost for *reach* — a brief now always has somewhere
+reasonable to land — but not for *quality*: the fallback tier's picks are assembled from
+independent lookups, exactly the failure mode curation exists to avoid, deliberately traded
+off only as a last resort below the curated fit threshold.
 
 ### Three proposals, never one
 
@@ -159,7 +204,7 @@ re-deriving it.
 | Project | License | What was taken |
 |---|---|---|
 | [impeccable](https://github.com/pbakaus/impeccable) | Apache-2.0 | Detector heuristics and thresholds for 5 rules; the inline-waiver design |
-| [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT | Surface and guidance material; the persisted-design-system pattern |
+| [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT | Surface and guidance material; the persisted-design-system pattern; 350 rows (`styles.csv`/`colors.csv`/`typography.csv`) reshaped into the catalog fallback tier |
 | [design-motion-principles](https://github.com/kylezantos/design-motion-principles) | MIT | The frequency gate, and the motion guidance in the `animate` playbook |
 
 Rules carrying a `source` also carry `modified: true`, and a test enforces that pairing.

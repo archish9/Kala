@@ -59,7 +59,7 @@ to that one package rather than allowing builds generally.
 Confirm the install is healthy:
 
 ```bash
-pnpm test        # 437 passing
+pnpm test        # 476 passing
 pnpm typecheck   # no output means success
 ```
 

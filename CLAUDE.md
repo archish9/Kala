@@ -17,8 +17,10 @@ pnpm monorepo, packages depend downward:
 - `packages/kernel` — the IR, the lock (derived design-system state), the rule engine.
 - `packages/extractors/{core,react,vue,svelte,html,equivalence}` — parse source into IR.
 - `packages/packs` — the actual data: `rules/`, `guides/` (13 playbooks incl. `animate`),
-  `systems/` (12 design systems, each a `motion`/`type`/`space`/`color`/`shape` token
-  set), `surfaces/`.
+  `systems/` (12 curated design systems, each a `motion`/`type`/`space`/`color`/`shape`
+  token set), `surfaces/`, `catalog/` (84 styles / 192 palettes / 74 typography pairings —
+  the fallback tier `system_bootstrap` falls through to below a 0.55 curated fit; see
+  `Documentation/05-design-systems.md`'s "catalog fallback tier" section).
 - `packages/taste` — loads/validates/composes packs; token derivation and CSS/lock emit.
 - `packages/browser` — Playwright-backed `inspect` (pixel-level checks; opt-in Chromium).
 - `packages/report` — HTML report generation for `critique`.
@@ -40,6 +42,10 @@ pnpm typecheck                     # tsc -b, no output = success
 pnpm --filter @kala/server build   # required before running the server
 ```
 
+Refreshing the catalog data (rare — only if upstream ui-ux-pro-max data changes) is a
+separate, non-CI maintenance step: `Documentation/08-extending.md`'s "Refresh the catalog
+data" section.
+
 ## Provenance (why some code looks familiar)
 
 Three prior projects were harvested from, vendored locally for reference under
@@ -49,7 +55,7 @@ gitignored, upstream copies only — not our source):
 | Project | License | What was taken |
 |---|---|---|
 | impeccable | Apache-2.0 | Detector heuristics/thresholds for 5 rules; inline-waiver design |
-| ui-ux-pro-max-skill | MIT | Surface/guidance material; the persisted-design-system pattern |
+| ui-ux-pro-max-skill | MIT | Surface/guidance material; the persisted-design-system pattern; 350 rows (`styles.csv`/`colors.csv`/`typography.csv`) reshaped into `packages/packs/catalog/` — see `docs/superpowers/specs/2026-08-14-catalog-search-infra-design.md` |
 | design-motion-principles | MIT | The frequency gate + the motion guidance in the `animate` guide |
 
 Rules carrying a `source` field also carry `modified: true` — a test enforces that
