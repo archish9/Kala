@@ -5,7 +5,7 @@ const src = (p: string) => resolve(import.meta.dirname, p)
 
 export default defineConfig({
   test: {
-    include: ['packages/**/tests/**/*.test.ts'],
+    include: ['packages/**/tests/**/*.test.ts', 'packages/**/scripts/**/*.test.mjs'],
     environment: 'node'
   },
   resolve: {
