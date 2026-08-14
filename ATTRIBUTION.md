@@ -10,6 +10,9 @@ fields of each rule JSON under `packages/packs/rules/`.
 | `rules/craft/nested-card.json` | impeccable `nested-cards` | Apache-2.0 | Rewritten as a predicate over IR parent links |
 | `rules/craft/monotonous-spacing.json` | impeccable `monotonous-spacing` | Apache-2.0 | Rewritten as an aggregate rule with a minimum sample size |
 | `rules/craft/flat-type-hierarchy.json` | impeccable `flat-type-hierarchy` | Apache-2.0 | Rewritten as a surface-scoped aggregate rule |
+| `packs/catalog/styles.json` | ui-ux-pro-max `styles.csv` (84 rows) | MIT | Reshaped into kala's `axes`/`fitFor`/`avoidFor` schema (`packages/taste/scripts/build-catalog-styles.mjs`); `signature`/`antiDefaults` deliberately left empty — see `docs/superpowers/specs/2026-08-14-catalog-search-infra-design.md` |
+| `packs/catalog/palettes.json` | ui-ux-pro-max `colors.csv` (192 rows) | MIT | Reduced from literal hex sets to `neutralHue`/`chromaCeiling`/`defaultAccent` parameter presets (`packages/taste/scripts/build-catalog-palettes.mjs`) so kala's WCAG contrast solver (`composeSystem`) still runs on every pick |
+| `packs/catalog/typography.json` | ui-ux-pro-max `typography.csv` (74 rows) | MIT | Reshaped into kala's schema (`packages/taste/scripts/build-catalog-typography.mjs`) |
 
 ## Deliberately not carried over
 

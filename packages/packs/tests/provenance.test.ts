@@ -26,4 +26,13 @@ describe('attribution', () => {
     expect(s).toContain('system_status')
     expect(s).toContain('verify')
   })
+
+  it('documents the catalog data port in ATTRIBUTION.md', async () => {
+    const text = await readFile(join(ROOT, 'ATTRIBUTION.md'), 'utf8')
+    expect(text).toContain('packs/catalog/styles.json')
+    expect(text).toContain('packs/catalog/palettes.json')
+    expect(text).toContain('packs/catalog/typography.json')
+    expect(text).toMatch(/ui-ux-pro-max.*styles\.csv/)
+    expect(text).toMatch(/MIT/)
+  })
 })
