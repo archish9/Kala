@@ -68,3 +68,57 @@ selected independently and combined. See [Catalog](05-catalog.md).
 
 A proposal from the fallback tier has **no signature rules and no anti-defaults** — that is
 the trade. It still gets a fully contrast-solved palette; nothing skips the colour solver.
+
+---
+
+## What kala writes into your project
+
+Setting up a design system is the **only** thing kala ever writes to disk. It creates
+exactly three files:
+
+| File | What it holds |
+|---|---|
+| `tailwind.config.mjs` | The spacing, type, and radius scales, the generated palette, and the font families |
+| `src/styles/globals.css` | The same values as CSS custom properties, plus the dark scheme and motion tokens |
+| `design.lock.json` | The derived values, plus the design intent — which system, its bans, its signature rules |
+
+Three properties worth knowing:
+
+**It is idempotent.** Running it twice with the same input produces byte-identical files.
+
+**Your edits survive.** Generated blocks are fenced by `kala:*:start` and `kala:*:end`
+comments. Anything you write outside those markers is left alone when the files are
+regenerated.
+
+**It refuses to overwrite.** If `design.lock.json` already exists, kala will not replace it
+unless you explicitly say so — replacing rewrites your palette, type, and scales.
+
+Once those files exist, they are the source of truth. Every later check reads them, so
+changing your Tailwind config changes what kala enforces.
+
+---
+
+## How kala chooses
+
+Your brief is scored on four axes — formality, density, energy, and expressiveness — from
+the words you used. Each system declares the range it works in, plus the domains it is built
+for and the ones it should be kept away from.
+
+```
+"banking compliance portal for auditors"
+  → formality 0.86  density 0.50  energy 0.32  expressiveness 0.32
+
+"playful game for kids"
+  → formality 0.22  density 0.50  energy 0.82  expressiveness 0.70
+```
+
+The score is the distance from your brief to each system's range, adjusted by whether the
+brief names a domain the system is built for or told to avoid. It is fully deterministic:
+the same brief always produces the same three proposals, in the same order.
+
+This is why vague briefs produce three similar options and specific ones produce three
+genuinely different options. *"A dashboard"* barely moves the axes; *"a dense trading
+console for professional traders, calm under pressure"* moves all four.
+
+The maths behind the palette generation is in
+[Design rationale](../contributors/05-design-rationale.md#the-colour-maths).

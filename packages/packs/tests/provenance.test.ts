@@ -27,6 +27,18 @@ describe('attribution', () => {
     expect(s).toContain('verify')
   })
 
+  it('keeps the licensing material in the contributor provenance doc', async () => {
+    const text = await readFile(
+      join(ROOT, 'Documentation', 'contributors', '07-provenance.md'), 'utf8'
+    )
+    expect(text).toMatch(/impeccable/i)
+    expect(text).toMatch(/ui-ux-pro-max/i)
+    expect(text).toMatch(/design-motion-principles/i)
+    expect(text).toMatch(/Apache-2\.0/)
+    expect(text).toMatch(/MIT/)
+    expect(text).toMatch(/trademark/i)
+  })
+
   it('documents the catalog data port in ATTRIBUTION.md', async () => {
     const text = await readFile(join(ROOT, 'ATTRIBUTION.md'), 'utf8')
     expect(text).toContain('packs/catalog/styles.json')
