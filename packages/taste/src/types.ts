@@ -39,3 +39,40 @@ export type Proposal = {
   fit: number
   rationale: string
 }
+
+export type CatalogStyle = {
+  id: string
+  axes: Record<AxisName, AxisRange>
+  fitFor: string[]
+  avoidFor: string[]
+  keywords: string[]
+  shape: { radius: number; depth: 'borders' | 'shadows' }
+  motion: { budget: string; duration: number; easing: string }
+  color: { strategy: string; darkPrimary: boolean }
+  signature: string[]
+  antiDefaults: string[]
+}
+
+export type CatalogPalette = {
+  id: string
+  axes: Record<AxisName, AxisRange>
+  fitFor: string[]
+  avoidFor: string[]
+  neutralHue: number
+  chromaCeiling: number
+  defaultAccent: string
+  darkPrimary: boolean
+}
+
+export type CatalogTypography = {
+  id: string
+  axes: Record<AxisName, AxisRange>
+  fitFor: string[]
+  avoidFor: string[]
+  keywords: string[]
+  families: { sans: string; serif: string }
+  ratio: number
+  baseSize: number
+  maxWeights: number
+  googleFontsUrl?: string
+}
