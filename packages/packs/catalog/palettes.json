@@ -1,1 +1,5570 @@
-[]
+[
+  {
+    "id": "saas-general-1",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "saas (general)"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "micro-saas-2",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "micro saas"
+    ],
+    "avoidFor": [],
+    "neutralHue": 293.7557071647735,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "e-commerce-3",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "e-commerce"
+    ],
+    "avoidFor": [],
+    "neutralHue": 166.1129534494903,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "e-commerce-luxury-4",
+    "axes": {
+      "formality": [
+        0.5499999999999999,
+        0.85
+      ],
+      "density": [
+        0.18999999999999997,
+        0.49
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "e-commerce luxury"
+    ],
+    "avoidFor": [],
+    "neutralHue": 106.4238006899913,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "b2b-service-5",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "b2b service"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.1192898017585669,
+    "defaultAccent": "#0369A1",
+    "darkPrimary": false
+  },
+  {
+    "id": "financial-dashboard-6",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "financial dashboard"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "analytics-dashboard-7",
+    "axes": {
+      "formality": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "density": [
+        0.63,
+        0.93
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.25,
+        0.55
+      ]
+    },
+    "fitFor": [
+      "analytics dashboard"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "healthcare-app-8",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.15,
+        0.44999999999999996
+      ],
+      "expressiveness": [
+        0.33999999999999997,
+        0.64
+      ]
+    },
+    "fitFor": [
+      "healthcare app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 200.87313694002503,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "educational-app-9",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.65,
+        0.9500000000000001
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "educational app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 272.3143919217472,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "creative-agency-10",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.5900000000000001,
+        0.8900000000000001
+      ],
+      "expressiveness": [
+        0.77,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative agency"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": false
+  },
+  {
+    "id": "portfolio-personal-11",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.20000000000000004,
+        0.5
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "portfolio/personal"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "gaming-12",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "gaming"
+    ],
+    "avoidFor": [],
+    "neutralHue": 281.57235455661635,
+    "chromaCeiling": 0.21540307992703298,
+    "defaultAccent": "#F43F5E",
+    "darkPrimary": true
+  },
+  {
+    "id": "government-public-service-13",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "government/public service"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.1192898017585669,
+    "defaultAccent": "#0369A1",
+    "darkPrimary": false
+  },
+  {
+    "id": "fintech-crypto-14",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.4,
+        0.7000000000000001
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "fintech/crypto"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.21891508141197888,
+    "defaultAccent": "#8B5CF6",
+    "darkPrimary": true
+  },
+  {
+    "id": "social-media-app-15",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.57,
+        0.87
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "social media app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 12.42174362189751,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "productivity-tool-16",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "productivity tool"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "design-system-component-library-17",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "design system/component library"
+    ],
+    "avoidFor": [],
+    "neutralHue": 272.3143919217472,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "ai-chatbot-platform-18",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "ai/chatbot platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": false
+  },
+  {
+    "id": "nft-web3-platform-19",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "nft/web3 platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 281.57235455661635,
+    "chromaCeiling": 0.16442156368790437,
+    "defaultAccent": "#FBBF24",
+    "darkPrimary": true
+  },
+  {
+    "id": "creator-economy-platform-20",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "creator economy platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "remote-work-collaboration-tool-21",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "remote work/collaboration tool"
+    ],
+    "avoidFor": [],
+    "neutralHue": 293.7557071647735,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "mental-health-app-22",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.18999999999999997,
+        0.49
+      ],
+      "expressiveness": [
+        0.45000000000000007,
+        0.7500000000000001
+      ]
+    },
+    "fitFor": [
+      "mental health app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "pet-tech-app-23",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "pet tech app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 73.68404080080244,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "smart-home-iot-dashboard-24",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "smart home/iot dashboard"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "ev-charging-ecosystem-25",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "ev/charging ecosystem"
+    ],
+    "avoidFor": [],
+    "neutralHue": 200.87313694002503,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "subscription-box-service-26",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "subscription box service"
+    ],
+    "avoidFor": [],
+    "neutralHue": 320.05783339115976,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "podcast-platform-27",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "podcast platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 281.57235455661635,
+    "chromaCeiling": 0.18672106768094693,
+    "defaultAccent": "#F97316",
+    "darkPrimary": true
+  },
+  {
+    "id": "dating-app-28",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "dating app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 12.42174362189751,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "micro-credentials-badges-platform-29",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "micro-credentials/badges platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "knowledge-base-documentation-30",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "knowledge base/documentation"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "hyperlocal-services-31",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "hyperlocal services"
+    ],
+    "avoidFor": [],
+    "neutralHue": 166.1129534494903,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "beauty-spa-wellness-service-32",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.27,
+        0.57
+      ],
+      "expressiveness": [
+        0.5,
+        0.8
+      ]
+    },
+    "fitFor": [
+      "beauty/spa/wellness service"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.21891508141197888,
+    "defaultAccent": "#8B5CF6",
+    "darkPrimary": false
+  },
+  {
+    "id": "luxury-premium-brand-33",
+    "axes": {
+      "formality": [
+        0.5499999999999999,
+        0.85
+      ],
+      "density": [
+        0.09,
+        0.39
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "luxury/premium brand"
+    ],
+    "avoidFor": [],
+    "neutralHue": 106.4238006899913,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "restaurant-food-service-34",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "restaurant/food service"
+    ],
+    "avoidFor": [],
+    "neutralHue": 17.379545924244642,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "fitness-gym-app-35",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "fitness/gym app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 256.84795621004855,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "real-estate-property-36",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "real estate/property"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.1192898017585669,
+    "defaultAccent": "#0369A1",
+    "darkPrimary": false
+  },
+  {
+    "id": "travel-tourism-agency-37",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "travel/tourism agency"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "hotel-hospitality-38",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "hotel/hospitality"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "wedding-event-planning-39",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "wedding/event planning"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "legal-services-40",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "legal services"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.14550520791268265,
+    "defaultAccent": "#B45309",
+    "darkPrimary": false
+  },
+  {
+    "id": "insurance-platform-41",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "insurance platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "banking-traditional-finance-42",
+    "axes": {
+      "formality": [
+        0.57,
+        0.87
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.39,
+        0.6900000000000001
+      ]
+    },
+    "fitFor": [
+      "banking/traditional finance"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "online-course-e-learning-43",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "online course/e-learning"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "non-profit-charity-44",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "non-profit/charity"
+    ],
+    "avoidFor": [],
+    "neutralHue": 200.87313694002503,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "music-streaming-45",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "music streaming"
+    ],
+    "avoidFor": [],
+    "neutralHue": 281.57235455661635,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "video-streaming-ott-46",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "video streaming/ott"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#E11D48",
+    "darkPrimary": true
+  },
+  {
+    "id": "job-board-recruitment-47",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "job board/recruitment"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "marketplace-p2p-48",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "marketplace (p2p)"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "logistics-delivery-49",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "logistics/delivery"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "agriculture-farm-tech-50",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "agriculture/farm tech"
+    ],
+    "avoidFor": [],
+    "neutralHue": 155.8264338215795,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "construction-architecture-51",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "construction/architecture"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "automotive-car-dealership-52",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "automotive/car dealership"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "photography-studio-53",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "photography studio"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.02,
+    "defaultAccent": "#F8FAFC",
+    "darkPrimary": true
+  },
+  {
+    "id": "coworking-space-54",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "coworking space"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "home-services-plumber-electrician-55",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "home services (plumber/electrician)"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "childcare-daycare-56",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "childcare/daycare"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "senior-care-elderly-57",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.15,
+        0.44999999999999996
+      ],
+      "expressiveness": [
+        0.33999999999999997,
+        0.64
+      ]
+    },
+    "fitFor": [
+      "senior care/elderly"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "medical-clinic-58",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.27,
+        0.57
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "medical clinic"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "pharmacy-drug-store-59",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "pharmacy/drug store"
+    ],
+    "avoidFor": [],
+    "neutralHue": 155.8264338215795,
+    "chromaCeiling": 0.1192898017585669,
+    "defaultAccent": "#0369A1",
+    "darkPrimary": false
+  },
+  {
+    "id": "dental-practice-60",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "dental practice"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.14786863624618882,
+    "defaultAccent": "#0EA5E9",
+    "darkPrimary": false
+  },
+  {
+    "id": "veterinary-clinic-61",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "veterinary clinic"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "florist-plant-shop-62",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "florist/plant shop"
+    ],
+    "avoidFor": [],
+    "neutralHue": 155.8264338215795,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "bakery-cafe-63",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "bakery/cafe"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.61744863952855,
+    "chromaCeiling": 0.12469850283572274,
+    "defaultAccent": "#92400E",
+    "darkPrimary": false
+  },
+  {
+    "id": "brewery-winery-64",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "brewery/winery"
+    ],
+    "avoidFor": [],
+    "neutralHue": 17.379545924244642,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "airline-65",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "airline"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "news-media-platform-66",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "news/media platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 17.379545924244642,
+    "chromaCeiling": 0.18086885422289087,
+    "defaultAccent": "#1E40AF",
+    "darkPrimary": false
+  },
+  {
+    "id": "magazine-blog-67",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.07000000000000003,
+        0.37
+      ],
+      "energy": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "expressiveness": [
+        0.7200000000000001,
+        1
+      ]
+    },
+    "fitFor": [
+      "magazine/blog"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "freelancer-platform-68",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.20000000000000004,
+        0.5
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "freelancer platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 272.3143919217472,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "marketing-agency-69",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.07000000000000003,
+        0.37
+      ],
+      "energy": [
+        0.67,
+        0.9700000000000001
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "marketing agency"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": false
+  },
+  {
+    "id": "event-management-70",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "event management"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "membership-community-71",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "membership/community"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "newsletter-platform-72",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "newsletter platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "digital-products-downloads-73",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "digital products/downloads"
+    ],
+    "avoidFor": [],
+    "neutralHue": 272.3143919217472,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "church-religious-organization-74",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "church/religious organization"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "sports-team-club-75",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "sports team/club"
+    ],
+    "avoidFor": [],
+    "neutralHue": 17.379545924244642,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "museum-gallery-76",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "museum/gallery"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.02,
+    "defaultAccent": "#18181B",
+    "darkPrimary": false
+  },
+  {
+    "id": "theater-cinema-77",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "theater/cinema"
+    ],
+    "avoidFor": [],
+    "neutralHue": 281.57235455661635,
+    "chromaCeiling": 0.14228314760139316,
+    "defaultAccent": "#CA8A04",
+    "darkPrimary": true
+  },
+  {
+    "id": "language-learning-app-78",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "language learning app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 272.3143919217472,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "coding-bootcamp-79",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.27,
+        0.57
+      ]
+    },
+    "fitFor": [
+      "coding bootcamp"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "cybersecurity-platform-80",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "cybersecurity platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#FF3333",
+    "darkPrimary": true
+  },
+  {
+    "id": "developer-tool-ide-81",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.27,
+        0.57
+      ]
+    },
+    "fitFor": [
+      "developer tool / ide"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "biotech-life-sciences-82",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "biotech / life sciences"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "space-tech-aerospace-83",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "space tech / aerospace"
+    ],
+    "avoidFor": [],
+    "neutralHue": 285.0641444870124,
+    "chromaCeiling": 0.18801473450792208,
+    "defaultAccent": "#3B82F6",
+    "darkPrimary": true
+  },
+  {
+    "id": "architecture-interior-84",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "architecture / interior"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "quantum-computing-interface-85",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "quantum computing interface"
+    ],
+    "avoidFor": [],
+    "neutralHue": 281.72253809966094,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#FF00FF",
+    "darkPrimary": true
+  },
+  {
+    "id": "biohacking-longevity-app-86",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "biohacking / longevity app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 286.3501396984551,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "autonomous-drone-fleet-manager-87",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.27,
+        0.57
+      ]
+    },
+    "fitFor": [
+      "autonomous drone fleet manager"
+    ],
+    "avoidFor": [],
+    "neutralHue": 258.35718067076175,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#FF3333",
+    "darkPrimary": true
+  },
+  {
+    "id": "generative-art-platform-88",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "generative art platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "spatial-computing-os-app-89",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "spatial computing os / app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.02,
+    "defaultAccent": "#FFFFFF",
+    "darkPrimary": false
+  },
+  {
+    "id": "sustainable-energy-climate-tech-90",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "sustainable energy / climate tech"
+    ],
+    "avoidFor": [],
+    "neutralHue": 166.1129534494903,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "personal-finance-tracker-91",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.30000000000000004,
+        0.6
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "personal finance tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": true
+  },
+  {
+    "id": "chat-messaging-app-92",
+    "axes": {
+      "formality": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.5099999999999999,
+        0.8099999999999999
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "chat & messaging app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "notes-writing-app-93",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "notes & writing app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "habit-tracker-94",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "habit tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "food-delivery-on-demand-95",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "food delivery / on-demand"
+    ],
+    "avoidFor": [],
+    "neutralHue": 73.68404080080244,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "ride-hailing-transportation-96",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "ride hailing / transportation"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": true
+  },
+  {
+    "id": "recipe-cooking-app-97",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "recipe & cooking app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "meditation-mindfulness-98",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.06999999999999998,
+        0.37
+      ],
+      "expressiveness": [
+        0.39,
+        0.6900000000000001
+      ]
+    },
+    "fitFor": [
+      "meditation & mindfulness"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "weather-app-99",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "weather app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.16465940106168822,
+    "defaultAccent": "#F59E0B",
+    "darkPrimary": false
+  },
+  {
+    "id": "diary-journal-app-100",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "diary & journal app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.20405527824372596,
+    "defaultAccent": "#6366F1",
+    "darkPrimary": false
+  },
+  {
+    "id": "crm-client-management-101",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "crm & client management"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "inventory-stock-management-102",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "inventory & stock management"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "flashcard-study-tool-103",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "flashcard & study tool"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "booking-appointment-app-104",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "booking & appointment app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "invoice-billing-tool-105",
+    "axes": {
+      "formality": [
+        0.5899999999999999,
+        0.8899999999999999
+      ],
+      "density": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "invoice & billing tool"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "grocery-shopping-list-106",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "grocery & shopping list"
+    ],
+    "avoidFor": [],
+    "neutralHue": 166.1129534494903,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "timer-pomodoro-107",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "timer & pomodoro"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": true
+  },
+  {
+    "id": "parenting-baby-tracker-108",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "parenting & baby tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.13886827163754584,
+    "defaultAccent": "#0284C7",
+    "darkPrimary": false
+  },
+  {
+    "id": "scanner-document-manager-109",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "scanner & document manager"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "calendar-scheduling-app-110",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "calendar & scheduling app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "password-manager-111",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "password manager"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": true
+  },
+  {
+    "id": "expense-splitter-bill-split-112",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "expense splitter / bill split"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "voice-recorder-memo-113",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "voice recorder & memo"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "bookmark-read-later-114",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "bookmark & read-later"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "translator-app-115",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "translator app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "calculator-unit-converter-116",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "calculator & unit converter"
+    ],
+    "avoidFor": [],
+    "neutralHue": 56.0433322108943,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": true
+  },
+  {
+    "id": "alarm-world-clock-117",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "alarm & world clock"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.20405527824372596,
+    "defaultAccent": "#6366F1",
+    "darkPrimary": true
+  },
+  {
+    "id": "file-manager-transfer-118",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "file manager & transfer"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "email-client-119",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "email client"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "casual-puzzle-game-120",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "casual puzzle game"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.16465940106168822,
+    "defaultAccent": "#F59E0B",
+    "darkPrimary": false
+  },
+  {
+    "id": "trivia-quiz-game-121",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "trivia & quiz game"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.16465940106168822,
+    "defaultAccent": "#F59E0B",
+    "darkPrimary": false
+  },
+  {
+    "id": "card-board-game-122",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "card & board game"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": true
+  },
+  {
+    "id": "idle-clicker-game-123",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "idle & clicker game"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#7C3AED",
+    "darkPrimary": false
+  },
+  {
+    "id": "word-crossword-game-124",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "word & crossword game"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "arcade-retro-game-125",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "arcade & retro game"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "photo-editor-filters-126",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "photo editor & filters"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": true
+  },
+  {
+    "id": "short-video-editor-127",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "short video editor"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": true
+  },
+  {
+    "id": "drawing-sketching-canvas-128",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "drawing & sketching canvas"
+    ],
+    "avoidFor": [],
+    "neutralHue": 56.0433322108943,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": true
+  },
+  {
+    "id": "music-creation-beat-maker-129",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "music creation & beat maker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "meme-sticker-maker-130",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "meme & sticker maker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "ai-photo-avatar-generator-131",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "ai photo & avatar generator"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "link-in-bio-page-builder-132",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "link-in-bio page builder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 0,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "wardrobe-outfit-planner-133",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "wardrobe & outfit planner"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "plant-care-tracker-134",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.27,
+        0.57
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "plant care tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 155.8264338215795,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "book-reading-tracker-135",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "book & reading tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "couple-relationship-app-136",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "couple & relationship app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "family-calendar-chores-137",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "family calendar & chores"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "mood-tracker-138",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "mood tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "gift-wishlist-139",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "gift & wishlist"
+    ],
+    "avoidFor": [],
+    "neutralHue": 12.42174362189751,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "running-cycling-gps-140",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "running & cycling gps"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": true
+  },
+  {
+    "id": "yoga-stretching-guide-141",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.33999999999999997,
+        0.64
+      ]
+    },
+    "fitFor": [
+      "yoga & stretching guide"
+    ],
+    "avoidFor": [],
+    "neutralHue": 106.5223758932817,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": false
+  },
+  {
+    "id": "sleep-tracker-142",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "sleep tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#7C3AED",
+    "darkPrimary": true
+  },
+  {
+    "id": "calorie-nutrition-counter-143",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "calorie & nutrition counter"
+    ],
+    "avoidFor": [],
+    "neutralHue": 166.1129534494903,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "period-cycle-tracker-144",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "period & cycle tracker"
+    ],
+    "avoidFor": [],
+    "neutralHue": 343.19803659130366,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#7C3AED",
+    "darkPrimary": false
+  },
+  {
+    "id": "medication-pill-reminder-145",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "medication & pill reminder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "water-hydration-reminder-146",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "water & hydration reminder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": false
+  },
+  {
+    "id": "fasting-intermittent-timer-147",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "fasting & intermittent timer"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": true
+  },
+  {
+    "id": "anonymous-community-confession-148",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "anonymous community / confession"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.11093883223276743,
+    "defaultAccent": "#0891B2",
+    "darkPrimary": true
+  },
+  {
+    "id": "local-events-discovery-149",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "local events & discovery"
+    ],
+    "avoidFor": [],
+    "neutralHue": 73.68404080080244,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "study-together-virtual-coworking-150",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "study together / virtual coworking"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "coding-challenge-practice-151",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "coding challenge & practice"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": true
+  },
+  {
+    "id": "kids-learning-abc-math-152",
+    "axes": {
+      "formality": [
+        0.06999999999999998,
+        0.37
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.67,
+        0.9700000000000001
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "kids learning (abc & math)"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "music-instrument-learning-153",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "music instrument learning"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "parking-finder-154",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "parking finder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "public-transit-guide-155",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "public transit guide"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.1943266360845904,
+    "defaultAccent": "#EA580C",
+    "darkPrimary": false
+  },
+  {
+    "id": "road-trip-planner-156",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "road trip planner"
+    ],
+    "avoidFor": [],
+    "neutralHue": 73.68404080080244,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "vpn-privacy-tool-157",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "vpn & privacy tool"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "emergency-sos-safety-158",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "emergency sos & safety"
+    ],
+    "avoidFor": [],
+    "neutralHue": 12.42174362189751,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "wallpaper-theme-app-159",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "wallpaper & theme app"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "white-noise-ambient-sound-160",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "white noise & ambient sound"
+    ],
+    "avoidFor": [],
+    "neutralHue": 265.7548754713905,
+    "chromaCeiling": 0.21457799442599038,
+    "defaultAccent": "#4338CA",
+    "darkPrimary": true
+  },
+  {
+    "id": "home-decoration-interior-design-161",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "home decoration & interior design"
+    ],
+    "avoidFor": [],
+    "neutralHue": 53.44773464589546,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "academic-journal-scholarly-publishing-162",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "academic journal / scholarly publishing"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.14550520791268265,
+    "defaultAccent": "#B45309",
+    "darkPrimary": false
+  },
+  {
+    "id": "api-developer-portal-163",
+    "axes": {
+      "formality": [
+        0.5099999999999999,
+        0.8099999999999999
+      ],
+      "density": [
+        0.5499999999999999,
+        0.85
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.18999999999999997,
+        0.49
+      ]
+    },
+    "fitFor": [
+      "api developer portal"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.19200735889944792,
+    "defaultAccent": "#22C55E",
+    "darkPrimary": true
+  },
+  {
+    "id": "forum-discussion-board-164",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "forum / discussion board"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.21520776794183366,
+    "defaultAccent": "#2563EB",
+    "darkPrimary": false
+  },
+  {
+    "id": "directory-listing-site-165",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "directory / listing site"
+    ],
+    "avoidFor": [],
+    "neutralHue": 166.1129534494903,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "status-page-incident-management-166",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "status page / incident management"
+    ],
+    "avoidFor": [],
+    "neutralHue": 155.8264338215795,
+    "chromaCeiling": 0.21515673018339782,
+    "defaultAccent": "#DC2626",
+    "darkPrimary": false
+  },
+  {
+    "id": "wiki-encyclopedia-167",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "wiki / encyclopedia"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.22,
+    "defaultAccent": "#7C3AED",
+    "darkPrimary": false
+  },
+  {
+    "id": "auction-platform-168",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "auction platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": true
+  },
+  {
+    "id": "changelog-release-notes-169",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "changelog / release notes"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12741811705847278,
+    "defaultAccent": "#059669",
+    "darkPrimary": false
+  },
+  {
+    "id": "citizen-science-platform-170",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "citizen science platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 155.8264338215795,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "classifieds-buy-sell-171",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "classifieds / buy-sell"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "conference-symposium-landing-page-172",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "conference / symposium landing page"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "crowdfunding-platform-173",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "crowdfunding platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "digital-signage-kiosk-174",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "digital signage / kiosk"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.20784884605110113,
+    "defaultAccent": "#EF4444",
+    "darkPrimary": true
+  },
+  {
+    "id": "e-signature-document-workflow-175",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "e-signature / document workflow"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "feature-flag-config-management-176",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "feature flag / config management"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": true
+  },
+  {
+    "id": "government-portal-civic-services-177",
+    "axes": {
+      "formality": [
+        0.5499999999999999,
+        0.85
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.24000000000000002,
+        0.54
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "government portal / civic services"
+    ],
+    "avoidFor": [],
+    "neutralHue": 254.6042025782728,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "grant-funding-portal-178",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "grant / funding portal"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "lms-learning-management-system-179",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "lms (learning management system)"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "no-code-low-code-builder-180",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "no-code / low-code builder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.2117733875785405,
+    "defaultAccent": "#EC4899",
+    "darkPrimary": false
+  },
+  {
+    "id": "open-source-project-landing-181",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "open source project landing"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": true
+  },
+  {
+    "id": "patient-portal-health-records-182",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.27,
+        0.57
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "patient portal / health records"
+    ],
+    "avoidFor": [],
+    "neutralHue": 236.61983615137152,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "patent-ip-database-183",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "patent / ip database"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "q-a-community-platform-184",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "q&a community platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "research-lab-university-department-185",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "research lab / university department"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.12068267144453818,
+    "defaultAccent": "#A16207",
+    "darkPrimary": false
+  },
+  {
+    "id": "resume-cv-builder-186",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "resume / cv builder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 247.85777459444185,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "review-platform-187",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "review platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 95.27743314555003,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "rpa-automation-dashboard-188",
+    "axes": {
+      "formality": [
+        0.48,
+        0.78
+      ],
+      "density": [
+        0.59,
+        0.89
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.22,
+        0.52
+      ]
+    },
+    "fitFor": [
+      "rpa / automation dashboard"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": true
+  },
+  {
+    "id": "survey-form-builder-189",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "survey / form builder"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.15742218083697318,
+    "defaultAccent": "#D97706",
+    "darkPrimary": false
+  },
+  {
+    "id": "telemedicine-platform-190",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "telemedicine platform"
+    ],
+    "avoidFor": [],
+    "neutralHue": 180.72019479619894,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": false
+  },
+  {
+    "id": "testimonial-social-proof-widget-191",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "testimonial & social proof widget"
+    ],
+    "avoidFor": [],
+    "neutralHue": 308.2989442990313,
+    "chromaCeiling": 0.16465940106168822,
+    "defaultAccent": "#F59E0B",
+    "darkPrimary": false
+  },
+  {
+    "id": "ticketing-box-office-192",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "ticketing / box office"
+    ],
+    "avoidFor": [],
+    "neutralHue": 264.69515496991403,
+    "chromaCeiling": 0.16991208459734425,
+    "defaultAccent": "#16A34A",
+    "darkPrimary": true
+  }
+]
