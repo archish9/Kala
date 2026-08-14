@@ -1,1 +1,5069 @@
-[]
+[
+  {
+    "id": "minimalism-swiss-style",
+    "axes": {
+      "formality": [
+        0.65,
+        0.9500000000000001
+      ],
+      "density": [
+        0.41000000000000003,
+        0.7100000000000001
+      ],
+      "energy": [
+        2.7755575615628914e-17,
+        0.30000000000000004
+      ],
+      "expressiveness": [
+        0.17,
+        0.47
+      ]
+    },
+    "fitFor": [
+      "enterprise apps",
+      "dashboards",
+      "documentation sites",
+      "saas platforms",
+      "professional tools"
+    ],
+    "avoidFor": [
+      "creative portfolios",
+      "entertainment",
+      "playful brands",
+      "artistic experiments"
+    ],
+    "keywords": [
+      "clean",
+      "simple",
+      "spacious",
+      "functional",
+      "white space",
+      "high contrast",
+      "geometric",
+      "sans-serif",
+      "grid-based",
+      "essential"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Monochromatic, Black #000000, White #FFFFFF; Neutral (Beige #F5F1E8, Grey #808080, Taupe #B38B6D), Primary accent",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "neumorphism",
+    "axes": {
+      "formality": [
+        0.20000000000000004,
+        0.5
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0,
+        0.2899999999999999
+      ],
+      "expressiveness": [
+        0.44000000000000006,
+        0.7400000000000001
+      ]
+    },
+    "fitFor": [
+      "health/wellness apps",
+      "meditation platforms",
+      "fitness trackers",
+      "minimal interaction uis"
+    ],
+    "avoidFor": [
+      "complex apps",
+      "critical accessibility",
+      "data-heavy dashboards",
+      "high-contrast required"
+    ],
+    "keywords": [
+      "soft ui",
+      "embossed",
+      "debossed",
+      "convex",
+      "concave",
+      "light source",
+      "subtle depth",
+      "rounded (12-16px)",
+      "monochromatic"
+    ],
+    "shape": {
+      "radius": 12,
+      "depth": "shadows"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 150,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Light pastels: Soft Blue #C8E0F4, Soft Pink #F5E0E8, Soft Grey #E8E8E8; Tints/shades (±30%), gradient subtlety, color harmony",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "glassmorphism",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "modern saas",
+      "financial dashboards",
+      "high-end corporate",
+      "lifestyle apps",
+      "modal overlays",
+      "navigation"
+    ],
+    "avoidFor": [
+      "low-contrast backgrounds",
+      "critical accessibility",
+      "performance-limited",
+      "dark text on dark"
+    ],
+    "keywords": [
+      "frosted glass",
+      "transparent",
+      "blurred background",
+      "layered",
+      "vibrant background",
+      "light source",
+      "depth",
+      "multi-layer"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Translucent white: rgba(255,255,255,0.1-0.3); Vibrant: Electric Blue #0080FF, Neon Purple #8B00FF, Vivid Pink #FF1493, Teal #20B2AA",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "brutalism",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.39,
+        0.6900000000000001
+      ],
+      "energy": [
+        0.54,
+        0.8400000000000001
+      ],
+      "expressiveness": [
+        0.5599999999999999,
+        0.86
+      ]
+    },
+    "fitFor": [
+      "design portfolios",
+      "artistic projects",
+      "counter-culture brands",
+      "editorial/media sites",
+      "tech blogs"
+    ],
+    "avoidFor": [
+      "corporate environments",
+      "conservative industries",
+      "critical accessibility",
+      "customer-facing professional"
+    ],
+    "keywords": [
+      "raw",
+      "unpolished",
+      "stark",
+      "high contrast",
+      "plain text",
+      "default fonts",
+      "visible borders",
+      "asymmetric",
+      "anti-design"
+    ],
+    "shape": {
+      "radius": 0,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary: Red #FF0000, Blue #0000FF, Yellow #FFFF00, Black #000000, White #FFFFFF; Limited: Neon Green #00FF00, Hot Pink #FF00FF, minimal secondary",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "3d-hyperrealism",
+    "axes": {
+      "formality": [
+        0.30999999999999994,
+        0.61
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.56,
+        0.8600000000000001
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "gaming",
+      "product showcase",
+      "immersive experiences",
+      "high-end e-commerce",
+      "architectural viz",
+      "vr/ar"
+    ],
+    "avoidFor": [
+      "low-end mobile",
+      "performance-limited",
+      "critical accessibility",
+      "data tables/forms"
+    ],
+    "keywords": [
+      "depth",
+      "realistic textures",
+      "3d models",
+      "spatial navigation",
+      "tactile",
+      "skeuomorphic elements",
+      "rich detail",
+      "immersive"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 300,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Deep Navy #001F3F, Forest Green #228B22, Burgundy #800020, Gold #FFD700, Silver #C0C0C0; Complex gradients (5-10 stops), realistic lighting, shadow variations (20-40% darker)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "vibrant-block-based",
+    "axes": {
+      "formality": [
+        0,
+        0.26999999999999996
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.85,
+        1
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "startups",
+      "creative agencies",
+      "gaming",
+      "social media",
+      "youth-focused",
+      "entertainment",
+      "consumer"
+    ],
+    "avoidFor": [
+      "financial institutions",
+      "healthcare",
+      "formal business",
+      "government",
+      "conservative",
+      "elderly"
+    ],
+    "keywords": [
+      "bold",
+      "energetic",
+      "playful",
+      "block layout",
+      "geometric shapes",
+      "high color contrast",
+      "duotone",
+      "modern",
+      "energetic"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neon Green #39FF14, Electric Purple #BF00FF, Vivid Pink #FF1493, Bright Cyan #00FFFF, Sunburst #FFAA00; Complementary: Orange #FF7F00, Shocking Pink #FF006E, Lime #CCFF00, triadic schemes",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "dark-mode-oled",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "night-mode apps",
+      "coding platforms",
+      "entertainment",
+      "eye-strain prevention",
+      "oled devices",
+      "low-light"
+    ],
+    "avoidFor": [
+      "print-first content",
+      "high-brightness outdoor",
+      "color-accuracy-critical"
+    ],
+    "keywords": [
+      "dark theme",
+      "low light",
+      "high contrast",
+      "deep black",
+      "midnight blue",
+      "eye-friendly",
+      "oled",
+      "night mode",
+      "power efficient"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Deep Black #000000, Dark Grey #121212, Midnight Blue #0A0E27; Vibrant accents: Neon Green #39FF14, Electric Blue #0080FF, Gold #FFD700, Plasma Purple #BF00FF",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "accessible-ethical",
+    "axes": {
+      "formality": [
+        0.71,
+        1
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.17,
+        0.47
+      ],
+      "expressiveness": [
+        0.17,
+        0.47
+      ]
+    },
+    "fitFor": [
+      "government",
+      "healthcare",
+      "education",
+      "inclusive products",
+      "large audience",
+      "legal compliance",
+      "public"
+    ],
+    "avoidFor": [
+      "none - accessibility universal"
+    ],
+    "keywords": [
+      "high contrast",
+      "large text (16px+)",
+      "keyboard navigation",
+      "screen reader friendly",
+      "wcag compliant",
+      "focus state",
+      "semantic"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "WCAG AA/AAA (4.5:1 min), simple primary, clear secondary, high luminosity (7:1+); Symbol-based colors (not color-only), supporting patterns, inclusive combinations",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "claymorphism",
+    "axes": {
+      "formality": [
+        0,
+        0.15
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.85,
+        1
+      ],
+      "expressiveness": [
+        0.8499999999999998,
+        1
+      ]
+    },
+    "fitFor": [
+      "educational apps",
+      "children's apps",
+      "saas platforms",
+      "creative tools",
+      "fun-focused",
+      "onboarding",
+      "casual games"
+    ],
+    "avoidFor": [
+      "formal corporate",
+      "professional services",
+      "data-critical",
+      "serious/medical",
+      "legal apps",
+      "finance"
+    ],
+    "keywords": [
+      "soft 3d",
+      "chunky",
+      "playful",
+      "toy-like",
+      "bubbly",
+      "thick borders (3-4px)",
+      "double shadows",
+      "rounded (16-24px)"
+    ],
+    "shape": {
+      "radius": 16,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Pastel: Soft Peach #FDBCB4, Baby Blue #ADD8E6, Mint #98FF98, Lilac #E6E6FA, light BG; Soft gradients (pastel-to-pastel), light/dark variations (20-30%), gradient subtle",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "aurora-ui",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.54,
+        0.8400000000000001
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "modern saas",
+      "creative agencies",
+      "branding",
+      "music platforms",
+      "lifestyle",
+      "premium products",
+      "hero sections"
+    ],
+    "avoidFor": [
+      "data-heavy dashboards",
+      "critical accessibility",
+      "content-heavy where distraction issues"
+    ],
+    "keywords": [
+      "vibrant gradients",
+      "smooth blend",
+      "northern lights effect",
+      "mesh gradient",
+      "luminous",
+      "atmospheric",
+      "abstract"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Complementary: Blue-Orange, Purple-Yellow, Electric Blue #0080FF, Magenta #FF1493, Cyan #00FFFF; Smooth transitions (Blue→Purple→Pink→Teal), iridescent effects, blend modes (screen, multiply)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "retro-futurism",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "gaming",
+      "entertainment",
+      "music platforms",
+      "tech brands",
+      "artistic projects",
+      "nostalgic",
+      "cyberpunk"
+    ],
+    "avoidFor": [
+      "conservative industries",
+      "critical accessibility",
+      "professional/corporate",
+      "elderly",
+      "legal/finance"
+    ],
+    "keywords": [
+      "vintage sci-fi",
+      "80s aesthetic",
+      "neon glow",
+      "geometric patterns",
+      "crt scanlines",
+      "pixel art",
+      "cyberpunk",
+      "synthwave"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neon Blue #0080FF, Hot Pink #FF006E, Cyan #00FFFF, Deep Black #1A1A2E, Purple #5D34D0; Metallic Silver #C0C0C0, Gold #FFD700, duotone, 80s Pink #FF10F0, neon accents",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "flat-design",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.010000000000000037,
+        0.31000000000000005
+      ],
+      "expressiveness": [
+        0.21,
+        0.51
+      ]
+    },
+    "fitFor": [
+      "web apps",
+      "mobile apps",
+      "cross-platform",
+      "startup mvps",
+      "user-friendly",
+      "saas",
+      "dashboards",
+      "corporate"
+    ],
+    "avoidFor": [
+      "complex 3d",
+      "premium/luxury",
+      "artistic portfolios",
+      "immersive experiences",
+      "high-detail"
+    ],
+    "keywords": [
+      "2d",
+      "minimalist",
+      "bold colors",
+      "no shadows",
+      "clean lines",
+      "simple shapes",
+      "typography-focused",
+      "modern",
+      "icon-heavy"
+    ],
+    "shape": {
+      "radius": 0,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 150,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Solid bright: Red, Orange, Blue, Green, limited palette (4-6 max); Complementary colors, muted secondaries, high saturation, clean accents",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "skeuomorphism",
+    "axes": {
+      "formality": [
+        0.4099999999999999,
+        0.71
+      ],
+      "density": [
+        0.18999999999999997,
+        0.49
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "legacy apps",
+      "gaming",
+      "immersive storytelling",
+      "premium products",
+      "luxury",
+      "realistic simulations",
+      "education"
+    ],
+    "avoidFor": [
+      "modern enterprise",
+      "critical accessibility",
+      "low-performance",
+      "web (use flat/modern)"
+    ],
+    "keywords": [
+      "realistic",
+      "texture",
+      "depth",
+      "3d appearance",
+      "real-world metaphors",
+      "shadows",
+      "gradients",
+      "tactile",
+      "detailed",
+      "material"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 300,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Rich realistic: wood, leather, metal colors, detailed gradients (8-12 stops), metallic effects; Realistic lighting gradients, shadow variations (30-50% darker), texture overlays, material colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "liquid-glass",
+    "axes": {
+      "formality": [
+        0.6499999999999999,
+        0.95
+      ],
+      "density": [
+        0.009999999999999981,
+        0.30999999999999994
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.8099999999999999,
+        1
+      ]
+    },
+    "fitFor": [
+      "premium saas",
+      "high-end e-commerce",
+      "creative platforms",
+      "branding experiences",
+      "luxury portfolios"
+    ],
+    "avoidFor": [
+      "performance-limited",
+      "critical accessibility",
+      "complex data",
+      "budget projects"
+    ],
+    "keywords": [
+      "flowing glass",
+      "morphing",
+      "smooth transitions",
+      "fluid effects",
+      "translucent",
+      "animated blur",
+      "iridescent",
+      "chromatic aberration"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 400,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Vibrant iridescent (rainbow spectrum), translucent base with opacity shifts, gradient fluidity; Chromatic aberration (Red-Cyan), iridescent oil-spill, fluid gradient blends, holographic effects",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "motion-driven",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "expressiveness": [
+        0.67,
+        0.9700000000000001
+      ]
+    },
+    "fitFor": [
+      "portfolio sites",
+      "storytelling platforms",
+      "interactive experiences",
+      "entertainment apps",
+      "creative",
+      "saas"
+    ],
+    "avoidFor": [
+      "data dashboards",
+      "critical accessibility",
+      "low-power devices",
+      "content-heavy",
+      "motion-sensitive"
+    ],
+    "keywords": [
+      "animation-heavy",
+      "microinteractions",
+      "smooth transitions",
+      "scroll effects",
+      "parallax",
+      "entrance anim",
+      "page transitions"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 300,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Bold colors emphasize movement, high contrast animated, dynamic gradients, accent action colors; Transitional states, success (Green #22C55E), error (Red #EF4444), neutral feedback",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "micro-interactions",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.30000000000000004,
+        0.6
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "mobile apps",
+      "touchscreen uis",
+      "productivity tools",
+      "user-friendly",
+      "consumer apps",
+      "interactive components"
+    ],
+    "avoidFor": [
+      "desktop-only",
+      "critical performance",
+      "accessibility-first (alternatives needed)"
+    ],
+    "keywords": [
+      "small animations",
+      "gesture-based",
+      "tactile feedback",
+      "subtle animations",
+      "contextual interactions",
+      "responsive"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 50,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Subtle color shifts (10-20%), feedback: Green #22C55E, Red #EF4444, Amber #F59E0B; Accent feedback, neutral supporting, clear action indicators",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "inclusive-design",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "public services",
+      "education",
+      "healthcare",
+      "finance",
+      "government",
+      "accessible consumer",
+      "inclusive"
+    ],
+    "avoidFor": [
+      "none - accessibility universal"
+    ],
+    "keywords": [
+      "accessible",
+      "color-blind friendly",
+      "high contrast",
+      "haptic feedback",
+      "voice interaction",
+      "screen reader",
+      "wcag aaa",
+      "universal"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "WCAG AAA (7:1+ contrast), avoid red-green only, symbol-based indicators, high contrast primary; Supporting patterns (stripes, dots, hatch), symbols, combinations, clear non-color indicators",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "zero-interface",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "voice assistants",
+      "ai platforms",
+      "future-forward ux",
+      "smart home",
+      "contextual computing",
+      "ambient experiences"
+    ],
+    "avoidFor": [
+      "complex workflows",
+      "data-entry heavy",
+      "traditional systems",
+      "legacy support",
+      "explicit control"
+    ],
+    "keywords": [
+      "minimal visible ui",
+      "voice-first",
+      "gesture-based",
+      "ai-driven",
+      "invisible controls",
+      "predictive",
+      "context-aware",
+      "ambient"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neutral backgrounds: Soft white #FAFAFA, light grey #F0F0F0, warm off-white #F5F1E8; Subtle feedback: light green, light red, minimal UI elements, soft accents",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "soft-ui-evolution",
+    "axes": {
+      "formality": [
+        0.44999999999999984,
+        0.7499999999999999
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0,
+        0.25999999999999995
+      ],
+      "expressiveness": [
+        0.32999999999999996,
+        0.63
+      ]
+    },
+    "fitFor": [
+      "modern enterprise apps",
+      "saas platforms",
+      "health/wellness",
+      "modern business tools",
+      "professional",
+      "hybrid"
+    ],
+    "avoidFor": [
+      "extreme minimalism",
+      "critical performance",
+      "systems without modern os"
+    ],
+    "keywords": [
+      "evolved soft ui",
+      "better contrast",
+      "modern aesthetics",
+      "subtle depth",
+      "accessibility-focused",
+      "improved shadows",
+      "hybrid"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Improved contrast pastels: Soft Blue #87CEEB, Soft Pink #FFB6C1, Soft Green #90EE90, better hierarchy; Better combinations, accessible secondary, supporting with improved contrast, modern accents",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "hero-centric-design",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.62,
+        0.92
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "saas landing pages",
+      "product launches",
+      "service landing pages",
+      "b2b platforms",
+      "tech companies"
+    ],
+    "avoidFor": [
+      "complex navigation",
+      "multi-page experiences",
+      "data-heavy applications"
+    ],
+    "keywords": [
+      "large hero section",
+      "compelling headline",
+      "high-contrast cta",
+      "product showcase",
+      "value proposition",
+      "hero image/video",
+      "dramatic visual"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Brand primary color, white/light backgrounds for contrast, accent color for CTA; Supporting colors for secondary CTAs, accent highlights, trust elements (testimonials, logos)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "conversion-optimized",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "e-commerce product pages",
+      "free trial signups",
+      "lead generation",
+      "saas pricing pages",
+      "limited-time offers"
+    ],
+    "avoidFor": [
+      "complex feature explanations",
+      "multi-product showcases",
+      "technical documentation"
+    ],
+    "keywords": [
+      "form-focused",
+      "minimalist design",
+      "single cta focus",
+      "high contrast",
+      "urgency elements",
+      "trust signals",
+      "social proof",
+      "clear value"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary brand color, high-contrast white/light backgrounds, warning/urgency colors for time-limited offers; Secondary CTA color (muted), trust element colors (testimonial highlights), accent for key b",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "feature-rich-showcase",
+    "axes": {
+      "formality": [
+        0.52,
+        0.8200000000000001
+      ],
+      "density": [
+        0.41000000000000003,
+        0.7100000000000001
+      ],
+      "energy": [
+        0.37,
+        0.67
+      ],
+      "expressiveness": [
+        0.33999999999999997,
+        0.64
+      ]
+    },
+    "fitFor": [
+      "enterprise saas",
+      "software tools landing pages",
+      "platform services",
+      "complex product explanations",
+      "b2b products"
+    ],
+    "avoidFor": [
+      "simple product pages",
+      "early-stage startups with few features",
+      "entertainment landing pages"
+    ],
+    "keywords": [
+      "multiple feature sections",
+      "grid layout",
+      "benefit cards",
+      "visual feature demonstrations",
+      "interactive elements",
+      "problem-solution pairs"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary brand, bright secondary colors for feature cards, contrasting accent for CTAs; Supporting colors for: benefits (green), problems (red/orange), features (blue/purple), social proof (neutral)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "minimal-direct",
+    "axes": {
+      "formality": [
+        0.08999999999999997,
+        0.38999999999999996
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "expressiveness": [
+        0.27,
+        0.5700000000000001
+      ]
+    },
+    "fitFor": [
+      "simple service landing pages",
+      "indie products",
+      "consulting services",
+      "micro saas",
+      "freelancer portfolios"
+    ],
+    "avoidFor": [
+      "feature-heavy products",
+      "complex explanations",
+      "multi-product showcases"
+    ],
+    "keywords": [
+      "minimal text",
+      "white space heavy",
+      "single column layout",
+      "direct messaging",
+      "clean typography",
+      "visual-centric",
+      "fast-loading"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Monochromatic primary, white background, single accent color for CTA, black/dark grey text; Minimal secondary colors, reserved for critical CTAs only, neutral supporting elements",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "social-proof-focused",
+    "axes": {
+      "formality": [
+        0.63,
+        0.93
+      ],
+      "density": [
+        0.4700000000000001,
+        0.7700000000000001
+      ],
+      "energy": [
+        0.3799999999999999,
+        0.6799999999999999
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "b2b saas",
+      "professional services",
+      "premium products",
+      "e-commerce conversion pages",
+      "established brands"
+    ],
+    "avoidFor": [
+      "startup mvps",
+      "products without users",
+      "niche/experimental products"
+    ],
+    "keywords": [
+      "testimonials prominent",
+      "client logos displayed",
+      "case studies sections",
+      "reviews/ratings",
+      "user avatars",
+      "success metrics",
+      "credibility markers"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary brand, trust colors (blue), success/growth colors (green), neutral backgrounds; Testimonial highlight colors, logo grid backgrounds (light grey), badge/achievement colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "interactive-product-demo",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.37,
+        0.67
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.37,
+        0.67
+      ]
+    },
+    "fitFor": [
+      "saas platforms",
+      "tool/software products",
+      "productivity apps landing pages",
+      "developer tools",
+      "productivity software"
+    ],
+    "avoidFor": [
+      "simple services",
+      "consulting",
+      "non-digital products",
+      "complexity-averse audiences"
+    ],
+    "keywords": [
+      "embedded product mockup/video",
+      "interactive elements",
+      "product walkthrough",
+      "step-by-step guides",
+      "hover-to-reveal features",
+      "embedded demos"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary brand, interface colors matching product, demo highlight colors for interactive elements; Product UI colors, tutorial step colors (numbered progression), hover state indicators",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "trust-authority",
+    "axes": {
+      "formality": [
+        0.84,
+        1
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.48,
+        0.78
+      ]
+    },
+    "fitFor": [
+      "healthcare/medical landing pages",
+      "financial services",
+      "enterprise software",
+      "premium/luxury products",
+      "legal services"
+    ],
+    "avoidFor": [
+      "casual products",
+      "entertainment",
+      "viral/social-first products"
+    ],
+    "keywords": [
+      "certificates/badges displayed",
+      "expert credentials",
+      "case studies with metrics",
+      "before/after comparisons",
+      "industry recognition",
+      "security badges"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Professional colors (blue/grey), trust colors, certification badge colors (gold/silver accents); Certificate highlight colors, metric showcase colors, comparison highlight (success green)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "storytelling-driven",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.48,
+        0.78
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "brand/startup stories",
+      "mission-driven products",
+      "premium/lifestyle brands",
+      "documentary-style products",
+      "educational"
+    ],
+    "avoidFor": [
+      "technical/complex products (unless narrative-driven)",
+      "traditional enterprise software"
+    ],
+    "keywords": [
+      "narrative flow",
+      "visual story progression",
+      "section transitions",
+      "consistent character/brand voice",
+      "emotional messaging",
+      "journey visualization"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Brand primary, warm/emotional colors, varied accent colors per story section, high visual variety; Story section color coding, emotional state colors (calm, excitement, success), transitional gradient",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "data-dense-dashboard",
+    "axes": {
+      "formality": [
+        0.7200000000000002,
+        1
+      ],
+      "density": [
+        0.85,
+        1
+      ],
+      "energy": [
+        0.17,
+        0.47
+      ],
+      "expressiveness": [
+        0,
+        0.28
+      ]
+    },
+    "fitFor": [
+      "business intelligence dashboards",
+      "financial analytics",
+      "enterprise reporting",
+      "operational dashboards",
+      "data warehousing"
+    ],
+    "avoidFor": [
+      "marketing dashboards",
+      "consumer-facing analytics",
+      "simple reporting"
+    ],
+    "keywords": [
+      "multiple charts/widgets",
+      "data tables",
+      "kpi cards",
+      "minimal padding",
+      "grid layout",
+      "space-efficient",
+      "maximum data visibility"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neutral primary (light grey/white #F5F5F5), data colors (blue/green/red), dark text #333333; Chart colors: success (green #22C55E), warning (amber #F59E0B), alert (red #EF4444), neutral (grey)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "heat-map-heatmap-style",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "geographical analysis",
+      "performance matrices",
+      "correlation analysis",
+      "user behavior heatmaps",
+      "temperature/intensity data"
+    ],
+    "avoidFor": [
+      "linear data representation",
+      "categorical comparisons (use bar charts)",
+      "small datasets"
+    ],
+    "keywords": [
+      "color-coded grid/matrix",
+      "data intensity visualization",
+      "geographical heat maps",
+      "correlation matrices",
+      "cell-based representation",
+      "gradient coloring"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Gradient scale: Cool (blue #0080FF) to hot (red #FF0000), neutral middle (white/yellow); Support gradients: Light (cool blue) to dark (warm red), divergent for positive/negative data, monochromatic op",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "executive-dashboard",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.24000000000000002,
+        0.54
+      ]
+    },
+    "fitFor": [
+      "c-suite dashboards",
+      "business summary reports",
+      "decision-maker dashboards",
+      "strategic planning views"
+    ],
+    "avoidFor": [
+      "detailed analyst dashboards",
+      "technical deep-dives",
+      "operational monitoring"
+    ],
+    "keywords": [
+      "high-level kpis",
+      "large key metrics",
+      "minimal detail",
+      "summary view",
+      "trend indicators",
+      "at-a-glance insights",
+      "executive summary"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Brand colors, professional palette (blue/grey/white), accent for KPIs, red for alerts/concerns; KPI highlight colors: positive (green), negative (red), neutral (grey), trend arrow colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "real-time-monitoring",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "system monitoring dashboards",
+      "devops dashboards",
+      "real-time analytics",
+      "stock market dashboards",
+      "live event tracking"
+    ],
+    "avoidFor": [
+      "historical analysis",
+      "long-term trend reports",
+      "archived data dashboards"
+    ],
+    "keywords": [
+      "live data updates",
+      "status indicators",
+      "alert notifications",
+      "streaming data visualization",
+      "active monitoring",
+      "streaming charts"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Alert colors: critical (red #FF0000), warning (orange #FFA500), normal (green #22C55E), updating (blue animation); Status indicator colors, chart line colors varying by metric, streaming data highligh",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "drill-down-analytics",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "sales analytics",
+      "product analytics",
+      "funnel analysis",
+      "multi-dimensional data exploration",
+      "business intelligence"
+    ],
+    "avoidFor": [
+      "simple linear data",
+      "single-metric dashboards",
+      "streaming real-time dashboards"
+    ],
+    "keywords": [
+      "hierarchical data exploration",
+      "expandable sections",
+      "interactive drill-down paths",
+      "summary-to-detail flow",
+      "context preservation"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary brand, breadcrumb colors, drill-level indicator colors, hierarchy depth colors; Drill-down path indicator colors, level-specific colors, highlight colors for selected level, transition colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "comparative-analysis-dashboard",
+    "axes": {
+      "formality": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "density": [
+        0.63,
+        0.93
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.25,
+        0.55
+      ]
+    },
+    "fitFor": [
+      "period-over-period reporting",
+      "a/b test dashboards",
+      "market comparison",
+      "competitive analysis",
+      "regional performance"
+    ],
+    "avoidFor": [
+      "single metric dashboards",
+      "future projections (use forecasting)",
+      "real-time only (no historical)"
+    ],
+    "keywords": [
+      "side-by-side comparisons",
+      "period-over-period metrics",
+      "a/b test results",
+      "regional comparisons",
+      "performance benchmarks"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Comparison colors: primary (blue), comparison (orange/purple), delta indicator (green/red); Winning metric color (green), losing metric color (red), neutral comparison (grey), benchmark colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "predictive-analytics",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "forecasting dashboards",
+      "anomaly detection systems",
+      "trend prediction dashboards",
+      "ai-powered analytics",
+      "budget planning"
+    ],
+    "avoidFor": [
+      "historical-only dashboards",
+      "simple reporting",
+      "real-time operational dashboards"
+    ],
+    "keywords": [
+      "forecast lines",
+      "confidence intervals",
+      "trend projections",
+      "scenario modeling",
+      "ai-driven insights",
+      "anomaly detection visualization"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Forecast line color (distinct from actual), confidence interval shading, anomaly highlight (red alert), trend colors; High confidence (dark color), low confidence (light color), anomaly colors (red/or",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "user-behavior-analytics",
+    "axes": {
+      "formality": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "density": [
+        0.55,
+        0.8500000000000001
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "conversion funnel analysis",
+      "user journey tracking",
+      "engagement analytics",
+      "cohort analysis",
+      "retention tracking"
+    ],
+    "avoidFor": [
+      "real-time operational metrics",
+      "technical system monitoring",
+      "financial transactions"
+    ],
+    "keywords": [
+      "funnel visualization",
+      "user flow diagrams",
+      "conversion tracking",
+      "engagement metrics",
+      "user journey mapping",
+      "cohort analysis"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Funnel stage colors: high engagement (green), drop-off (red), conversion (blue), user flow arrows (grey); Stage completion colors (success), abandonment colors (warning), engagement levels (gradient),",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "financial-dashboard",
+    "axes": {
+      "formality": [
+        0.8200000000000001,
+        1
+      ],
+      "density": [
+        0.7200000000000001,
+        1
+      ],
+      "energy": [
+        0.28,
+        0.58
+      ],
+      "expressiveness": [
+        0.24000000000000002,
+        0.54
+      ]
+    },
+    "fitFor": [
+      "financial reporting",
+      "accounting dashboards",
+      "portfolio tracking",
+      "budget monitoring",
+      "banking analytics"
+    ],
+    "avoidFor": [
+      "simple business dashboards",
+      "entertainment/social metrics",
+      "non-financial data"
+    ],
+    "keywords": [
+      "revenue metrics",
+      "profit/loss visualization",
+      "budget tracking",
+      "financial ratios",
+      "portfolio performance",
+      "cash flow",
+      "audit trail"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Financial colors: profit (green #22C55E), loss (red #EF4444), neutral (grey), trust (dark blue #003366); Revenue highlight (green), expenses (red), budget variance (orange/red), balance (grey), accura",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "sales-intelligence-dashboard",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "crm dashboards",
+      "sales management",
+      "opportunity tracking",
+      "performance management",
+      "quota planning"
+    ],
+    "avoidFor": [
+      "marketing analytics",
+      "customer support metrics",
+      "hr dashboards"
+    ],
+    "keywords": [
+      "deal pipeline",
+      "sales metrics",
+      "territory performance",
+      "sales rep leaderboard",
+      "win-loss analysis",
+      "quota tracking",
+      "forecast accuracy"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Sales colors: won (green), lost (red), in-progress (blue), blocked (orange), quota met (gold), quota missed (grey); Pipeline stage colors, rep performance colors, quota achievement colors, forecast ac",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "neubrutalism",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.7000000000000001,
+        1
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "gen z brands",
+      "startups",
+      "creative agencies",
+      "figma-style apps",
+      "notion-style interfaces",
+      "tech blogs"
+    ],
+    "avoidFor": [
+      "luxury brands",
+      "finance",
+      "healthcare",
+      "conservative industries (too playful)"
+    ],
+    "keywords": [
+      "bold borders",
+      "black outlines",
+      "primary colors",
+      "thick shadows",
+      "no gradients",
+      "flat colors",
+      "45° shadows",
+      "playful",
+      "gen z"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "shadows"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#FFEB3B (Yellow), #FF5252 (Red), #2196F3 (Blue), #000000 (Black borders); Limited accent colors, high contrast combinations, no gradients allowed",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "bento-box-grid",
+    "axes": {
+      "formality": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "density": [
+        0.55,
+        0.8500000000000001
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.5900000000000001
+      ]
+    },
+    "fitFor": [
+      "dashboards",
+      "product pages",
+      "portfolios",
+      "apple-style marketing",
+      "feature showcases",
+      "saas"
+    ],
+    "avoidFor": [
+      "dense data tables",
+      "text-heavy content",
+      "real-time monitoring"
+    ],
+    "keywords": [
+      "modular cards",
+      "asymmetric grid",
+      "varied sizes",
+      "apple-style",
+      "dashboard tiles",
+      "negative space",
+      "clean hierarchy",
+      "cards"
+    ],
+    "shape": {
+      "radius": 24,
+      "depth": "shadows"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neutral base + brand accent, #FFFFFF, #F5F5F5, brand primary; Subtle gradients, shadow variations, accent highlights for interactive cards",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "y2k-aesthetic",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.39,
+        0.6900000000000001
+      ]
+    },
+    "fitFor": [
+      "fashion brands",
+      "music platforms",
+      "gen z brands",
+      "nostalgia marketing",
+      "entertainment",
+      "youth-focused"
+    ],
+    "avoidFor": [
+      "b2b enterprise",
+      "healthcare",
+      "finance",
+      "conservative industries",
+      "elderly users"
+    ],
+    "keywords": [
+      "neon pink",
+      "chrome",
+      "metallic",
+      "bubblegum",
+      "iridescent",
+      "glossy",
+      "retro-futurism",
+      "2000s",
+      "futuristic nostalgia"
+    ],
+    "shape": {
+      "radius": 50,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#FF69B4 (Hot Pink), #00FFFF (Cyan), #C0C0C0 (Silver), #9400D3 (Purple); Metallic gradients, glossy overlays, iridescent effects, chrome textures",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "cyberpunk-ui",
+    "axes": {
+      "formality": [
+        0.37,
+        0.67
+      ],
+      "density": [
+        0.5499999999999999,
+        0.85
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "gaming platforms",
+      "tech products",
+      "crypto apps",
+      "sci-fi applications",
+      "developer tools",
+      "entertainment"
+    ],
+    "avoidFor": [
+      "corporate enterprise",
+      "healthcare",
+      "family apps",
+      "conservative brands",
+      "elderly users"
+    ],
+    "keywords": [
+      "neon",
+      "dark mode",
+      "terminal",
+      "hud",
+      "sci-fi",
+      "glitch",
+      "dystopian",
+      "futuristic",
+      "matrix",
+      "tech noir"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#00FF00 (Matrix Green), #FF00FF (Magenta), #00FFFF (Cyan), #0D0D0D (Dark); Neon gradients, scanline overlays, glitch colors, terminal green accents",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "organic-biophilic",
+    "axes": {
+      "formality": [
+        0.20000000000000004,
+        0.5
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.10999999999999996,
+        0.4099999999999999
+      ],
+      "expressiveness": [
+        0.5000000000000001,
+        0.8000000000000002
+      ]
+    },
+    "fitFor": [
+      "wellness apps",
+      "sustainability brands",
+      "eco products",
+      "health apps",
+      "meditation",
+      "organic food brands"
+    ],
+    "avoidFor": [
+      "tech-focused products",
+      "gaming",
+      "industrial",
+      "urban brands"
+    ],
+    "keywords": [
+      "nature",
+      "organic shapes",
+      "green",
+      "sustainable",
+      "rounded",
+      "flowing",
+      "wellness",
+      "earthy",
+      "natural textures"
+    ],
+    "shape": {
+      "radius": 16,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#228B22 (Forest Green), #8B4513 (Earth Brown), #87CEEB (Sky Blue), #F5F5DC (Beige); Natural gradients, earth tones, sky blues, organic textures, wood/stone colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "ai-native-ui",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "ai products",
+      "chatbots",
+      "voice assistants",
+      "copilots",
+      "ai-powered tools",
+      "conversational interfaces"
+    ],
+    "avoidFor": [
+      "traditional forms",
+      "data-heavy dashboards",
+      "print-first content"
+    ],
+    "keywords": [
+      "chatbot",
+      "conversational",
+      "voice",
+      "assistant",
+      "agentic",
+      "ambient",
+      "minimal chrome",
+      "streaming text",
+      "ai interactions"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neutral + single accent, #6366F1 (AI Purple), #10B981 (Success), #F5F5F5 (Background); Status indicators, streaming highlights, context card colors, subtle accent variations",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "memphis-design",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.7000000000000001,
+        1
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative agencies",
+      "music sites",
+      "youth brands",
+      "event promotion",
+      "artistic portfolios",
+      "entertainment"
+    ],
+    "avoidFor": [
+      "corporate finance",
+      "healthcare",
+      "legal",
+      "elderly users",
+      "conservative brands"
+    ],
+    "keywords": [
+      "80s",
+      "geometric",
+      "playful",
+      "postmodern",
+      "shapes",
+      "patterns",
+      "squiggles",
+      "triangles",
+      "neon",
+      "abstract",
+      "bold"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#FF71CE (Hot Pink), #FFCE5C (Yellow), #86CCCA (Teal), #6A7BB4 (Blue Purple); Complementary geometric colors, pattern fills, contrasting accent shapes",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "vaporwave",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.56,
+        0.8600000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "music platforms",
+      "gaming",
+      "creative portfolios",
+      "tech startups",
+      "entertainment",
+      "artistic projects"
+    ],
+    "avoidFor": [
+      "business apps",
+      "e-commerce",
+      "education",
+      "healthcare",
+      "enterprise software"
+    ],
+    "keywords": [
+      "synthwave",
+      "retro-futuristic",
+      "80s-90s",
+      "neon",
+      "glitch",
+      "nostalgic",
+      "sunset gradient",
+      "dreamy",
+      "aesthetic"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#FF71CE (Pink), #01CDFE (Cyan), #05FFA1 (Mint), #B967FF (Purple); Sunset gradients, glitch overlays, VHS effects, neon accents, pastel variations",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "dimensional-layering",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "dashboards",
+      "card layouts",
+      "modals",
+      "navigation",
+      "product showcases",
+      "saas interfaces"
+    ],
+    "avoidFor": [
+      "print-style layouts",
+      "simple blogs",
+      "low-end devices",
+      "flat design requirements"
+    ],
+    "keywords": [
+      "depth",
+      "overlapping",
+      "z-index",
+      "layers",
+      "3d",
+      "shadows",
+      "elevation",
+      "floating",
+      "cards",
+      "spatial hierarchy"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neutral base (#FFFFFF, #F5F5F5, #E0E0E0) + brand accent for elevated elements; Shadow variations (sm/md/lg/xl), elevation colors, highlight colors for top layers",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "exaggerated-minimalism",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0,
+        0.29000000000000004
+      ],
+      "energy": [
+        0.6900000000000001,
+        0.9900000000000001
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "fashion",
+      "architecture",
+      "portfolios",
+      "agency landing pages",
+      "luxury brands",
+      "editorial"
+    ],
+    "avoidFor": [
+      "e-commerce catalogs",
+      "dashboards",
+      "forms",
+      "data-heavy",
+      "elderly users",
+      "complex apps"
+    ],
+    "keywords": [
+      "bold minimalism",
+      "oversized typography",
+      "high contrast",
+      "negative space",
+      "loud minimal",
+      "statement design"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#000000 (Black), #FFFFFF (White), single vibrant accent only; Minimal - single accent color, no secondary colors, extreme restraint",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "kinetic-typography",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.09,
+        0.39
+      ],
+      "energy": [
+        0.5599999999999999,
+        0.86
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "hero sections",
+      "marketing sites",
+      "video platforms",
+      "storytelling",
+      "creative portfolios",
+      "landing pages"
+    ],
+    "avoidFor": [
+      "long-form content",
+      "accessibility-critical",
+      "data interfaces",
+      "forms",
+      "elderly users"
+    ],
+    "keywords": [
+      "motion text",
+      "animated type",
+      "moving letters",
+      "dynamic",
+      "typing effect",
+      "morphing",
+      "scroll-triggered text"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Flexible - high contrast recommended, bold colors for emphasis, animation-friendly palette; Accent colors for emphasis, transition colors, gradient text fills",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "parallax-storytelling",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.48,
+        0.78
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "brand storytelling",
+      "product launches",
+      "case studies",
+      "portfolios",
+      "annual reports",
+      "marketing campaigns"
+    ],
+    "avoidFor": [
+      "e-commerce",
+      "dashboards",
+      "mobile-first",
+      "seo-critical",
+      "accessibility-required"
+    ],
+    "keywords": [
+      "scroll-driven",
+      "narrative",
+      "layered scrolling",
+      "immersive",
+      "progressive disclosure",
+      "cinematic",
+      "scroll-triggered"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Story-dependent, often gradients and natural colors, section-specific palettes; Section transition colors, depth layer colors, narrative mood colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "swiss-modernism-2-0",
+    "axes": {
+      "formality": [
+        0.53,
+        0.8300000000000001
+      ],
+      "density": [
+        0.31000000000000005,
+        0.61
+      ],
+      "energy": [
+        0.23000000000000007,
+        0.53
+      ],
+      "expressiveness": [
+        0.45000000000000007,
+        0.7500000000000001
+      ]
+    },
+    "fitFor": [
+      "corporate sites",
+      "architecture",
+      "editorial",
+      "saas",
+      "museums",
+      "professional services",
+      "documentation"
+    ],
+    "avoidFor": [
+      "playful brands",
+      "children's sites",
+      "entertainment",
+      "gaming",
+      "emotional storytelling"
+    ],
+    "keywords": [
+      "grid system",
+      "helvetica",
+      "modular",
+      "asymmetric",
+      "international style",
+      "rational",
+      "clean",
+      "mathematical spacing"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "#000000, #FFFFFF, #F5F5F5, single vibrant accent only; Minimal secondary, accent for emphasis only, no gradients",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "hud-sci-fi-fui",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "sci-fi games",
+      "space tech",
+      "cybersecurity",
+      "movie props",
+      "immersive dashboards"
+    ],
+    "avoidFor": [
+      "standard corporate",
+      "reading heavy content",
+      "accessible public services"
+    ],
+    "keywords": [
+      "futuristic",
+      "technical",
+      "wireframe",
+      "neon",
+      "data",
+      "transparency",
+      "iron man",
+      "sci-fi",
+      "interface"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Neon Cyan #00FFFF, Holographic Blue #0080FF, Alert Red #FF0000; Transparent Black, Grid Lines #333333",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "pixel-art",
+    "axes": {
+      "formality": [
+        0.12999999999999998,
+        0.42999999999999994
+      ],
+      "density": [
+        0.12000000000000002,
+        0.42000000000000004
+      ],
+      "energy": [
+        0.64,
+        0.9400000000000001
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "indie games",
+      "retro tools",
+      "creative portfolios",
+      "nostalgia marketing",
+      "web3/nft"
+    ],
+    "avoidFor": [
+      "professional corporate",
+      "modern saas",
+      "high-res photography sites"
+    ],
+    "keywords": [
+      "retro",
+      "8-bit",
+      "16-bit",
+      "gaming",
+      "blocky",
+      "nostalgic",
+      "pixelated",
+      "arcade"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "shadows"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary colors (NES Palette), brights, limited palette; Black outlines, shading via dithering or block colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "bento-grids",
+    "axes": {
+      "formality": [
+        0.32000000000000006,
+        0.62
+      ],
+      "density": [
+        0.36,
+        0.66
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.33999999999999997,
+        0.64
+      ]
+    },
+    "fitFor": [
+      "product features",
+      "dashboards",
+      "personal sites",
+      "marketing summaries",
+      "galleries"
+    ],
+    "avoidFor": [
+      "long-form reading",
+      "data tables",
+      "complex forms"
+    ],
+    "keywords": [
+      "apple-style",
+      "modular",
+      "cards",
+      "organized",
+      "clean",
+      "hierarchy",
+      "grid",
+      "rounded",
+      "soft"
+    ],
+    "shape": {
+      "radius": 20,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Off-white #F5F5F7, Clean White #FFFFFF, Text #1D1D1F; Subtle accents, soft shadows, blurred backdrops",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "spatial-ui-visionos",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "spatial computing apps",
+      "vr/ar interfaces",
+      "immersive media",
+      "futuristic dashboards"
+    ],
+    "avoidFor": [
+      "text-heavy documents",
+      "high-contrast requirements",
+      "non-3d capable devices"
+    ],
+    "keywords": [
+      "glass",
+      "depth",
+      "immersion",
+      "spatial",
+      "translucent",
+      "gaze",
+      "gesture",
+      "apple",
+      "vision-pro"
+    ],
+    "shape": {
+      "radius": 24,
+      "depth": "shadows"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Frosted Glass #FFFFFF (15-30% opacity), System White; Vibrant system colors for active states, deep shadows for depth",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "e-ink-paper",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.11000000000000001,
+        0.41000000000000003
+      ],
+      "expressiveness": [
+        0.23,
+        0.53
+      ]
+    },
+    "fitFor": [
+      "reading apps",
+      "digital newspapers",
+      "minimal journals",
+      "distraction-free writing",
+      "slow-living brands"
+    ],
+    "avoidFor": [
+      "gaming",
+      "video platforms",
+      "high-energy marketing",
+      "dark mode dependent apps"
+    ],
+    "keywords": [
+      "paper-like",
+      "matte",
+      "high contrast",
+      "texture",
+      "reading",
+      "calm",
+      "slow tech",
+      "monochrome"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Off-White #FDFBF7, Paper White #F5F5F5, Ink Black #1A1A1A; Pencil Grey #4A4A4A, Highlighter Yellow #FFFF00 (accent)",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "gen-z-chaos-maximalism",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.62,
+        0.92
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "gen z lifestyle brands",
+      "music artists",
+      "creative portfolios",
+      "viral marketing",
+      "fashion"
+    ],
+    "avoidFor": [
+      "corporate",
+      "government",
+      "healthcare",
+      "banking",
+      "serious tools"
+    ],
+    "keywords": [
+      "chaos",
+      "clutter",
+      "stickers",
+      "raw",
+      "collage",
+      "mixed media",
+      "loud",
+      "internet culture",
+      "ironic"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Clashing Brights: #FF00FF, #00FF00, #FFFF00, #0000FF; Gradients, rainbow, glitch, noise, heavily saturated mix",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "biomimetic-organic-2-0",
+    "axes": {
+      "formality": [
+        0.25,
+        0.55
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.18999999999999997,
+        0.49
+      ],
+      "expressiveness": [
+        0.45000000000000007,
+        0.7500000000000001
+      ]
+    },
+    "fitFor": [
+      "sustainability tech",
+      "biotech",
+      "advanced health",
+      "meditation",
+      "generative art platforms"
+    ],
+    "avoidFor": [
+      "standard saas",
+      "data grids",
+      "strict corporate",
+      "accounting"
+    ],
+    "keywords": [
+      "nature-inspired",
+      "cellular",
+      "fluid",
+      "breathing",
+      "generative",
+      "algorithms",
+      "life-like"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Cellular Pink #FF9999, Chlorophyll Green #00FF41, Bioluminescent Blue; Deep Ocean #001E3C, Coral #FF7F50, Organic gradients",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "anti-polish-raw-aesthetic",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.10000000000000006,
+        0.4
+      ],
+      "energy": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "expressiveness": [
+        0.67,
+        0.9700000000000001
+      ]
+    },
+    "fitFor": [
+      "creative portfolios",
+      "artist sites",
+      "indie brands",
+      "handmade products",
+      "authentic storytelling",
+      "editorial"
+    ],
+    "avoidFor": [
+      "corporate enterprise",
+      "fintech",
+      "healthcare",
+      "government",
+      "polished saas"
+    ],
+    "keywords": [
+      "hand-drawn",
+      "collage",
+      "scanned textures",
+      "unfinished",
+      "imperfect",
+      "authentic",
+      "human",
+      "sketch",
+      "raw marks",
+      "creative process"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Paper White #FAFAF8, Pencil Grey #4A4A4A, Marker Black #1A1A1A, Kraft Brown #C4A77D; Watercolor washes, pencil shading, ink splatters, tape textures, aged paper tones",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "tactile-digital-deformable-ui",
+    "axes": {
+      "formality": [
+        0.06999999999999998,
+        0.37
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.67,
+        0.9700000000000001
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "modern mobile apps",
+      "playful brands",
+      "entertainment",
+      "gaming ui",
+      "consumer products",
+      "interactive demos"
+    ],
+    "avoidFor": [
+      "enterprise software",
+      "data dashboards",
+      "accessibility-critical",
+      "professional tools"
+    ],
+    "keywords": [
+      "jelly buttons",
+      "chrome",
+      "clay",
+      "squishy",
+      "deformable",
+      "bouncy",
+      "physical",
+      "tactile feedback",
+      "press response"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Gradient metallics, Chrome Silver #C0C0C0, Jelly Pink #FF9ECD, Soft Blue #87CEEB; Glossy highlights, shadow depth, reflection effects, material-specific colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "nature-distilled",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.27,
+        0.57
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "wellness brands",
+      "sustainable products",
+      "artisan goods",
+      "organic food",
+      "spa/beauty",
+      "home decor"
+    ],
+    "avoidFor": [
+      "tech startups",
+      "gaming",
+      "nightlife",
+      "corporate finance",
+      "high-energy brands"
+    ],
+    "keywords": [
+      "muted earthy",
+      "skin tones",
+      "wood",
+      "soil",
+      "sand",
+      "terracotta",
+      "warmth",
+      "organic materials",
+      "handmade warmth"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Terracotta #C67B5C, Sand Beige #D4C4A8, Warm Clay #B5651D, Soft Cream #F5F0E1; Earth Brown #8B4513, Olive Green #6B7B3C, Warm Stone #9C8B7A, muted gradients",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "interactive-cursor-design",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.6100000000000001,
+        0.9100000000000001
+      ],
+      "expressiveness": [
+        0.77,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative portfolios",
+      "interactive experiences",
+      "agency sites",
+      "product showcases",
+      "gaming",
+      "entertainment"
+    ],
+    "avoidFor": [
+      "mobile-first (no cursor)",
+      "accessibility-critical",
+      "data-heavy dashboards",
+      "forms"
+    ],
+    "keywords": [
+      "custom cursor",
+      "cursor as tool",
+      "hover effects",
+      "cursor feedback",
+      "pointer transformation",
+      "cursor trail",
+      "magnetic cursor"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Brand-dependent, cursor accent color, high contrast for visibility; Trail colors, hover state colors, magnetic zone indicators, feedback colors",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "voice-first-multimodal",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "voice assistants",
+      "accessibility apps",
+      "hands-free tools",
+      "smart home",
+      "automotive ui",
+      "cooking apps"
+    ],
+    "avoidFor": [
+      "visual-heavy content",
+      "data entry",
+      "complex forms",
+      "noisy environments"
+    ],
+    "keywords": [
+      "voice ui",
+      "multimodal",
+      "audio feedback",
+      "conversational",
+      "hands-free",
+      "ambient",
+      "contextual",
+      "speech recognition"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Calm neutrals: Soft White #FAFAFA, Muted Blue #6B8FAF, Gentle Purple #9B8FBB; Audio waveform colors, status indicators (listening/processing/speaking), success/error tones",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "3d-product-preview",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "e-commerce",
+      "furniture",
+      "fashion",
+      "automotive",
+      "electronics",
+      "jewelry",
+      "product configurators"
+    ],
+    "avoidFor": [
+      "content-heavy sites",
+      "blogs",
+      "dashboards",
+      "low-bandwidth",
+      "accessibility-critical"
+    ],
+    "keywords": [
+      "360 product view",
+      "rotatable",
+      "zoomable",
+      "touch-to-spin",
+      "ar preview",
+      "product configurator",
+      "interactive 3d model"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Product-dependent, neutral backgrounds: Soft Grey #E8E8E8, Pure White #FFFFFF; Shadow gradients, reflection planes, environment lighting colors, accent highlights",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "gradient-mesh-aurora-evolved",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "hero sections",
+      "backgrounds",
+      "creative brands",
+      "music platforms",
+      "fashion",
+      "lifestyle",
+      "premium products"
+    ],
+    "avoidFor": [
+      "data interfaces",
+      "text-heavy content",
+      "accessibility-critical",
+      "conservative brands"
+    ],
+    "keywords": [
+      "complex gradients",
+      "mesh gradients",
+      "multi-color blend",
+      "aurora effect",
+      "flowing colors",
+      "iridescent",
+      "holographic",
+      "prismatic"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Multi-stop gradients: Cyan #00FFFF, Magenta #FF00FF, Yellow #FFFF00, Blue #0066FF, Green #00FF66; Complementary mesh points, smooth color transitions, iridescent overlays, chromatic shifts",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "editorial-grid-magazine",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.19000000000000009,
+        0.4900000000000001
+      ],
+      "energy": [
+        0.5000000000000001,
+        0.8000000000000002
+      ],
+      "expressiveness": [
+        0.78,
+        1
+      ]
+    },
+    "fitFor": [
+      "news sites",
+      "blogs",
+      "magazines",
+      "editorial content",
+      "long-form articles",
+      "journalism",
+      "publishing"
+    ],
+    "avoidFor": [
+      "dashboards",
+      "apps",
+      "e-commerce catalogs",
+      "real-time data",
+      "short-form content"
+    ],
+    "keywords": [
+      "magazine layout",
+      "asymmetric grid",
+      "editorial typography",
+      "pull quotes",
+      "drop caps",
+      "column layout",
+      "print-inspired"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "High contrast: Black #000000, White #FFFFFF, accent brand color; Muted supporting, pull quote highlights, byline colors, section dividers",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "chromatic-aberration-rgb-split",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.56,
+        0.8600000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "music platforms",
+      "gaming",
+      "tech brands",
+      "creative portfolios",
+      "nightlife",
+      "entertainment",
+      "video platforms"
+    ],
+    "avoidFor": [
+      "corporate",
+      "healthcare",
+      "finance",
+      "accessibility-critical",
+      "elderly users"
+    ],
+    "keywords": [
+      "rgb split",
+      "color fringing",
+      "glitch",
+      "retro tech",
+      "vhs",
+      "analog error",
+      "distortion",
+      "lens effect"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Offset RGB: Red #FF0000, Green #00FF00, Blue #0000FF, Black #000000; Neon accents, scan lines, noise overlays, error colors",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "vintage-analog-retro-film",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "photography portfolios",
+      "music/vinyl brands",
+      "vintage fashion",
+      "nostalgia marketing",
+      "film industry",
+      "cafes"
+    ],
+    "avoidFor": [
+      "modern tech",
+      "saas",
+      "healthcare",
+      "children's apps",
+      "corporate enterprise"
+    ],
+    "keywords": [
+      "film grain",
+      "vhs",
+      "cassette tape",
+      "polaroid",
+      "analog warmth",
+      "faded colors",
+      "light leaks",
+      "vintage photography"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Faded Cream #F5E6C8, Warm Sepia #D4A574, Muted Teal #4A7B7C, Soft Pink #E8B4B8; Grain overlays, light leak oranges, shadow blues, vintage paper tones, desaturated accents",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "bauhaus",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.39,
+        0.6900000000000001
+      ],
+      "energy": [
+        0.54,
+        0.8400000000000001
+      ],
+      "expressiveness": [
+        0.5599999999999999,
+        0.86
+      ]
+    },
+    "fitFor": [
+      "mobile-first apps needing high personality",
+      "onboarding flows",
+      "branding-forward product screens",
+      "artisan/design brands",
+      "editorial mobile experiences"
+    ],
+    "avoidFor": [
+      "enterprise dashboards",
+      "accessibility-critical contexts (requires extra a11y work)",
+      "data-heavy screens",
+      "conservative industries"
+    ],
+    "keywords": [
+      "bauhaus",
+      "geometric",
+      "constructivist",
+      "primary colors",
+      "hard shadow",
+      "bold",
+      "tactile",
+      "functional",
+      "poster",
+      "mechanical",
+      "architectural"
+    ],
+    "shape": {
+      "radius": 0,
+      "depth": "shadows"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 0,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary Red #D02020, Primary Blue #1040C0, Primary Yellow #F0C020; Background #F0F0F0 (Off-white), Foreground #121212 (Stark Black), Muted #E0E0E0",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "minimalist-monochrome",
+    "axes": {
+      "formality": [
+        0.5499999999999999,
+        0.85
+      ],
+      "density": [
+        0,
+        0.29000000000000004
+      ],
+      "energy": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "luxury fashion e-commerce mobile",
+      "editorial publications",
+      "high-end portfolio apps",
+      "experimental/avant-garde brands",
+      "digital exhibitions"
+    ],
+    "avoidFor": [
+      "entertainment",
+      "colorful brands",
+      "friendly consumer apps",
+      "anything requiring visual warmth or gradient"
+    ],
+    "keywords": [
+      "monochrome",
+      "black white",
+      "editorial",
+      "austere",
+      "typographic",
+      "sharp",
+      "zero radius",
+      "high contrast",
+      "brutalist",
+      "pocket editorial",
+      "serif",
+      "mechanical"
+    ],
+    "shape": {
+      "radius": 0,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Pure Black #000000, Pure White #FFFFFF; Muted #F5F5F5, Dark Gray #525252, Border Light #E5E5E5",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "modern-dark-cinema-mobile",
+    "axes": {
+      "formality": [
+        0.5699999999999998,
+        0.8699999999999999
+      ],
+      "density": [
+        0.3400000000000001,
+        0.64
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.57,
+        0.87
+      ]
+    },
+    "fitFor": [
+      "developer tools",
+      "pro productivity apps",
+      "fintech/trading dashboards",
+      "media/streaming platforms",
+      "ai tool interfaces",
+      "high-end gaming companion apps"
+    ],
+    "avoidFor": [
+      "consumer apps needing warmth",
+      "children's apps",
+      "health/medical contexts where dark feels harsh",
+      "high-accessibility contexts needing maximum contrast"
+    ],
+    "keywords": [
+      "dark mode",
+      "cinematic",
+      "ambient light",
+      "glassmorphism",
+      "deep black",
+      "indigo",
+      "glow",
+      "blur",
+      "atmospheric",
+      "reanimated",
+      "haptic",
+      "premium",
+      "layered",
+      "frosted glass",
+      "linear gradient"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Deep #020203, Base #050506, Elevated #0a0a0c, Accent #5E6AD2; Foreground #EDEDEF, Muted #8A8F98, Accent Glow rgba(94 106 210/0.2), Border rgba(255 255 255/0.08), Surface rgba(255 255 255/0.05)",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "saas-mobile-high-tech-boutique",
+    "axes": {
+      "formality": [
+        0.7599999999999999,
+        1
+      ],
+      "density": [
+        0.40000000000000013,
+        0.7000000000000002
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.5199999999999999,
+        0.82
+      ]
+    },
+    "fitFor": [
+      "b2b saas mobile dashboards",
+      "fintech apps",
+      "developer tool mobile companions",
+      "marketing analytics apps",
+      "hr/operations apps",
+      "modern business productivity"
+    ],
+    "avoidFor": [
+      "pure consumer entertainment",
+      "children's apps",
+      "highly decorative lifestyle apps",
+      "contexts where electric blue feels too corporate"
+    ],
+    "keywords": [
+      "saas",
+      "electric blue",
+      "gradient",
+      "fintech",
+      "spring animation",
+      "dual font",
+      "glassmorphism",
+      "boutique",
+      "premium",
+      "calistoga",
+      "inter",
+      "mono",
+      "tactile",
+      "haptic",
+      "bento"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Electric Blue #0052FF, Gradient End #4D7CFF; Background #FAFAFA, Foreground #0F172A, Muted #F1F5F9, Card #FFFFFF, Border #E2E8F0",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "terminal-cli-mobile",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.47,
+        0.77
+      ],
+      "energy": [
+        0.64,
+        0.9400000000000001
+      ],
+      "expressiveness": [
+        0.4700000000000001,
+        0.7700000000000001
+      ]
+    },
+    "fitFor": [
+      "developer tools",
+      "web3/blockchain apps",
+      "geek-culture apps",
+      "arg games",
+      "sci-fi/noir gaming companions",
+      "hacker/security tools",
+      "creative studio portfolios"
+    ],
+    "avoidFor": [
+      "consumer products",
+      "health apps",
+      "anything requiring approachability or warmth",
+      "children's apps",
+      "standard enterprise contexts"
+    ],
+    "keywords": [
+      "terminal",
+      "cli",
+      "matrix green",
+      "monospace",
+      "hacker",
+      "ascii",
+      "command line",
+      "developer",
+      "web3",
+      "crypto",
+      "sci-fi",
+      "oled",
+      "retro-future",
+      "field operative"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 500,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Matrix Green #33FF00, OLED Black #050505; Amber #FFB000, Muted Green #1A3D1A, Error Red #FF3333, Border Green #33FF00",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "kinetic-brutalism-mobile",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "immersive storytelling apps",
+      "brand flagship mobile",
+      "music/culture platforms",
+      "sports apps",
+      "underground zines",
+      "limited-edition product drops",
+      "performance dashboards"
+    ],
+    "avoidFor": [
+      "calm informational apps",
+      "healthcare",
+      "finance contexts needing trust",
+      "children's",
+      "any context where aggressive typography feels inappropriate"
+    ],
+    "keywords": [
+      "kinetic",
+      "brutalism",
+      "motion",
+      "marquee",
+      "acid yellow",
+      "uppercase",
+      "oversized",
+      "aggressive typography",
+      "street",
+      "zine",
+      "high contrast",
+      "scroll-driven",
+      "haptic",
+      "reanimated"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 100,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Acid Yellow #DFE104, Rich Black #09090B; Off-white #FAFAFA, Dark Gray #27272A, Zinc #A1A1AA, Border Zinc #3F3F46",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "flat-design-mobile-touch-first",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.31000000000000005,
+        0.61
+      ],
+      "energy": [
+        0.38,
+        0.68
+      ],
+      "expressiveness": [
+        0.54,
+        0.8400000000000001
+      ]
+    },
+    "fitFor": [
+      "cross-platform apps (ios+android parity)",
+      "information-dense dashboards",
+      "system ui",
+      "brand illustration",
+      "onboarding flows",
+      "marketing pages",
+      "icon design"
+    ],
+    "avoidFor": [
+      "ultra-premium contexts needing depth/shadow",
+      "dark-mode-first products",
+      "contexts where flat design reads as unfinished or sterile"
+    ],
+    "keywords": [
+      "flat",
+      "2d",
+      "no shadow",
+      "color blocking",
+      "geometric",
+      "bold",
+      "poster",
+      "icon",
+      "touch-first",
+      "minimal",
+      "clean",
+      "tailored",
+      "cross-platform"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "minimal",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Blue #3B82F6, Emerald #10B981; Background #FFFFFF, Surface #F3F4F6, Text #111827, Amber #F59E0B, Border #E5E7EB",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "material-you-md3-mobile",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.30000000000000004,
+        0.6
+      ]
+    },
+    "fitFor": [
+      "android ecosystem apps",
+      "cross-platform productivity tools",
+      "md3-based admin panels",
+      "data-heavy back-office ui with material ui"
+    ],
+    "avoidFor": [
+      "ultra-minimal brutalist brands",
+      "terminal/hacker aesthetics",
+      "monochrome editorial apps"
+    ],
+    "keywords": [
+      "material design 3",
+      "md3",
+      "tonal surfaces",
+      "pills",
+      "soft curves",
+      "android",
+      "md3 easing",
+      "state layers",
+      "haptic",
+      "fab",
+      "google"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Primary Violet #6750A4, Secondary Container #E8DEF8, Tertiary #7D5260; Surface #FFFBFE, On Surface #1C1B1F, Surface Container #F3EDF7, Outline #79747E",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "neo-brutalism-mobile",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.07000000000000003,
+        0.37
+      ],
+      "energy": [
+        0.53,
+        0.8300000000000001
+      ],
+      "expressiveness": [
+        0.77,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative tools",
+      "collab platforms",
+      "gen z marketing & e-commerce",
+      "portfolio sites",
+      "sticker-book style content apps"
+    ],
+    "avoidFor": [
+      "serious enterprise apps",
+      "conservative industries",
+      "sober fintech",
+      "accessibility-first contexts (must tune contrast)"
+    ],
+    "keywords": [
+      "neo brutalism",
+      "pop art",
+      "stickers",
+      "thick borders",
+      "cream background",
+      "hot red",
+      "vivid yellow",
+      "soft violet",
+      "hard offset shadow",
+      "mechanical press",
+      "collage"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Cream #FFFDF5, Hot Red #FF6B6B, Vivid Yellow #FFD93D; Soft Violet #C4B5FD, Pure Black #000000, White #FFFFFF",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "bold-typography-mobile-poster",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0,
+        0.27
+      ],
+      "energy": [
+        0.6000000000000001,
+        0.9000000000000001
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative brand heroes",
+      "reading-focused apps",
+      "event/exhibition pages",
+      "editorial mobile experiences",
+      "landing hero sections"
+    ],
+    "avoidFor": [
+      "utility dashboards",
+      "kids apps",
+      "playful consumer products",
+      "contexts needing many icons or heavy imagery"
+    ],
+    "keywords": [
+      "bold typography",
+      "editorial",
+      "poster",
+      "broadsheet",
+      "vermillion",
+      "negative space",
+      "edge-to-edge type",
+      "underline cta",
+      "near-black",
+      "warm white"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Near Black #0A0A0A, Warm White #FAFAFA; Muted #1A1A1A, Secondary Text #737373, Accent Vermillion #FF3D00, Border #262626",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "academia-scholarly-mobile",
+    "axes": {
+      "formality": [
+        0.16999999999999996,
+        0.47
+      ],
+      "density": [
+        0.30000000000000004,
+        0.6
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "knowledge management apps",
+      "deep reading tools",
+      "ritual-heavy personal brands",
+      "lore-heavy rpg/roleplay apps",
+      "culture-specific community platforms"
+    ],
+    "avoidFor": [
+      "hyper-modern tech dashboards",
+      "neon/glassmorphism",
+      "playful gen z branding"
+    ],
+    "keywords": [
+      "academia",
+      "library",
+      "mahogany",
+      "parchment",
+      "brass",
+      "crimson",
+      "serif",
+      "drop cap",
+      "arch-top",
+      "vignette",
+      "leather",
+      "scholarly",
+      "tactile"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Mahogany #1C1714, Oak #251E19; Parchment #E8DFD4, Worn Leather #3D332B, Faded Ink #9C8B7A, Brass #C9A962, Library Crimson #8B2635",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "cyberpunk-mobile-hud",
+    "axes": {
+      "formality": [
+        0.29000000000000004,
+        0.59
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.51,
+        0.81
+      ],
+      "expressiveness": [
+        0.37,
+        0.67
+      ]
+    },
+    "fitFor": [
+      "gaming dashboards",
+      "crypto/cyberpunk apps",
+      "sci-fi companion tools",
+      "hacker os skins",
+      "data-heavy monitoring huds"
+    ],
+    "avoidFor": [
+      "serious enterprise",
+      "health/finance requiring calm trust",
+      "minimal editorial apps"
+    ],
+    "keywords": [
+      "cyberpunk",
+      "neon",
+      "glitch",
+      "chamfered",
+      "orbitron",
+      "jetbrains",
+      "scanlines",
+      "crt",
+      "hud",
+      "matrix",
+      "military",
+      "decker"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Void #0A0A0F, Card #12121A; Neon Green #00FF88, Neon Magenta #FF00FF, Cyber Cyan #00D4FF, Neutral Text #E0E0E0, Alert Red #FF3366, Border #2A2A3A",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "bitcoin-defi-mobile",
+    "axes": {
+      "formality": [
+        0.32999999999999996,
+        0.63
+      ],
+      "density": [
+        0.4,
+        0.7000000000000001
+      ],
+      "energy": [
+        0.42999999999999994,
+        0.73
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "defi dashboards",
+      "wallets",
+      "nft marketplaces",
+      "web3 social",
+      "metaverse utilities",
+      "high-tech fintech brands"
+    ],
+    "avoidFor": [
+      "playful casual apps",
+      "low-tech brands",
+      "ultra-minimal editorial apps"
+    ],
+    "keywords": [
+      "web3",
+      "bitcoin",
+      "defi",
+      "digital gold",
+      "fintech",
+      "wallet",
+      "orange",
+      "glassmorphism",
+      "gradient",
+      "blur",
+      "holographic",
+      "trust",
+      "precision"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Bitcoin Orange #F7931A, Burnt Orange #EA580C, Digital Gold #FFD600; Void #030304, Dark Matter #0F1115, Pure Light #FFFFFF, Stardust #94A3B8, Border Dim rgba(30,41,59,0.2)",
+      "darkPrimary": true
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "claymorphism-mobile",
+    "axes": {
+      "formality": [
+        0,
+        0.26999999999999996
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.85,
+        1
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "children education apps",
+      "teen social products",
+      "crypto gamification",
+      "creative tools",
+      "brand mascot-led apps"
+    ],
+    "avoidFor": [
+      "serious enterprise",
+      "high-density data",
+      "editorial reading apps",
+      "fintech trust signals"
+    ],
+    "keywords": [
+      "claymorphism",
+      "clay",
+      "3d",
+      "soft",
+      "bubbly",
+      "candy",
+      "playful",
+      "rounded",
+      "squish",
+      "tactile",
+      "inflate",
+      "silicone",
+      "haptic",
+      "spring"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Vivid Violet #7C3AED, Hot Pink #DB2777; Canvas #F4F1FA, Soft Charcoal #332F3A, Emerald #10B981, Amber #F59E0B, Lavender-Gray #635F69",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "enterprise-saas-mobile",
+    "axes": {
+      "formality": [
+        0.7499999999999999,
+        1
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.010000000000000037,
+        0.31000000000000005
+      ],
+      "expressiveness": [
+        0.17,
+        0.47
+      ]
+    },
+    "fitFor": [
+      "b2b backend management",
+      "productivity tools",
+      "government and finance mobile apps",
+      "saas companion apps",
+      "enterprise dashboards"
+    ],
+    "avoidFor": [
+      "pure consumer entertainment",
+      "gen-z youth apps",
+      "gaming ui",
+      "ultra-minimal editorial"
+    ],
+    "keywords": [
+      "enterprise",
+      "saas",
+      "b2b",
+      "professional",
+      "indigo",
+      "violet",
+      "gradient",
+      "polished",
+      "trustworthy",
+      "clean",
+      "approachable",
+      "spring",
+      "haptic"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "expressive",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Indigo #4F46E5, Violet #7C3AED; Slate 50 #F8FAFC, White #FFFFFF, Slate 900 #0F172A, Slate 500 #64748B, Emerald #10B981, Slate 200 #E2E8F0",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "sketch-hand-drawn-mobile",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.7000000000000001,
+        1
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "low-fidelity prototyping",
+      "creative brands",
+      "children/picturebook apps",
+      "education tools",
+      "journaling apps",
+      "gamified puzzles"
+    ],
+    "avoidFor": [
+      "enterprise dashboards",
+      "high-density data tables",
+      "fintech precision tools",
+      "medical or legal apps"
+    ],
+    "keywords": [
+      "sketch",
+      "hand-drawn",
+      "handwriting",
+      "wobbly",
+      "imperfect",
+      "paper",
+      "kalam",
+      "organic",
+      "collage",
+      "post-it",
+      "tape",
+      "offset shadow",
+      "scribble"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Red Marker #FF4D4D, Pencil Black #2D2D2D; Warm Paper #FDFBF7, Old Paper #E5E0D8, Blue Ballpoint #2D5DA1, Post-it Yellow #FFF9C4",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  },
+  {
+    "id": "neumorphism-mobile",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.29000000000000004,
+        0.5900000000000001
+      ],
+      "energy": [
+        0.2500000000000001,
+        0.55
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "minimal hardware controls",
+      "smart home apps",
+      "aesthetic utility tools",
+      "health monitors",
+      "brand showcase pages"
+    ],
+    "avoidFor": [
+      "high-density data",
+      "bright multi-color apps",
+      "apps needing strong visual hierarchy via color",
+      "dark-mode-only products"
+    ],
+    "keywords": [
+      "neumorphism",
+      "soft ui",
+      "dual shadow",
+      "extruded",
+      "inset",
+      "clay surface",
+      "monochromatic",
+      "cool grey",
+      "haptic",
+      "ceramic",
+      "physical",
+      "depth"
+    ],
+    "shape": {
+      "radius": 8,
+      "depth": "borders"
+    },
+    "motion": {
+      "budget": "moderate",
+      "duration": 200,
+      "easing": "ease-out"
+    },
+    "color": {
+      "strategy": "Accent Violet #6C63FF, Clay Base #E0E5EC; Text Dark #3D4852, Text Muted #6B7280, Shadow Light rgba(255,255,255,0.6), Shadow Dark rgba(163,177,198,0.7), Inset Background #D1D9E6",
+      "darkPrimary": false
+    },
+    "signature": [],
+    "antiDefaults": []
+  }
+]
