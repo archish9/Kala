@@ -172,9 +172,10 @@ const surfaces = readDirJson('surfaces')
 const guides = readDirJson('guides')
 
 const surfacesTable = table(
-  ['Surface', 'Also called', 'Required states', 'Primary action'],
+  ['Surface', 'What the user is doing', 'Also called', 'Required states', 'Primary action'],
   surfaces.map(s => [
     `\`${s.id}\``,
+    cell(s.purpose),
     list((s.aliases ?? []).map(a => `\`${a}\``), 4),
     list((s.requiredStates ?? []).map(x => `\`${x}\``)),
     cell(s.primaryAction ?? '—')

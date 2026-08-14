@@ -62,12 +62,39 @@ brief and guide response, so they become constraints your agent works under.
 
 ## The catalog fallback tier
 
-If your brief does not fit any of the 12 well (a fit score below 0.55), kala falls through
-to a much larger, less opinionated pool: 84 styles, 192 palettes, and 74 font pairings,
-selected independently and combined. See [Catalog](05-catalog.md).
+Twelve hand-authored systems is a real catalogue, but a brief like *"artisanal candle
+subscription box for pet reptiles"* has no business being forced into one of twelve bundles
+written around completely different domains. So if your brief does not fit any of the 12
+well — a fit score below 0.55 — kala falls through to a much larger, less opinionated pool:
+84 styles, 192 palettes, and 74 font pairings. See [Catalog](05-catalog.md).
 
-A proposal from the fallback tier has **no signature rules and no anti-defaults** — that is
-the trade. It still gets a fully contrast-solved palette; nothing skips the colour solver.
+**They are combined, not bundled.** The 12 curated systems are whole units on purpose: a
+designer picks a serif *because* the palette is warm. The fallback tier cannot offer that,
+so rather than pretend, it picks a style, a palette, and a typography pairing
+**independently** and assembles them:
+
+```
+brief scores below 0.55 against all 12
+  → pick the best-fit style from the 84
+  → work out light or dark from your brief and that style
+  → pick the best-fit palette matching that mode
+  → pick the best-fit typography pairing
+  → assemble the three into one system
+```
+
+**Palettes stay parameters, not fixed hex.** kala's colour pipeline derives your whole
+accessible light and dark palette from an accent plus two numbers. Shipping the catalog's
+literal hex values would skip that solver, so each palette row is reduced to those
+parameters instead. A fallback-tier proposal still gets a fully contrast-solved palette on
+exactly the same terms as a curated one.
+
+**What you give up:** a fallback-tier proposal has **no signature rules and no
+anti-defaults**. Those are hand-written, and there are none for the 84 catalog styles. You
+get coherent tokens without the opinions.
+
+**It never comes back empty.** If the catalog is missing or fails to load, kala falls back to
+the 12 curated systems rather than erroring. If no catalog style fits at all, it returns the
+best curated system regardless of its score. There is always a proposal.
 
 ---
 
@@ -82,6 +109,50 @@ exactly three files:
 | `src/styles/globals.css` | The same values as CSS custom properties, plus the dark scheme and motion tokens |
 | `design.lock.json` | The derived values, plus the design intent — which system, its bans, its signature rules |
 
+`tailwind.config.mjs` gets your scales and palette:
+
+```js
+// kala:tailwind:start — generated; edits inside are overwritten
+export default {
+  theme: { extend: {
+    spacing:      { "0": '0px', "1": '4px', … },
+    fontSize:     { "s12": '12px', "s16": '16px', … },
+    borderRadius: { "0": '0px', "8": '8px', … },
+    fontFamily:   { sans: ["Public Sans", "system-ui", …] },
+    colors: { accent: { "50": '#…', … }, neutral: { … }, bg: '#…', fg: '#…' }
+  } }
+}
+// kala:tailwind:end
+```
+
+`src/styles/globals.css` gets the same values as custom properties, plus dark mode and a
+reduced-motion rule you did not have to remember:
+
+```css
+/* kala:tokens:start — generated; edits inside are overwritten */
+:root {
+  --color-bg: #f7f4f3;
+  --color-fg: #4c433d;
+  --color-primary: #8f6755;
+  --space-0: 0px; --space-1: 4px; …
+  --text-12: 12px; --text-16: 16px; …
+  --radius: 8px;
+  --motion-duration: 180ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { … }
+}
+:root[data-theme="dark"] { … }
+
+@media (prefers-reduced-motion: reduce) { :root { --motion-duration: 0ms; } }
+/* kala:tokens:end */
+```
+
+`design.lock.json` records both the derived values and the *intent* — which system you
+chose, its signature rules, its bans, and why. Config holds values; nothing but a lock can
+hold intent.
+
 Three properties worth knowing:
 
 **It is idempotent.** Running it twice with the same input produces byte-identical files.
@@ -95,6 +166,17 @@ unless you explicitly say so — replacing rewrites your palette, type, and scal
 
 Once those files exist, they are the source of truth. Every later check reads them, so
 changing your Tailwind config changes what kala enforces.
+
+### The scales it generates
+
+**Type:** `baseSize × ratio^n`, snapped to whole pixels and clamped to 6–7 steps. More steps
+and hierarchy stops meaning anything. Never below 12px.
+
+**Space:** `base × [0, 1, 2, 3, 4, 6, 8, 12, 16]`, stretched by the system's rhythm —
+`tight`, `normal`, or `generous`.
+
+**Radius:** always includes 0. Some elements should not be rounded even in a rounded system,
+and the alternative is an arbitrary value appearing in your markup.
 
 ---
 

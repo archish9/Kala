@@ -6,9 +6,14 @@ direction when none exists, and names the states a screen must handle before it'
 Not a linter, not a component library — a design-system authority a coding agent can
 query and be checked against. Works across React, Vue, Svelte, and plain HTML.
 
-Full pitch: `README.md`. Full docs: `Documentation/01-getting-started.md` through
-`10-roadmap.md` (architecture, tools, rules, design systems, surfaces/guides, testing,
-extending, troubleshooting, roadmap — in that numbered order).
+Full pitch: `README.md`. Docs are split by audience: `Documentation/users/` (install, first
+project, prompts, tool reference, and the generated catalog/system/surface/action/rule
+inventories) and `Documentation/contributors/` (architecture, writing rules, extending,
+testing, design rationale, roadmap, provenance).
+
+Four user docs contain marker-delimited generated regions. After changing any pack data, run
+`node scripts/build-docs.mjs` — `packages/packs/tests/docs-sync.test.ts` fails if they drift,
+and `docs-links.test.ts` fails on a broken internal link or anchor.
 
 ## Repo shape
 

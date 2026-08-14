@@ -148,7 +148,7 @@ Same call plus `choice`.
   it has no hand-authored opinions, unlike a curated one. See
   [Design systems § the catalog fallback tier](06-design-systems.md#the-catalog-fallback-tier).
 
-Details of what gets written: [Design systems](06-design-systems.md#what-gets-written).
+Details of what gets written: [Design systems](06-design-systems.md#what-kala-writes-into-your-project).
 
 ---
 
