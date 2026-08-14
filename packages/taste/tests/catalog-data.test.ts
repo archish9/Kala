@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { CATALOG_DIR } from '@kala/packs'
 import { join } from 'node:path'
-import { AXIS_NAMES, type CatalogStyle, type CatalogPalette } from '../src/types.js'
+import { AXIS_NAMES, type CatalogStyle, type CatalogPalette, type CatalogTypography } from '../src/types.js'
 
 const styles = JSON.parse(
   readFileSync(join(CATALOG_DIR, 'styles.json'), 'utf8')
@@ -71,5 +71,36 @@ describe('catalog/palettes.json', () => {
     expect(saas).toBeDefined()
     expect(saas!.defaultAccent).toBe('#EA580C')
     expect(saas!.darkPrimary).toBe(false)
+  })
+})
+
+const typography = JSON.parse(
+  readFileSync(join(CATALOG_DIR, 'typography.json'), 'utf8')
+) as CatalogTypography[]
+
+describe('catalog/typography.json', () => {
+  it('has 74 entries', () => {
+    expect(typography).toHaveLength(74)
+  })
+
+  it('gives every pairing both a sans and a serif family', () => {
+    for (const t of typography) {
+      expect(t.families.sans, t.id).toBeTruthy()
+      expect(t.families.serif, t.id).toBeTruthy()
+      expect(t.ratio).toBeGreaterThan(1)
+      expect(t.baseSize).toBeGreaterThan(0)
+    }
+  })
+
+  it('has unique ids', () => {
+    expect(new Set(typography.map(t => t.id)).size).toBe(typography.length)
+  })
+
+  it('converts the first source row (Classic Elegant) correctly', () => {
+    const classic = typography.find(t => t.id === 'classic-elegant')
+    expect(classic).toBeDefined()
+    expect(classic!.families.serif).toBe('Playfair Display')
+    expect(classic!.families.sans).toBe('Inter')
+    expect(classic!.keywords).toContain('elegant')
   })
 })

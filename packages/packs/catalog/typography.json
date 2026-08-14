@@ -1,1 +1,3369 @@
-[]
+[
+  {
+    "id": "classic-elegant",
+    "axes": {
+      "formality": [
+        0.7499999999999999,
+        1
+      ],
+      "density": [
+        0,
+        0.22999999999999998
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "luxury brands",
+      "fashion",
+      "spa",
+      "beauty",
+      "editorial",
+      "magazines",
+      "high-end e-commerce"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "elegant",
+      "luxury",
+      "sophisticated",
+      "timeless",
+      "premium",
+      "editorial"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Playfair Display"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "modern-professional",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.18000000000000002,
+        0.48
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "saas",
+      "corporate sites",
+      "business apps",
+      "startups",
+      "professional services"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "modern",
+      "professional",
+      "clean",
+      "corporate",
+      "friendly",
+      "approachable"
+    ],
+    "families": {
+      "sans": "Poppins",
+      "serif": "Poppins"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "tech-startup",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.37,
+        0.67
+      ]
+    },
+    "fitFor": [
+      "tech companies",
+      "startups",
+      "saas",
+      "developer tools",
+      "ai products"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "tech",
+      "startup",
+      "modern",
+      "innovative",
+      "bold",
+      "futuristic"
+    ],
+    "families": {
+      "sans": "Space Grotesk",
+      "serif": "Space Grotesk"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "editorial-classic",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "expressiveness": [
+        0.67,
+        0.9700000000000001
+      ]
+    },
+    "fitFor": [
+      "publishing",
+      "blogs",
+      "news sites",
+      "literary magazines",
+      "book covers"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "editorial",
+      "classic",
+      "literary",
+      "traditional",
+      "refined",
+      "bookish"
+    ],
+    "families": {
+      "sans": "Cormorant Garamond",
+      "serif": "Cormorant Garamond"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+  },
+  {
+    "id": "minimal-swiss",
+    "axes": {
+      "formality": [
+        0.65,
+        0.9500000000000001
+      ],
+      "density": [
+        0.41000000000000003,
+        0.7100000000000001
+      ],
+      "energy": [
+        2.7755575615628914e-17,
+        0.30000000000000004
+      ],
+      "expressiveness": [
+        0.17,
+        0.47
+      ]
+    },
+    "fitFor": [
+      "dashboards",
+      "admin panels",
+      "documentation",
+      "enterprise apps",
+      "design systems"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "minimal",
+      "clean",
+      "swiss",
+      "functional",
+      "neutral",
+      "professional"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "playful-creative",
+    "axes": {
+      "formality": [
+        0,
+        0.15
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.85,
+        1
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "children's apps",
+      "educational",
+      "gaming",
+      "creative tools",
+      "entertainment"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "playful",
+      "friendly",
+      "fun",
+      "creative",
+      "warm",
+      "approachable"
+    ],
+    "families": {
+      "sans": "Nunito",
+      "serif": "Nunito"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "bold-statement",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.71,
+        1
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "marketing sites",
+      "portfolios",
+      "agencies",
+      "event pages",
+      "sports"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "bold",
+      "impactful",
+      "strong",
+      "dramatic",
+      "modern",
+      "headlines"
+    ],
+    "families": {
+      "sans": "Source Sans 3",
+      "serif": "Source Sans 3"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "wellness-calm",
+    "axes": {
+      "formality": [
+        0.20000000000000004,
+        0.5
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0,
+        0.2899999999999999
+      ],
+      "expressiveness": [
+        0.44000000000000006,
+        0.7400000000000001
+      ]
+    },
+    "fitFor": [
+      "health apps",
+      "wellness",
+      "spa",
+      "meditation",
+      "yoga",
+      "organic brands"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "calm",
+      "wellness",
+      "health",
+      "relaxing",
+      "natural",
+      "organic"
+    ],
+    "families": {
+      "sans": "Raleway",
+      "serif": "Lora"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "developer-mono",
+    "axes": {
+      "formality": [
+        0.5599999999999999,
+        0.86
+      ],
+      "density": [
+        0.47,
+        0.77
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.23999999999999996,
+        0.5399999999999999
+      ]
+    },
+    "fitFor": [
+      "developer tools",
+      "documentation",
+      "code editors",
+      "tech blogs",
+      "cli apps"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "code",
+      "developer",
+      "technical",
+      "precise",
+      "functional",
+      "hacker"
+    ],
+    "families": {
+      "sans": "IBM Plex Sans",
+      "serif": "IBM Plex Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "retro-vintage",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.68,
+        0.9800000000000001
+      ],
+      "expressiveness": [
+        0.71,
+        1
+      ]
+    },
+    "fitFor": [
+      "vintage brands",
+      "breweries",
+      "restaurants",
+      "creative portfolios",
+      "posters"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "retro",
+      "vintage",
+      "nostalgic",
+      "dramatic",
+      "decorative",
+      "bold"
+    ],
+    "families": {
+      "sans": "Abril Fatface",
+      "serif": "Merriweather"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:wght@300;400;700&display=swap"
+  },
+  {
+    "id": "geometric-modern",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.39,
+        0.6900000000000001
+      ]
+    },
+    "fitFor": [
+      "general purpose",
+      "portfolios",
+      "agencies",
+      "modern brands",
+      "landing pages"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "geometric",
+      "modern",
+      "clean",
+      "balanced",
+      "contemporary",
+      "versatile"
+    ],
+    "families": {
+      "sans": "Outfit",
+      "serif": "Outfit"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "luxury-serif",
+    "axes": {
+      "formality": [
+        0.7499999999999999,
+        1
+      ],
+      "density": [
+        0.029999999999999943,
+        0.32999999999999996
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.7499999999999999,
+        1
+      ]
+    },
+    "fitFor": [
+      "fashion brands",
+      "luxury e-commerce",
+      "jewelry",
+      "high-end services"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "luxury",
+      "high-end",
+      "fashion",
+      "elegant",
+      "refined",
+      "premium"
+    ],
+    "families": {
+      "sans": "Montserrat",
+      "serif": "Cormorant"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "friendly-saas",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.18000000000000002,
+        0.48
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "saas products",
+      "web apps",
+      "dashboards",
+      "b2b",
+      "productivity tools"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "friendly",
+      "modern",
+      "saas",
+      "clean",
+      "approachable",
+      "professional"
+    ],
+    "families": {
+      "sans": "Plus Jakarta Sans",
+      "serif": "Plus Jakarta Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "news-editorial",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "news sites",
+      "blogs",
+      "magazines",
+      "journalism",
+      "content-heavy sites"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "news",
+      "editorial",
+      "journalism",
+      "trustworthy",
+      "readable",
+      "informative"
+    ],
+    "families": {
+      "sans": "Roboto",
+      "serif": "Newsreader"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "handwritten-charm",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.20000000000000004,
+        0.5
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "personal blogs",
+      "invitations",
+      "creative portfolios",
+      "lifestyle brands"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "handwritten",
+      "personal",
+      "friendly",
+      "casual",
+      "warm",
+      "charming"
+    ],
+    "families": {
+      "sans": "Quicksand",
+      "serif": "Quicksand"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "corporate-trust",
+    "axes": {
+      "formality": [
+        0.7499999999999999,
+        1
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0,
+        0.19
+      ],
+      "expressiveness": [
+        0.11000000000000001,
+        0.41000000000000003
+      ]
+    },
+    "fitFor": [
+      "enterprise",
+      "government",
+      "healthcare",
+      "finance",
+      "accessibility-focused"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "corporate",
+      "trustworthy",
+      "accessible",
+      "readable",
+      "professional",
+      "clean"
+    ],
+    "families": {
+      "sans": "Lexend",
+      "serif": "Lexend"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "brutalist-raw",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.21,
+        0.51
+      ]
+    },
+    "fitFor": [
+      "brutalist designs",
+      "developer portfolios",
+      "experimental",
+      "tech art"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "brutalist",
+      "raw",
+      "technical",
+      "monospace",
+      "minimal",
+      "stark"
+    ],
+    "families": {
+      "sans": "Space Mono",
+      "serif": "Space Mono"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+  },
+  {
+    "id": "fashion-forward",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.54,
+        0.8400000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "fashion brands",
+      "creative agencies",
+      "art galleries",
+      "design studios"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "fashion",
+      "avant-garde",
+      "creative",
+      "bold",
+      "artistic",
+      "edgy"
+    ],
+    "families": {
+      "sans": "Syne",
+      "serif": "Syne"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "soft-rounded",
+    "axes": {
+      "formality": [
+        0.16,
+        0.45999999999999996
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.43000000000000005,
+        0.7300000000000001
+      ],
+      "expressiveness": [
+        0.5,
+        0.8
+      ]
+    },
+    "fitFor": [
+      "children's products",
+      "pet apps",
+      "friendly brands",
+      "wellness",
+      "soft ui"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "soft",
+      "rounded",
+      "friendly",
+      "approachable",
+      "warm",
+      "gentle"
+    ],
+    "families": {
+      "sans": "Varela Round",
+      "serif": "Varela Round"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Varela+Round&display=swap"
+  },
+  {
+    "id": "premium-sans",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.39,
+        0.6900000000000001
+      ]
+    },
+    "fitFor": [
+      "premium brands",
+      "modern agencies",
+      "saas",
+      "portfolios",
+      "startups"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "premium",
+      "modern",
+      "clean",
+      "sophisticated",
+      "versatile",
+      "balanced"
+    ],
+    "families": {
+      "sans": "Satoshi",
+      "serif": "Satoshi"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+  },
+  {
+    "id": "vietnamese-friendly",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "vietnamese sites",
+      "multilingual apps",
+      "international products"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "vietnamese",
+      "international",
+      "readable",
+      "clean",
+      "multilingual",
+      "accessible"
+    ],
+    "families": {
+      "sans": "Be Vietnam Pro",
+      "serif": "Be Vietnam Pro"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "japanese-elegant",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "japanese sites",
+      "japanese restaurants",
+      "cultural sites",
+      "anime/manga"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "japanese",
+      "elegant",
+      "traditional",
+      "modern",
+      "multilingual",
+      "readable"
+    ],
+    "families": {
+      "sans": "Noto Sans JP",
+      "serif": "Noto Serif JP"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "korean-modern",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.18000000000000002,
+        0.48
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "korean sites",
+      "k-beauty",
+      "k-pop",
+      "korean businesses",
+      "multilingual"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "korean",
+      "modern",
+      "clean",
+      "professional",
+      "multilingual",
+      "readable"
+    ],
+    "families": {
+      "sans": "Noto Sans KR",
+      "serif": "Noto Sans KR"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "chinese-traditional",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "traditional chinese sites",
+      "cultural content",
+      "taiwan/hong kong markets"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "chinese",
+      "traditional",
+      "elegant",
+      "cultural",
+      "multilingual",
+      "readable"
+    ],
+    "families": {
+      "sans": "Noto Sans TC",
+      "serif": "Noto Serif TC"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "chinese-simplified",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.30000000000000004,
+        0.6
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "simplified chinese sites",
+      "mainland china market",
+      "business apps"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "chinese",
+      "simplified",
+      "modern",
+      "professional",
+      "multilingual",
+      "readable"
+    ],
+    "families": {
+      "sans": "Noto Sans SC",
+      "serif": "Noto Sans SC"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "arabic-elegant",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "arabic sites",
+      "middle east market",
+      "islamic content",
+      "bilingual sites"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "arabic",
+      "elegant",
+      "traditional",
+      "cultural",
+      "rtl",
+      "readable"
+    ],
+    "families": {
+      "sans": "Noto Sans Arabic",
+      "serif": "Noto Naskh Arabic"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "thai-modern",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "thai sites",
+      "southeast asia",
+      "tourism",
+      "thai restaurants"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "thai",
+      "modern",
+      "readable",
+      "clean",
+      "multilingual",
+      "accessible"
+    ],
+    "families": {
+      "sans": "Noto Sans Thai",
+      "serif": "Noto Sans Thai"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "hebrew-modern",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.18000000000000002,
+        0.48
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "hebrew sites",
+      "israeli market",
+      "jewish content",
+      "bilingual sites"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "hebrew",
+      "modern",
+      "rtl",
+      "clean",
+      "professional",
+      "readable"
+    ],
+    "families": {
+      "sans": "Noto Sans Hebrew",
+      "serif": "Noto Sans Hebrew"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "legal-professional",
+    "axes": {
+      "formality": [
+        0.85,
+        1
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.07000000000000003,
+        0.37
+      ],
+      "expressiveness": [
+        0.17,
+        0.47
+      ]
+    },
+    "fitFor": [
+      "law firms",
+      "legal services",
+      "contracts",
+      "formal documents",
+      "government"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "legal",
+      "professional",
+      "traditional",
+      "trustworthy",
+      "formal",
+      "authoritative"
+    ],
+    "families": {
+      "sans": "Lato",
+      "serif": "EB Garamond"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+  },
+  {
+    "id": "medical-clean",
+    "axes": {
+      "formality": [
+        0.45999999999999996,
+        0.76
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.05000000000000002,
+        0.35
+      ],
+      "expressiveness": [
+        0.33999999999999997,
+        0.64
+      ]
+    },
+    "fitFor": [
+      "healthcare",
+      "medical clinics",
+      "pharma",
+      "health apps",
+      "accessibility"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "medical",
+      "clean",
+      "accessible",
+      "professional",
+      "healthcare",
+      "trustworthy"
+    ],
+    "families": {
+      "sans": "Figtree",
+      "serif": "Figtree"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "financial-trust",
+    "axes": {
+      "formality": [
+        0.85,
+        1
+      ],
+      "density": [
+        0.4,
+        0.7000000000000001
+      ],
+      "energy": [
+        0.07000000000000003,
+        0.37
+      ],
+      "expressiveness": [
+        0.17,
+        0.47
+      ]
+    },
+    "fitFor": [
+      "banks",
+      "finance",
+      "insurance",
+      "investment",
+      "fintech",
+      "enterprise"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "financial",
+      "trustworthy",
+      "professional",
+      "corporate",
+      "banking",
+      "serious"
+    ],
+    "families": {
+      "sans": "IBM Plex Sans",
+      "serif": "IBM Plex Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "real-estate-luxury",
+    "axes": {
+      "formality": [
+        0.6499999999999999,
+        0.95
+      ],
+      "density": [
+        0.10999999999999996,
+        0.4099999999999999
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "real estate",
+      "luxury properties",
+      "architecture",
+      "interior design"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "real estate",
+      "luxury",
+      "elegant",
+      "sophisticated",
+      "property",
+      "premium"
+    ],
+    "families": {
+      "sans": "Josefin Sans",
+      "serif": "Cinzel"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "restaurant-menu",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "restaurants",
+      "cafes",
+      "food blogs",
+      "culinary",
+      "hospitality"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "restaurant",
+      "menu",
+      "culinary",
+      "elegant",
+      "foodie",
+      "hospitality"
+    ],
+    "families": {
+      "sans": "Karla",
+      "serif": "Playfair Display SC"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap"
+  },
+  {
+    "id": "art-deco",
+    "axes": {
+      "formality": [
+        0.5499999999999999,
+        0.85
+      ],
+      "density": [
+        0.18999999999999997,
+        0.49
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "vintage events",
+      "art deco themes",
+      "luxury hotels",
+      "classic cocktails"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "art deco",
+      "vintage",
+      "1920s",
+      "elegant",
+      "decorative",
+      "gatsby"
+    ],
+    "families": {
+      "sans": "Didact Gothic",
+      "serif": "Didact Gothic"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Poiret+One&display=swap"
+  },
+  {
+    "id": "magazine-style",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.050000000000000044,
+        0.35000000000000003
+      ],
+      "energy": [
+        0.5000000000000001,
+        0.8000000000000002
+      ],
+      "expressiveness": [
+        0.8300000000000001,
+        1
+      ]
+    },
+    "fitFor": [
+      "magazines",
+      "online publications",
+      "editorial content",
+      "journalism"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "magazine",
+      "editorial",
+      "publishing",
+      "refined",
+      "journalism",
+      "print"
+    ],
+    "families": {
+      "sans": "Public Sans",
+      "serif": "Libre Bodoni"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "crypto-web3",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "crypto platforms",
+      "nft",
+      "blockchain",
+      "web3",
+      "futuristic tech"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "crypto",
+      "web3",
+      "futuristic",
+      "tech",
+      "blockchain",
+      "digital"
+    ],
+    "families": {
+      "sans": "Orbitron",
+      "serif": "Orbitron"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "gaming-bold",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.79,
+        1
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "gaming",
+      "esports",
+      "action games",
+      "competitive sports",
+      "entertainment"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "gaming",
+      "bold",
+      "action",
+      "esports",
+      "competitive",
+      "energetic"
+    ],
+    "families": {
+      "sans": "Chakra Petch",
+      "serif": "Chakra Petch"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Russo+One&display=swap"
+  },
+  {
+    "id": "indie-craft",
+    "axes": {
+      "formality": [
+        0.27,
+        0.57
+      ],
+      "density": [
+        0.20000000000000004,
+        0.5
+      ],
+      "energy": [
+        0.4,
+        0.7000000000000001
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "craft brands",
+      "indie products",
+      "artisan",
+      "handmade",
+      "organic products"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "indie",
+      "craft",
+      "handmade",
+      "artisan",
+      "organic",
+      "creative"
+    ],
+    "families": {
+      "sans": "Cabin",
+      "serif": "Cabin"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "startup-bold",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "startups",
+      "pitch decks",
+      "product launches",
+      "bold brands"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "startup",
+      "bold",
+      "modern",
+      "innovative",
+      "confident",
+      "dynamic"
+    ],
+    "families": {
+      "sans": "Clash Display",
+      "serif": "Clash Display"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "e-commerce-clean",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.31000000000000005,
+        0.61
+      ],
+      "expressiveness": [
+        0.39,
+        0.6900000000000001
+      ]
+    },
+    "fitFor": [
+      "e-commerce",
+      "online stores",
+      "product pages",
+      "retail",
+      "shopping"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "ecommerce",
+      "clean",
+      "shopping",
+      "product",
+      "retail",
+      "conversion"
+    ],
+    "families": {
+      "sans": "Rubik",
+      "serif": "Rubik"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "academic-research",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "universities",
+      "research papers",
+      "academic journals",
+      "educational"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "academic",
+      "research",
+      "scholarly",
+      "accessible",
+      "readable",
+      "educational"
+    ],
+    "families": {
+      "sans": "Atkinson Hyperlegible",
+      "serif": "Crimson Pro"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "dashboard-data",
+    "axes": {
+      "formality": [
+        0.5000000000000001,
+        0.8000000000000002
+      ],
+      "density": [
+        0.77,
+        1
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.20000000000000004,
+        0.5
+      ]
+    },
+    "fitFor": [
+      "dashboards",
+      "analytics",
+      "data visualization",
+      "admin panels"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "dashboard",
+      "data",
+      "analytics",
+      "code",
+      "technical",
+      "precise"
+    ],
+    "families": {
+      "sans": "Fira Sans",
+      "serif": "Fira Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "music-entertainment",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.79,
+        1
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "music platforms",
+      "entertainment",
+      "events",
+      "festivals",
+      "performers"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "music",
+      "entertainment",
+      "fun",
+      "energetic",
+      "bold",
+      "performance"
+    ],
+    "families": {
+      "sans": "Poppins",
+      "serif": "Poppins"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap"
+  },
+  {
+    "id": "minimalist-portfolio",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.2100000000000001,
+        0.5100000000000001
+      ],
+      "expressiveness": [
+        0.5499999999999999,
+        0.85
+      ]
+    },
+    "fitFor": [
+      "design portfolios",
+      "creative professionals",
+      "minimalist brands"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "minimal",
+      "portfolio",
+      "designer",
+      "creative",
+      "clean",
+      "artistic"
+    ],
+    "families": {
+      "sans": "Archivo",
+      "serif": "Archivo"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "kids-education",
+    "axes": {
+      "formality": [
+        0,
+        0.22999999999999995
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.8300000000000001,
+        1
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "children's apps",
+      "educational games",
+      "kid-friendly content"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "kids",
+      "education",
+      "playful",
+      "friendly",
+      "colorful",
+      "learning"
+    ],
+    "families": {
+      "sans": "Comic Neue",
+      "serif": "Comic Neue"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap"
+  },
+  {
+    "id": "wedding-romance",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "wedding sites",
+      "invitations",
+      "romantic brands",
+      "bridal"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "wedding",
+      "romance",
+      "elegant",
+      "script",
+      "invitation",
+      "feminine"
+    ],
+    "families": {
+      "sans": "Great Vibes",
+      "serif": "Cormorant Infant"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+  },
+  {
+    "id": "science-tech",
+    "axes": {
+      "formality": [
+        0.4,
+        0.7000000000000001
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.4,
+        0.7000000000000001
+      ]
+    },
+    "fitFor": [
+      "science",
+      "research",
+      "tech documentation",
+      "data-heavy sites"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "science",
+      "technology",
+      "research",
+      "data",
+      "futuristic",
+      "precise"
+    ],
+    "families": {
+      "sans": "Exo",
+      "serif": "Exo"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;700&display=swap"
+  },
+  {
+    "id": "accessibility-first",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "accessibility-critical sites",
+      "government",
+      "healthcare",
+      "inclusive design"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "accessible",
+      "readable",
+      "inclusive",
+      "wcag",
+      "dyslexia-friendly",
+      "clear"
+    ],
+    "families": {
+      "sans": "Atkinson Hyperlegible",
+      "serif": "Atkinson Hyperlegible"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+  },
+  {
+    "id": "sports-fitness",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.49,
+        0.79
+      ],
+      "expressiveness": [
+        0.44999999999999996,
+        0.75
+      ]
+    },
+    "fitFor": [
+      "sports",
+      "fitness",
+      "gyms",
+      "athletic brands",
+      "competition"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "sports",
+      "fitness",
+      "athletic",
+      "energetic",
+      "condensed",
+      "action"
+    ],
+    "families": {
+      "sans": "Barlow Condensed",
+      "serif": "Barlow Condensed"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "luxury-minimalist",
+    "axes": {
+      "formality": [
+        0.6499999999999999,
+        0.95
+      ],
+      "density": [
+        0.10999999999999996,
+        0.4099999999999999
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "luxury minimalist brands",
+      "high-end fashion",
+      "premium products"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "luxury",
+      "minimalist",
+      "high-end",
+      "sophisticated",
+      "refined",
+      "premium"
+    ],
+    "families": {
+      "sans": "Jost",
+      "serif": "Bodoni Moda"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "tech-hud-mono",
+    "axes": {
+      "formality": [
+        0.42999999999999994,
+        0.73
+      ],
+      "density": [
+        0.44999999999999996,
+        0.75
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.27,
+        0.57
+      ]
+    },
+    "fitFor": [
+      "sci-fi interfaces",
+      "developer tools",
+      "cybersecurity",
+      "dashboards"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "tech",
+      "futuristic",
+      "hud",
+      "sci-fi",
+      "data",
+      "monospaced",
+      "precise"
+    ],
+    "families": {
+      "sans": "Share Tech Mono",
+      "serif": "Share Tech Mono"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+  },
+  {
+    "id": "pixel-retro",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.56,
+        0.8600000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "pixel art games",
+      "retro websites",
+      "creative portfolios"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "pixel",
+      "retro",
+      "gaming",
+      "8-bit",
+      "nostalgic",
+      "arcade"
+    ],
+    "families": {
+      "sans": "VT323",
+      "serif": "VT323"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+  },
+  {
+    "id": "neubrutalist-bold",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.85,
+        1
+      ],
+      "expressiveness": [
+        0.7499999999999999,
+        1
+      ]
+    },
+    "fitFor": [
+      "neubrutalist designs",
+      "gen z brands",
+      "bold marketing"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "bold",
+      "neubrutalist",
+      "loud",
+      "strong",
+      "geometric",
+      "quirky"
+    ],
+    "families": {
+      "sans": "Public Sans",
+      "serif": "Public Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Public+Sans:wght@100..900&display=swap"
+  },
+  {
+    "id": "academic-archival",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "university sites",
+      "archives",
+      "research papers",
+      "history"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "academic",
+      "old-school",
+      "university",
+      "research",
+      "serious",
+      "traditional"
+    ],
+    "families": {
+      "sans": "EB Garamond",
+      "serif": "EB Garamond"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap"
+  },
+  {
+    "id": "spatial-clear",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.23,
+        0.53
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "spatial computing",
+      "ar/vr",
+      "glassmorphism interfaces"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "spatial",
+      "legible",
+      "glass",
+      "system",
+      "clean",
+      "neutral"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  },
+  {
+    "id": "kinetic-motion",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.35,
+        0.65
+      ]
+    },
+    "fitFor": [
+      "music festivals",
+      "automotive",
+      "high-energy brands"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "kinetic",
+      "motion",
+      "futuristic",
+      "speed",
+      "wide",
+      "tech"
+    ],
+    "families": {
+      "sans": "Syncopate",
+      "serif": "Syncopate"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syncopate:wght@400;700&display=swap"
+  },
+  {
+    "id": "gen-z-brutal",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.71,
+        1
+      ],
+      "expressiveness": [
+        0.6499999999999999,
+        0.95
+      ]
+    },
+    "fitFor": [
+      "gen z marketing",
+      "streetwear",
+      "viral campaigns"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "brutal",
+      "loud",
+      "shouty",
+      "meme",
+      "internet",
+      "bold"
+    ],
+    "families": {
+      "sans": "Epilogue",
+      "serif": "Epilogue"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "bauhaus-geometric",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.54,
+        0.8400000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "bauhaus mobile apps",
+      "bold editorial mobile",
+      "design-forward branding apps",
+      "art/culture platforms"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "bauhaus",
+      "geometric",
+      "constructivist",
+      "bold",
+      "uppercase",
+      "architectural",
+      "mechanical",
+      "poster",
+      "tactile"
+    ],
+    "families": {
+      "sans": "Outfit",
+      "serif": "Outfit"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&display=swap"
+  },
+  {
+    "id": "minimalist-monochrome-editorial",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0.07000000000000003,
+        0.37
+      ],
+      "energy": [
+        0.45000000000000007,
+        0.7500000000000001
+      ],
+      "expressiveness": [
+        0.77,
+        1
+      ]
+    },
+    "fitFor": [
+      "luxury fashion mobile apps",
+      "editorial publications",
+      "digital exhibitions",
+      "portfolio apps",
+      "high-contrast e-reader aesthetics"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "monochrome",
+      "editorial",
+      "austere",
+      "typographic",
+      "pocket manifesto",
+      "luxury",
+      "high contrast",
+      "brutalist mobile"
+    ],
+    "families": {
+      "sans": "Playfair Display",
+      "serif": "Playfair Display"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400|Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300"
+  },
+  {
+    "id": "modern-dark-cinema-inter-system",
+    "axes": {
+      "formality": [
+        0.7899999999999998,
+        1
+      ],
+      "density": [
+        0.3400000000000001,
+        0.64
+      ],
+      "energy": [
+        0.18000000000000002,
+        0.48
+      ],
+      "expressiveness": [
+        0.4099999999999999,
+        0.71
+      ]
+    },
+    "fitFor": [
+      "developer tools",
+      "fintech/trading",
+      "ai dashboards",
+      "streaming platforms",
+      "high-end productivity apps"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "dark",
+      "cinematic",
+      "technical",
+      "precision",
+      "clean",
+      "premium",
+      "developer",
+      "professional",
+      "high-end utility"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+  },
+  {
+    "id": "saas-mobile-boutique-calistoga-inter",
+    "axes": {
+      "formality": [
+        0.6799999999999999,
+        0.98
+      ],
+      "density": [
+        0.2000000000000001,
+        0.5000000000000001
+      ],
+      "energy": [
+        0.62,
+        0.92
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "b2b saas mobile",
+      "fintech apps",
+      "analytics dashboards",
+      "marketing tools",
+      "operations platforms"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "saas",
+      "boutique",
+      "electric",
+      "warm",
+      "editorial",
+      "bold",
+      "premium",
+      "fintech",
+      "business",
+      "dual font",
+      "human warmth"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Calistoga:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+  },
+  {
+    "id": "terminal-cli-monospace",
+    "axes": {
+      "formality": [
+        0.5899999999999999,
+        0.8899999999999999
+      ],
+      "density": [
+        0.6499999999999999,
+        0.95
+      ],
+      "energy": [
+        0.35,
+        0.65
+      ],
+      "expressiveness": [
+        0.10999999999999996,
+        0.4099999999999999
+      ]
+    },
+    "fitFor": [
+      "developer tools",
+      "web3/blockchain apps",
+      "hacker aesthetic",
+      "sci-fi games",
+      "arg",
+      "security tools",
+      "geek-culture portfolios"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "terminal",
+      "cli",
+      "hacker",
+      "monospace",
+      "matrix",
+      "developer",
+      "retro-future",
+      "command line",
+      "precision",
+      "oled"
+    ],
+    "families": {
+      "sans": "JetBrains Mono",
+      "serif": "JetBrains Mono"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;1,400"
+  },
+  {
+    "id": "kinetic-brutalism-space-grotesk",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.54,
+        0.8400000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "music/culture apps",
+      "sports platforms",
+      "brand flagship mobile",
+      "performance dashboards",
+      "underground product drops"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "kinetic",
+      "brutalist",
+      "aggressive",
+      "uppercase",
+      "oversized",
+      "display",
+      "motion",
+      "street",
+      "bold",
+      "high-energy",
+      "zine"
+    ],
+    "families": {
+      "sans": "Space Grotesk",
+      "serif": "Space Grotesk"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  },
+  {
+    "id": "flat-design-mobile-system-bold",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.27,
+        0.57
+      ],
+      "energy": [
+        0.33000000000000007,
+        0.63
+      ],
+      "expressiveness": [
+        0.42999999999999994,
+        0.73
+      ]
+    },
+    "fitFor": [
+      "cross-platform apps",
+      "dashboards",
+      "system ui",
+      "onboarding",
+      "marketing pages",
+      "informational apps",
+      "icon-heavy interfaces"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "flat",
+      "clean",
+      "system",
+      "bold",
+      "geometric",
+      "cross-platform",
+      "icon",
+      "poster",
+      "minimal",
+      "functional",
+      "responsive"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+  },
+  {
+    "id": "material-you-md3-roboto-system",
+    "axes": {
+      "formality": [
+        0.47,
+        0.77
+      ],
+      "density": [
+        0.35,
+        0.65
+      ],
+      "energy": [
+        0.29000000000000004,
+        0.59
+      ],
+      "expressiveness": [
+        0.29000000000000004,
+        0.59
+      ]
+    },
+    "fitFor": [
+      "android apps",
+      "cross-platform tools",
+      "productivity software",
+      "data-heavy b2b dashboards",
+      "enterprise mobile"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "material design 3",
+      "md3",
+      "android",
+      "google",
+      "tonal",
+      "friendly",
+      "rounded",
+      "accessible",
+      "adaptive"
+    ],
+    "families": {
+      "sans": "Roboto",
+      "serif": "Roboto"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400"
+  },
+  {
+    "id": "neo-brutalism-mobile-space-grotesk-heavy",
+    "axes": {
+      "formality": [
+        0.35,
+        0.65
+      ],
+      "density": [
+        0.17,
+        0.47
+      ],
+      "energy": [
+        0.76,
+        1
+      ],
+      "expressiveness": [
+        0.8099999999999999,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative tools",
+      "gen-z marketing",
+      "e-commerce for youth culture",
+      "content portfolios",
+      "collage-style apps"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "neo brutalism",
+      "pop art",
+      "loud",
+      "bold",
+      "heavy",
+      "stickers",
+      "mechanical",
+      "high contrast",
+      "cream",
+      "gen-z"
+    ],
+    "families": {
+      "sans": "Space Grotesk",
+      "serif": "Space Grotesk"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap"
+  },
+  {
+    "id": "bold-typography-mobile-inter-tight-poster",
+    "axes": {
+      "formality": [
+        0.44999999999999996,
+        0.75
+      ],
+      "density": [
+        0,
+        0.27
+      ],
+      "energy": [
+        0.6400000000000001,
+        0.9400000000000002
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "creative brand flagships",
+      "reading platforms",
+      "event apps",
+      "flash pages",
+      "luxury mobile experiences"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "bold typography",
+      "editorial",
+      "poster",
+      "near-black",
+      "vermillion",
+      "luxury",
+      "type-as-hero",
+      "manifesto",
+      "high-contrast"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400|JetBrains+Mono:wght@400|Playfair+Display:ital@1"
+  },
+  {
+    "id": "academia-mobile-cormorant-crimson-cinzel",
+    "axes": {
+      "formality": [
+        0.16999999999999996,
+        0.47
+      ],
+      "density": [
+        0.20000000000000004,
+        0.5
+      ],
+      "energy": [
+        0.48,
+        0.78
+      ],
+      "expressiveness": [
+        0.51,
+        0.81
+      ]
+    },
+    "fitFor": [
+      "knowledge management apps",
+      "scholarly reading tools",
+      "personal brand portfolios",
+      "rpg games",
+      "cultural community platforms"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "academia",
+      "library",
+      "mahogany",
+      "parchment",
+      "brass",
+      "scholarly",
+      "prestige",
+      "antique",
+      "victorian",
+      "leather"
+    ],
+    "families": {
+      "sans": "Cormorant Garamond",
+      "serif": "Cormorant Garamond"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300;1,500|Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400"
+  },
+  {
+    "id": "cyberpunk-mobile-orbitron-jetbrains-mono",
+    "axes": {
+      "formality": [
+        0.2899999999999999,
+        0.59
+      ],
+      "density": [
+        0.30000000000000004,
+        0.6000000000000001
+      ],
+      "energy": [
+        0.56,
+        0.8600000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "gaming companion apps",
+      "fintech/crypto",
+      "data visualization",
+      "dark brand apps",
+      "cyberpunk narrative games"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "cyberpunk",
+      "neon",
+      "glitch",
+      "hud",
+      "sci-fi",
+      "dark",
+      "matrix green",
+      "magenta",
+      "chamfered",
+      "tactical"
+    ],
+    "families": {
+      "sans": "Orbitron",
+      "serif": "Orbitron"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;900&display=swap"
+  },
+  {
+    "id": "web3-bitcoin-defi-space-grotesk-inter-mono",
+    "axes": {
+      "formality": [
+        0.32999999999999996,
+        0.63
+      ],
+      "density": [
+        0.22000000000000006,
+        0.52
+      ],
+      "energy": [
+        0.5599999999999999,
+        0.86
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "defi protocols and wallets",
+      "nft platforms",
+      "metaverse social apps",
+      "high-tech brand landing pages"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "web3",
+      "bitcoin",
+      "defi",
+      "digital gold",
+      "fintech",
+      "crypto",
+      "trustless",
+      "luminescent",
+      "precision",
+      "dark"
+    ],
+    "families": {
+      "sans": "Inter",
+      "serif": "Inter"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+  },
+  {
+    "id": "claymorphism-mobile-nunito-dm-sans",
+    "axes": {
+      "formality": [
+        0.04999999999999993,
+        0.3499999999999999
+      ],
+      "density": [
+        0.2000000000000001,
+        0.5000000000000001
+      ],
+      "energy": [
+        0.85,
+        1
+      ],
+      "expressiveness": [
+        0.85,
+        1
+      ]
+    },
+    "fitFor": [
+      "children education apps",
+      "teen social",
+      "brand mascot apps",
+      "creative tools",
+      "fintech gamification"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "claymorphism",
+      "clay",
+      "rounded",
+      "playful",
+      "candy",
+      "bubbly",
+      "soft",
+      "3d",
+      "children",
+      "education",
+      "tactile",
+      "spring",
+      "nunito",
+      "dm sans"
+    ],
+    "families": {
+      "sans": "Nunito",
+      "serif": "Nunito"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400|Nunito:ital,wght@0,700;0,800;0,900;1,700"
+  },
+  {
+    "id": "enterprise-saas-mobile-plus-jakarta-sans",
+    "axes": {
+      "formality": [
+        0.72,
+        1
+      ],
+      "density": [
+        0.49,
+        0.79
+      ],
+      "energy": [
+        0.18000000000000002,
+        0.48
+      ],
+      "expressiveness": [
+        0.18000000000000002,
+        0.48
+      ]
+    },
+    "fitFor": [
+      "b2b saas apps",
+      "productivity tools",
+      "government and finance mobile apps",
+      "admin dashboards",
+      "enterprise onboarding"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "enterprise",
+      "saas",
+      "b2b",
+      "professional",
+      "indigo",
+      "modern",
+      "approachable",
+      "legible",
+      "ios dynamic type",
+      "android scaling"
+    ],
+    "families": {
+      "sans": "Plus Jakarta Sans",
+      "serif": "Plus Jakarta Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400"
+  },
+  {
+    "id": "sketch-hand-drawn-mobile-kalam-patrick-hand",
+    "axes": {
+      "formality": [
+        0.21,
+        0.51
+      ],
+      "density": [
+        0.25,
+        0.55
+      ],
+      "energy": [
+        0.56,
+        0.8600000000000001
+      ],
+      "expressiveness": [
+        0.61,
+        0.91
+      ]
+    },
+    "fitFor": [
+      "journaling apps",
+      "prototype tools",
+      "children's picturebook apps",
+      "creative platforms",
+      "gamified puzzle apps"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "sketch",
+      "hand-drawn",
+      "handwriting",
+      "human",
+      "imperfect",
+      "organic",
+      "paper",
+      "kalam",
+      "patrick hand",
+      "education",
+      "journal",
+      "creative"
+    ],
+    "families": {
+      "sans": "Kalam",
+      "serif": "Kalam"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap"
+  },
+  {
+    "id": "neumorphism-mobile-plus-jakarta-sans-system",
+    "axes": {
+      "formality": [
+        0.30000000000000004,
+        0.6
+      ],
+      "density": [
+        0.15000000000000005,
+        0.45000000000000007
+      ],
+      "energy": [
+        0.2500000000000001,
+        0.55
+      ],
+      "expressiveness": [
+        0.66,
+        0.9600000000000001
+      ]
+    },
+    "fitFor": [
+      "smart home controls",
+      "minimal tools",
+      "aesthetic dashboards",
+      "health monitors",
+      "brand showcase pages"
+    ],
+    "avoidFor": [],
+    "keywords": [
+      "neumorphism",
+      "soft ui",
+      "monochromatic",
+      "cool grey",
+      "minimal",
+      "physical",
+      "depth",
+      "ceramic",
+      "system font",
+      "utility"
+    ],
+    "families": {
+      "sans": "Plus Jakarta Sans",
+      "serif": "Plus Jakarta Sans"
+    },
+    "ratio": 1.25,
+    "baseSize": 16,
+    "maxWeights": 3,
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400"
+  }
+]
