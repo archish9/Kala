@@ -1,9 +1,9 @@
 import { access } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import {
-  loadSystems, selectSystems, composeSystem, emitAll
+  loadSystems, loadCatalog, proposeSystem, composeSystem, emitAll
 } from '@kala/taste'
-import { SYSTEMS_DIR } from '@kala/packs'
+import { SYSTEMS_DIR, CATALOG_DIR } from '@kala/packs'
 import type { PairReport, DesignSystem } from '@kala/taste'
 
 export type BootstrapProposal = {
@@ -52,7 +52,11 @@ export const systemBootstrap = async (
     )
   }
 
-  const proposals = selectSystems(brief, systems)
+  // A missing/malformed catalog degrades to empty pools, not a thrown error —
+  // proposeSystem falls back to curated-only proposals when the catalog is empty.
+  const { catalog } = await loadCatalog(CATALOG_DIR)
+
+  const proposals = proposeSystem(brief, systems, catalog)
 
   if (opts.choice === undefined) {
     return {

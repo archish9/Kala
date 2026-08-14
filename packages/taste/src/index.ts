@@ -1,7 +1,13 @@
 export { loadSystems } from './load.js'
 export { briefToAxes } from './axes.js'
-export { selectSystems, axisDistance } from './select.js'
-export { composeSystem, DEFAULT_ACCENTS, type ComposedTokens } from './compose.js'
+export {
+  selectSystems, axisDistance,
+  selectCatalogStyles, selectCatalogPalettes, selectCatalogTypography
+} from './select.js'
+export {
+  composeSystem, DEFAULT_ACCENTS, proposeSystem, resolveColorMode, type ComposedTokens
+} from './compose.js'
+export { loadCatalog, type CatalogPools } from './catalog.js'
 export { emitAll, emitLock } from './emit/lock.js'
 export { emitTailwindConfig } from './emit/tailwind.js'
 export { emitGlobalsCss } from './emit/css.js'

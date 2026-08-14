@@ -28,6 +28,28 @@ describe('system_bootstrap — propose', () => {
       for (const hex of p.palettePreview) expect(hex).toMatch(/^#[0-9a-f]{6}$/i)
     }
   })
+
+  it('still proposes from the curated systems when the brief fits one well', async () => {
+    const r = await systemBootstrap(dir, 'portfolio site for a photographer')
+    expect(r.mode).toBe('proposed')
+    if (r.mode !== 'proposed') throw new Error('expected proposals')
+    expect(r.proposals[0]!.id).toBe('editorial-clean')
+  })
+
+  it('falls through to the catalog tier when no curated system fits', async () => {
+    // Deliberately contradictory domain signals (medical + gaming + banking +
+    // luxury + admin + fun + ...) so every curated system's fitFor/avoidFor
+    // score cancels out or goes negative — verified empirically to score
+    // well below the 0.55 curated threshold against every one of the 12.
+    const r = await systemBootstrap(
+      dir,
+      'a cli tool for medical accounting solo consumer luxury developer kids ' +
+      'banking gaming compliance boutique reporting campaign console fun admin'
+    )
+    expect(r.mode).toBe('proposed')
+    if (r.mode !== 'proposed') throw new Error('expected proposals')
+    expect(r.proposals[0]!.signature).toEqual([])
+  })
 })
 
 describe('system_bootstrap — apply', () => {
