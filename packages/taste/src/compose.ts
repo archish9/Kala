@@ -2,7 +2,11 @@ import { buildRamp, buildNeutralRamp, type Ramp } from './color/ramp.js'
 import { solveSemantics, type Semantics, type PairReport } from './color/solve.js'
 import { deriveDark } from './color/dark.js'
 import { typeScale, spaceScale, radiusScale } from './scales.js'
-import type { DesignSystem } from './types.js'
+import { selectSystems, selectCatalogStyles, selectCatalogPalettes, selectCatalogTypography } from './select.js'
+import type { CatalogPools } from './catalog.js'
+import type {
+  DesignSystem, CatalogStyle, CatalogPalette, CatalogTypography, Proposal
+} from './types.js'
 
 export type ComposedTokens = {
   system: DesignSystem
@@ -67,4 +71,78 @@ export const composeSystem = (
     dark,
     report: [...lightReport, ...darkReport]
   }
+}
+
+const DARK_QUERY_MARKERS = [
+  'dark mode', 'dark theme', 'dark ui', 'dark-mode', 'darkmode',
+  'night mode', 'midnight', 'oled'
+]
+
+export const resolveColorMode = (brief: string, style: CatalogStyle): 'light' | 'dark' => {
+  const lower = brief.toLowerCase()
+  if (DARK_QUERY_MARKERS.some(m => lower.includes(m))) return 'dark'
+  if (style.color.darkPrimary) return 'dark'
+  return 'light'
+}
+
+const synthesizeSystem = (
+  style: CatalogStyle, palette: CatalogPalette, typography: CatalogTypography
+): DesignSystem => ({
+  id: `${style.id}--${palette.id}--${typography.id}`,
+  axes: style.axes,
+  fitFor: style.fitFor,
+  avoidFor: style.avoidFor,
+  type: {
+    families: typography.families,
+    fallbacks: { sans: ['system-ui', 'sans-serif'] },
+    ratio: typography.ratio,
+    baseSize: typography.baseSize,
+    maxWeights: typography.maxWeights
+  },
+  space: { base: 4, rhythm: 'normal', sectionGap: 64 },
+  shape: style.shape,
+  color: {
+    strategy: style.color.strategy,
+    neutralHue: palette.neutralHue,
+    chromaCeiling: palette.chromaCeiling
+  },
+  motion: style.motion,
+  signature: [],
+  antiDefaults: []
+})
+
+/** Below this, a curated-system fit is treated as not a real match. */
+const CURATED_FIT_THRESHOLD = 0.55
+
+/**
+ * Curated systems first — they carry hand-authored signature/antiDefaults
+ * guidance the catalog tier does not. Only when the best curated fit is weak
+ * does this fall through to independently picking a style, a color-mode-
+ * matched palette, and a typography pairing from the catalog. The avoidFor
+ * penalty (scorePool, -0.30 per hit) already prices an avoidFor match into
+ * `fit`, so a single threshold check covers both "weak fit" and
+ * "avoidFor-blocked" without a second condition.
+ */
+export const proposeSystem = (
+  brief: string, curated: DesignSystem[], catalog: CatalogPools, limit = 3
+): Proposal[] => {
+  const curatedProposals = selectSystems(brief, curated, limit)
+  const bestCurated = curatedProposals[0]
+
+  if (bestCurated !== undefined && bestCurated.fit >= CURATED_FIT_THRESHOLD) {
+    return curatedProposals
+  }
+
+  const styles = selectCatalogStyles(brief, catalog.styles, limit)
+  if (styles.length === 0) return curatedProposals // never a dead end
+
+  return styles.map(({ style, fit, rationale }) => {
+    const mode = resolveColorMode(brief, style)
+    const palette = selectCatalogPalettes(brief, catalog.palettes, mode, 1)[0]?.palette
+    const typography = selectCatalogTypography(brief, catalog.typography, 1)[0]?.typography
+
+    if (!palette || !typography) return curatedProposals[0]! // catalog partially empty
+
+    return { system: synthesizeSystem(style, palette, typography), fit, rationale }
+  })
 }
