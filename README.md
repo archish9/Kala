@@ -20,33 +20,32 @@ structurally cannot.
 
 ## Install
 
-```bash
-git clone git@github.com:archish9/Kala.git
-cd Kala
-corepack enable pnpm            # Node 20+ required
-pnpm install
-pnpm test                       # 477 tests
-pnpm --filter @kala/server build
+**Claude Code** — the plugin carries the server, the companion skill, the `/kala` command,
+and the restricted subagent in one install:
+
+```
+/plugin marketplace add archish9/Kala
+/plugin install kala@kala-marketplace
 ```
 
-Then point your agent at the built server, using an **absolute** path:
+**Any other MCP client** — one block of JSON, no clone and no build:
 
 ```json
 {
   "mcpServers": {
     "kala": {
-      "command": "node",
-      "args": ["/absolute/path/to/Kala/packages/server/dist/src/index.js"]
+      "command": "npx",
+      "args": ["-y", "kala-mcp"]
     }
   }
 }
 ```
 
-Open your agent in a project and say:
+Node 20+ is the only requirement. Open your agent in a project and say:
 
 > *"What design system does this project have?"*
 
-Full setup, per-client config, and the optional `/kala` command:
+Per-client config, building from source, and the companion skill:
 **[Install](Documentation/users/01-install.md)**.
 Complete walkthrough: **[Your first project](Documentation/users/02-first-project.md)**.
 
@@ -86,7 +85,7 @@ More phrasings for every task: **[What to say](Documentation/users/03-prompts.md
   for briefs none of the 12 fit well
 - **[6 surface briefs and 13 action playbooks](Documentation/users/07-surfaces-and-actions.md)**
 - **4 framework extractors** proven equivalent by a dedicated test suite
-- **477 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
+- **485 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
 - **No browser required** — the rendered pass is opt-in and degrades cleanly
 - **No network calls, no API keys** — static data plus deterministic code; nothing kala does
   depends on an external service

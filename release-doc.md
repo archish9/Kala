@@ -6,10 +6,13 @@ gitignored-`dist` problem), wiring up LangChain `deepagents`, and publishing the
 Code plugin to a marketplace. kala is used throughout as the worked example — swap the
 names for your own project if you're reading this as a general guide.
 
-**Status as of writing:** none of this is done yet. kala is still in development/testing.
-`packages/server/dist/` is gitignored; the MCP server currently only runs from a local
-build (`pnpm --filter @kala/server build`) pointed at by an absolute path. Nothing here
-should be started until the project is actually ready to ship.
+**Status.** Parts 1 and 3 are built and verified: `packages/server/scripts/bundle.mjs`
+stages a publish-ready package, the packed tarball was installed into a clean project
+outside the monorepo and answered a real `tools/list` and two real tool calls over stdio,
+and `.claude-plugin/marketplace.json` is pushed. What remains is the `npm publish` itself,
+which needs a 2FA OTP, and a listing decision (3.6). The parts of this doc describing the
+old local-`dist/` wiring have been updated to describe what was actually built, so it stays
+usable as a guide for the next release rather than a record of the first one.
 
 ---
 
@@ -246,11 +249,11 @@ context).
 
 ### 3.2 Two ways to distribute a plugin
 
-A plugin (the `.claude-plugin/plugin.json` + `agents/`/`commands/`/`skills/` bundle) is
-not itself installable — it needs a **marketplace** entry pointing at it. There is no
-Anthropic review/submission queue documented for getting listed in a curated official
-marketplace; the standard, fully self-service path is **hosting your own marketplace**,
-which can live in the same repo as the plugin.
+A plugin (the `.claude-plugin/plugin.json` + its components) is not itself installable — it
+needs a **marketplace** entry pointing at it. The fully self-service path is **hosting your
+own marketplace**, which can live in the same repo as the plugin. Getting listed in one of
+Anthropic's two public marketplaces is a separate, later step — see
+[3.6](#36-getting-listed-in-anthropics-marketplaces).
 
 #### Self-referencing marketplace (recommended for a single-plugin repo like kala)
 
@@ -323,16 +326,16 @@ the marketplace entry's `version` field → git commit SHA → `unknown`. For ka
 
 ### 3.5 Pre-publish checklist
 
-- [ ] `claude plugin validate . --strict` passes (catches misspelled/leftover fields,
+- [x] `claude plugin validate . --strict` passes (catches misspelled/leftover fields,
       not just the loose default check already run).
-- [ ] `mcpServers.kala` in `plugin.json` points at the published `npx kala-mcp` command
+- [x] `mcpServers.kala` in `plugin.json` points at the published `npx kala-mcp` command
       (Part 1), not a local `dist/` path — the single most likely thing to be stale.
-- [ ] `.claude-plugin/marketplace.json` added, `source: "./"`.
+- [x] `.claude-plugin/marketplace.json` added, `source: "./"`.
 - [ ] Version bumped in `plugin.json` (and npm, if publishing both together).
 - [ ] `LICENSE`, `NOTICE`, `LICENSES/` still accurate — check `ATTRIBUTION.md` and
       `CLAUDE.md`'s provenance table hasn't drifted from what `packages/packs/rules/*`
       actually declares in their `source` fields.
-- [ ] Push to `git@github.com:archish9/Kala.git`, tag the release
+- [x] Push to `git@github.com:archish9/Kala.git`, tag the release
       (`claude plugin tag . --push` handles this if versioning off git tags; not
       required if using explicit `plugin.json` versions).
 - [ ] Test the actual install flow in a clean environment: `/plugin marketplace add
@@ -341,13 +344,49 @@ the marketplace entry's `version` field → git commit SHA → `unknown`. For ka
 
 ---
 
+### 3.6 Getting listed in Anthropic's marketplaces
+
+A self-hosted marketplace is invisible until someone runs `/plugin marketplace add` for it.
+There is no crawler and no public index of self-hosted marketplaces — discovery is entirely
+word of mouth, a README link, or a listing in one of Anthropic's two public marketplaces:
+
+| Marketplace | How a plugin gets in | Users install with |
+|---|---|---|
+| `claude-plugins-official` | Curated by Anthropic at its discretion. No application process; the submission form does not feed it. | `@claude-plugins-official` |
+| `claude-community` | Open submission, then review. | `@claude-community` |
+
+`claude-plugins-official` is registered automatically the first time Claude Code starts
+interactively, which is why it appears in `claude plugin marketplace list` without anyone
+adding it. `claude-community` is opt-in: `/plugin marketplace add anthropics/claude-plugins-community`.
+
+To submit to `claude-community`, use one of the in-app forms:
+
+- **Console** — [platform.claude.com/plugins/submit](https://platform.claude.com/plugins/submit),
+  the route for an individual author.
+- **claude.ai** — [claude.ai/admin-settings/directory/submissions/plugins/new](https://claude.ai/admin-settings/directory/submissions/plugins/new),
+  which requires a Team or Enterprise organization with directory management access.
+
+Run `claude plugin validate .` before submitting; the review pipeline runs the same check
+plus automated safety screening. Approved plugins are pinned to a specific commit SHA in
+[`anthropics/claude-plugins-community`](https://github.com/anthropics/claude-plugins-community),
+and CI bumps the pin as new commits land. The public catalog syncs nightly, so approval and
+installability are not the same moment — check for the plugin's name in that repo's
+`.claude-plugin/marketplace.json` to know it is live.
+
+Submission is not a prerequisite for anything above. The self-hosted marketplace works the
+day it is pushed; a listing only changes who finds it.
+
+---
+
 ## Open questions to resolve before publishing, not before
 
-- Final npm package name (`kala-mcp` vs `@kala/server`) — affects `bin`, `npx` command,
-  and the `plugin.json` `mcpServers.kala.command` args together; change all three at once.
-- Whether `playwright` (the `inspect` tool's dependency) ships bundled or external.
+- ~~Final npm package name~~ — `kala-mcp`, published from a staging directory so the
+  workspace package keeps `@kala/server`.
+- ~~Whether `playwright` ships bundled or external~~ — external, declared as an optional
+  peer dependency, so `inspect` degrades exactly as it already did.
 - Whether an HTTP/SSE transport is ever worth adding for the managed-deep-agents cloud
   gap (Part 2.3) — no evidence yet this is worth the effort pre-launch.
-- Whether an Anthropic-curated official-marketplace listing (distinct from a self-hosted
-  marketplace) is worth pursuing — not documented as a self-service process anywhere
-  found during research for this doc; would need direct outreach/research at the time.
+- Whether to submit to `claude-community` once the self-hosted marketplace has been
+  exercised by real installs — the submission is free and reversible, but a listed plugin
+  gets installed by people who will not read this repo first, so the install path should be
+  boring before it goes in front of them. See [3.6](#36-getting-listed-in-anthropics-marketplaces).

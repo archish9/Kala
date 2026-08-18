@@ -72,16 +72,28 @@ doesn't exist. The principles themselves live on in the `motion` token field.
 
 ## Distribution artifacts (these ship to end users, not just contributors)
 
+- `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` — the Claude Code
+  plugin and the self-hosted marketplace that makes it installable
+  (`/plugin marketplace add archish9/Kala` → `/plugin install kala@kala-marketplace`).
+  The plugin ships the two artifacts below plus the MCP server, declared as
+  `npx -y kala-mcp`. This is the primary install path; the manual copies below are for
+  everyone else. Every component is a real file — no symlinks, since a Windows clone
+  without symlink support turns those into text files containing a path.
 - `skills/kala/SKILL.md` — companion skill; tool descriptions alone activate weakly, this
-  tells an agent when to call what. Users copy it to `.claude/skills/kala/SKILL.md` in
-  their own project (or globally).
+  tells an agent when to call what. Non-plugin users copy it to
+  `.claude/skills/kala/SKILL.md` in their own project (or globally).
 - `.claude/agents/kala.md` + `.claude/commands/kala.md` — a `/kala` command that
   hard-restricts the subagent's tools to kala + core file/bash tools, so it works even
   when another FE-design MCP is also installed and would otherwise compete for the same
-  request. Users copy both into their own project's `.claude/agents` and
-  `.claude/commands`. Same pattern is portable to LangChain `deepagents` via its
-  `SubAgent(tools=[...])` — see the "LangChain deepagents" section in
-  `Documentation/01-getting-started.md`.
+  request. The plugin manifest points at these paths directly; non-plugin users copy both
+  into their own project's `.claude/agents` and `.claude/commands`. Same pattern is
+  portable to LangChain `deepagents` via its `SubAgent(tools=[...])` — see the "LangChain
+  deepagents" section in `Documentation/users/01-install.md`.
+- `kala-mcp` on npm — the published server, built by `packages/server/scripts/bundle.mjs`
+  into the staging directory `packages/server/dist/npm` and published from there, so the
+  workspace package keeps the name `@kala/server` that every `pnpm --filter` uses. Only
+  `@kala/*` is bundled; registry dependencies stay external and pack data ships beside the
+  bundle, because `@kala/packs` reads it from disk at runtime.
 - kala itself is a plain stdio MCP server (`@modelcontextprotocol/sdk`) — works
   unmodified with any MCP client (Claude Code, deepagents/`dcode`, others). No
   kala-side changes needed for cross-agent compatibility; the one known gap is the

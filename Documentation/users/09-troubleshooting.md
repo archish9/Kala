@@ -3,6 +3,7 @@
 Failures you are likely to hit, what they mean, and how to fix them.
 
 - [The agent ignores kala](#the-agent-ignores-kala-and-designs-from-memory)
+- [The plugin](#the-plugin)
 - [Install and build](#install-and-build)
 - [Running the server](#running-the-server)
 - [Tool responses](#tool-responses)
@@ -28,8 +29,54 @@ Three fixes, cheapest first:
    kala's, so no other design tool competes for the request. See
    [Install](01-install.md#the-kala-command).
 
+On Claude Code the [plugin](01-install.md#claude-code-install-the-plugin) ships both 2 and 3
+already active, so if you installed that way, start at 1.
+
 If the agent calls kala but then ignores what it said, that is worth reporting — the whole
 point is that the answer is grounded in your project's real values.
+
+---
+
+## The plugin
+
+### `/plugin install` succeeded but nothing happened
+
+Check the install summary. If it ended with `Run /reload-plugins to activate.`, that command
+finishes the job — the components are fetched but not yet loaded.
+
+### The plugin installed but kala's tools are missing
+
+The plugin declares its MCP server as `npx -y kala-mcp`, so the first call fetches the
+package from the registry. That needs network access and a working `npx`. Check both:
+
+```bash
+node --version        # must be v20 or higher
+npx -y kala-mcp       # should wait silently for stdin, not error
+```
+
+A corporate registry mirror that does not proxy `kala-mcp` fails here. Point npm at the
+public registry, or install [from source](01-install.md#from-source) instead.
+
+### `/kala` is not recognised
+
+Another installed plugin may define the same command. The namespaced form always resolves to
+this one:
+
+```
+/kala:kala Build the settings page and verify it
+```
+
+### `/plugin update` says there is nothing to update
+
+Updates are keyed to the `version` field in the plugin manifest, not to commits. A pushed
+change with no version bump is invisible to installed users by design.
+
+### Uninstalling
+
+```
+/plugin uninstall kala
+/plugin marketplace remove kala-marketplace
+```
 
 ---
 
@@ -106,7 +153,8 @@ set per package.
 
 ### `Cannot find module '…/dist/src/index.js'`
 
-The server is not built:
+Only reachable on a [source install](01-install.md#from-source) — the plugin and `npx` paths
+run a published artifact with no build step. The server is not built:
 
 ```bash
 pnpm --filter @kala/server build
