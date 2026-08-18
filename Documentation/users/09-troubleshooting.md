@@ -255,14 +255,31 @@ Do not add a value to the config purely to silence a finding without saying so.
 
 ### `BROWSER_UNAVAILABLE`
 
-Chromium is not installed:
+Two different things are called Playwright here, and the detail line says which one is
+missing. `Playwright is not installed` is the npm package; `Chromium could not start` is the
+browser binary.
+
+The browser binary is a ~115MB download:
 
 ```bash
 npx playwright install chromium
 ```
 
-This is a ~115MB download. Everything except the rendered checks works without it, and a
-review still returns in full from source findings alone.
+The package has to be resolvable from wherever the server runs, which for an `npx` install
+is the npx cache — not your project, and not the plugin cache, so installing it in either
+place changes nothing. It is an optional peer dependency, so npm never installs it on its
+own; naming it as a second `-p` package is what puts it there:
+
+```bash
+npx -y -p kala-mcp -p playwright kala-mcp
+```
+
+The plugin already declares the server that way. A hand-written config that runs a bare
+`npx -y kala-mcp` will report `BROWSER_UNAVAILABLE` no matter how many times you download
+Chromium — [fix the config](01-install.md#any-mcp-client-the-server-alone) instead.
+
+Everything except the rendered checks works without either piece, and a review still returns
+in full from source findings alone.
 
 ### `PAGE_FAILED`
 

@@ -76,7 +76,9 @@ doesn't exist. The principles themselves live on in the `motion` token field.
   plugin and the self-hosted marketplace that makes it installable
   (`/plugin marketplace add archish9/Kala` → `/plugin install kala@kala-marketplace`).
   The plugin ships the two artifacts below plus the MCP server, declared as
-  `npx -y kala-mcp`. This is the primary install path; the manual copies below are for
+  `npx -y -p kala-mcp -p playwright kala-mcp` — the second `-p` puts Playwright in the
+  same npx cache the bundle resolves from, since an optional peer is never installed on
+  its own. This is the primary install path; the manual copies below are for
   everyone else. Every component is a real file — no symlinks, since a Windows clone
   without symlink support turns those into text files containing a path.
 - `skills/kala/SKILL.md` — companion skill; tool descriptions alone activate weakly, this

@@ -35,7 +35,7 @@ and the restricted subagent in one install:
   "mcpServers": {
     "kala": {
       "command": "npx",
-      "args": ["-y", "kala-mcp"]
+      "args": ["-y", "-p", "kala-mcp", "-p", "playwright", "kala-mcp"]
     }
   }
 }

@@ -45,4 +45,17 @@ describe('the /kala subagent allowlist', () => {
     expect(manifest.name).toBe('kala')
     expect(Object.keys(manifest.mcpServers)).toEqual(['kala'])
   })
+
+  // Playwright is an optional peer, so npm never installs it beside the bundle on its
+  // own, and the bundle resolves a bare import from the npx cache rather than from the
+  // user's project. Without the second -p, inspect and critique report
+  // BROWSER_UNAVAILABLE however many times Chromium is downloaded.
+  it('declares the server so Playwright lands in the same npx cache as the bundle', async () => {
+    const manifest = JSON.parse(
+      await readFile(join(ROOT, '.claude-plugin/plugin.json'), 'utf8')
+    )
+    const { command, args } = manifest.mcpServers.kala
+    expect(command).toBe('npx')
+    expect(args).toEqual(['-y', '-p', 'kala-mcp', '-p', 'playwright', 'kala-mcp'])
+  })
 })

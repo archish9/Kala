@@ -35,6 +35,12 @@ npx playwright install chromium     # ~115MB, only needed for reviewing a runnin
 Without it every other part of kala works unchanged, and `inspect` says so rather than
 failing.
 
+That command installs the *browser*. The `playwright` *package* is a separate thing, and it
+has to sit where the server itself resolves from — which is the npx cache, not your project.
+Declaring it as a second `-p` package does that, and the install commands below all do. A
+config that runs a bare `npx -y kala-mcp` will report `BROWSER_UNAVAILABLE` even with
+Chromium downloaded, because an optional peer dependency is never installed on its own.
+
 ---
 
 ## Claude Code: install the plugin
@@ -52,8 +58,8 @@ subagent it dispatches to.
 with `Run /reload-plugins to activate.`, run that and the components load without a restart.
 
 That is the entire install. There is no `claude mcp add` step and nothing to copy by hand —
-the plugin declares the MCP server itself, as `npx -y kala-mcp`, so the first call fetches
-the published package and caches it.
+the plugin declares the MCP server itself, as `npx -y -p kala-mcp -p playwright kala-mcp`,
+so the first call fetches the published package and caches it.
 
 To confirm it worked, open a project and say:
 
@@ -73,7 +79,7 @@ spawn a stdio MCP server can run it.
 **Claude Code**, without the plugin:
 
 ```bash
-claude mcp add kala --scope user -- npx -y kala-mcp
+claude mcp add kala --scope user -- npx -y -p kala-mcp -p playwright kala-mcp
 ```
 
 **Cursor**, in `.cursor/mcp.json` (project) or `~/.cursor/mcp.json` (global) — and the same
@@ -84,7 +90,7 @@ shape for any other client:
   "mcpServers": {
     "kala": {
       "command": "npx",
-      "args": ["-y", "kala-mcp"]
+      "args": ["-y", "-p", "kala-mcp", "-p", "playwright", "kala-mcp"]
     }
   }
 }
@@ -213,7 +219,7 @@ agent = create_deep_agent(
     mcp_servers={
         "kala": {
             "command": "npx",
-            "args": ["-y", "kala-mcp"],
+            "args": ["-y", "-p", "kala-mcp", "-p", "playwright", "kala-mcp"],
         }
     },
 )
