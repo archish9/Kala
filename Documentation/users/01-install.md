@@ -183,6 +183,13 @@ restricted to kala's plus core file editing, so nothing else is consulted:
 The plugin registers it under both `/kala` and the namespaced `/kala:kala`; use the
 namespaced form if another installed plugin also defines `/kala`.
 
+If the subagent reports back that it only had `Read`/`Edit`/`Write`/`Bash` and no kala
+tool, its allowlist did not match the names the server is actually registered under. A
+plugin-installed server exposes `mcp__plugin_kala_kala__<tool>`; a server from a
+hand-written `.mcp.json` exposes `mcp__kala__<tool>`. The shipped agent lists both, so
+whichever applies resolves and the other is dropped — if you wrote your own agent file,
+list both there too. Names that match nothing are silently discarded rather than erroring.
+
 Without the plugin, copy the two files into your own project:
 
 ```bash
