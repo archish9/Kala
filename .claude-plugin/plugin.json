@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "kala",
   "displayName": "Kala",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Design-system verification and critique for frontend agents: checks code against the project's own design system, bootstraps one when none exists, and names the states a screen must handle before it's built.",
   "author": {
     "name": "archish9",
