@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { spawn } from 'node:child_process'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 
 const BIN = resolve(import.meta.dirname, '..', 'dist', 'src', 'index.js')
@@ -45,6 +45,15 @@ describe.skipIf(!existsSync(BIN))('built binary', () => {
         'critique', 'explain', 'guide', 'inspect',
         'surface_brief', 'system_bootstrap', 'system_status', 'verify'
       ])
+  }, 15000)
+
+  it('announces the version from the package manifest, not a hardcoded one', async () => {
+    const out = await rpc([INIT])
+    const init = out.trim().split('\n').map(l => JSON.parse(l)).find(m => m.id === 1)
+    const manifest = JSON.parse(
+      readFileSync(resolve(import.meta.dirname, '..', 'package.json'), 'utf8')
+    )
+    expect(init.result.serverInfo.version).toBe(manifest.version)
   }, 15000)
 
   it('returns a surface brief through the shipped binary', async () => {

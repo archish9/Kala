@@ -10,11 +10,12 @@ import { inspect } from './tools/inspect.js'
 import { critique } from './tools/critique.js'
 import { surfaceBrief } from './tools/surface-brief.js'
 import { guide } from './tools/guide.js'
+import { SERVER_VERSION } from './version.js'
 import type { VerifyResult } from '@kala/kernel/engine/rule-types.js'
 
 let lastRun: VerifyResult | null = null
 
-const server = new McpServer({ name: 'kala', version: '0.1.0' })
+const server = new McpServer({ name: 'kala', version: SERVER_VERSION })
 
 const asText = (v: unknown) => ({
   content: [{ type: 'text' as const, text: JSON.stringify(v, null, 2) }]
