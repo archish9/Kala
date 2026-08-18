@@ -72,7 +72,7 @@ doesn't exist. The principles themselves live on in the `motion` token field.
 
 ## Distribution artifacts (these ship to end users, not just contributors)
 
-- `skill/SKILL.md` — companion skill; tool descriptions alone activate weakly, this
+- `skills/kala/SKILL.md` — companion skill; tool descriptions alone activate weakly, this
   tells an agent when to call what. Users copy it to `.claude/skills/kala/SKILL.md` in
   their own project (or globally).
 - `.claude/agents/kala.md` + `.claude/commands/kala.md` — a `/kala` command that

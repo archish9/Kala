@@ -21,7 +21,7 @@ reliably remember to ask kala first.
 Three fixes, cheapest first:
 
 1. **Say the tool name.** *"Use kala to check this file"* works immediately.
-2. **Install the companion skill.** `skill/SKILL.md` tells the agent when to call what.
+2. **Install the companion skill.** `skills/kala/SKILL.md` tells the agent when to call what.
    Copy it to `.claude/skills/kala/SKILL.md` in your project. See
    [Install](01-install.md#the-companion-skill).
 3. **Use the `/kala` command.** It dispatches to a subagent whose tools are restricted to

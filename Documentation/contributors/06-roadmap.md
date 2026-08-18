@@ -55,7 +55,7 @@ design doc and the full ordering rationale.
 | 5 | Banner/slide/component generation — new write-capable tool(s); breaks the "one writing tool" invariant below, needs its own design | Not started |
 | 6 | Brand/CIP without images — brand guideline docs, not mockup renders | Not started |
 | 7 | Stack coverage expansion — extractors beyond React/Vue/Svelte/HTML, one stack at a time | Not started |
-| — | **`npx kala install`** — a one-line installer that detects the harness, writes the MCP config block, and copies `skill/SKILL.md` and the `/kala` command into place. Today install means clone → `pnpm install` → build → hand-edit JSON, which rules kala out for anyone who does not already work that way. Both upstream projects ship one; kala does not. | Candidate, not approved |
+| — | **`npx kala install`** — a one-line installer that detects the harness, writes the MCP config block, and copies `skills/kala/SKILL.md` and the `/kala` command into place. Today install means clone → `pnpm install` → build → hand-edit JSON, which rules kala out for anyone who does not already work that way. Both upstream projects ship one; kala does not. | Candidate, not approved |
 
 (Numbered here by approved build order, which front-loads the sub-project everything else
 leans on; this does not match the order the sub-projects were originally proposed in.)

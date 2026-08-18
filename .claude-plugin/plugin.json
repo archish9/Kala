@@ -9,10 +9,12 @@
   "repository": "https://github.com/archish9/Kala",
   "license": "Apache-2.0",
   "keywords": ["design-system", "frontend", "ui", "design-review", "accessibility", "motion"],
+  "agents": ["./.claude/agents/kala.md"],
+  "commands": ["./.claude/commands/kala.md"],
   "mcpServers": {
     "kala": {
-      "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/packages/server/dist/src/index.js"]
+      "command": "npx",
+      "args": ["-y", "kala-mcp"]
     }
   }
 }

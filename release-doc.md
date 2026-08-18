@@ -225,17 +225,24 @@ copy-pasting real values instead of re-deriving the process.
 ### 3.1 What's already scaffolded (done, in this repo)
 
 ```
-.claude-plugin/plugin.json   ← plugin manifest (name, mcpServers, etc.)
-agents/kala.md                 → symlink to .claude/agents/kala.md
-commands/kala.md               → symlink to .claude/commands/kala.md
-skills/kala/SKILL.md           → symlink to skill/SKILL.md
+.claude-plugin/plugin.json      ← plugin manifest (name, mcpServers, component paths)
+.claude-plugin/marketplace.json ← marketplace manifest, source "./"
+skills/kala/SKILL.md            ← companion skill, in the conventional skills/ location
+.claude/agents/kala.md          ← referenced by the manifest's "agents" field
+.claude/commands/kala.md        ← referenced by the manifest's "commands" field
 ```
 
-`claude plugin validate .` passes clean (one expected warning: `CLAUDE.md` at plugin root
-isn't loaded as plugin context — correct, it's a contributor doc, not shipped context).
+Every component is a real file. An earlier layout had `agents/`, `commands/`, and
+`skills/` holding symlinks into `.claude/` and `skill/`. Git stores those faithfully,
+but a Windows clone without symlink support materializes them as text files containing a
+path — a plugin that installs and then silently does nothing. The manifest's
+`agents`/`commands` fields take explicit paths, so each component stays in the one place
+the docs already point users at, with no duplication and no symlink.
 
-**Note on the current `mcpServers` block**: it's inline in `plugin.json`, pointing at the
-local `dist/` build (see Part 1 for why that's a placeholder, not the final state).
+`claude plugin validate . --strict` passes clean (one expected warning: `CLAUDE.md` at
+plugin root isn't loaded as plugin context — correct, it's a contributor doc, not shipped
+context).
+
 
 ### 3.2 Two ways to distribute a plugin
 
@@ -297,7 +304,7 @@ Once `.claude-plugin/marketplace.json` is pushed to GitHub:
 (`kala@kala-marketplace` = `plugin-name@marketplace-name`, per the marketplace's own
 `name` field above.) If the install summary says `Run /reload-plugins to activate.`, that
 command finishes it. From then on: `/kala <task>`, the restricted subagent, and the
-`skill/SKILL.md` companion skill are all active — no separate `claude mcp add` step, no
+`skills/kala/SKILL.md` companion skill are all active — no separate `claude mcp add` step, no
 manual copying of `.claude/agents`/`.claude/commands` into the user's own project (that
 manual-copy path documented in `CLAUDE.md` today is the pre-plugin workaround; the plugin
 install supersedes it).

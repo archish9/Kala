@@ -172,17 +172,17 @@ specific managed service.
 **Recommended.** Tool descriptions alone activate weakly: an agent mid-task will not
 reliably remember to ask kala what the design system is before writing a component.
 
-`skill/SKILL.md` is a short file that tells the agent when to call what. Copy it wherever
+`skills/kala/SKILL.md` is a short file that tells the agent when to call what. Copy it wherever
 your harness looks for skills:
 
 ```bash
 # Claude Code, for this project
 mkdir -p .claude/skills/kala
-cp /path/to/Kala/skill/SKILL.md .claude/skills/kala/SKILL.md
+cp /path/to/Kala/skills/kala/SKILL.md .claude/skills/kala/SKILL.md
 
 # Or globally, for every project
 mkdir -p ~/.claude/skills/kala
-cp /path/to/Kala/skill/SKILL.md ~/.claude/skills/kala/SKILL.md
+cp /path/to/Kala/skills/kala/SKILL.md ~/.claude/skills/kala/SKILL.md
 ```
 
 ---

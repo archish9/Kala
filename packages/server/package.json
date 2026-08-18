@@ -1,6 +1,7 @@
 {
   "name": "@kala/server",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "bin": {
     "kala-mcp": "./dist/src/index.js"
@@ -18,8 +19,12 @@
     "@kala/browser": "workspace:*",
     "@kala/report": "workspace:*"
   },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
   "scripts": {
-    "build": "tsc -b"
+    "build": "tsc -b",
+    "build:bundle": "node scripts/bundle.mjs"
   },
   "license": "Apache-2.0"
 }

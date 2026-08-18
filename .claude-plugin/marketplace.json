@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "kala-marketplace",
+  "owner": { "name": "archish9", "url": "https://github.com/archish9" },
+  "metadata": {
+    "description": "Design-system tooling for coding agents.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "kala",
+      "source": "./",
+      "description": "Design-system verification and critique for frontend agents: checks code against the project's own design system, bootstraps one when none exists, and names the states a screen must handle before it's built.",
+      "author": { "name": "archish9", "url": "https://github.com/archish9" },
+      "homepage": "https://github.com/archish9/Kala",
+      "license": "Apache-2.0",
+      "keywords": ["design-system", "frontend", "ui", "design-review", "accessibility", "motion"]
+    }
+  ]
+}

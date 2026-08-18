@@ -22,7 +22,7 @@ describe('attribution', () => {
   })
 
   it('the companion skill tells the agent to call system_status and verify', async () => {
-    const s = await readFile(join(ROOT, 'skill/SKILL.md'), 'utf8')
+    const s = await readFile(join(ROOT, 'skills/kala/SKILL.md'), 'utf8')
     expect(s).toContain('system_status')
     expect(s).toContain('verify')
   })
