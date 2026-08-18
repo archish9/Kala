@@ -2,19 +2,36 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "kala",
   "displayName": "Kala",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Design-system verification and critique for frontend agents: checks code against the project's own design system, bootstraps one when none exists, and names the states a screen must handle before it's built.",
-  "author": { "name": "archish9", "url": "https://github.com/archish9" },
+  "author": {
+    "name": "archish9",
+    "url": "https://github.com/archish9"
+  },
   "homepage": "https://github.com/archish9/Kala",
   "repository": "https://github.com/archish9/Kala",
   "license": "Apache-2.0",
-  "keywords": ["design-system", "frontend", "ui", "design-review", "accessibility", "motion"],
-  "agents": ["./.claude/agents/kala.md"],
-  "commands": ["./.claude/commands/kala.md"],
+  "keywords": [
+    "design-system",
+    "frontend",
+    "ui",
+    "design-review",
+    "accessibility",
+    "motion"
+  ],
+  "agents": [
+    "./.claude/agents/kala.md"
+  ],
+  "commands": [
+    "./.claude/commands/kala.md"
+  ],
   "mcpServers": {
     "kala": {
       "command": "npx",
-      "args": ["-y", "kala-mcp"]
+      "args": [
+        "-y",
+        "kala-mcp"
+      ]
     }
   }
 }
