@@ -1,4 +1,4 @@
-# kala
+# kala (कला)
 
 An MCP server that helps coding agents build **production-grade frontend** — work that reads
 as though an experienced designer made it, rather than a template filled in.
