@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="kala_logo.jpg" alt="kala (कला)" width="200">
+</div>
+
 # kala (कला)
 
 An MCP server that helps coding agents build **production-grade frontend** — work that reads
@@ -85,7 +89,7 @@ More phrasings for every task: **[What to say](Documentation/users/03-prompts.md
   for briefs none of the 12 fit well
 - **[6 surface briefs and 13 action playbooks](Documentation/users/07-surfaces-and-actions.md)**
 - **4 framework extractors** proven equivalent by a dedicated test suite
-- **485 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
+- **492 tests**, typechecked under `strict` and `exactOptionalPropertyTypes`
 - **No browser required** — the rendered pass is opt-in and degrades cleanly
 - **No network calls, no API keys** — static data plus deterministic code; nothing kala does
   depends on an external service

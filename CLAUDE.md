@@ -25,14 +25,14 @@ pnpm monorepo, packages depend downward:
   `systems/` (12 curated design systems, each a `motion`/`type`/`space`/`color`/`shape`
   token set), `surfaces/`, `catalog/` (84 styles / 192 palettes / 74 typography pairings —
   the fallback tier `system_bootstrap` falls through to below a 0.55 curated fit; see
-  `Documentation/05-design-systems.md`'s "catalog fallback tier" section).
+  `Documentation/users/06-design-systems.md`'s "catalog fallback tier" section).
 - `packages/taste` — loads/validates/composes packs; token derivation and CSS/lock emit.
 - `packages/browser` — Playwright-backed `inspect` (pixel-level checks; opt-in Chromium).
 - `packages/report` — HTML report generation for `critique`.
 - `packages/server` — the MCP server itself (`packages/server/src/index.ts`), 8 tools:
   `system_status`, `system_bootstrap`, `surface_brief`, `guide`, `verify`, `explain`,
   `inspect`, `critique`. Only `system_bootstrap` writes files — everything else is
-  read-only by design (see "One writing tool" in `10-roadmap.md`).
+  read-only by design (see "One writing tool" in `Documentation/contributors/05-design-rationale.md`).
 
 `dist/` is gitignored everywhere; the server runs from compiled JS, so
 `pnpm --filter @kala/server build` is required after every fresh clone before the MCP
@@ -48,7 +48,7 @@ pnpm --filter @kala/server build   # required before running the server
 ```
 
 Refreshing the catalog data (rare — only if upstream ui-ux-pro-max data changes) is a
-separate, non-CI maintenance step: `Documentation/08-extending.md`'s "Refresh the catalog
+separate, non-CI maintenance step: `Documentation/contributors/03-extending.md`'s "Refresh the catalog
 data" section.
 
 ## Provenance (why some code looks familiar)
