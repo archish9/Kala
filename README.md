@@ -2,7 +2,7 @@
   <img src="kala_logo.jpg" alt="kala (कला)" width="200">
 </div>
 
-# kala (कला)
+# Kala (कला)
 
 An MCP server that helps coding agents build **production-grade frontend** — work that reads
 as though an experienced designer made it, rather than a template filled in.
