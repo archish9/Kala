@@ -1,11 +1,12 @@
 # Install
 
-> **Who this is for.** kala is an MCP server for an AI coding agent. If you use Claude Code,
-> installing the plugin is two commands and nothing else. Every other client needs one block
-> of JSON pointing at `npx kala-mcp`.
+> **Who this is for.** kala is an MCP server for an AI coding agent. If you use Claude Code
+> or Antigravity, installing is one or two commands and nothing else. Every other client
+> needs one block of JSON pointing at `npx kala-mcp`.
 
 - [Requirements](#requirements)
 - [Claude Code: install the plugin](#claude-code-install-the-plugin)
+- [Antigravity (agy): install the plugin](#antigravity-agy-install-the-plugin)
 - [Any MCP client: the server alone](#any-mcp-client-the-server-alone)
 - [From source](#from-source)
 - [The companion skill](#the-companion-skill)
@@ -67,6 +68,43 @@ To confirm it worked, open a project and say:
 
 To update later, `/plugin update kala`. Updates are keyed to the `version` field in the
 plugin manifest, not to new commits.
+
+---
+
+## Antigravity (agy): install the plugin
+
+One command installs the MCP server, the companion skill, and the `/kala` rule:
+
+```bash
+agy plugin install https://github.com/archish9/Kala
+```
+
+Restart your Antigravity IDE (or start a new chat) for the MCP server to load.
+
+The plugin ships three things:
+
+| Component | File | What it does |
+|---|---|---|
+| MCP server | `mcp_config.json` | Spawns `npx -y -p kala-mcp -p playwright kala-mcp` — same server as every other client |
+| Companion skill | `skills/kala/SKILL.md` | Tells the agent when to call which kala tool |
+| `/kala` rule | `rules/kala.md` | Restricts the agent to kala's tools only when you prefix a prompt with `/kala` |
+
+To confirm it worked, open a project and say:
+
+> *"What design system does this project have?"*
+
+Or use the strict mode:
+
+```
+/kala Build the settings page and verify it
+```
+
+To update later, uninstall and reinstall:
+
+```bash
+agy plugin uninstall kala
+agy plugin install https://github.com/archish9/Kala
+```
 
 ---
 

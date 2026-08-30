@@ -32,6 +32,15 @@ and the restricted subagent in one install:
 /plugin install kala@kala-marketplace
 ```
 
+**Antigravity (agy)** — one command installs the server, the companion skill, and the
+`/kala` rule:
+
+```bash
+agy plugin install https://github.com/archish9/Kala
+```
+
+Restart your IDE, then type `/kala` followed by your request.
+
 **Any other MCP client** — one block of JSON, no clone and no build:
 
 ```json
