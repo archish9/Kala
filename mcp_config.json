@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "kala": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "-p",
+        "kala-mcp",
+        "-p",
+        "playwright",
+        "kala-mcp"
+      ]
+    }
+  }
+}
