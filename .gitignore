@@ -23,3 +23,5 @@ docs/
 note.txt
 # Personal release runbook — operator notes, not a contributor doc.
 release-runbook.md
+
+.DS_Store
