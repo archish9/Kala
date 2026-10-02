@@ -11,6 +11,7 @@
   "homepage": "https://github.com/archish9/Kala",
   "repository": "https://github.com/archish9/Kala",
   "license": "Apache-2.0",
+  "icon": "./kala_logo.jpg",
   "keywords": [
     "design-system",
     "frontend",
@@ -20,7 +21,7 @@
     "motion"
   ],
   "agents": [
-    "./.claude/agents/kala.md"
+    "./agents/kala.md"
   ],
   "commands": [
     "./.claude/commands/kala.md"
@@ -31,9 +32,9 @@
       "args": [
         "-y",
         "-p",
-        "kala-mcp",
+        "kala-mcp@0.4.0",
         "-p",
-        "playwright",
+        "playwright@1.63.0",
         "kala-mcp"
       ]
     }

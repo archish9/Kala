@@ -76,9 +76,12 @@ doesn't exist. The principles themselves live on in the `motion` token field.
   plugin and the self-hosted marketplace that makes it installable
   (`/plugin marketplace add archish9/Kala` → `/plugin install kala@kala-marketplace`).
   The plugin ships the two artifacts below plus the MCP server, declared as
-  `npx -y -p kala-mcp -p playwright kala-mcp` — the second `-p` puts Playwright in the
-  same npx cache the bundle resolves from, since an optional peer is never installed on
-  its own. This is the primary install path; the manual copies below are for
+  `npx -y -p kala-mcp@<version> -p playwright@<version> kala-mcp` — the second `-p` puts
+  Playwright in the same npx cache the bundle resolves from, since an optional peer is
+  never installed on its own. Both are pinned exactly because the Claude plugin directory
+  blocks a floating launcher; `plugin-agent.test.ts` fails if the `kala-mcp` pin, the
+  plugin `version`, and `packages/server/package.json` drift apart, so bump all three per
+  release. This is the primary install path; the manual copies below are for
   everyone else. Every component is a real file — no symlinks, since a Windows clone
   without symlink support turns those into text files containing a path.
 - `skills/kala/SKILL.md` — companion skill; tool descriptions alone activate weakly, this
@@ -87,8 +90,12 @@ doesn't exist. The principles themselves live on in the `motion` token field.
 - `.claude/agents/kala.md` + `.claude/commands/kala.md` — a `/kala` command that
   hard-restricts the subagent's tools to kala + core file/bash tools, so it works even
   when another FE-design MCP is also installed and would otherwise compete for the same
-  request. The plugin manifest points at these paths directly; non-plugin users copy both
-  into their own project's `.claude/agents` and `.claude/commands`. Same pattern is
+  request. Non-plugin users copy both into their own project's `.claude/agents` and
+  `.claude/commands`. The plugin manifest points at the command directly but at its own
+  copy of the agent, `agents/kala.md`, which lists only the plugin-scoped tool names
+  (`mcp__plugin_kala_kala__*`) — the Claude plugin directory rejects the plain
+  `mcp__kala__*` names the hand-copied file also needs. `plugin-agent.test.ts` fails if
+  the two files differ anywhere but the `tools:` line, so edit both together. Same pattern is
   portable to LangChain `deepagents` via its `SubAgent(tools=[...])` — see the "LangChain
   deepagents" section in `Documentation/users/01-install.md`.
 - `kala-mcp` on npm — the published server, built by `packages/server/scripts/bundle.mjs`

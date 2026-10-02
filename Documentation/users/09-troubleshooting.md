@@ -46,7 +46,7 @@ finishes the job — the components are fetched but not yet loaded.
 
 ### The plugin installed but kala's tools are missing
 
-The plugin declares its MCP server as `npx -y kala-mcp`, so the first call fetches the
+The plugin declares its MCP server as an `npx` command, so the first call fetches the
 package from the registry. That needs network access and a working `npx`. Check both:
 
 ```bash
@@ -277,6 +277,15 @@ npx -y -p kala-mcp -p playwright kala-mcp
 The plugin already declares the server that way. A hand-written config that runs a bare
 `npx -y kala-mcp` will report `BROWSER_UNAVAILABLE` no matter how many times you download
 Chromium — [fix the config](01-install.md#any-mcp-client-the-server-alone) instead.
+
+The plugin pins Playwright to an exact version, and each Playwright version starts only the
+Chromium build it was released with. If `Chromium could not start` persists after the
+download above, the bare command fetched the build for a newer Playwright — download the
+one the plugin's version expects instead:
+
+```bash
+npx -y playwright@1.63.0 install chromium
+```
 
 Everything except the rendered checks works without either piece, and a review still returns
 in full from source findings alone.

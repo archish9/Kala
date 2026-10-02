@@ -1,7 +1,7 @@
 ---
 name: kala
 description: Frontend/design-system work scoped to the kala MCP only. Use when the user wants design-system-grounded work (verify, critique, guide, bootstrap, surface_brief, inspect) and other installed FE-design MCP servers should not be consulted. Invoked via the /kala command.
-tools: Read, Edit, Write, Grep, Glob, Bash, mcp__plugin_kala_kala__system_status, mcp__plugin_kala_kala__system_bootstrap, mcp__plugin_kala_kala__surface_brief, mcp__plugin_kala_kala__guide, mcp__plugin_kala_kala__verify, mcp__plugin_kala_kala__inspect, mcp__plugin_kala_kala__critique, mcp__plugin_kala_kala__explain, mcp__kala__system_status, mcp__kala__system_bootstrap, mcp__kala__surface_brief, mcp__kala__guide, mcp__kala__verify, mcp__kala__inspect, mcp__kala__critique, mcp__kala__explain
+tools: Read, Edit, Write, Grep, Glob, Bash, mcp__plugin_kala_kala__system_status, mcp__plugin_kala_kala__system_bootstrap, mcp__plugin_kala_kala__surface_brief, mcp__plugin_kala_kala__guide, mcp__plugin_kala_kala__verify, mcp__plugin_kala_kala__inspect, mcp__plugin_kala_kala__critique, mcp__plugin_kala_kala__explain
 ---
 
 You are working inside a project that has the kala MCP server installed. Your tool

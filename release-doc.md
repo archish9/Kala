@@ -125,9 +125,11 @@ npm publish --access public
 ```
 
 Versioning: follow semver (`npm version patch|minor|major`) and tag releases. Keep this
-version and the plugin's `.claude-plugin/plugin.json` `version` field moving together —
-they don't have to match exactly, but drift between "what npm has" and "what the plugin
-manifest claims" is confusing to debug later.
+version and the plugin's `.claude-plugin/plugin.json` `version` field moving together,
+along with the `kala-mcp@<version>` pin in that file's `mcpServers.kala.args` — the Claude
+plugin directory blocks an unpinned launcher, and `plugin-agent.test.ts` fails when the
+three disagree. Publish to npm before pushing the bumped manifest, or the plugin points at
+a version that does not exist yet.
 
 ### 1.5 What changes for each consumer once published
 
@@ -231,7 +233,8 @@ copy-pasting real values instead of re-deriving the process.
 .claude-plugin/plugin.json      ← plugin manifest (name, mcpServers, component paths)
 .claude-plugin/marketplace.json ← marketplace manifest, source "./"
 skills/kala/SKILL.md            ← companion skill, in the conventional skills/ location
-.claude/agents/kala.md          ← referenced by the manifest's "agents" field
+agents/kala.md                  ← referenced by the manifest's "agents" field
+.claude/agents/kala.md          ← the same agent for manual copying, both tool-name schemes
 .claude/commands/kala.md        ← referenced by the manifest's "commands" field
 ```
 

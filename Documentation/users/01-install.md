@@ -59,8 +59,9 @@ subagent it dispatches to.
 with `Run /reload-plugins to activate.`, run that and the components load without a restart.
 
 That is the entire install. There is no `claude mcp add` step and nothing to copy by hand —
-the plugin declares the MCP server itself, as `npx -y -p kala-mcp -p playwright kala-mcp`,
-so the first call fetches the published package and caches it.
+the plugin declares the MCP server itself, as
+`npx -y -p kala-mcp@<version> -p playwright@<version> kala-mcp` with both versions pinned
+exactly, so the first call fetches the published package and caches it.
 
 To confirm it worked, open a project and say:
 
@@ -230,11 +231,14 @@ namespaced form if another installed plugin also defines `/kala`.
 If the subagent reports back that it only had `Read`/`Edit`/`Write`/`Bash` and no kala
 tool, its allowlist did not match the names the server is actually registered under. A
 plugin-installed server exposes `mcp__plugin_kala_kala__<tool>`; a server from a
-hand-written `.mcp.json` exposes `mcp__kala__<tool>`. The shipped agent lists both, so
-whichever applies resolves and the other is dropped — if you wrote your own agent file,
-list both there too. Names that match nothing are silently discarded rather than erroring.
+hand-written `.mcp.json` exposes `mcp__kala__<tool>`. The plugin's own agent
+(`agents/kala.md`) lists only the first, because nothing else resolves inside a plugin; the
+copy below (`.claude/agents/kala.md`) lists both, so whichever applies resolves and the
+other is dropped — if you wrote your own agent file, list both there too. Names that match
+nothing are silently discarded rather than erroring.
 
-Without the plugin, copy the two files into your own project:
+Without the plugin, copy the two files into your own project — from `.claude/`, not the
+top-level `agents/`:
 
 ```bash
 mkdir -p .claude/agents .claude/commands
