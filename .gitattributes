@@ -1,0 +1,34 @@
+# The Claude plugin directory fetches this repo as a git archive and scans every
+# file in it, not just the plugin `source` (plugin/). The pnpm monorepo that lives
+# alongside the plugin — above all pnpm-workspace.yaml, whose `packages:` index the
+# directory reads as a registry/index redirect in the launcher's shipped config
+# (LAUNCHER_REGISTRY_REDIRECT) — has no business in that archive. export-ignore drops
+# these from `git archive` (and GitHub's codeload tarball) while leaving normal clones,
+# which contributors and `pnpm` need, completely untouched.
+#
+# Leading slash anchors each pattern to the repo root, so `/skills/` and `/.claude/`
+# strip ONLY the top-level hand-install copies and never the plugin's own copies under
+# plugin/skills/ and plugin/.claude/.
+/pnpm-workspace.yaml   export-ignore
+/pnpm-lock.yaml        export-ignore
+/package.json          export-ignore
+/tsconfig.base.json    export-ignore
+/tsconfig.json         export-ignore
+/vitest.config.ts      export-ignore
+/mcp_config.json       export-ignore
+/release-doc.md        export-ignore
+/packages/             export-ignore
+/scripts/              export-ignore
+/Documentation/        export-ignore
+/rules/                export-ignore
+/.agents/              export-ignore
+/LICENSES/             export-ignore
+
+# Contributor/dev files and the hand-install copies (root .claude/ and skills/) that
+# non-plugin users get from a normal clone. The plugin ships its own copies under
+# plugin/, so none of these belong in the fetched archive either.
+/CLAUDE.md             export-ignore
+/.gitignore            export-ignore
+/.gitattributes        export-ignore
+/.claude/              export-ignore
+/skills/               export-ignore

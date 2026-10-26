@@ -82,7 +82,19 @@ doesn't exist. The principles themselves live on in the `motion` token field.
   shipped as the plugin, and the Claude plugin directory read `pnpm-workspace.yaml`'s
   `packages:` index as a registry/index redirect in the launcher's shipped config
   (`LAUNCHER_REGISTRY_REDIRECT`) and failed the submission. Scoping `source` to `plugin/`
-  keeps the workspace config out of what ships. The command, skill, and icon under
+  fixes the manifest location but is **not enough on its own**: the directory review
+  fetches the whole repo as a git archive and scans every file in it, not just `source`.
+  `.gitattributes` therefore `export-ignore`s the entire monorepo (`pnpm-workspace.yaml`,
+  `packages/`, docs, the root hand-install `.claude/` and `skills/` copies, …) so the
+  fetched archive is only `plugin/` + `.claude-plugin/marketplace.json` + README/LICENSE
+  (~11 files). `export-ignore` affects `git archive` / GitHub's codeload tarball only —
+  normal clones, which contributors and `pnpm` depend on, are untouched. Verify with
+  `git archive HEAD | tar -t`. Two directory-policy items remain, both only for the
+  **Verified badge**, not for listing: the launcher uses two `-p` flags (`kala-mcp` +
+  the optional-peer `playwright`), but a "locked launch" allows only one `-p` and a
+  `package-lock.json`/`uv.lock` beside the manifest with pinned hashes — satisfying those
+  would mean folding Playwright into `kala-mcp`'s own deps (heavier install) or vendoring
+  the server to run from `${CLAUDE_PLUGIN_ROOT}`. The command, skill, and icon under
   `plugin/` are byte-for-byte copies of the canonical root files (below) the non-plugin
   path installs; `plugin-agent.test.ts` fails if any copy drifts. The plugin ships that
   subtree plus the MCP server, declared as
