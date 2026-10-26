@@ -300,10 +300,11 @@ ship more plugins later.
 
 ### 3.3 What a user actually runs
 
-Once `.claude-plugin/marketplace.json` is pushed to GitHub:
+Once the plugin repo `archish9/kala-plugin` is pushed to GitHub (the thin,
+monorepo-free copy the Claude plugin directory scans):
 
 ```
-/plugin marketplace add archish9/Kala
+/plugin marketplace add archish9/kala-plugin
 /plugin install kala@kala-marketplace
 ```
 

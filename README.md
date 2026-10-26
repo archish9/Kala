@@ -28,7 +28,7 @@ structurally cannot.
 and the restricted subagent in one install:
 
 ```
-/plugin marketplace add archish9/Kala
+/plugin marketplace add archish9/kala-plugin
 /plugin install kala@kala-marketplace
 ```
 

@@ -51,11 +51,14 @@ skill](#the-companion-skill), the [`/kala` command](#the-kala-command), and the 
 subagent it dispatches to.
 
 ```
-/plugin marketplace add archish9/Kala
+/plugin marketplace add archish9/kala-plugin
 /plugin install kala@kala-marketplace
 ```
 
-`kala@kala-marketplace` reads as `plugin-name@marketplace-name`. If the install summary ends
+`archish9/kala-plugin` is the plugin's own repo — a thin, self-contained copy of the
+plugin (manifest, command, skill, subagent, icon) that the Claude plugin directory can
+scan cleanly; the server and all source live in `archish9/Kala`. `kala@kala-marketplace`
+reads as `plugin-name@marketplace-name`. If the install summary ends
 with `Run /reload-plugins to activate.`, run that and the components load without a restart.
 
 That is the entire install. There is no `claude mcp add` step and nothing to copy by hand —

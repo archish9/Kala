@@ -74,7 +74,8 @@ doesn't exist. The principles themselves live on in the `motion` token field.
 
 - `plugin/` + `.claude-plugin/marketplace.json` — the Claude Code plugin and the
   self-hosted marketplace that makes it installable
-  (`/plugin marketplace add archish9/Kala` → `/plugin install kala@kala-marketplace`).
+  (`/plugin marketplace add archish9/kala-plugin` → `/plugin install kala@kala-marketplace`;
+  the directory is served from the separate `archish9/kala-plugin` repo, see below).
   The marketplace manifest stays at the repo root; its one plugin entry has
   `source: "./plugin"`, so the plugin is the self-contained `plugin/` subtree
   (`plugin/.claude-plugin/plugin.json` + the agent, command, skill, and icon beside it),
