@@ -78,26 +78,24 @@ doesn't exist. The principles themselves live on in the `motion` token field.
   The marketplace manifest stays at the repo root; its one plugin entry has
   `source: "./plugin"`, so the plugin is the self-contained `plugin/` subtree
   (`plugin/.claude-plugin/plugin.json` + the agent, command, skill, and icon beside it),
-  **not** the repo root. This is deliberate: with `source: "./"` the whole pnpm monorepo
-  shipped as the plugin, and the Claude plugin directory read `pnpm-workspace.yaml`'s
-  `packages:` index as a registry/index redirect in the launcher's shipped config
-  (`LAUNCHER_REGISTRY_REDIRECT`) and failed the submission. Scoping `source` to `plugin/`
-  fixes the manifest location but is **not enough on its own**: the directory review
-  fetches the whole repo as a git archive and scans every file in it, not just `source`.
-  `.gitattributes` therefore `export-ignore`s the entire monorepo (`pnpm-workspace.yaml`,
-  `packages/`, docs, the root hand-install `.claude/` and `skills/` copies, …) so the
-  fetched archive is only `plugin/` + `.claude-plugin/marketplace.json` + README/LICENSE
-  (~11 files). `export-ignore` affects `git archive` / GitHub's codeload tarball only —
-  normal clones, which contributors and `pnpm` depend on, are untouched. Verify with
-  `git archive HEAD | tar -t`. Two directory-policy items remain, both only for the
-  **Verified badge**, not for listing: the launcher uses two `-p` flags (`kala-mcp` +
-  the optional-peer `playwright`), but a "locked launch" allows only one `-p` and a
-  `package-lock.json`/`uv.lock` beside the manifest with pinned hashes — satisfying those
-  would mean folding Playwright into `kala-mcp`'s own deps (heavier install) or vendoring
-  the server to run from `${CLAUDE_PLUGIN_ROOT}`. The command, skill, and icon under
-  `plugin/` are byte-for-byte copies of the canonical root files (below) the non-plugin
-  path installs; `plugin-agent.test.ts` fails if any copy drifts. The plugin ships that
-  subtree plus the MCP server, declared as
+  **not** the repo root. The `plugin/` subtree is self-contained so it can be copied
+  verbatim into the dedicated distribution repo (below); the command, skill, and icon
+  under it are byte-for-byte copies of the canonical root files, and `plugin-agent.test.ts`
+  fails if any copy drifts.
+
+  **The public Claude plugin directory cannot be served from this monorepo.** The
+  directory review fetches the *entire* pinned commit and scans every file — `source` does
+  not scope the scan — and it reads `pnpm-workspace.yaml`'s `packages:` index as a
+  registry/index redirect in the launcher's shipped config (`LAUNCHER_REGISTRY_REDIRECT`),
+  a hard block. There is no in-repo escape: `pnpm-workspace.yaml` must sit at the repo root
+  for pnpm, and the review explicitly **refuses any `.gitattributes export-ignore` rule**
+  (`gitattributes_export_rule`) precisely so the archive cannot differ from a clone. So the
+  directory listing is served from a **separate, monorepo-free plugin repo** that contains
+  only the `plugin/` contents flattened to its root plus README/LICENSE; the directory
+  watches that repo. `/plugin marketplace add archish9/Kala` still works for self-hosted
+  installs straight from here (a clone does not care about the workspace file) and is what
+  the docs point non-directory users at. The plugin ships the `plugin/` subtree plus the
+  MCP server, declared as
   `npx -y -p kala-mcp@<version> -p playwright@<version> kala-mcp` — the second `-p` puts
   Playwright in the same npx cache the bundle resolves from, since an optional peer is
   never installed on its own. Both are pinned exactly because the Claude plugin directory
