@@ -232,13 +232,13 @@ If the subagent reports back that it only had `Read`/`Edit`/`Write`/`Bash` and n
 tool, its allowlist did not match the names the server is actually registered under. A
 plugin-installed server exposes `mcp__plugin_kala_kala__<tool>`; a server from a
 hand-written `.mcp.json` exposes `mcp__kala__<tool>`. The plugin's own agent
-(`agents/kala.md`) lists only the first, because nothing else resolves inside a plugin; the
-copy below (`.claude/agents/kala.md`) lists both, so whichever applies resolves and the
-other is dropped — if you wrote your own agent file, list both there too. Names that match
-nothing are silently discarded rather than erroring.
+(`plugin/agents/kala.md`) lists only the first, because nothing else resolves inside a
+plugin; the copy below (`.claude/agents/kala.md`) lists both, so whichever applies resolves
+and the other is dropped — if you wrote your own agent file, list both there too. Names
+that match nothing are silently discarded rather than erroring.
 
-Without the plugin, copy the two files into your own project — from `.claude/`, not the
-top-level `agents/`:
+Without the plugin, copy the two files into your own project — from the top-level
+`.claude/`, not the plugin subtree `plugin/`:
 
 ```bash
 mkdir -p .claude/agents .claude/commands

@@ -11,7 +11,13 @@ const registeredTools = async (): Promise<string[]> => {
 
 // The agent ships as two files. The plugin loads PLUGIN_AGENT; MANUAL_AGENT is the one a
 // non-plugin user copies into their own project, and the one this repo itself runs.
-const PLUGIN_AGENT = 'agents/kala.md'
+// The plugin is a self-contained subtree under plugin/ so the monorepo's package-manager
+// config (pnpm-workspace.yaml) never ships as the plugin's config — the Claude plugin
+// directory reads a workspace index as a registry redirect. Its manifest references assets
+// by paths relative to that plugin root, so the on-disk path and the manifest path differ.
+const PLUGIN_ROOT = 'plugin'
+const PLUGIN_AGENT = `${PLUGIN_ROOT}/agents/kala.md`
+const PLUGIN_MANIFEST = `${PLUGIN_ROOT}/.claude-plugin/plugin.json`
 const MANUAL_AGENT = '.claude/agents/kala.md'
 
 const agentAllowlist = async (path: string): Promise<string[]> => {
@@ -69,11 +75,12 @@ describe('the /kala subagent allowlist', () => {
 
   it('keeps the plugin manifest server name the allowlist is derived from', async () => {
     const manifest = JSON.parse(
-      await readFile(join(ROOT, '.claude-plugin/plugin.json'), 'utf8')
+      await readFile(join(ROOT, PLUGIN_MANIFEST), 'utf8')
     )
     expect(manifest.name).toBe('kala')
     expect(Object.keys(manifest.mcpServers)).toEqual(['kala'])
-    expect(manifest.agents).toEqual([`./${PLUGIN_AGENT}`])
+    // Relative to the plugin root (plugin/), not the repo root.
+    expect(manifest.agents).toEqual(['./agents/kala.md'])
   })
 
   // Playwright is an optional peer, so npm never installs it beside the bundle on its
@@ -82,7 +89,7 @@ describe('the /kala subagent allowlist', () => {
   // BROWSER_UNAVAILABLE however many times Chromium is downloaded.
   it('declares the server so Playwright lands in the same npx cache as the bundle', async () => {
     const manifest = JSON.parse(
-      await readFile(join(ROOT, '.claude-plugin/plugin.json'), 'utf8')
+      await readFile(join(ROOT, PLUGIN_MANIFEST), 'utf8')
     )
     const { command, args } = manifest.mcpServers.kala
     expect(command).toBe('npx')
@@ -101,7 +108,7 @@ describe('the /kala subagent allowlist', () => {
   // left behind, an updated plugin keeps launching the previous server.
   it('pins every fetched package exactly, and kala-mcp to the released version', async () => {
     const manifest = JSON.parse(
-      await readFile(join(ROOT, '.claude-plugin/plugin.json'), 'utf8')
+      await readFile(join(ROOT, PLUGIN_MANIFEST), 'utf8')
     )
     const server = JSON.parse(
       await readFile(join(ROOT, 'packages/server/package.json'), 'utf8')
@@ -111,5 +118,32 @@ describe('the /kala subagent allowlist', () => {
     for (const spec of fetched) expect(spec).toMatch(/^[a-z-]+@\d+\.\d+\.\d+$/)
     expect(manifest.version).toBe(server.version)
     expect(fetched[0]).toBe(`kala-mcp@${server.version}`)
+  })
+})
+
+// The plugin lives in its own subtree (plugin/) so the monorepo root — and its
+// pnpm-workspace.yaml — is not what the Claude plugin directory scans as plugin config.
+// That means the command, skill, and icon the plugin ships are copies of the canonical
+// root files a non-plugin user installs by hand. These guard against the two drifting.
+describe('the plugin subtree mirrors the canonical root files', () => {
+  const bytes = (path: string) => readFile(join(ROOT, path))
+  const text = (path: string) => readFile(join(ROOT, path), 'utf8')
+
+  it('ships the /kala command verbatim from the hand-install copy', async () => {
+    expect(await text(`${PLUGIN_ROOT}/.claude/commands/kala.md`)).toBe(
+      await text('.claude/commands/kala.md')
+    )
+  })
+
+  it('ships the companion skill verbatim from the hand-install copy', async () => {
+    expect(await text(`${PLUGIN_ROOT}/skills/kala/SKILL.md`)).toBe(
+      await text('skills/kala/SKILL.md')
+    )
+  })
+
+  it('ships the same icon the manifest and README point at', async () => {
+    expect(await bytes(`${PLUGIN_ROOT}/kala_logo.jpg`)).toEqual(
+      await bytes('kala_logo.jpg')
+    )
   })
 })

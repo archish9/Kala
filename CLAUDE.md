@@ -72,10 +72,20 @@ doesn't exist. The principles themselves live on in the `motion` token field.
 
 ## Distribution artifacts (these ship to end users, not just contributors)
 
-- `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` — the Claude Code
-  plugin and the self-hosted marketplace that makes it installable
+- `plugin/` + `.claude-plugin/marketplace.json` — the Claude Code plugin and the
+  self-hosted marketplace that makes it installable
   (`/plugin marketplace add archish9/Kala` → `/plugin install kala@kala-marketplace`).
-  The plugin ships the two artifacts below plus the MCP server, declared as
+  The marketplace manifest stays at the repo root; its one plugin entry has
+  `source: "./plugin"`, so the plugin is the self-contained `plugin/` subtree
+  (`plugin/.claude-plugin/plugin.json` + the agent, command, skill, and icon beside it),
+  **not** the repo root. This is deliberate: with `source: "./"` the whole pnpm monorepo
+  shipped as the plugin, and the Claude plugin directory read `pnpm-workspace.yaml`'s
+  `packages:` index as a registry/index redirect in the launcher's shipped config
+  (`LAUNCHER_REGISTRY_REDIRECT`) and failed the submission. Scoping `source` to `plugin/`
+  keeps the workspace config out of what ships. The command, skill, and icon under
+  `plugin/` are byte-for-byte copies of the canonical root files (below) the non-plugin
+  path installs; `plugin-agent.test.ts` fails if any copy drifts. The plugin ships that
+  subtree plus the MCP server, declared as
   `npx -y -p kala-mcp@<version> -p playwright@<version> kala-mcp` — the second `-p` puts
   Playwright in the same npx cache the bundle resolves from, since an optional peer is
   never installed on its own. Both are pinned exactly because the Claude plugin directory
@@ -92,7 +102,7 @@ doesn't exist. The principles themselves live on in the `motion` token field.
   when another FE-design MCP is also installed and would otherwise compete for the same
   request. Non-plugin users copy both into their own project's `.claude/agents` and
   `.claude/commands`. The plugin manifest points at the command directly but at its own
-  copy of the agent, `agents/kala.md`, which lists only the plugin-scoped tool names
+  copy of the agent, `plugin/agents/kala.md`, which lists only the plugin-scoped tool names
   (`mcp__plugin_kala_kala__*`) — the Claude plugin directory rejects the plain
   `mcp__kala__*` names the hand-copied file also needs. `plugin-agent.test.ts` fails if
   the two files differ anywhere but the `tools:` line, so edit both together. Same pattern is

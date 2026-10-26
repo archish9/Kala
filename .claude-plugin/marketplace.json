@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "kala",
-      "source": "./",
+      "source": "./plugin",
       "description": "Design-system verification and critique for frontend agents: checks code against the project's own design system, bootstraps one when none exists, and names the states a screen must handle before it's built.",
       "author": {
         "name": "archish9",
